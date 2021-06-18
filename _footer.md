@@ -1,2 +1,2 @@
 ---
-Last edited: {docsify-updated}
+Ombori Documentation

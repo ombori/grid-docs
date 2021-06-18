@@ -1,3 +1,3 @@
 * [Home](/)
   **Module Development**
-  * [Custom Events](/module-development/remote-events.md)
+  * [Remote Method and Event Calls](/module-development/remote-events.md)

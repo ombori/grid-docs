@@ -1,4 +1,7 @@
 <!-- * [Home](/) -->
 * **Module Development**
   * [Get Started with Module Development](/module-development/readme.md)
-* Great Stuff
+  * [Remote Method and Event Calls](/module-development/remote-events.md)
+* **App Development**
+* **CLI**
+  * [CLI Reference](/cli/reference.md)

@@ -25,10 +25,6 @@ echo AUTH_TOKEN=[YOUR-TOKEN] >> ~/.gridapprc
 ```
 #### **Windows**
 ```bash
-echo AUTH_TOKEN=[YOUR-TOKEN] >> %HOME%/.gridapprc 
-```
-or
-```bash
 echo AUTH_TOKEN=[YOUR-TOKEN] >> %HOMEPATH%/.gridapprc
 ```
 <!-- tabs:end -->

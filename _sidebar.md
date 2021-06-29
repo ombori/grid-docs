@@ -4,7 +4,7 @@
   * [Communicate with your module](/module-development/communication.md)
   * [Remote Method and Event Calls](/module-development/remote-events.md)
 * **App Development**
-  * [Building your first app](/app-development/building-your-first-app.md)
+  * [Building your first Screen App](/app-development/building-your-first-screen-app.md)
   * [Communicate with your app](/app-development/communication.md)
 * **CLI**
   * [CLI Setup](cli/setup.md)

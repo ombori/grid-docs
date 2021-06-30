@@ -12,7 +12,7 @@ import { usePublish } from ‘@ombori/ga-messaging’;
 
 const App = () => {
     const publish = usePublish();
-    publish({type: "Hello.There", some: "data here"}); 
+    publish("event.name", {data: "data here"}); 
 }
 ```
 
@@ -24,7 +24,7 @@ When you want to receive messages sent by the modules on the same device, you ne
 ```javascript
 import { useSubscribe } from ‘@ombori/ga-messaging’;
 const App = () => {
-   useSubscribe('Test.Message', (data) => {
+   useSubscribe('event.name', (data) => {
      // data contains payload
    });
 }

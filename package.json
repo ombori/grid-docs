@@ -4,8 +4,8 @@
     "description": "Welcome to the Ombori Documentation, all you need to know about working with the Ombori Grid and related tooling can be found about in here.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "docsify start . -c ssr.config.js"
+        "start-ssr": "docsify start .",
+        "start": "docsify serve"
     },
     "docsify": {
         "search": {

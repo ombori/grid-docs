@@ -1,5 +1,5 @@
 # Testing App Events Locally
-To test your app locally while using the event bus of your device you will need to set up an event-websocket with your device.
+To test your app locally while using the event bus of your device you will need to set up an event-websocket with your device. This can be useful for developing without replicating the environment entirely, like integrating with a phyisical device (eg. printer/barcode scanner) without the need to have these at the development environment. 
 
 ## Setting up event tunnel
 

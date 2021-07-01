@@ -6,7 +6,7 @@ To build an app for your device connected to the Ombori system there are a few p
 
 * NodeJS and NPM - install latest LTS
 * Yarn - run `[sudo] npm i -g yarn` if it is not already installed
-* Ombori CLI - Check installation guide
+* Ombori CLI - [Check installation guide](/cli/setup.md)
 * Git
 
 ## Creating the app

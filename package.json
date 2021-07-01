@@ -1,0 +1,43 @@
+{
+    "name": "ombori-docs-docsify",
+    "version": "1.0.0",
+    "description": "Welcome to the Ombori Documentation, all you need to know about working with the Ombori Grid and related tooling can be found about in here.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "docsify start . -c ssr.config.js"
+    },
+    "docsify": {
+        "search": {
+            "depth": 6,
+            "hideOtherSidebarContent": false
+        },
+        "repo": "https://github.com/ombori",
+        "loadSidebar": true,
+        "coverpage": false,
+        "maxLevel": 3,
+        "subMaxLevel": 3,
+        "name": "Ombori Grid Docs",
+        "nameLink": "/",
+        "auto2top": true,
+        "autoHeader": false,
+        "copyCode": {
+            "buttonText": "Copy"
+        },
+        "loadFooter": "_footer.md"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Topener/ombori-docs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Topener/ombori-docs/issues"
+    },
+    "homepage": "https://github.com/Topener/ombori-docs#readme",
+    "devDependencies": {
+        "docsify-cli": "^4.4.3",
+        "now": "^21.0.1"
+    }
+}

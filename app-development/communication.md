@@ -26,7 +26,7 @@ import { useSubscribe } from ‘@ombori/ga-messaging’;
 const App = () => {
    useSubscribe('event.name', (data) => {
      // data contains payload
-   });
+   }, [])
 }
 ```
 

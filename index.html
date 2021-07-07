@@ -32,6 +32,14 @@
                     buttonText: "Copy",
                 },
                 loadFooter: "_footer.md",
+                plugins: [
+                    function (hook, vm) {
+                        hook.doneEach(function () {
+                            if (document.title.indexOf("Ombori Grid Documentation") === -1)
+                                document.title += " - Ombori Grid Documentation";
+                        });
+                    },
+                ],
             };
         </script>
         <!-- Docsify v4 -->

@@ -17,7 +17,9 @@ Now you're ready to create your first app. Run this command on CLIU to create a 
 omg app create [project-name] 
 ```
 
-Replace `[project-name]` with the name you want to give your project. For the purpose of this guide we're going to be selecting "React" as our app template as choice.
+> Replace `[project-name]` with the name you want to give your project. 
+ 
+For the purpose of this guide we're going to be selecting "React" as our app template as choice.
 
 ## Running the application
 After you created the application you can run it, this also tests your environment at the same time.

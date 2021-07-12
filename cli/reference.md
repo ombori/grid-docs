@@ -106,7 +106,7 @@ Replace `[app-name]` with the name of the app you want to create, it is recommen
 To see a guided-through guide to create an app check out [Building your first app](/app-development/building-your-first-app)
 
 #### Publish
-To publish an app, make sure you have configuraed it correctly. Check the [Building your first app](/app-development/building-your-first-app) guide if you don't know how. 
+To publish an app, make sure you have configured it correctly. Check the [Building your first app](/app-development/building-your-first-app) guide if you don't know how. 
 
 Once you've configured your app, you are ready to publish. Run the publish command
 
@@ -123,6 +123,72 @@ Optional arguments
 omg app publish --file path/to/file.gridapp --overwrite
 ```
 
+
+## Modules
+This subsection of the CLI is placed under `omg module` and contains the tools for developing modules.
+
+The modules subsection contains the following items
+
+* **list**
+* **versions**
+* **create**
+* **build**
+* **deploy**
+* **publish**
+* **delete**
+
+#### List
+The list command lists all modules available to you with the slug of the module attached.
+
+```bash
+omg module list [search-string]
+```
+
+`[search-string]` is an optional filter for finding a specific module, if omitted all modules will be printed.
+
+#### Versions
+The versions command will list all versions of a specific module.
+
+```
+omg module versions [module-slug]
+```
+> Replace `[module-slug]` with the slug of the module. This is `name` in the `package.json` of your module, or can be found using `omg module list`.
+
+#### Create :id=module-create
+The `create` command will create a module. 
+```bash
+omg module create [module-name]
+```
+> Replace `[module-name]` with the name of the module you want to create
+
+For an in-depth guide of module creation check [Build your first module](/module-development/creating-your-first-module.md).
+
+#### Build :id=module-build
+The `build` command will build your module
+```bash
+omg module build
+```
+
+#### Deploy :id=module-deploy
+The `deploy` command will direct-deploy a module to a device. This is only possible if said module is already running on the device.
+
+```bash
+omg module deploy [device-name] [-w]
+```
+> Replace [device-name] with the name of the device you want to direct-deploy to.
+
+`-w` is optional, it will allow you to watch your local code, and automatically redeploy to your device as soon as you changed a file in your module. This is incredibly useful while developing the module and you have direct access to your device.
+
+#### Publish :id=module-publish
+The `publish` command published an already built module to the Ombori Grid. Keep in mind you need to increment your version every time you run this command as the version build will exist in the grid. 
+```bash
+omg module publish
+```
+
+Check the [Build your first module](/module-development/creating-your-first-module.md) guide for more information.
+
+#### Delete
+The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.
 ## Organisation
 This subsection is placed under the `omg org` CLI, and currently only has one function, to list the organisations you're part of. 
 #### List organisations

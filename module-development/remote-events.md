@@ -20,10 +20,6 @@ module.onMethod("method.name", async (payload) => {
     return "hello there";
 });
 ```
-#### **Python**
-```python
-# todo: add python code
-```
 <!-- tabs:end -->
 
 These events and methods can play a key role in device communication and make your modules interactive. However, these calls can also be triggered externally using the Ombori API.

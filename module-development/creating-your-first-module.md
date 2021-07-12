@@ -101,5 +101,7 @@ yarn deploy [device-name]
 
 This will direct-deploy a new version of the module, bypassing the grid. Keep in mind this will not register a new version in the grid, and any changes pushed to the device will not be permanent as a redeploy from the grid will override any manual versions. However, this is a great way to test the module you're working on.
 
+To make this process even smoother, check out [auto direct-deploy](/module-development/direct-deploy-debug.md).
+
 ## Understand the yarn commands
 To understand what the different `yarn` commands do we've used, you can check `package.json` to see what the commands actually triggered. These commands are mostly a short and easy reference to the `omg` CLI, for which any more information you can find in the [CLI Reference](/cli/reference.md).

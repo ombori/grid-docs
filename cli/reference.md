@@ -111,7 +111,7 @@ To create an application you need to run the create command with the name of the
 ```bash
 omg app create [app-name]
 ```
-Replace `[app-name]` with the name of the app you want to create, it is recommended to use `kebab-case` for your name. 
+> Replace `[app-name]` with the name of the app you want to create, it is recommended to use `kebab-case` for your name. 
 
 To see a guided-through guide to create an app check out [Building your first app](/app-development/building-your-first-app)
 

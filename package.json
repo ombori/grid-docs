@@ -37,7 +37,6 @@
     },
     "homepage": "https://github.com/Topener/ombori-docs#readme",
     "devDependencies": {
-        "docsify-cli": "^4.4.3",
-        "now": "^21.0.1"
+        "docsify-cli": "^4.4.3"
     }
 }

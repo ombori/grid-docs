@@ -4,7 +4,13 @@ To develop on the Ombori Ecosystem you will need to install the Ombori `omg` CLI
 
 This page contains all the information on the CLI and it's components. If you want more in-depth information you will have to check out the guides.
 
-!> **Under Construction** - This page is stil evolving and doesn't contain all items. If you need a CLI command not listed use the `-h` command on the CLI/
+!> **Under Construction** - This page is stil evolving and doesn't contain all items. If you need a CLI command not listed use the `-h` command on the CLI.
+
+- [Generic commands](#generic-commands)
+- [Developer](#developer)
+- [Applications](#applications)
+- [Modules](#modules)
+- [Organisation](#organisation)
 
 ## Generic commands
 Some commands that are useful for using the CLI itself
@@ -86,18 +92,19 @@ omg dev modules <device-name>
 ## Applications
 This subsection is dedicated to app development and management, and is nested under `omg app`.
 
-!> **Under Construction** - This section is incomplete. Use `-h` for more information where needed
-
 There are several functions available in the app subsection of the CLI.
 
-* **create** - To create an app
-* **build** - To build a created app to prepare it for deployment
-* **settings** - Download settings from an existing grid app installation
-* **upload-settings** - Upload settings to an existing grid app installation
-* **publish** - Publish an app
-* **upload-description** - Upload a markdown file as description for a published app.
-* **list** - List all apps
+| Command            | Description                                               |
+| ------------------ | --------------------------------------------------------- |
+| create             | To create an app                                          |
+| build              | To build a created app to prepare it for deployment       |
+| settings           | Download settings from an existing grid app installation  |
+| upload-settings    | Upload settings to an existing grid app installation      |
+| publish            | Publish an app                                            |
+| upload-description | Upload a markdown file as description for a published app |
+| list               | List all apps                                             |
 
+> All these commands can be triggered using `omg app [command]`
 #### Create
 To create an application you need to run the create command with the name of the application you want to create.
 
@@ -132,13 +139,15 @@ This subsection of the CLI is placed under `omg module` and contains the tools f
 
 The modules subsection contains the following items
 
-* **list**
-* **versions**
-* **create**
-* **build**
-* **deploy**
-* **publish**
-* **delete**
+| Command  | Description                                |
+| -------- | ------------------------------------------ |
+| list     | List all modules                           |
+| versions | Display all versions for a specific module |
+| create   | create a new module                        |
+| build    | build/compile a module                     |
+| deploy   | direct-deploy a module to a device         |
+| publish  | publish a module to the grid               |
+| delete   | delete a (version of) the module           |
 
 #### List
 The list command lists all modules available to you with the slug of the module attached.
@@ -205,4 +214,5 @@ If you want to filter the list, there is a optional parameter you can pass along
 ```bash
 omg org list [search-string]
 ```
-Where you need to replace `[search-string]` with the parameter you want to search with. This will search in both the name and the slug.
+
+> Replace `[search-string]` with the parameter you want to search with. This will search in both the name and the slug.

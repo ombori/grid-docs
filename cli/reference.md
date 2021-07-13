@@ -31,26 +31,31 @@ To check the version of the CLI, initiate the version call
 omg --version
 omg -V
 ```
-## Developer CLI
+## Developer
 Within the Ombori CLI there's a `dev` subsection. This can be used to work with and debug devices. 
 
 The following commands are available on the `dev CLI`. They're all explained in their own subsection below.
 
-* **list** - [List devices](#list-devices)
-* **modules** - List modules running on device
-* **logs** - Show logs for module running on device
-* **invoke** - Execute a method on a module
-* **settings** - Show and alter module settings
-* **deploy** - deploy configuration to device 
-* **pub** - Publish an event to the event bus
-* **sub** - Retrieve recent events from the event bus
-* **ws** - Proxy message bus via local web socket
-* **shell** - Open a shell session to the device
-* **vnc** - Open a VNC session to the device
-* **rdp** - Open an RDP session to the device
-* **debug** - Open debugger session to a screen app on a device
-* **forward** - Access an url from device's local network
-* **move** - Move device to a different organisation
+| Command  | Description                                       |
+| -------- | ------------------------------------------------- |
+| list     | List devices                                      |
+| modules  | List modules running on device                    |
+| logs     | Show logs for module running on device            |
+| invoke   | Execute a method on a module                      |
+| settings | Show and alter module settings                    |
+| deploy   | deploy configuration to device                    |
+| pub      | Publish an event to the event bus                 |
+| sub      | Retrieve recent events from the event bus         |
+| ws       | Proxy message bus via local web socket            |
+| shell    | Open a shell session to the device                |
+| vnc      | Open a VNC session to the device                  |
+| rdp      | Open an RDP session to the device                 |
+| debug    | Open debugger session to a screen app on a device |
+| forward  | Access an url from device's local network         |
+| move     | Move device to a different organisation           |
+
+> All these commands can be triggered using `omg dev [command]`
+
 #### List Devices
 To retrieve the list of devices accessible for your token. This command will return the device name plus serial number.
 
@@ -70,15 +75,13 @@ You can follow the command with a search string, which will filter the results. 
 omg dev list [searchstring]
 omg dev list -l [searchstring]
 ```
-
+> Replace `[searchstring]` with whatever you want to filter on.
 #### List Modules on Device
 You can list all installed modules on a device using this command. This command will return a very extensive list of information from your device.
 ```bash
 omg dev modules <device-name>
 ```
-You should replace `<device-name>` with the name of the device you can find using `omg dev list`.
-
-Where of course you replace `[searchstring]` with part of the device-name.
+> You should replace `<device-name>` with the name of the device you can find using `omg dev list`.
 
 ## Applications
 This subsection is dedicated to app development and management, and is nested under `omg app`.

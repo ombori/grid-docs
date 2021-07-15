@@ -1,4 +1,3 @@
-<!-- * [Home](/) -->
 * **Module Development**
   * [Building your first module](/module-development/creating-your-first-module.md)
   * [Communicate with your module](/module-development/communication.md)
@@ -12,3 +11,5 @@
 * **CLI**
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)
+* **Apps**
+  * [Apps Documentation](/apps/)

@@ -18,6 +18,8 @@ Once you've clicked *OK* in the dialog your installation is done and you will be
 ## Getting into the management screen
 As you can see in the screenshot above, everything is already up and running and works out of the box. To get into the management screen, click the button on the right which says `Queue Manager`. This will bring you to the queue manager where you can see currently queueing people. 
 
+![](/assets/queue-sidebar.png ":no-zoom :size=400").
+
 However, you might notice there's a pincode required to enter. This pincode has been randomly generated with the creation of the queue, you can find this pincode in the console inside the queue you generated. Enter this pincode and proceed.
 
 Once you're in, all you need to do is open the queue, and people can start making tickets. For this you need to press the gear-icon on the top right, and then flip the toggle next to `Queue is closed`. 
@@ -32,6 +34,8 @@ You can customize queue management in the console, there are many options includ
 ## Letting people generate tickets.
 
 By default there's a QR code generated to be used for people to scan. You can access this QR code on the right-hand-side in the console when in the queue setup screen. This QR code can be printed or put on a display so people can scan it with their phones.
+
+![](/assets/queue-sidebar.png ":no-zoom :size=400").
 
 Another way of generating tickets is by also installing a queue kiosk. This can connect to a printer and print tickets for your customers. You can find the queue kiosk inside the Queue Management Marketplace page.
 

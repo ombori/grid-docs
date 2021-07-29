@@ -1,12 +1,6 @@
-<!-- ---
-name: Firing methods and events remotely
-route: /api/remote-events-methods
-menu: API
---- -->
-
 # Firing events and triggering methods using the Ombori API
 
-When developing modules you can fire events and call methods on other modules using the provided module methods. Here’s the code you should have running in your module.
+When developing IoT apps you can fire events and call methods on other Apps using the provided module methods. Here’s the code you should have running in your module.
 
 <!-- tabs:start -->
 #### **JavaScript**
@@ -48,11 +42,11 @@ https://api.omborigrid.com/api/edge/devices/[device]/modules/[module]/invoke/[me
 
 As you can see, there are 3 variables you need to fill in to get to the right device.
 
-| Variable| Description                                                                                                                                                                                                                           |
-| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [device]                                    | The device you want to connect to. <br /><br /> Format for this is `[org-slug].[device-slug]` <br /><br /> You can find the full name in this format when you output the device list using the Ombori CLI with the command `omg dev list` |  |
-| [module]                                    | The module you want to trigger the method on                                                                                                                                                                                            |
-| [method]                                    | The name of the method you defined using the module.onMethod method of our SDK.                                                                                                                                                         |
+| Variable | Description                                                                                                                                                                                                                               |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [device] | The device you want to connect to. <br /><br /> Format for this is `[org-slug].[device-slug]` <br /><br /> You can find the full name in this format when you output the device list using the Ombori CLI with the command `omg dev list` |  |
+| [module] | The IoT App or module you want to trigger the method on                                                                                                                                                                                   |
+| [method] | The name of the method you defined using the module.onMethod method of our SDK.                                                                                                                                                           |
 
 ### Adding payload
 
@@ -83,7 +77,7 @@ curl --location --request POST 'https://api.omborigrid.com/api/edge/devices/[dev
 ```
 
 ## Triggering Events
-To trigger an event using the Ombori API you need to call a similar URL as for the methods. Events currently is a custom implementation of the method call, and this features no return value. You also don’t need to define a module you want to send it to, as it is received by the event agent on the device.
+To trigger an event using the Ombori API you need to call a similar URL as for the methods. Events currently is a custom implementation of the method call, and this features no return value. You also don’t need to define an app you want to send it to, as it is received by the event agent on the device.
 
 The URL is defined as this
 ```
@@ -95,7 +89,7 @@ The payload has to follow a specific format and should contain the event name an
 {"type": "event.name", "payload": "awesome"}
 ```
 
-By specifying both the type and the payload you will trigger any event listener on the device regardless of the module this event is listened for.
+By specifying both the type and the payload you will trigger any event listener on the device regardless of the app this event is listened for.
 
 Once the event is sent successfully, you will receive the following response.
 

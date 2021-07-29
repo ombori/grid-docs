@@ -173,7 +173,7 @@ omg module create [module-name]
 ```
 > Replace `[module-name]` with the name of the module you want to create
 
-For an in-depth guide of module creation check [Build your first module](/module-development/creating-your-first-module.md).
+For an in-depth guide of module creation check [Build your first module](/iot-development/creating-your-first-iot-app.md).
 
 #### Build :id=module-build
 The `build` command will build your module
@@ -197,7 +197,7 @@ The `publish` command published an already built module to the Ombori Grid. Keep
 omg module publish
 ```
 
-Check the [Build your first module](/module-development/creating-your-first-module.md) guide for more information.
+Check the [Build your first module](/iot-development/creating-your-first-iot-app.md) guide for more information.
 
 #### Delete
 The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.

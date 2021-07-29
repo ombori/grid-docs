@@ -1,5 +1,5 @@
 * **IoT App Development**
-  * [Building your first IoT app](/iot-development/creating-your-first-module.md)
+  * [Building your first IoT app](/iot-development/creating-your-first-iot-app.md)
   * [Communication](/iot-development/communication.md)
   * [Remote Method and Event Calls](/iot-development/remote-events.md)
   * [Direct-deploy and Debug](/iot-development/direct-deploy-debug.md)

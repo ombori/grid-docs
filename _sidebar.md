@@ -13,5 +13,8 @@
   * [CLI Reference](/cli/reference.md)
 * **Concepts**
   * [Settings Schema](/concepts/schema.md)
-<!-- * **Apps**
-  * [Apps Documentation](/apps/) -->
+  * [Adding a device](/concepts/adding-device.md)
+* **Apps**
+  * [Apps Documentation](/apps/)
+  * [Signage](/apps/signage/)
+  * [Queue](/apps/queue/)

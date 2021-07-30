@@ -11,5 +11,7 @@
 * **CLI**
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)
+* **Concepts**
+  * [Settings Schema](/concepts/schema.md)
 <!-- * **Apps**
   * [Apps Documentation](/apps/) -->

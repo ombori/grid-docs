@@ -47,8 +47,9 @@ You can set the name of the IoT App in `package.json` name property.
 The description of the IoT app is the visible part in the console. You want this to have a recognizable name so you can easily use it in the console. There is no rule for setting the name, but it is recommended to keep it short, for example "Barcode Reader".
 
 ## Code Structure
-The code structure of the IoT app is a basic NodeJS application, you can see the relevant source in the `src` directory. There's 2 files by default, `app.ts` and `schema.ts`. The Schema file is for configuration purposes which we also discussed in the Screen App Development guide. But more importantly is the `app.ts` file that contains your basic application.
+The code structure of the IoT app is a basic NodeJS application, you can see the relevant source in the `src` directory. There's 2 files by default, `app.ts` and `schema.ts`. The Settings Schema file is for configuration purposes which we also discussed in the Screen App Development guide. But more importantly is the `app.ts` file that contains your basic application.
 
+> Read more about [Settings Schema](/concepts/schema.md)
 ### App.ts
 By default the `app.ts` file contains some sample code how to communicate with different apps on the same instalation. You can read about communication more in-depth in our dedeicated guides.
 

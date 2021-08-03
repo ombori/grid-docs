@@ -40,6 +40,14 @@
                                 document.title += " - Ombori Grid Documentation";
                         });
                     },
+                    function (hook, vm) {
+                        hook.afterEach(function (html) {
+                            return (
+                                html +
+                                `<hr /><a href="https://github.com/ombori/grid-docs/blob/main/${vm.route.file}" target="_blank">Edit this page on GitHub</a>`
+                            );
+                        });
+                    },
                 ],
             };
         </script>
@@ -59,6 +67,7 @@
                 --theme-color: #5f06e4;
                 --sidebar-nav-pagelink-background-image--active: url("data:image/svg+xml,%3Csvg height='8' viewBox='0 0 14 8' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0 6 6 6-6' fill='none' stroke='%235f06e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'/%3E%3C/svg%3E%0A");
                 --sidebar-background: #f5f5fc;
+                --sidebar-width: 20rem;
             }
         </style>
     </body>

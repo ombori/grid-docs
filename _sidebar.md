@@ -14,7 +14,8 @@
 * **Concepts**
   * [Settings Schema](/concepts/schema.md)
   * [Adding a device](/concepts/adding-device.md)
+  * [Hardware requirements](/concepts/hardware-requirements.md)
 * **Apps**
   * [Apps Documentation](/apps/)
   * [Signage](/apps/signage/)
-  * [Queue](/apps/queue/)
+  * [Queue](/apps/queue/setting-up)

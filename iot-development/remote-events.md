@@ -3,7 +3,7 @@
 When developing IoT apps you can fire events and call methods on other Apps using the provided module methods. Here’s the code you should have running in your module.
 
 <!-- tabs:start -->
-#### **JavaScript**
+<!-- #### **JavaScript** -->
 ```javascript
 module.subscribe("event.name", async (data) => {
     console.log("Received event", data);

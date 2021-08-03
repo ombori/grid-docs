@@ -23,8 +23,15 @@ For Raspberry Pi we recommend getting Raspberry Pi 4 or better.
 
 Without heatsink case and fan the Raspberry pi might overheat, especially when playing videos. You *could* get away with just a heatsink and no fan if your content is light. If you have questions about this contact us on Slack.
 
+## Samsung Smart Signage Display
+The Samsung Smart Signage displays allow you to display Screen Apps, like Signage Playlist.
+
+**Minimum requirements**
+
+- At least version 3.5
+
 ## Android Tablets
-Android Tablets are great for mobility and wireless devices. 
+Android Tablets are great for mobility and wireless devices, can display Screen Apps only. 
 
 **Minimum requirements**
 
@@ -35,7 +42,7 @@ Android Tablets are great for mobility and wireless devices.
 
 
 ## Android TVBox
-Android TVBox is great for supporting any screen you have on stock.
+Android TVBox is great for supporting any screen you have on stock. Can display Screen Apps only.
 
 **Minimum requirements**
 

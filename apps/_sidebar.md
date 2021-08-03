@@ -2,6 +2,8 @@
 
 * [**Signage**](/apps/signage/)
   * [Setting up signage](/apps/signage/setting-up.md)
+  * [Adding Content](/apps/signage/adding-content.md)
+  * [Using Triggers](/apps/signage/using-triggers.md)
 * [**Queue**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
   * [Queue Settings Reference](/apps/queue/settings.md)

@@ -56,7 +56,7 @@ Supported application types: Screen App
 
 **Minimum requirements**
 
-- 8GB disk sppace
+- 8GB disk space
 - 2GB RAM
 - CPU - details coming soon
 - GPU - details coming soon

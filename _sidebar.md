@@ -15,6 +15,7 @@
   * [Settings Schema](/concepts/schema.md)
   * [Adding a device](/concepts/adding-device.md)
   * [Hardware requirements](/concepts/hardware-requirements.md)
+  * [Network Requirements](/concepts/network-requirements.md)
 * **Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)

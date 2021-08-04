@@ -1,4 +1,4 @@
-# Using Triggers in Signage
+# Using Triggers in Signage Playlist
 Triggers are great for dynamically adjusting playlist based on external factors. However, there are a few rules to keep in mind for triggers.
 
 - If a trigger is true, all content will be played inside the trigger.

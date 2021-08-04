@@ -1,12 +1,12 @@
-# Adding content to Signage
+# Adding content to Signage Playlist
 
-Adding content to a signage installation is easy and very flexible. You can configure playlist exactly how you want them to play. 
+Adding content to a Signage Playlist installation is easy and very flexible. You can configure playlist exactly how you want them to play. 
 
 Triggers can even enhance this further as you can use external factors to influence what should play on the screen.
 
 ?> To read more about the available triggers and how to use them, head over to [Using Triggers](/apps/signage/using-triggers.md) documentation.
 ## Add media items
-You can add media to a signage playlist by clickin on the `Content` tab inside your signage installation
+You can add media to a Signage Playlist by clickin on the `Content` tab inside your installation
 
 To add media items to a playlist you need to press the `+ Add` button next to *any* `items` section in the playlist. Either inside a trigger item, or in the generic items playlist.
 
@@ -43,7 +43,7 @@ The configuration of the app depends fully on what application you choose, so ch
 
 After you've configured your Screen Application, you can press the `Save all changes` button on the right of the screen.
 ## Publishing to device
-Now that you have content in your playlist you can publish the playlist to your signage device. If you don't have a device attached to your signage installation, do so now. 
+Now that you have content in your playlist you can publish the playlist to your Signage Playlist device. If you don't have a device attached to your installation, do so now. 
 
 ?> To learn more about how to add a device to the Ombori grid, visit the [Add a device](/concepts/adding-device.md) documentation.
 

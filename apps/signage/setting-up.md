@@ -1,4 +1,4 @@
-# Setting up signage
+# Setting up Signage Playlist
 
 To set up a signage screen, find the Signage Playlist app in the Marketplace.
 

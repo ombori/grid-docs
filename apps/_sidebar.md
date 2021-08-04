@@ -1,7 +1,7 @@
 * [< Back to all documentation](/)
 
-* [**Signage**](/apps/signage/)
-  * [Setting up signage](/apps/signage/setting-up.md)
+* [**Signage Playlist**](/apps/signage/)
+  * [Setting up](/apps/signage/setting-up.md)
   * [Adding Content](/apps/signage/adding-content.md)
   * [Using Triggers](/apps/signage/using-triggers.md)
 * [**Queue**](/apps/queue/)

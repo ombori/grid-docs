@@ -17,5 +17,5 @@
   * [Hardware requirements](/concepts/hardware-requirements.md)
 * **Apps**
   * [Apps Documentation](/apps/)
-  * [Signage](/apps/signage/)
+  * [Signage Playlist](/apps/signage/)
   * [Queue](/apps/queue/setting-up)

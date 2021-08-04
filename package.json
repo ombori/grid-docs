@@ -7,25 +7,6 @@
         "start-ssr": "docsify start .",
         "start": "docsify serve --open"
     },
-    "docsify": {
-        "search": {
-            "depth": 6,
-            "hideOtherSidebarContent": false
-        },
-        "repo": "https://github.com/ombori",
-        "loadSidebar": true,
-        "coverpage": false,
-        "maxLevel": 3,
-        "subMaxLevel": 3,
-        "name": "Ombori Grid Docs",
-        "nameLink": "/",
-        "auto2top": true,
-        "autoHeader": false,
-        "copyCode": {
-            "buttonText": "Copy"
-        },
-        "loadFooter": "_footer.md"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Topener/ombori-docs.git"

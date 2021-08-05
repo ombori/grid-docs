@@ -29,7 +29,7 @@ Once you're in, all you need to do is open the queue, and people can start makin
 ## Customizing Queue Management
 You can customize queue management in the console, there are many options including pre-booked tickets, capacity, labels, and more. To learn more about this refer to our guides for it.
 
-?> As of now, the guides are still to be written, but if you want more information please ask on Slack and we can help you out and point you to further information.
+?> As of now, the guides are still to be written, but if you want more information please ask on [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg) and we can help you out and point you to further information.
 
 ## Letting people generate tickets.
 
@@ -42,4 +42,4 @@ Another way of generating tickets is by also installing a queue kiosk. This can 
 ## Adding Queue Ticket Signage
 Next to the queue kiosk, there's also Queue Ticket Signage. This can also be found on the Queue Management Marketplace page.
 
-?> Want to learn more about integrating signage? The documentation for this is still being written, but you can ask in Slack!
+?> Want to learn more about integrating signage? The documentation for this is still being written, but you can ask in [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg)!

@@ -34,13 +34,13 @@ Unless otherwise specified, all domains are using port `443`.
 ### Virtual Queues
 For virtual queues we have a specific set of domains.
 
-| Domain                               | Description    |
-| ------------------------------------ | -------------- |
-| ombori-queue-prod-eu.azure-api.net   | Queues EU API  |
-| ombori-queue-prod-us.azure-api.net   | Queues US API  |
-| ombori-queue-prod-au.azure-api.net   | Queues AU API  |
-| ombori-queue-prod-uae.azure-api.net  | Queues UAE API |
-| signalr-prod-eu-1.service.signalr.net  | SignalR EU     |
-| signalr-prod-us.service.signalr.net  | SignalR US     |
-| signalr-prod-au.service.signalr.net  | SignalR AU     |
-| signalr-prod-uae.service.signalr.net | SignalR UAE    |
+| Domain                                | Description    |
+| ------------------------------------- | -------------- |
+| ombori-queue-prod-eu.azure-api.net    | Queues EU API  |
+| ombori-queue-prod-us.azure-api.net    | Queues US API  |
+| ombori-queue-prod-au.azure-api.net    | Queues AU API  |
+| ombori-queue-prod-uae.azure-api.net   | Queues UAE API |
+| signalr-prod-eu-1.service.signalr.net | SignalR EU     |
+| signalr-prod-us.service.signalr.net   | SignalR US     |
+| signalr-prod-au.service.signalr.net   | SignalR AU     |
+| signalr-prod-uae.service.signalr.net  | SignalR UAE    |

@@ -1,14 +1,14 @@
 # Adding content to Signage Playlist
 
-Adding content to a Signage Playlist installation is easy and very flexible. You can configure playlist exactly how you want them to play. 
+Adding content to a Signage Playlist installation is easy and very flexible. You can configure playlists exactly how you want them to play. 
 
 Triggers can even enhance this further as you can use external factors to influence what should play on the screen.
 
 ?> To read more about the available triggers and how to use them, head over to [Using Triggers](/apps/signage/using-triggers.md) documentation.
 ## Add media items
-You can add media to a Signage Playlist by clickin on the `Content` tab inside your installation
+You can add media to a Signage Playlist by clicking on the `Content` tab inside your installation
 
-To add media items to a playlist you need to press the `+ Add` button next to *any* `items` section in the playlist. Either inside a trigger item, or in the generic items playlist.
+To add media items to a playlist you need to press the `+ Add` button next to *any* `items` section in the playlist. Either inside a trigger item or in the generic items playlist.
 
 By pressing the `+ Add` button a small form will show up.
 
@@ -18,11 +18,11 @@ For `item type` you should select `MEDIA` and the item will expand to show more 
 
 ![](/assets/media-item.png ":size=500")
 
-From here you click the `Pick an asset` icon, this will open the media library. The media library will show all content you've uploaded in your organisation, but you can also upload new content from here.
+From here you click the `Pick an asset` icon, this will open the media library. The media library will show all content you've uploaded to your organization, but you can also upload new content from here.
 
 ![](/assets/media-library.png ":size=500")
 
-Choose the item you want to add to your library, in this case we're going to select a static image. This will add an extra required field to the form to input the time you want this image displayed, in ms, or milliseconds (1 second is 1000ms). Once you've filled it out, the item is complete
+Choose the item you want to add to your library, in this case, we're going to select a static image. This will add an extra required field to the form to input the time you want this image displayed, in ms, or milliseconds (1 second is 1000ms). Once you've filled it out, the item is complete
 
 ![](/assets/filled-item.png ":size=500")
 
@@ -37,7 +37,7 @@ Next to media you can also add Screen Apps to the playlist, which you can config
 
 To add a screen app, select `GRIDAPP` from `Item type` on the content page. 
 
-Then the first field is `Application`, which can be any Screen App available in your organisation. So this can be either a pre-built marketplace app or one you've deployed yourself.
+Then the first field is `Application`, which can be any Screen App available in your organization. So this can be either a pre-built marketplace app or one you've deployed yourself.
 
 The configuration of the app depends fully on what application you choose, so check the related documentation for any marketplace app. However, there's one field that needs filling for any application, and that is the duration you want the Screen App to be on screen. This needs to be filled in ms, or milliseconds (1 second is 1000ms).
 

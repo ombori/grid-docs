@@ -3,23 +3,23 @@ To add a device in the Ombori Console you need to head over to the installation 
 
 Make sure your hardware is supported by checking the [Hardware Requirements](/concepts/hardware-requirements.md) page.
 
-## Adding device to the console
+## Adding a device to the console
 
-Head over to the installation, go to the `devices` tab, and press the `connect a device` buttton.
+Head over to the installation, go to the `devices` tab and press the `connect a device` button.
 
 ![](/assets/connect-device.png ":no-zoom :size=300").
 
-The connect device page opens up a screen with all the already connected devices in your organisation. From here you could re-assign a device to the new installation, or you could set up a new device. 
+The connect device page opens up a screen with all the already connected devices in your organization. From here you could re-assign a device to the new installation, or you could set up a new device. 
 
 To set up a new device, you need to press the button `Setup a new device` on the top right.
 
 ![](/assets/setup-new-device.png ":no-zoom :size=300").
 
-When you press the `Setup a new device` button you will be prompted with an configuration screen, which looks like this.
+When you press the `Setup a new device` button you will be prompted with a configuration screen, which looks like this.
 
 ![](/assets/configure-device.png ":size=400").
 
-On the right of the screen you will find instructions how to configure the device type you've selected. Now is a good time to look at the device you want to connect. 
+On the right of the screen, you will find instructions on how to configure the device type you've selected. Now is a good time to look at the device you want to connect. 
 
 For both the Intel devices and Raspberry Pi Devices we have GridOS. You can download GridOS from the `Setup a new device` window and also instructions how to install it on the device. 
 
@@ -28,4 +28,4 @@ Once GridOS is installed and running on your device, you will see a screen with 
 
 ![](/assets/gridos-menu.png ":size=400").
 
-Once you've connected the device to internet, and you've copied the serial to the configuration screen you should have your device provisioned. It can take a minute to reflect this on the screen and in the console.
+Once you've connected the device to the internet, and you've copied the serial to the configuration screen you should have your device provisioned. It can take a minute to reflect this on the screen and in the console.

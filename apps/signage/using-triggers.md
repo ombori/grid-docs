@@ -1,5 +1,5 @@
 # Using Triggers in Signage Playlist
-Triggers are great for dynamically adjusting playlist based on external factors. However, there are a few rules to keep in mind for triggers.
+Triggers are great for dynamically adjusting the playlist based on external factors. However, there are a few rules to keep in mind for triggers.
 
 - If a trigger is true, all content will be played inside the trigger.
 - If multiple triggers are true, only the topmost trigger will play.
@@ -7,9 +7,9 @@ Triggers are great for dynamically adjusting playlist based on external factors.
 
 With that in mind, let's have a look at the trigger options
 
-## Trigers
+## Triggers
 
-There are several trigers you can use
+There are several triggers you can use
 
 | Trigger         | Description                                                   |
 | --------------- | ------------------------------------------------------------- |
@@ -22,7 +22,7 @@ There are several trigers you can use
 | TEMPERATURE_MAX | Until what temperature should the content show                |
 
 ## DATETIME
-With the DATETIME trigger you can specify a date/time range when to display certain content. This is a one-time trigger as you cannot specify multiple date/times.
+With the DATETIME trigger, you can specify a date/time range when to display certain content. This is a one-time trigger as you cannot specify multiple date/times.
 
 The device configuration of date/time is used for this trigger.
 
@@ -31,7 +31,7 @@ The device configuration of date/time is used for this trigger.
 ## DATE
 The DATE trigger allows you to specify a date range when to display certain content. This is a one-time trigger as you cannot specify multiple dates.
 
-The device configuration for date is used for this trigger.
+The device configuration for DATE is used for this trigger.
 
 ![](/assets/trigger-date.png ":size=500 :no-zoom")
 
@@ -48,7 +48,7 @@ The DAY trigger allows you to select which days of the week certain content need
 ![](/assets/trigger-day.png ":size=500 :no-zoom")
 
 ## WEATHER
-The WEATHER trigger allows you to play content specific to the weather at the specified city. There are several weathertypes that can be used as a trigger
+The WEATHER trigger allows you to play content specific to the weather at the specified city. Several weather types can be used as a trigger
 
 - Clear
 - Clouds

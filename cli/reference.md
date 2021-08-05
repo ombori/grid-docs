@@ -94,15 +94,15 @@ This subsection is dedicated to app development and management, and is nested un
 
 There are several functions available in the app subsection of the CLI.
 
-| Command            | Description                                               |
-| ------------------ | --------------------------------------------------------- |
-| create             | To create an app                                          |
-| build              | To build a created app to prepare it for deployment       |
-| settings           | Download settings from an existing grid app installation  |
-| upload-settings    | Upload settings to an existing grid app installation      |
-| publish            | Publish an app                                            |
-| upload-description | Upload a markdown file as description for a published app |
-| list               | List all apps                                             |
+| Command            | Description                                                   |
+| ------------------ | ------------------------------------------------------------- |
+| create             | To create an app                                              |
+| build              | To build a created app to prepare it for deployment           |
+| settings           | Download settings from an existing grid app installation      |
+| upload-settings    | Upload settings to an existing grid app installation          |
+| publish            | Publish an app                                                |
+| upload-description | Upload a markdown file as the description for a published app |
+| list               | List all apps                                                 |
 
 > All these commands can be triggered using `omg app [command]`
 #### Create
@@ -189,7 +189,7 @@ omg module deploy [device-name] [-w]
 ```
 > Replace [device-name] with the name of the device you want to direct-deploy to.
 
-`-w` is optional, it will allow you to watch your local code, and automatically redeploy to your device as soon as you changed a file in your module. This is incredibly useful while developing the module and you have direct access to your device.
+`-w` is optional, it will allow you to watch your local code, and automatically redeploy it to your device as soon as you changed a file in your module. This is incredibly useful while developing the module and you have direct access to your device.
 
 #### Publish :id=module-publish
 The `publish` command published an already built module to the Ombori Grid. Keep in mind you need to increment your version every time you run this command as the version build will exist in the grid. 
@@ -202,14 +202,14 @@ Check the [Build your first module](/iot-development/creating-your-first-iot-app
 #### Delete
 The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.
 ## Organisation
-This subsection is placed under the `omg org` CLI, and currently only has one function, to list the organisations you're part of. 
+This subsection is placed under the `omg org` CLI, and currently only has one function, to list the organizations you're part of. 
 #### List organisations
 ```bash
 omg org list
 ```
-This will return a list of organisations you're part of, plus the organisation slug you need to use to configure modules and apps.
+This will return a list of organizations you're part of, plus the organization slug you need to use to configure modules and apps.
 
-If you want to filter the list, there is a optional parameter you can pass along that will filter it for you.
+If you want to filter the list, there is an optional parameter you can pass along that will filter it for you.
 
 ```bash
 omg org list [search-string]

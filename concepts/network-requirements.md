@@ -1,12 +1,12 @@
 # Network Requirements
-All devices connected to the Ombori Grid need to have access to the internet to receive updates, however they can work offline after the first launch.
+All devices connected to the Ombori Grid need to have access to the internet to receive updates. However, they can work offline after the first launch.
 
 ## Offline support
-For Screen Apps you need to connect to the internet at least once to download content and assets. All apps, assets and web resources will be downloaded on first launch, and will function offline as soon as the content has been downloaded. Of course internet-based functionality will be suspended until the device is connected once again. 
+For Screen Apps, you need to connect to the internet at least once to download content and assets. All apps, assets, and web resources will be downloaded on first launch, and will function offline as soon as the content has been downloaded. Of course, internet-based functionality will be suspended until the device is connected once again. 
 
 Once the device is connected to the internet after a time of being offline, a sync will take place to update according to the console.
 ## Whitelist
-There are a list of domains in use that require to be added to your internal whitelist in your firewall. We are unable to provide a static list of IP addresses as some Azure endpoints do not have static IP addresses.
+There is a list of domains in use that require to be added to your internal whitelist in your firewall. We are unable to provide a static list of IP addresses as some Azure endpoints do not have static IP addresses.
 
 Unless otherwise specified, all domains are using port `443`.
 

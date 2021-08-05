@@ -40,7 +40,7 @@ For virtual queues we have a specific set of domains.
 | ombori-queue-prod-us.azure-api.net   | Queues US API  |
 | ombori-queue-prod-au.azure-api.net   | Queues AU API  |
 | ombori-queue-prod-uae.azure-api.net  | Queues UAE API |
-| signalr-prod-eu.service.signalr.net  | SignalR EU     |
+| signalr-prod-eu-1.service.signalr.net  | SignalR EU     |
 | signalr-prod-us.service.signalr.net  | SignalR US     |
 | signalr-prod-au.service.signalr.net  | SignalR AU     |
 | signalr-prod-uae.service.signalr.net | SignalR UAE    |

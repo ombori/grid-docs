@@ -41,7 +41,19 @@ Then the first field is `Application`, which can be any Screen App available in 
 
 The configuration of the app depends fully on what application you choose, so check the related documentation for any marketplace app. However, there's one field that needs filling for any application, and that is the duration you want the Screen App to be on screen. This needs to be filled in ms, or milliseconds (1 second is 1000ms).
 
+## Adding an Installation (Nested Installations)
+A powerful feature of the Ombori Signage Playlist is that you can also add another installation as a playlist item.
+
+To add an installation, select `Installation` from the `Item type` on the content page. 
+
+The first field is `Installation`, which can be any installation available in your organization. Be it a signage playlist or a different application type, you have the option to select any existing installation.
+
+Additionally, we need to specify the `Next Item Trigger`, which is the trigger to play the next item. For Signage Playlist installations, select `Installation Trigger`, it has built-in logic to detect the end of playback. For other installations, select `Duration`, and specify the length of time in milliseconds you want to show the specified installation on the signage.
+
+The Signage Playlist handles caching, and auto-updates itself when at least one of its nested installations has a new deployed build.
+
 After you've configured your Screen Application, you can press the `Save all changes` button on the right of the screen.
+
 ## Publishing to device
 Now that you have content in your playlist you can publish the playlist to your Signage Playlist device. If you don't have a device attached to your installation, do so now. 
 

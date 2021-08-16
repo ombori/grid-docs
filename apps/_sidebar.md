@@ -7,3 +7,4 @@
 * [**Queue**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
   * [Queue Settings Reference](/apps/queue/settings.md)
+  * [Curbside Pickup](/apps/queue/curbside-pickup.md)

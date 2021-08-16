@@ -77,12 +77,6 @@ When enabling e-mail notifications you can configure a couple fields
 
 ![](/assets/email-notifications.png ":size=400")
 
-
-## Feedback Survey
-This feature allows you to poll your customers for ratings. You can customize 2 messages that will be displayed to the user.
-
-![](/assets/feedback-survey.png ":size=500 :no-zoom")
-
 ## SMS Notification Customization
 There are a lot of messages and notifications you can send to your users. You can find out about what each field means in our [documentation](https://ombori.atlassian.net/wiki/spaces/OAKB/pages/214761693/Curbside+Text+Communication+Customization).
 
@@ -90,7 +84,6 @@ There are a lot of messages and notifications you can send to your users. You ca
 If this is configured then the entered e-mail addresses will receive notifications in Microsoft Teams if they have an account there.
 
 ![](/assets/teams-integration.png ":size=500 :no-zoom")
-
 
 ## Customizing the design
 To customize the design of the screens involved in the curbside pickup, you can make a few changes.

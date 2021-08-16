@@ -36,7 +36,7 @@ This allows you to configure opening hours and capacity separately from the open
 
 As you can see in the image above we've configured to enable it on Monday only, and then also a custom capacity. This separate capacity field overrides the `Timeslot capacity` for the timeframe only.
 
-## Logging Method
+## Log-in Method
 To get into the admin panel you can configure how to access it. By default PIN-based login is enabled, and a random pin was generated when curbside-pickup was installed. 
 
 However, you can also opt-in to use email based login, this is based on the available users added in your console. This way authentication is already handled.

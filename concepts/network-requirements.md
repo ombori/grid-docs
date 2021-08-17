@@ -30,6 +30,7 @@ Unless otherwise specified, all domains are using port `443`.
 | browser-connect.azurewebsites.net                    | Device Provisioning Service |
 | qr.run                                               | URL Shortener Service       |
 | os.omborigrid.com                                    | GridOS Updates              |
+| installations-service.omborigrid.com                 | Grid Installations Service  |
 
 ### Virtual Queues
 For virtual queues we have a specific set of domains.

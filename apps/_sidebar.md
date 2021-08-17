@@ -6,4 +6,4 @@
   * [Using Triggers](/apps/signage/using-triggers.md)
 * [**Queue**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
-  * [Curbside Pickup](/apps/queue/curbside-pickup.md)
+  * [Order Pickup](/apps/queue/order-pickup.md)

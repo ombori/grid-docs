@@ -3,7 +3,7 @@ Setting up a queue is very easy using the Marketplace. Find the Queue Management
 
 ![](/assets/queue-app-marketplace.png ":no-zoom :size=400")
 
-On the Queue Management page, you'll see an installation section with several options. But to get the queue up-and-running you'll only need the first one (`Queue Management`).
+On the Queue Management page, you'll see an installation section with several options. But to get the queue up and running you'll only need the first one (`Queue Management`).
 
 ![](/assets/queue-app-install.png ":no-zoom :size=400")
 
@@ -20,26 +20,26 @@ As you can see in the screenshot above, everything is already up and running and
 
 ![](/assets/queue-sidebar.png ":no-zoom :size=400").
 
-However, you might notice there's a pincode required to enter. This pincode has been randomly generated with the creation of the queue, you can find this pincode in the console inside the queue you generated. Enter this pincode and proceed.
+However, you might notice there's a Pincode required to enter. This Pincode has been randomly generated with the creation of the queue, you can find this Pincode in the console inside the queue you generated. Enter this Pincode and proceed.
 
-Once you're in, all you need to do is open the queue, and people can start making tickets. For this you need to press the gear-icon on the top right, and then flip the toggle next to `Queue is closed`. 
+Once you're in, all you need to do is open the queue, and people can start making tickets. For this, you need to press the gear icon on the top right, and then flip the toggle next to `Queue is closed`. 
 
 ![](/assets/queue-opened.png ":no-zoom :size=400").
 
 ## Customizing Queue Management
-You can customize queue management in the console, there are many options including pre-booked tickets, capacity, labels and more. To learn more about this refer to our guides for it.
+You can customize queue management in the console, there are many options including pre-booked tickets, capacity, labels, and more. To learn more about this refer to our guides for it.
 
-?> As of now, the guides are still to be written, but if you want more information please ask on Slack and we can help you out and point you to further information.
+?> As of now, the guides are still to be written, but if you want more information please ask on [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg) and we can help you out and point you to further information.
 
 ## Letting people generate tickets.
 
-By default there's a QR code generated to be used for people to scan. You can access this QR code on the right-hand-side in the console when in the queue setup screen. This QR code can be printed or put on a display so people can scan it with their phones.
+By default, there's a QR code generated to be used for people to scan. You can access this QR code on the right-hand side in the console when in the queue setup screen. This QR code can be printed or put on a display so people can scan it with their phones.
 
 ![](/assets/queue-sidebar.png ":no-zoom :size=400").
 
 Another way of generating tickets is by also installing a queue kiosk. This can connect to a printer and print tickets for your customers. You can find the queue kiosk inside the Queue Management Marketplace page.
 
 ## Adding Queue Ticket Signage
-Next to the queue kiosk there's also Queue Ticket Signage. This can also be found in the Queue Management Marketplace page.
+Next to the queue kiosk, there's also Queue Ticket Signage. This can also be found on the Queue Management Marketplace page.
 
-?> Want to learn more about integrating signage? The documentation for this is still being written, but you can ask in Slack!
+?> Want to learn more about integrating signage? The documentation for this is still being written, but you can ask in [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg)!

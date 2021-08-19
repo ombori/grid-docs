@@ -6,5 +6,5 @@
   * [Using Triggers](/apps/signage/using-triggers.md)
 * [**Queue Management**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
-  * [Queue Settings Reference](/apps/queue/settings.md)
+  * [Order Pickup](/apps/queue/order-pickup.md)
   * [Releasenotes](/apps/queue/releasenotes/)

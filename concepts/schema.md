@@ -1,5 +1,5 @@
 # Settings Schema
-Apps have a settings schema you can use to let people configure the apps they install. This is applicable for both IoT and Screen applications, but also applies to modules.
+Apps have a settings schema you can use to let people configure the apps they install. This is applicable for both IoT and Screen applications but also applies to modules.
 
 
 ## Default Schema
@@ -17,7 +17,7 @@ export type Settings = {
 ```
 
 ## Schema Structure
-There are 3 relevant lines in the schema, let's explain them all.
+There are 3 relevant lines in the schema Let's explain them all.
 
 **Title**
 
@@ -50,7 +50,7 @@ Supported variable types are
 - array - *an array of defineable objects*
 
 ## Array definition
-To define an array, you can't simply put in `array` as type, but you need to specify your definition. For example, if you want an array with object with string input, then you need to define this as an input field like this.
+To define an array, you can't simply put in `array` as type, but you need to specify your definition. For example, if you want an array with an object with string input, then you need to define this as an input field like this.
 
 ```javascript
 type MyCustomObject = {
@@ -74,7 +74,7 @@ export type Schema = {
 ```
 
 ## Optional Settings
-By default all fields you've defined in the settings are mandatory, if you want to make them optional you need to add a `?` to the variable definition.
+By default, all fields you've defined in the settings are mandatory If you want to make them optional, you need to add a `?` to the variable definition.
 
 ```javascript
   testSetting?: string;

@@ -1,5 +1,5 @@
 # Hardware requirements
-Ombori Grid is very flexible in terms of hardware, however we have some minimum requirements for each hardware type. If you have any questions if certain hardware is supported in your specific case please contact us on Slack.
+Ombori Grid is very flexible in terms of hardware, however we have some minimum requirements for each hardware type. If you have any questions if certain hardware is supported in your specific case please contact us on [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg).
 
 Keep in mind all these specifications are minimum specifications, anything above would work as well.
 
@@ -14,7 +14,7 @@ Supported application types: Screen App, IoT App
 - 10GB disk space
 - 4GB RAM
 
-Example devices: Intel NUC, Intel Compute Stick, Surface Go, Surface Pro and many more.
+Example devices: Intel NUC, Intel Compute Stick, Surface Go, Surface Pro, and many more.
 
 ## Raspberry Pi
 Raspberry Pi 4 is supported by Ombori Grid and GridOS.
@@ -26,7 +26,7 @@ Supported application types: Screen App, IoT App
 - SD Card A2. Read Speed > 150MB/s. Write Speed > 60MB/s
 - Heatsink case with fans
 
-Heatsink is not strictly required, but recommended. Depending on what will be running on RPI, the hardware can potentially get hot.
+A heatsink is not strictly required, but recommended. Depending on what will be running on RPI, the hardware can potentially get hot.
 
 ## Samsung Smart Signage Display
 The Samsung Smart Signage displays allow you to run Screen Apps, like Signage Playlist.
@@ -50,7 +50,7 @@ Supported application types: Screen App
 - CPU - details coming soon
 
 ## Android TVBox
-Android TVBox is capable of running app on any screen you have on stock.
+Android TVBox is capable of running apps on any screen you have in stock.
 
 Supported application types: Screen App
 

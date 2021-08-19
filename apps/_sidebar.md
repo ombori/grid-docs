@@ -4,6 +4,7 @@
   * [Setting up](/apps/signage/setting-up.md)
   * [Adding Content](/apps/signage/adding-content.md)
   * [Using Triggers](/apps/signage/using-triggers.md)
-* [**Queue**](/apps/queue/)
+* [**Queue Management**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
   * [Queue Settings Reference](/apps/queue/settings.md)
+  * [Releasenotes](/apps/queue/releasenotes/)

@@ -15,7 +15,7 @@ This page contains all the information on the CLI and it's components. If you wa
 ## Generic commands
 Some commands that are useful for using the CLI itself
 
-#### Help command
+### Help command
 
 The help command explains how to use the CLI, can be useful for a quick reference. 
 ```bash
@@ -30,7 +30,7 @@ omg module -h
 omg app -h
 ```
 
-#### Checking version
+### Checking version
 
 To check the version of the CLI, initiate the version call
 ```bash
@@ -46,7 +46,7 @@ The following commands are available on the `dev CLI`. They're all explained in 
 | -------- | ------------------------------------------------- |
 | list     | List devices                                      |
 | modules  | List modules running on device                    |
-| logs     | Show logs for module running on device            |
+| logs     | Show logs for a module running on a device        |
 | invoke   | Execute a method on a module                      |
 | settings | Show and alter module settings                    |
 | deploy   | deploy configuration to device                    |
@@ -57,12 +57,12 @@ The following commands are available on the `dev CLI`. They're all explained in 
 | vnc      | Open a VNC session to the device                  |
 | rdp      | Open an RDP session to the device                 |
 | debug    | Open debugger session to a screen app on a device |
-| forward  | Access an url from device's local network         |
-| move     | Move device to a different organisation           |
+| forward  | Access an URL from the device's local network     |
+| move     | Move device to a different organization           |
 
 > All these commands can be triggered using `omg dev [command]`
 
-#### List Devices
+### List Devices
 To retrieve the list of devices accessible for your token. This command will return the device name plus serial number.
 
 ```bash
@@ -82,12 +82,33 @@ omg dev list [searchstring]
 omg dev list -l [searchstring]
 ```
 > Replace `[searchstring]` with whatever you want to filter on.
-#### List Modules on Device
+### List Modules on Device
 You can list all installed modules on a device using this command. This command will return a very extensive list of information from your device.
 ```bash
 omg dev modules <device-name>
 ```
 > You should replace `<device-name>` with the name of the device you can find using `omg dev list`.
+
+### Show logs for a module running on a device
+To show the logs for a module on a device, use this command
+
+```bash
+omg dev logs [device-name] [module-name]
+```
+
+?> Replace `[device-name]` with the name of the device you want to read the logs from
+<br />Replace `[module-name]` with the name of the module on the device you want to read the logs from
+
+Furthermore, there are several options you can add to this command
+
+| Option             | Description                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| `-n --lines [#]`   | The number of lines to display, replace `[#]` with the number you want                          |
+| `--filter [query]` | Filter bases on your search query, where `[query]` needs to be replaced with your search string |
+| `-t --timestamps`  | Display timestamps with the logs                                                                |
+| `-f --follow`      | Follow the logs, will stream logs continuously                                                  |
+
+### Invoke methods on a device
 
 ## Applications
 This subsection is dedicated to app development and management, and is nested under `omg app`.
@@ -105,7 +126,7 @@ There are several functions available in the app subsection of the CLI.
 | list               | List all apps                                             |
 
 > All these commands can be triggered using `omg app [command]`
-#### Create
+### Create
 To create an application you need to run the create command with the name of the application you want to create.
 
 ```bash
@@ -115,7 +136,7 @@ omg app create [app-name]
 
 To see a guided-through guide to create an app check out [Building your first app](/app-development/building-your-first-app)
 
-#### Publish
+### Publish
 To publish an app, make sure you have configured it correctly. Check the [Building your first app](/app-development/building-your-first-app) guide if you don't know how. 
 
 Once you've configured your app, you are ready to publish. Run the publish command
@@ -158,7 +179,7 @@ omg module list [search-string]
 
 `[search-string]` is an optional filter for finding a specific module, if omitted all modules will be printed.
 
-#### Versions
+### Versions
 The versions command will list all versions of a specific module.
 
 ```
@@ -166,7 +187,7 @@ omg module versions [module-slug]
 ```
 > Replace `[module-slug]` with the slug of the module. This is `name` in the `package.json` of your module, or can be found using `omg module list`.
 
-#### Create :id=module-create
+### Create :id=module-create
 The `create` command will create a module. 
 ```bash
 omg module create [module-name]
@@ -175,13 +196,13 @@ omg module create [module-name]
 
 For an in-depth guide of module creation check [Build your first module](/iot-development/creating-your-first-iot-app.md).
 
-#### Build :id=module-build
+### Build :id=module-build
 The `build` command will build your module
 ```bash
 omg module build
 ```
 
-#### Deploy :id=module-deploy
+### Deploy :id=module-deploy
 The `deploy` command will direct-deploy a module to a device. This is only possible if said module is already running on the device.
 
 ```bash
@@ -191,7 +212,7 @@ omg module deploy [device-name] [-w]
 
 `-w` is optional, it will allow you to watch your local code, and automatically redeploy to your device as soon as you changed a file in your module. This is incredibly useful while developing the module and you have direct access to your device.
 
-#### Publish :id=module-publish
+### Publish :id=module-publish
 The `publish` command published an already built module to the Ombori Grid. Keep in mind you need to increment your version every time you run this command as the version build will exist in the grid. 
 ```bash
 omg module publish
@@ -199,15 +220,15 @@ omg module publish
 
 Check the [Build your first module](/iot-development/creating-your-first-iot-app.md) guide for more information.
 
-#### Delete
+### Delete
 The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.
 ## Organisation
 This subsection is placed under the `omg org` CLI, and currently only has one function, to list the organisations you're part of. 
-#### List organisations
+### List organisations
 ```bash
 omg org list
 ```
-This will return a list of organisations you're part of, plus the organisation slug you need to use to configure modules and apps.
+This will return a list of organizations you're part of, plus the organisation slug you need to use to configure modules and apps.
 
 If you want to filter the list, there is a optional parameter you can pass along that will filter it for you.
 

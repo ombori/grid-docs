@@ -1,10 +1,10 @@
 # CLI Reference
 
-To develop on the Ombori Ecosystem you will need to install the Ombori `omg` CLI. You can find information about setup in the [CLI setup](cli/setup.md) page.
+To develop on the Ombori Ecosystem you will need to install the Ombori `omg` CLI. You can find information about setup on the [CLI setup](cli/setup.md) page.
 
-This page contains all the information on the CLI and it's components. If you want more in-depth information you will have to check out the guides.
+This page contains all the information on the CLI and its components. If you want more in-depth information you will have to check out the guides.
 
-!> **Under Construction** - This page is stil evolving and doesn't contain all items. If you need a CLI command not listed use the `-h` command on the CLI.
+!> **Under Construction** - This page is still evolving and doesn't contain all items. If you need a CLI command not listed use the `-h` command on the CLI.
 
 - [Generic commands](#generic-commands)
 - [Developer](#developer)
@@ -39,7 +39,7 @@ omg -V
 ### Update CLI
 To get the latest CLI version, run `omg update`. This will automatically check if you have the latest version, and if not, download the newest version and install potential new dependencies for you. 
 ## Developer
-Within the Ombori CLI there's a `dev` subsection. This can be used to work with and debug devices. 
+Within the Ombori CLI, there's a `dev` subsection. This can be used to work with and debug devices. 
 
 The following commands are available on the `dev CLI`. They're all explained in their own subsection below.
 
@@ -47,10 +47,10 @@ The following commands are available on the `dev CLI`. They're all explained in 
 | -------- | ------------------------------------------------- |
 | list     | List devices                                      |
 | modules  | List modules running on device                    |
-| logs     | Show logs for module running on device            |
+| logs     | Show logs for a module running on device          |
 | invoke   | Execute a method on a module                      |
 | settings | Show and alter module settings                    |
-| deploy   | deploy configuration to device                    |
+| deploy   | deploy the configuration to device                |
 | pub      | Publish an event to the event bus                 |
 | sub      | Retrieve recent events from the event bus         |
 | ws       | Proxy message bus via local web socket            |
@@ -58,8 +58,8 @@ The following commands are available on the `dev CLI`. They're all explained in 
 | vnc      | Open a VNC session to the device                  |
 | rdp      | Open an RDP session to the device                 |
 | debug    | Open debugger session to a screen app on a device |
-| forward  | Access an url from device's local network         |
-| move     | Move device to a different organisation           |
+| forward  | Access an URL from the device's local network     |
+| move     | Move device to a different organization           |
 
 > All these commands can be triggered using `omg dev [command]`
 
@@ -204,7 +204,7 @@ Check the [Build your first module](/iot-development/creating-your-first-iot-app
 The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.
 ## Organisation
 This subsection is placed under the `omg org` CLI, and currently only has one function, to list the organizations you're part of. 
-### List organisations
+### List organizations
 ```bash
 omg org list
 ```

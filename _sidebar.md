@@ -1,3 +1,6 @@
+
+  * [Get Started](/getting-started)
+
 * **Screen App Development**
   * [Building your first Screen App](/app-development/building-your-first-screen-app.md)
   * [Communicate with your app](/app-development/communication.md)

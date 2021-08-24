@@ -79,7 +79,7 @@ If you have an interactive screen where the input is "not touch", but control is
 - Screen Application that displays information and can listen to events
 - IoT App that parses events coming from mobile phone(s) and transmits events to the screen
 
-The IoT app could be on the same device as the screen, but can also be on a different device. The event bus can handle multi-device just as easily as single device.
+The IoT app could be on the same device as the screen, but can also be on a different device. The event bus can handle multi-device just as easily as a single device.
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 
 Welcome to the Ombori Documentation, all you need to know about working with the Ombori Grid and related tooling can be found here. 
 
-!> This documentation is still a work in progress and will not contain all information. If you need specific documentation please contact us directly.
+?> If there are any unclarities in the documentation or if you want to know more about a specific subject, please ask in our [Slack Channel](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg).
 
 ## The Ombori Grid
 The Ombori Grid allows any developer to integrate hardware, manage deployments and build amazing infrastructure in physical spaces. You can build a screen that responds to sensors, control hardware based on user interaction, respond to users' requests, and much much more. 

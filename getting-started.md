@@ -87,5 +87,4 @@ You should now have a general understanding of what each app can do, but of cour
 
 - [Building a screen-app](/app-development/building-your-first-screen-app)
 - [Building an IoT App](/iot-development/creating-your-first-iot-app.md)
-- Building a mobile app (coming soon)
 - [Events from Apps](/iot-development/communication)

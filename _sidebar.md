@@ -11,15 +11,17 @@
   * [Remote Method and Event Calls](/iot-development/remote-events.md)
   * [Direct-deploy and Debug](/iot-development/direct-deploy-debug.md)
   * [Set up Docker Image Registry](/iot-development/setup-docker-image-registry.md)
-* **CLI**
-  * [CLI Setup](cli/setup.md)
-  * [CLI Reference](/cli/reference.md)
 * **Concepts**
   * [Settings Schema](/concepts/schema.md)
   * [Adding a device](/concepts/adding-device.md)
   * [Hardware requirements](/concepts/hardware-requirements.md)
   * [Network Requirements](/concepts/network-requirements.md)
-* **Apps**
+* **CLI**
+  * [CLI Setup](cli/setup.md)
+  * [CLI Reference](/cli/reference.md)
+* **GridOS**
+  * [Releasenotes](/gridos/releasenotes/)
+* **Marketplace Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
   * [Queue](/apps/queue/setting-up)

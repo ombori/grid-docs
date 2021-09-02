@@ -4,7 +4,7 @@ Ombori Grid is very flexible in terms of hardware, however we have some minimum 
 Keep in mind all these specifications are minimum specifications, anything above would work as well.
 
 ## Intel
-Wide variety of Intel CPU based devices are supported by Ombori Grid and GridOS. When [adding the device](/concepts/adding-device/) just make sure to follow the Intel (NUC) installation guide.
+A wide variety of Intel CPU-based devices are supported by Ombori Grid and GridOS. When [adding the device](/concepts/adding-device/) just make sure to follow the Intel (NUC) installation guide.
 
 Supported application types: Screen App, IoT App
 
@@ -44,11 +44,8 @@ Supported application types: Screen App
 
 **Minimum requirements**
 
-- 32GB disk space
-- 3GB RAM
-- Android - details coming soon
-- CPU - details coming soon
-
+- 8GB disk space
+- 2GB RAM
 ## Android TVBox
 Android TVBox is capable of running apps on any screen you have in stock.
 
@@ -58,5 +55,3 @@ Supported application types: Screen App
 
 - 8GB disk space
 - 2GB RAM
-- CPU - details coming soon
-- GPU - details coming soon

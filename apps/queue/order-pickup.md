@@ -2,7 +2,7 @@
 
 Curbside pickup is a solution that allows your customers to book a slot. You will need to send your customers a unique link to book the slot, which you can read about in our [Vender Integration Documentation](https://ombori.atlassian.net/wiki/spaces/OAKB/pages/536346625/Curbside+pickup+Vendor+integration).
 
-To install "Curbside Pickup", visit the Ombori Grid Marketplace in the console and find the "Order Pickup" Application.
+To install Order Pickup, visit the [Ombori Grid Marketplace in the console](https://console.omborigrid.com/) and find the "Order Pickup" Application.
 
 ## How to use order-pickup.
 We've documented the administrator and customer user journeys to our documentation. Read more about how to use it there.

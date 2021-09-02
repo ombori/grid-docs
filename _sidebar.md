@@ -1,5 +1,5 @@
 
-  * [Get Started](/getting-started)
+* [Getting Started](/getting-started)
 
 * **Screen App Development**
   * [Building your first Screen App](/app-development/building-your-first-screen-app.md)
@@ -22,4 +22,6 @@
 * **Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
-  * [Queue](/apps/queue/setting-up)
+  * [Queue Management](/apps/queue/setting-up)
+
+* [Go to the console](https://console.omborigrid.com/)

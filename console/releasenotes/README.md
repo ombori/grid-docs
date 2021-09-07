@@ -1,4 +1,4 @@
-# Console Releasenotes
+# Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequently. This page contains all the console changes that were deployed in production recently.
 
 ## 20210907-A

@@ -9,10 +9,10 @@ To create a new IoT app there are a few prerequisites.
 
 * NodeJS and NPM - install latest LTS
 * Yarn - run `[sudo] npm i -g yarn` if it is not already installed
-* Ombori CLI - [Check installation guide](/cli/setup.md)
+* Ombori CLI - [Check installation guide](/cli/setup)
 * Git
 * Docker
-* Docker Image Registry - [Setup Guide](/iot-development/setup-docker-image-registry.md)
+* Docker Image Registry - [Setup Guide](/iot-development/setup-docker-image-registry)
 
 ## Creating your first IoT App
 To create an IoT App, run the following command.
@@ -49,12 +49,12 @@ The description of the IoT app is the visible part in the console. You want this
 ## Code Structure
 The code structure of the IoT app is a basic NodeJS application, you can see the relevant source in the `src` directory. There's 2 files by default, `app.ts` and `schema.ts`. The Settings Schema file is for configuration purposes which we also discussed in the Screen App Development guide. But more importantly is the `app.ts` file that contains your basic application.
 
-> Read more about [Settings Schema](/concepts/schema.md)
+> Read more about [Settings Schema](/concepts/schema)
 ### App.ts
 By default the `app.ts` file contains some sample code how to communicate with different apps on the same instalation. You can read about communication more in-depth in our dedeicated guides.
 
 - [Communication with an IoT App](/iot-development/communication)
-- [Communicate with your Screen app](/app-development/communication)
+- [Communicate with your Screen app](/screenapp-development/communication)
 
 Your app file is the start of your NodeJS application, just like any NodeJS application you've worked on in the past and there's not much more to it besides our internals like communication.
 
@@ -112,7 +112,7 @@ yarn deploy [device-name]
 
 This will direct-deploy a new version of the module, bypassing the grid. Keep in mind this will not register a new version in the grid, and any changes pushed to the device will not be permanent as a redeploy from the grid will override any manual versions. However, this is a great way to test the module you're working on.
 
-To make this process even smoother, check out [auto direct-deploy](/iot-development/direct-deploy-debug.md).
+To make this process even smoother, check out [auto direct-deploy](/iot-development/direct-deploy-debug).
 
 ## Understand the yarn commands
-To understand what the different `yarn` commands do we've used, you can check `package.json` to see what the commands actually triggered. These commands are mostly a short and easy reference to the `omg` CLI, for which any more information you can find in the [CLI Reference](/cli/reference.md).
+To understand what the different `yarn` commands do we've used, you can check `package.json` to see what the commands actually triggered. These commands are mostly a short and easy reference to the `omg` CLI, for which any more information you can find in the [CLI Reference](/cli/reference).

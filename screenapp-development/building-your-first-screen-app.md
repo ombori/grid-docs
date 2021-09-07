@@ -6,7 +6,7 @@ To build an app for your device connected to the Ombori system there are a few p
 
 * NodeJS and NPM - install latest LTS
 * Yarn - run `[sudo] npm i -g yarn` if it is not already installed
-* Ombori CLI - [Check installation guide](/cli/setup.md)
+* Ombori CLI - [Check installation guide](/cli/setup)
 * Git
 
 ## Creating the app
@@ -54,7 +54,7 @@ Open `package.json` and customize the package name. This should be in the format
 To find the org-slug you're part of, use the `omg org list` command on the CLI you can read more about in the [reference](cli/reference?id=list-organisations).
 
 ### App and Developer name
-To visually display the app name and developer name correctly in the Ombori Grid, you need to change these in `DESCRIPTION.md` listed in the root of your new application.
+To visually display the app name and developer name correctly in the Ombori Grid, you need to change these in `DESCRIPTION` listed in the root of your new application.
 
 On the first two lines, you can see this
 
@@ -154,4 +154,4 @@ Under the hood, both the `build` and `pub` commands use the Ombori CLI. You can 
 #### Next steps
 Now that you know how to create and publish an application, it is important to know how to communicate with your app. 
 
-* Learn how to [Communicate with your app](/app-development/communication.md)
+* Learn how to [Communicate with your app](/app-development/communication)

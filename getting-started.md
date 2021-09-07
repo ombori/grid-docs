@@ -85,6 +85,6 @@ The IoT app could be on the same device as the screen, but can also be on a diff
 
 You should now have a general understanding of what each app can do, but of course, there are many many more use-cases than the few outlined above. So next steps would be to learn about developing the apps and learning more about how to interact with them.
 
-- [Building a screen-app](/app-development/building-your-first-screen-app)
-- [Building an IoT App](/iot-development/creating-your-first-iot-app.md)
+- [Building a screen-app](/screenapp-development/building-your-first-screen-app)
+- [Building an IoT App](/iot-development/creating-your-first-iot-app)
 - [Events from Apps](/iot-development/communication)

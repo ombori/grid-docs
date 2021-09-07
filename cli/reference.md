@@ -1,6 +1,6 @@
 # CLI Reference
 
-To develop on the Ombori Ecosystem you will need to install the Ombori `omg` CLI. You can find information about setup on the [CLI setup](cli/setup.md) page.
+To develop on the Ombori Ecosystem you will need to install the Ombori `omg` CLI. You can find information about setup on the [CLI setup](cli/setup) page.
 
 This page contains all the information on the CLI and its components. If you want more in-depth information you will have to check out the guides.
 
@@ -114,10 +114,10 @@ omg app create [app-name]
 ```
 > Replace `[app-name]` with the name of the app you want to create, it is recommended to use `kebab-case` for your name. 
 
-To see a guided-through guide to create an app check out [Building your first app](/app-development/building-your-first-app)
+To see a guided-through guide to create an app check out [Building your first app](/screenapp-development/building-your-first-app)
 
 ### Publish
-To publish an app, make sure you have configured it correctly. Check the [Building your first app](/app-development/building-your-first-app) guide if you don't know how. 
+To publish an app, make sure you have configured it correctly. Check the [Building your first app](/screenapp-development/building-your-first-app) guide if you don't know how. 
 
 Once you've configured your app, you are ready to publish. Run the publish command
 
@@ -174,7 +174,7 @@ omg module create [module-name]
 ```
 > Replace `[module-name]` with the name of the module you want to create
 
-For an in-depth guide of module creation check [Build your first module](/iot-development/creating-your-first-iot-app.md).
+For an in-depth guide of module creation check [Build your first module](/iot-development/creating-your-first-iot-app).
 
 ### Build :id=module-build
 The `build` command will build your module
@@ -198,7 +198,7 @@ The `publish` command published an already built module to the Ombori Grid. Keep
 omg module publish
 ```
 
-Check the [Build your first module](/iot-development/creating-your-first-iot-app.md) guide for more information.
+Check the [Build your first module](/iot-development/creating-your-first-iot-app) guide for more information.
 
 ### Delete
 The `delete` command removes a version of your module from the Grid. This can be useful if you uploaded a broken version of the module to the grid. This however does not remove the build from the Docker image registry, so any following publishes will still need an incremental version number. However, this does prevent anyone from installing a faulty version on their device.

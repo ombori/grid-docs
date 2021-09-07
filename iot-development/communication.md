@@ -22,4 +22,4 @@ module.publish("event.name", (data) => {});
 ```
 
 #### App Side Communication
-To understand how to send and receive messages in a screen app, check out the [Communicate with your app](/app-development/communication) guide.
+To understand how to send and receive messages in a screen app, check out the [Communicate with your app](/screenapp-development/communication) guide.

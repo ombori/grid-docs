@@ -6,7 +6,7 @@ Install [Node.JS](https://nodejs.org/en/) now, to continue. If you already have 
 
 ## Install CLI 
 
-To install the CLI, you have to download the `@ombori/ga-cli` package from NPM. This package should be installed globally.
+To install the CLI, you have to download the `@ombori/ga-clip package from NPM. This package should be installed globally.
 
 ```bash
 npm i -g @ombori/ga-cli

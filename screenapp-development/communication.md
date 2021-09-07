@@ -35,4 +35,4 @@ The data sent will be present in the data variable.
 The hook `useSubscribe` is an extension to the built-in `useEffect` in React. To read more about the extendability and configuration of `useEffect` check the [React Documentation](https://reactjs.org/docs/hooks-reference.html#useeffect)
 
 #### The Iot App's side
-To learn how to send and receive messages from the IotT's end, check the [Communicate with your IoT App](/iot-development/communication.md) documentation
+To learn how to send and receive messages from the IotT's end, check the [Communicate with your IoT App](/iot-development/communication) documentation

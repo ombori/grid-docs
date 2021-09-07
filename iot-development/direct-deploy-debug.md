@@ -4,7 +4,7 @@ When you're developing a module it can be incredbily useful to directly deploy t
 
 The Ombori CLI has some very useful commands to do exactly this, and we'll run through these in this guide.
 
-?> It is important you understand how to develop, build and publish modules at this point, if you do not, please check the [Building your first IoT App](/iot-development/creating-your-first-iot-app.md) guide.
+?> It is important you understand how to develop, build and publish modules at this point, if you do not, please check the [Building your first IoT App](/iot-development/creating-your-first-iot-app) guide.
 
 ## Auto Direct-deploy your module
 To automatically direct-deploy a module to a device, all you need to do is add the watch flag to your deploy command like so.

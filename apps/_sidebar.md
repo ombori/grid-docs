@@ -7,4 +7,4 @@
 * [**Queue Management**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up.md)
   * [Order Pickup](/apps/queue/order-pickup.md)
-  * [Releasenotes](/apps/queue/releasenotes/)
+  * [Release Notes](/apps/queue/releasenotes/)

@@ -8,11 +8,11 @@ The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequ
 - Added Developer's slack link
 
 ### Installations
-
 - Moved installation delete button
   - For queue installations, it is found in Other configurations tab
   - For screen, mobile and IoT installation types, it is found in Settings tab
 - Fixed delete and publish button styles
+
 ### Marketplace
 - Added Web Kiosk in the list of solutions
 - Added Web Kiosk price

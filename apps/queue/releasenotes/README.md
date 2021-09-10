@@ -1,8 +1,8 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
-## 2021-09-*
-On September *th 2021 we released a new minor version of the Queue Manager.
+## 2021-09-09
+On September 9th 2021 we released a new minor version of the Queue Manager.
 
 ### Changes
 - Categories: You can now set up custom labels for different categories in the Console. This will reflect in the customer registration flow (customer will have to specify category) and it will be shown in queue manager UI.
@@ -12,11 +12,6 @@ On September *th 2021 we released a new minor version of the Queue Manager.
 |                                                                                      |                                                                                                    |                                                                                 |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ![](/assets/specify-custom-categories-console-septebmer-2-week-2021.png ":size=400") | ![](/assets/specify-custom-categories-console-registrattion-septebmer-2-week-2021.png ":size=400") | ![](/assets/specify-custom-categories-QM-septebmer-2-week-2021.png ":size=400") |
-
-
-
-
-
 
 - Added `queueId` property as a piece of extra information in *Bambuser* call link
 - Improved the update-mechanism for recalculation of position in the queue and waiting time. Now for smaller queues update is almost instant.

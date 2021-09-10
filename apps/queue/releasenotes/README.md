@@ -2,8 +2,6 @@
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
 ## 2021-09-09
-On September 9th 2021 we released a new minor version of the Queue Manager.
-
 ### Changes
 - Categories: You can now set up custom labels for different categories in the Console. This will reflect in the customer registration flow (customer will have to specify category) and it will be shown in queue manager UI.
 
@@ -22,8 +20,6 @@ On September 9th 2021 we released a new minor version of the Queue Manager.
 - Fixed initials in Queue manager view. This should now be consistent after booking is assigned and serving has started.
 
 ## 2021-08-31
-On August 31th 2021 we released a new minor version of the Queue Manager, this is visible in the settings screen.
-
 ### Changes
 - Staff notifications - now we can send emails to staff when the email feature is enabled if conditions are met. For example when the waiting time is too long. 
 
@@ -47,8 +43,6 @@ No new features have been added to this release.
 - Internal stabilization.
 
 ## 2021-08-04
-On August 4th 2021 we released a new minor version of the Queue Manager, this is visible in the settings screen.
-
 ### Changes
 Added a "blocked days" feature for booking, this allows you to prevent booking within `#` amount of days. 
 

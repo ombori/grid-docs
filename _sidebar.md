@@ -23,4 +23,4 @@
 * **Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
-  * [Queue](/apps/queue/setting-up)
+  * [Queue Manager](/apps/queue/setting-up)

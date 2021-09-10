@@ -3,6 +3,9 @@ The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequ
 
 ## 2021-09-10
 
+### Devices
+- Fixed a bug in the installation's list of devices
+
 ### Developers Tab
 - Added developer's documentation link
 - Added Developer's slack link
@@ -10,7 +13,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequ
 ### Installations
 - Moved the installation delete button
   - For queue installations, it is found in `Other configurations` tab
-  - For screen, mobile, and IoT installation types, it is found in the Settings tab
+  - For screen, mobile, and IoT installation types, it is found in the `Settings` tab
 - Fixed delete and publish button styles
 
 ### Marketplace
@@ -18,6 +21,10 @@ The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequ
 - Added Web Kiosk price
 
 ![](/assets/20210910-webkiosk.png ":size=300 :no-zoom")
+
+### Billing
+- Added the list of active plans. Today, it is only available for `sysadmin` role. It will be available for `admin` role in the future releases.
+
 
 ## 2021-09-07
 

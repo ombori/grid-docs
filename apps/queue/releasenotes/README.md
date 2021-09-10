@@ -1,6 +1,31 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-09-*
+On September *th 2021 we released a new minor version of the Queue Manager.
+
+### Changes
+- Categories: You can now set up custom labels for different categories in the Console. This will reflect in the customer registration flow (customer will have to specify category) and it will be shown in queue manager UI.
+
+**How do you use it?** First, specify the categories, then add the type *Categories* in the registration flow section. You can see how it looks in the screenshots below.
+
+|                                                                                      |                                                                                                    |                                                                                 |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![](/assets/specify-custom-categories-console-septebmer-2-week-2021.png ":size=400") | ![](/assets/specify-custom-categories-console-registrattion-septebmer-2-week-2021.png ":size=400") | ![](/assets/specify-custom-categories-QM-septebmer-2-week-2021.png ":size=400") |
+
+
+
+
+
+
+- Added `queueId` property as a piece of extra information in *Bambuser* call link
+- Improved the update-mechanism for recalculation of position in the queue and waiting time. Now for smaller queues update is almost instant.
+- Added support for 12-hours and 24-hours clocks in SMS for curbside and bookings
+
+### Bugfixes
+
+- Fixed initials in Queue manager view. This should now be consistent after booking is assigned and serving has started.
+
 ## 2021-08-31
 On August 31th 2021 we released a new minor version of the Queue Manager, this is visible in the settings screen.
 

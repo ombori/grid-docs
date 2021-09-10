@@ -70,12 +70,13 @@ To retrieve the list of devices accessible for your token. This command will ret
 omg dev list
 ```
 
- Further options for the CLI. This will display more information
+ There are a few flags that can be added to the command
 
-```bash
-omg dev list -l
-omg dev list --long
-```
+ | Flag                       | Description                         |
+ | -------------------------- | ----------------------------------- |
+ | `-d` <br> `--show-deleted` | Shows deleted devices               |
+ | `-l`<br>`--long`           | Add more details to the device list |
+
 
 You can follow the command with a search string, which will filter the results. This can be very useful if you have a large amount of devices
 ```bash

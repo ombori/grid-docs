@@ -14,7 +14,8 @@
 * **CLI**
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)
-* **Concepts**
+* **General**
+  * [Console Release Notes](/console/releasenotes/)
   * [Settings Schema](/concepts/schema.md)
   * [Adding a device](/concepts/adding-device.md)
   * [Hardware requirements](/concepts/hardware-requirements.md)

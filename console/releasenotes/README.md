@@ -1,6 +1,22 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2021-09-10
+
+### Developers Tab
+- Added developer's documentation link
+- Added Developer's slack link
+
+### Installations
+
+- Moved installation delete button
+  - For queue installations, it is found in Other configurations tab
+  - For screen, mobile and IoT installation types, it is found in Settings tab
+- Fixed delete and publish button styles
+### Marketplace
+- Added Web Kiosk in the list of solutions
+- Added Web Kiosk price
+
 ## 2021-09-07
 
 ### Devices

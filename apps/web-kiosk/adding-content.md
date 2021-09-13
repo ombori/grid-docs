@@ -1,6 +1,6 @@
 # Setting up Web Kiosk contents
 
-Go to the installation's `Content` tab. A Web Kiosk installation has five main Content settings. Like any other screen installations, you can also select an app version for Web Kiosk. It is suggested to use the latest version to acquire latest fixes and features.
+Go to the installation's `Content` tab. A Web Kiosk installation has five main Content settings. Like any other screen installations, you can also select an app version for Web Kiosk. It is suggested to use the latest version to acquire the latest fixes and features.
 
 ![](/assets/web-kiosk-settings-groups.png ":no-zoom :size=400")
 

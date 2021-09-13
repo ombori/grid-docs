@@ -8,3 +8,7 @@
   * [Setting up a queue](/apps/queue/setting-up.md)
   * [Order Pickup](/apps/queue/order-pickup.md)
   * [Release Notes](/apps/queue/releasenotes/)
+* [**Web Kiosk**](/apps/web-kiosk/)
+  * [Setting up](/apps/web-kiosk/setting-up.md)
+  * [Adding Content](/apps/web-kiosk/adding-content.md)
+  * [Device Configuration](/apps/web-kiosk/device-configuration.md)

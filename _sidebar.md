@@ -24,5 +24,6 @@
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
   * [Queue Management](/apps/queue/setting-up)
+  * [Web Kiosk](/apps/web-kiosk/)
 
 * [Go to the console](https://console.omborigrid.com/)

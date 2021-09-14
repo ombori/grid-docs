@@ -31,7 +31,7 @@ Unless otherwise specified, all domains are using port `443`.
 | qr.run                                               | URL Shortener Service       |
 | os.omborigrid.com                                    | GridOS Updates              |
 | installations-service.omborigrid.com                 | Grid Installations Service  |
-| tizen.omborigrid.com                                 | Grid Tizen Supervisor     |
+| tizen.omborigrid.com                                 | Grid Tizen Supervisor       |
 
 
 ### Virtual Queues

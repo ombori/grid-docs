@@ -6,4 +6,4 @@ Go to the installation's `Content` tab. A Web Kiosk installation has five main C
 
 ## General settings
 - Barcode (Optional)
-  - this is used for the barcode support. You can find the barcodes data file format by downloading the template file from [qr.run/d/web-kiosk-barcode](https://qr.run/d/web-kiosk-barcode). You just have to specify the barcode, and its corresponding url.
+  - this is used for barcode support. You can find the barcodes data file format by downloading the template file from [qr.run/d/web-kiosk-barcode](https://qr.run/d/web-kiosk-barcode). You just have to specify the barcode and its corresponding URL.

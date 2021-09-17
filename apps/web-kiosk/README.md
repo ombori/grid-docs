@@ -2,7 +2,7 @@
 Bring online experience into the physical space.
 
 #### Setting up
-To set up a new Web Kiosk installation, check out the [setting up](/apps/web-kiosk/setting-up) guide.
+To set up a new Web Kiosk installation, check out the [Setting up a Web Kiosk](/apps/web-kiosk/setting-up) guide.
 
 #### Content
 To configure the contents of your Web Kiosk, check the [adding content](/apps/signage/adding-content.md) guide.

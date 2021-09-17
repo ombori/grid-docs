@@ -2,9 +2,6 @@
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
 ## 2021-09-20
-### Changes
-In this release we have no new features, internal improvements and bugfixes
-
 ### Bugfixes
 - Fixed a bug that iOS notifications were not working on the later steps after creating
 

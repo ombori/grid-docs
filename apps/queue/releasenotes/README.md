@@ -3,7 +3,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-09-20
 ### Bugfixes
-- Fixed a bug that iOS notifications were not working on the later steps after creating
+- Fixed a bug that iOS notifications were not working after configuring them.
 
 ## 2021-09-09
 ### Changes

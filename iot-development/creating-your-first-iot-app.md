@@ -49,7 +49,7 @@ The description of the IoT app is the visible part in the console. You want this
 ## Code Structure
 The code structure of the IoT app is a basic NodeJS application, you can see the relevant source in the `src` directory. There's 2 files by default, `app.ts` and `schema.ts`. The Settings Schema file is for configuration purposes which we also discussed in the Screen App Development guide. But more importantly is the `app.ts` file that contains your basic application.
 
-> Read more about [Settings Schema](/concepts/schema.md)
+> Read more about [Settings Schema](/general/schema.md)
 ### App.ts
 By default the `app.ts` file contains some sample code how to communicate with different apps on the same instalation. You can read about communication more in-depth in our dedeicated guides.
 

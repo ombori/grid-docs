@@ -1,7 +1,7 @@
 # Adding a device
 To add a device in the Ombori Console you need to head over to the installation you want to add a device to. You can follow any of the guides in the docs, or install any product from the Marketplace to create an installation.
 
-Make sure your hardware is supported by checking the [Hardware Requirements](/concepts/hardware-requirements.md) page.
+Make sure your hardware is supported by checking the [Hardware Requirements](/general/hardware-requirements.md) page.
 
 ## Adding a device to the console
 

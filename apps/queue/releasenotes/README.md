@@ -1,6 +1,10 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-09-20
+### Bugfixes
+- Fixed a bug that iOS notifications were not working after configuring them.
+
 ## 2021-09-09
 ### Changes
 - Categories: You can now set up custom labels for different categories in the Console. This will reflect in the customer registration flow (customer will have to specify category) and it will be shown in queue manager UI.

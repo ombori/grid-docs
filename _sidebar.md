@@ -16,10 +16,10 @@
   * [CLI Reference](/cli/reference.md)
 * **General**
   * [Console Release Notes](/console/releasenotes/)
-  * [Settings Schema](/concepts/schema.md)
-  * [Adding a device](/concepts/adding-device.md)
-  * [Hardware requirements](/concepts/hardware-requirements.md)
-  * [Network Requirements](/concepts/network-requirements.md)
+  * [Settings Schema](/general/schema.md)
+  * [Adding a device](/general/adding-device.md)
+  * [Hardware requirements](/general/hardware-requirements.md)
+  * [Network Requirements](/general/network-requirements.md)
 * **Marketplace Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)

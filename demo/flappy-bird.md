@@ -16,9 +16,9 @@ Step one for deploying the Flappy Bird game is to download the source. We have o
 Once you've cloned the source to your machine you'll notice there are 2 directories. `mobileapp` and `screenapp`. The `screenapp` directory is the game itself, adjusted to work with a remote device, deployed as a ReactJS Application. The `mobileapp` directory is a simple mobile (web-based) screen application that communicates with the game. Let's go into details about both of them.
 
 ### Screen App
-The Screen App, or the game, is built using React. If you take a look inside the `src` directory you will find all relevant conde in `App.tsx`. Let's break it down
+The Screen App, or the game, is built using React. If you take a look inside the `src` directory you will find all relevant code in `App.tsx`. Let's break it down
 
-First, we're using several hooks from the Ombori Grid Platform
+First, we're using several hooks from the Grid Platform
 
 ```javascript
 import { useSettings } from '@ombori/ga-settings';
@@ -33,7 +33,7 @@ import { useHeartbeat, useSubscribe, useMobileRemote, usePublish } from '@ombori
 | `useMobileRemote` | Allows you to configure which mobile to remote to listen to                                                                  |
 | `usePublish`      | Allows you to publish events to the Ombori Event Bus                                                                         |
 
-The next line of code is very important to, we import several functionalities from the game itself, so we can interact with it directly.
+The next line of code is very important too, as we import several functionalities from the game itself, so we can interact with it directly.
 
 ```javascript
 import { Game, useFlap, useGameOver, useGameStarted } from './game';
@@ -110,6 +110,8 @@ And that really is all there is to this implementation.
 ## Installing
 Now that we're understanding how the game works, let's install it on Ombori Grid.
 
+### Installing the Screen Application
+
 ?> If you haven't yet signed up for an account on Ombori Grid, create a free account now [via our website](https://omborigrid.com).
 
 - Install the CLI and authenticate yourself. Follow [the installation guide](/cli/setup) to find out how to.
@@ -118,3 +120,24 @@ Now that we're understanding how the game works, let's install it on Ombori Grid
 
 Replace `my-org` in the application name with the slug of your tenant within the console. The slug is a lowercase version of the name of your tenant, with dashes (`-`) instead of spaces. If you don't know the exact slug you can always use the CLI to find it using the command `omg org list`. 
 
+- Run `yarn` in the `screenapp` directory to fetch all dependencies.
+- Everything should be installed correctly now, run `yarn start` to start the application in the browser. If you see the game it works!
+- Build and publish the app in your private app store using `yarn build && yarn pub`
+
+?> If this isn't your first upload of the app, add `npm version patch &&` in front of the command or alter the version manually in `package.json`.
+
+If you were authenticated correctly, and the version does not match any version in your organisation by now you should have the application listed in "Your Apps" within the marketplace. Check [the console](https://console.omborigrid.com) now to see if it is listed there. 
+
+Head over to the Marketplace, and then switch to "Your Apps" on top of the screen. Click on the install button, enter a name and then proceed. You will now have a functioning `screenapp` application.
+
+### Installing the Mobile Application
+
+Next we're going to do the same for the mobile app. 
+- Step into the `mobileapp` directory
+- Change the name of the `mobileapp` installation following the same instructions as before (put in the slug of your tenant into the name). 
+- Run `yarn` in the `mobileapp` directory to install dependencies
+- Run `yarn start` to test if it works, you should see a screen that says `Connecting...`.
+- Publish the mobile app to your private apps using `yarn build && yarn pub`
+- Install the mobile app from "Your Apps" in the marketplace in [the console](https://console.omborigrid.com).
+
+Now you have both the remote and the screen application installed in the console, it is time to go to the next stepp

@@ -24,5 +24,7 @@
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
   * [Queue Management](/apps/queue/setting-up)
+* **Demo**
+  * [Flappy Bird Remote](/demo/flappy-bird)
 
 * [Go to the console](https://console.omborigrid.com/)

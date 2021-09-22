@@ -1,4 +1,4 @@
-# Flappy Bird Demo
+# Flappy Bird With Mobile Remote
 The Flappy Bird demo implementation we have set up for you has several features.
 
 - Flappy Bird game running as a screen application

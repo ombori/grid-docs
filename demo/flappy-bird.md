@@ -29,9 +29,9 @@ import { useHeartbeat, useSubscribe, useMobileRemote, usePublish } from '@ombori
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `useSettings`     | Allows us to import configuration from the Ombori Console.                                                                   |
 | `useHeartbeat`    | Manages uptime/downtime indicator in the Ombori Console, this is not technically relevant to this demo but important to have |
-| `useSubscribe`    | Allows you to subscribe to events on the Ombori Event Bus                                                                    |
-| `useMobileRemote` | Allows you to configure which mobile to remote to listen to                                                                  |
-| `usePublish`      | Allows you to publish events to the Ombori Event Bus                                                                         |
+| `useSubscribe`    | Allows you to subscribe to events on the Grid Event Bus                                                                      |
+| `useMobileRemote` | Allows you to select an app that will be used as a mobile remote                                                             |
+| `usePublish`      | Allows you to publish events to the Grid Event Bus                                                                           |
 
 The next line of code is very important too, as we import several functionalities from the game itself, so we can interact with it directly.
 
@@ -71,10 +71,10 @@ useGameStarted(() => pub('remote/Game.started', {}), [pub]);
 useGameOver(() => pub('remote/Game.over', {}), [pub]);
 ```
 
-Then based on the game action, we're sending an event to the Ombori Event Bus, so any remote knows the game has either started or ended. 
+Then based on the game action, we're sending an event to the Grid Event Bus, so any remote knows the game has either started or ended. 
 
 <hr>
-And that really is all there is to configuring the game to be able to communicate over an event bus.
+And that is all there is to configuring the game to be able to communicate over the Grid Event Bus.
 
 ### Mobile App
 Now let's have a look at the mobile app, the important factor in connecting to the game to be able to play it. This code is very simple as it is only responsible for sending "flaps" over to the game, and displaying the gameover state.
@@ -95,7 +95,7 @@ These 2 lines subscribe to the events we discussed in the game screen, they basi
 ```
 And then there's this line of code that listens to any touch/click input on the entire container, and then triggers the `flap` function when that happens.
 
-The Flap function is defined on top of the file, and publishes the flap event on the event bus, which looks like this
+The Flap function is defined on top of the file, and publishes the flap event on the Grid Event Bus, which looks like this
 
 ```javascript
   const flap = useCallback(() => {
@@ -132,7 +132,8 @@ Head over to the Marketplace, and then switch to "Your Apps" on top of the scree
 
 ### Installing the Mobile Application
 
-Next we're going to do the same for the mobile app. 
+Next we're going to do the same for the mobile app. The instructions for this are identical to the screen application, but this is the order you need to perform the task.
+
 - Step into the `mobileapp` directory
 - Change the name of the `mobileapp` installation following the same instructions as before (put in the slug of your tenant into the name). 
 - Run `yarn` in the `mobileapp` directory to install dependencies
@@ -140,4 +141,23 @@ Next we're going to do the same for the mobile app.
 - Publish the mobile app to your private apps using `yarn build && yarn pub`
 - Install the mobile app from "Your Apps" in the marketplace in [the console](https://console.omborigrid.com).
 
-Now you have both the remote and the screen application installed in the console, it is time to go to the next stepp
+
+### Connecting the Mobile and Screen applications
+Now you have both the remote and the screen application installed in the console, it is time to go to the next step: Connecting them together.
+
+This process is actually really easy.
+
+- Open the `mobile app` installation in the console
+- Switch to the `mobile endpoints` tab
+- Copy the URL of the created endpoint, or create a new endpoint if one does not exist and then copy the URL
+- Open the `screen app` installation in the console
+- Go to the `content` tab
+- Paste the URL in the `mobile endpoint` field
+- Press `Save All Changes` on the right-hand-side
+- Press `Publish` on the right-hand-side
+- Wait until the build is done (you can see progress in the `builds` tab)
+- Press the blue `app` box to open the application, or connect a device through the devices tab. 
+
+?> To Connect a device and install the application on it, follow the [Adding Device](/general/adding-device.md) guide.
+
+When the application opens, you should be able to scan the QR code with your phone, and play Flappy Bird!

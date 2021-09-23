@@ -41,12 +41,12 @@ import { Game, useFlap, useGameOver, useGameStarted } from './game';
 
 | Function         | Description                                   |
 | ---------------- | --------------------------------------------- |
-| `Game`           | The actual game UI elememt                    |
+| `Game`           | The actual game UI element                    |
 | `useFlap`        | Ability to trigger a "Flap" from the bird"    |
 | `useGameOver`    | Ability to identify when the game is over     |
 | `useGameStarted` | Ability to identify when the game has started |
 
-From there we're defining the UI and functionality. We'll skip over lines that should speak for itself, especially if you have experience with ReactJS.
+From there we're defining the UI and functionality. We'll skip over lines that should speak for themselves, especially if you have experience with ReactJS.
 
 The next important line is the ability to identify if a remote has been connected. Let's look at these 2 lines
 
@@ -77,16 +77,16 @@ Then based on the game action, we're sending an event to the Grid Event Bus, so 
 And that is all there is to configuring the game to be able to communicate over the Grid Event Bus.
 
 ### Mobile App
-Now let's have a look at the mobile app, the important factor in connecting to the game to be able to play it. This code is very simple as it is only responsible for sending "flaps" over to the game, and displaying the gameover state.
+Now let's have a look at the mobile app, the important factor in connecting to the game to be able to play it. This code is very simple as it is only responsible for sending "flaps" over to the game and displaying the game over state.
 
-Let's have a look how this is done. Again I'm skipping most code as it should speak for itself as it is a ReactJS application. The file we're interested in is `/mobileapp/src/App.tsx`. 
+Let's have a look at how this is done. Again I'm skipping most code as it should speak for itself as it is a ReactJS application. The file we're interested in is `/mobileapp/src/App.tsx`. 
 
 ```javascript
   useSubscribe('remote/Game.over', () => setGameOver(true), [setGameOver]);
   useSubscribe('remote/Game.started', () => setGameOver(false), [setGameOver]);
 ```
 
-These 2 lines subscribe to the events we discussed in the game screen, they basically listen for gameover and game start events, and then alter the state to rerender the screen to reflect the status of the game.
+These 2 lines subscribe to the events we discussed in the game screen, they listen for game over and game start events and then alter the state to rerender the screen to reflect the status of the game.
 
 <hr>
 
@@ -95,7 +95,7 @@ These 2 lines subscribe to the events we discussed in the game screen, they basi
 ```
 And then there's this line of code that listens to any touch/click input on the entire container, and then triggers the `flap` function when that happens.
 
-The Flap function is defined on top of the file, and publishes the flap event on the Grid Event Bus, which looks like this
+The Flap function is defined on top of the file and publishes the flap event on the Grid Event Bus, which looks like this
 
 ```javascript
   const flap = useCallback(() => {
@@ -126,13 +126,13 @@ Replace `my-org` in the application name with the slug of your tenant within the
 
 ?> If this isn't your first upload of the app, add `npm version patch &&` in front of the command or alter the version manually in `package.json`.
 
-If you were authenticated correctly, and the version does not match any version in your organisation by now you should have the application listed in "Your Apps" within the marketplace. Check [the console](https://console.omborigrid.com) now to see if it is listed there. 
+If you were authenticated correctly, and the version does not match any version in your organization by now you should have the application listed in "Your Apps" within the marketplace. Check [the console](https://console.omborigrid.com) now to see if it is listed there. 
 
 Head over to the Marketplace, and then switch to "Your Apps" on top of the screen. Click on the install button, enter a name and then proceed. You will now have a functioning `screenapp` application.
 
 ### Installing the Mobile Application
 
-Next we're going to do the same for the mobile app. The instructions for this are identical to the screen application, but this is the order you need to perform the task.
+Next, we're going to do the same for the mobile app. The instructions for this are identical to the screen application, but this is the order you need to perform the task.
 
 - Step into the `mobileapp` directory
 - Change the name of the `mobileapp` installation following the same instructions as before (put in the slug of your tenant into the name). 
@@ -149,10 +149,10 @@ This process is actually really easy.
 
 - Open the `mobile app` installation in the console
 - Switch to the `mobile endpoints` tab
-- Copy the URL of the created endpoint, or create a new endpoint if one does not exist and then copy the URL
+- Make sure a mobile endpoint is configured and take note of the name.
 - Open the `screen app` installation in the console
 - Go to the `content` tab
-- Paste the URL in the `mobile endpoint` field
+- Select the mobile endpoint for the `mobile app`.
 - Press `Save All Changes` on the right-hand-side
 - Press `Publish` on the right-hand-side
 - Wait until the build is done (you can see progress in the `builds` tab)
@@ -161,3 +161,8 @@ This process is actually really easy.
 ?> To Connect a device and install the application on it, follow the [Adding Device](/general/adding-device.md) guide.
 
 When the application opens, you should be able to scan the QR code with your phone, and play Flappy Bird!
+
+### Configuring the game
+The Flappy Bird game also has 3 things that can be configured in the `content` screen of the `screenapp`. These are Gravity, Pipe Gap, and Flap Acceleration. The functionality of these 3 properties should speak for itself, so play around with your favorite combination of settings!
+
+After changing the settings, hit the `Save All Changes` button and then `Publish` to push it towards the device. After the build is done you can once again click the blue `app` box in the builds tab, or the connected device will update automatically.

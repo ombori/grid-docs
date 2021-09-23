@@ -6,6 +6,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 - Updated description for default email template
 ### Bugfixes
 - Fixed a bug that webhooks are not preserved after queue is updated and saved
+- Fixed a bug with connecting to Digital call
 
 ## 2021-09-20
 ### Bugfixes

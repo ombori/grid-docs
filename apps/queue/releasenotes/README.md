@@ -1,6 +1,12 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-09-27
+### Changes
+- Updated description for default email template
+### Bugfixes
+- Fixed a bug that webhooks are not preserved after queue is updated and saved
+
 ## 2021-09-20
 ### Bugfixes
 - Fixed a bug that iOS notifications were not working after configuring them.

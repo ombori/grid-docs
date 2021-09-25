@@ -1,4 +1,4 @@
-# Ombori Documentation
+# Ombori Grid Documentation
 
 Welcome to the Ombori Documentation, all you need to know about working with the Ombori Grid and related tooling can be found here. 
 

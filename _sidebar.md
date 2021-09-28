@@ -11,7 +11,6 @@
   * [Communication](/iot-development/communication.md)
   * [Remote Method and Event Calls](/iot-development/remote-events.md)
   * [Direct-deploy and Debug](/iot-development/direct-deploy-debug.md)
-  * [Set up Docker Image Registry](/iot-development/setup-docker-image-registry.md)
 * **CLI**
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)

@@ -17,6 +17,7 @@ Unless otherwise specified, all domains are using port `443`.
 | app.omborigrid.com                                   | Gridapp Releases            |
 | storage.googleapis.com                               | Google Workbox              |
 | media.omborigrid.com                                 | Gridapp media               |
+| iot-ca-prod.ombori.com                               | GridOS Provisioning Service |
 | browser-api.prod.omborigrid.com                      | Browser API                 |
 | omborigridregistry.azurecr.io                        | Modules Registry            |
 | tts-proxy.northeurope.cloudapp.azure.com             | TTS Service                 |

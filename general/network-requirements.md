@@ -35,8 +35,8 @@ Unless otherwise specified, all domains are using port `443`.
 | tizen.omborigrid.com                                 | Grid Tizen Supervisor       |
 
 
-### Virtual Queues
-For virtual queues we have a specific set of domains.
+### Queue Management
+For Queue Management, we have a specific set of domains.
 
 | Domain                                | Description    |
 | ------------------------------------- | -------------- |

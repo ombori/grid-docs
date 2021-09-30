@@ -1,6 +1,13 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-10-01
+#### Changes
+- Updated emails templates
+- Added time range for booking confirmation
+#### Bugfixes
+- Bambuser: Improved digital call calling logic for sounds (will stope the sound when it's picked up by another staff member)
+
 ## 2021-09-27
 #### Changes
 - Updated description for default email template

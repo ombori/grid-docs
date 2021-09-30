@@ -4,9 +4,9 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 ## 2021-09-27
 ### Changes
 - Updated description for default email template
-- Started using for waiting time range from time when ticket is created till time ticket is called to enter the location.
+- Queueing time calculation is now based on time between ticket creation and calling forward, previously it was until the ticket was checked-in instead.
 ### Bugfixes
-- Fixed a bug that webhooks are not preserved after queue is updated and saved
+- Fixed a bug that webhooks are not preserved after the queue has been updated and saved
 - Fixed a bug with connecting to Digital call
 
 ## 2021-09-20

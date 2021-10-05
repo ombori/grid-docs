@@ -33,6 +33,8 @@ Unless otherwise specified, all domains are using port `443`.
 | os.omborigrid.com                                    | GridOS Updates              |
 | installations-service.omborigrid.com                 | Grid Installations Service  |
 | tizen.omborigrid.com                                 | Grid Tizen Supervisor       |
+| omborigridregistry.westus.data.azurecr.io            | Module Repository Data (US) |
+| omborigridregistry.westeurope.data.azurecr.io        | Module Repository Data (EU) |
 
 
 ### Queue Management

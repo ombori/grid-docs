@@ -3,10 +3,10 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-10-01
 #### Changes
-- Updated emails templates
+- Updated email templates
 - Added time range for booking confirmation
 #### Bugfixes
-- Bambuser: Improved digital call calling logic for sounds (will stope the sound when it's picked up by another staff member)
+- Bambuser: Improved digital call calling logic for sounds (will stop the sound when it's picked up by another staff member)
 
 ## 2021-09-27
 #### Changes

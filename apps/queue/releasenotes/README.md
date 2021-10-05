@@ -5,6 +5,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 #### Changes
 - Updated email templates
 - Added time range for booking confirmation
+
 #### Bugfixes
 - Bambuser: Improved digital call calling logic for sounds (will stop the sound when it's picked up by another staff member)
 
@@ -12,6 +13,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 #### Changes
 - Updated description for default email template
 - Queueing time calculation for analytics is now based on time between ticket creation and calling forward, previously it was until the ticket was checked-in instead.
+
 #### Bugfixes
 - Fixed a bug that webhooks are not preserved after the queue has been updated and saved
 - Fixed a bug with connecting to Digital call

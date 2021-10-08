@@ -58,6 +58,6 @@ For Queue Management, we have a specific set of domains.
 | signalr-prod-uae.service.signalr.net  | SignalR UAE        |
 
 ### Other
-| Domain        | Description                                              |
-| ------------- | -------------------------------------------------------- |
-| google.com:80 | For displaying online/offline status in start QR screen. |
+| Domain        | Description                                             |
+| ------------- | ------------------------------------------------------- |
+| google.com:80 | For displaying online/offline status in start QR screen |

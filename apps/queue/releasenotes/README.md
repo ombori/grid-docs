@@ -1,7 +1,7 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
-## 2021-10-01
+## 2021-10-12
 #### Changes
 - Added registration information to the booking calendar. Now, staff can get booking information directly from the calendar.
 - Updated integration method for bambuser. Instead of configuration on Tenant level, it is now configured on Queue level.

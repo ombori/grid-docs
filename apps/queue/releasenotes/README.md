@@ -3,6 +3,17 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-10-01
 #### Changes
+- Added registration information to the booking calendar. Now, staff can get booking information directly from the calendar.
+- Updated integration method for bambuser. Instead of configuration on Tenant level, it is now configured on Queue level.
+- Added order number on the order pickup ticket page
+- Added customizations for SMS messages: 
+    - Ticket rejected from the Queue Manager
+    - Booking canceled by Queue Manager in the calendar
+    - Order pickup confirmation
+    - Order pickup link generated message.
+
+## 2021-10-01
+#### Changes
 - Updated email templates
 - Added time range for booking confirmation
 

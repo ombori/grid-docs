@@ -2,10 +2,9 @@
 
 You can customize the appearance of the booking page by using CSS. 
 
-Enter your custom CSS into the `“`Add brand guidelines with CSS to your customers booking UI`”` input field inside the Settings of your Queue. 
+Enter your custom CSS into the `Add brand guidelines with CSS to your customers booking UI` input field inside the Settings of your Queue. 
 
 Elements are targeted via data-theme attributes. 
-
 
 ## Available attributes
 List of available data-theme attributes and the corresponding elements. Look at examples to see how to use the properties inside css. Check the screenshots section for reference to each number

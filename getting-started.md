@@ -1,5 +1,7 @@
 # Getting started
 
+> Don't have an account yet? [Sign up now through our website](https://omborigrid.com)
+
 Welcome to the Ombori Grid. To get started with Ombori Grid App Development you need to know what components you want to develop, but first, you need to set up your own environment. 
 
 [CLI Setup](/cli/setup)

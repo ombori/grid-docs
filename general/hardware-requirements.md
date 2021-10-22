@@ -4,7 +4,7 @@ Ombori Grid is very flexible in terms of hardware, however we have some minimum 
 Keep in mind all these specifications are minimum specifications, anything above would work as well.
 
 ## Intel
-A wide variety of Intel CPU-based devices are supported by Ombori Grid and GridOS. When [adding the device](/concepts/adding-device/) just make sure to follow the Intel (NUC) installation guide.
+A wide variety of Intel CPU-based devices are supported by Ombori Grid and GridOS. When [adding the device](/general/adding-device/) just make sure to follow the Intel (NUC) installation guide.
 
 Supported application types: Screen App, IoT App
 

@@ -18,4 +18,4 @@ Click install, and fill out the popup and choose how you want it organized
 
 Now you've completed the installation, it's time to configure it. First, find your installation in the sidebar where you've installed it. 
 
-Once you've opened it you can configure your signage. You can do this by [adding content](/apps/signage/adding-content.md), or you can start by [adding a device](/concepts/adding-device.md).
+Once you've opened it you can configure your signage. You can do this by [adding content](/apps/signage/adding-content.md), or you can start by [adding a device](/general/adding-device.md).

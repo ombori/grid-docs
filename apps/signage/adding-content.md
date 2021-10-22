@@ -57,7 +57,7 @@ After you've configured your Screen Application, you can press the `Save all cha
 ## Publishing to device
 Now that you have content in your playlist you can publish the playlist to your Signage Playlist device. If you don't have a device attached to your installation, do so now. 
 
-?> To learn more about how to add a device to the Ombori grid, visit the [Add a device](/concepts/adding-device.md) documentation.
+?> To learn more about how to add a device to the Ombori grid, visit the [Add a device](/general/adding-device.md) documentation.
 
 After you've pressed `Save all changes` a new button appears, this is the `Publish` button.
 

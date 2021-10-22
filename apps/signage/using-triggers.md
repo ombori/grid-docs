@@ -2,8 +2,8 @@
 Triggers are great for dynamically adjusting the playlist based on external factors. However, there are a few rules to keep in mind for triggers.
 
 - If a trigger is true, all content will be played inside the trigger.
-- If multiple triggers are true, only the topmost trigger will play.
-- If any trigger is true, content outside a trigger will not play.
+- If multiple triggers are true, all of them will be played
+  - Unless you check the "only play first trigger" checkbox, then all other triggers AND content will be ignored.
 
 With that in mind, let's have a look at the trigger options
 

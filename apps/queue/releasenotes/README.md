@@ -1,6 +1,11 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-10-28
+#### Changes
+- Added verification by email if booking is using emails only
+- New logic for Special bookings hours: now values only from this section will be applied for specified date. Settings from regular hours or from Separate bookings hours won't be used at all.
+
 ## 2021-10-12
 #### Changes
 - Added registration information to the booking calendar. Now, staff can get booking information directly from the calendar.

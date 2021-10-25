@@ -146,7 +146,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | category  | string | Category key. Hierarchy separated by `>` symbol) | `Furniture>Bedroom` |
 
 ### [POST] Push Products
-> **[GET] {base-url}/{tenant-index}/products/push**
+> **[POST] {base-url}/{tenant-index}/products/push**
 
 Uploads or merges products listing following the GridProduct format
 
@@ -156,3 +156,6 @@ Uploads or merges products listing following the GridProduct format
 The body of the request should be an Array of [GridProducts]((/gps/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
+
+### [POST] Remove Products
+> **[POST] {base-url}/{tenant-index}/products/remove**

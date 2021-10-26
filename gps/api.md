@@ -22,7 +22,7 @@ The following endpoints are available in the API currently.
 | GET    | search                               | Searches products or category by keyword                     |
 | GET    | category/hierarchy                   | Returns category hierarchy for the GPS                       |
 | POST   | products/push                        | Pushes products into the database                            |
-| POST   | products/remove                      | Removes specified product IDs from the database              |
+| DELETE | products                             | Removes specified product IDs from the database              |
 | PATCH  | products/update-fields               | Update products listed in the database                       |
 
 ### [GET] Products
@@ -157,5 +157,11 @@ The body of the request should be an Array of [GridProducts]((/gps/data-model?id
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
 
-### [POST] Remove Products
-> **[POST] {base-url}/{tenant-index}/products/remove**
+### [DELETE] Remove Products
+> **[DELETE] {base-url}/{tenant-index}/products**
+
+Removes products from the GPS database based on specified ID's
+
+| parameter | type          | Description                                          | Example            |
+| --------- | ------------- | ---------------------------------------------------- | ------------------ |
+| data      | Array<string> | List of product ID's to be removed from the database | `[“1001”, “1002”]` |

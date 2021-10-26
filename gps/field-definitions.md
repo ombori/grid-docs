@@ -8,15 +8,15 @@ Nested structures are indicated by separate headers.
 |       |             |          |         |
 
 
-| Field                  | Description                                   | Required | Example     |
-| ---------------------- | --------------------------------------------- | -------- | ----------- |
-| ProductId              | Primary ID of the product                     | Yes      | product1    |
-| Tenant                 | Name of client whom the data belongs          | Yes      | Ombori      |
-| Customers              | List of customers associated with the product |          | Ombori,IKEA |
-| IntroductionDate       | Date when product is available/added          |          | 2012-05-05  |
-| PlannedAbandonmentDate | Date when product is to be abandoned          |          | 2030-05-05  |
-| ShellLifeDays          |                                               |          | 30          |
-
+| Field                  | Description                                                                                   | Required | Example            |
+| ---------------------- | --------------------------------------------------------------------------------------------- | -------- | ------------------ |
+| ProductId              | Primary ID of the product                                                                     | Yes      | product1           |
+| Tenant                 | Name of client whom the data belongs                                                          | Yes      | Ombori             |
+| Customers              | List of customers associated with the product                                                 |          | Ombori,IKEA        |
+| IntroductionDate       | Date when product is available/added                                                          |          | 2012-05-05         |
+| PlannedAbandonmentDate | Date when product is to be abandoned                                                          |          | 2030-05-05         |
+| ShellLifeDays          |                                                                                               |          | 30                 |
+| ProductType            | List of Product Type IDs applicable to this product as a reference from ProductTypes Database |          | ["item1", "item2"] |
 ### ProductName
 ProductName is a **required** property which contains an Array of Objects, one is required, which each has the following properties
 
@@ -101,3 +101,74 @@ ProductPriceList is a **required** field.
 | CatalogPage                | Root URL where image/media is found    |          | [https://assets.example.com](/ ':disabled')                   |
 | CatalogPageLocation        | ID or route where image/media is found |          | /images/image5.png                                            |
 | CatalogPageLocationProduct | Entire URL where image/media is found  | Yes      | [https://assets.example.com/images/image5.png](/ ':disabled') |
+
+### ProductLabel
+ProductName is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field         | Description                            | Required | Example                                         |
+| ------------- | -------------------------------------- | -------- | ----------------------------------------------- |
+| ProductLabel  | Translation value of the product label | Yes      |                                                 |
+| IsoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId     | Country ID                             | Yes      | 46                                              |
+
+
+
+### ProductItemQuantity
+The inventory quantity
+
+| Field                        | Description                                  | Required | Example |
+| ---------------------------- | -------------------------------------------- | -------- | ------- |
+| Id                           | SKU or Variant ID                            | Yes      |         |
+| StoreId                      | Store where quantity/inventory is applicable |          |         |
+| ProductItemQuantityStartDate | Quantity start date                          |          |         |
+| ProductItemQuantityEndDate   | Quantity end date                            |          |         |
+| ProductItemQuantity          | Product quantity value                       | Yes      |         |
+
+
+### ProductShortDescription
+ProductShortDescription is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field                   | Description                                        | Required | Example                                         |
+| ----------------------- | -------------------------------------------------- | -------- | ----------------------------------------------- |
+| ProductShortDescription | Translation value of the short product description | Yes      |                                                 |
+| IsoLanguageId           | Iso Language ID in BCP-47 format                   | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId               | Country ID                                         | Yes      | 46                                              |
+
+
+### ProductInternalName
+ProductInternalName is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field               | Description                            | Required | Example                                         |
+| ------------------- | -------------------------------------- | -------- | ----------------------------------------------- |
+| ProductInternalName | Translation of the internal name value | Yes      |                                                 |
+| IsoLanguageId       | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId           | Country ID                             | Yes      | 46                                              |
+
+### StorageInstructions
+StorageInstructions is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field               | Description                             | Required | Example                                         |
+| ------------------- | --------------------------------------- | -------- | ----------------------------------------------- |
+| StorageInstructions | Translation of the storage instructions | Yes      |                                                 |
+| IsoLanguageId       | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId           | Country ID                              | Yes      | 46                                              |
+
+
+### ConsumerStorageInstruction
+ConsumerStorageInstruction is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field                      | Description                                              | Required | Example                                         |
+| -------------------------- | -------------------------------------------------------- | -------- | ----------------------------------------------- |
+| ConsumerStorageInstruction | Translation of the storage instructions for the consumer | Yes      |                                                 |
+| IsoLanguageId              | Iso Language ID in BCP-47 format                         | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId                  | Country ID                                               | Yes      | 46                                              |
+
+
+### ProductShippingInstruction
+ProductShippingInstruction is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+
+| Field                      | Description                              | Required | Example                                         |
+| -------------------------- | ---------------------------------------- | -------- | ----------------------------------------------- |
+| ProductShippingInstruction | Translation of the shipping instructions | Yes      |                                                 |
+| IsoLanguageId              | Iso Language ID in BCP-47 format         | Yes      | [ISOLanguageID](/gps/data-model?id=languageids) |
+| CountryId                  | Country ID                               | Yes      | 46                                              |

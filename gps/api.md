@@ -70,6 +70,7 @@ Returns [GridProduct](/gps/data-model?id=gridproduct)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
+
 | parameter  | type   | Description                                             | Example                                          |
 | ---------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | product-id | string | The ID of the Product                                   | `100001`                                         |

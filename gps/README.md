@@ -7,4 +7,4 @@ To understand how to integrate GPS there are several documents that can help you
 - [API Reference](/gps/api)
 - [Data Models](/gps/data-model)
 
-Each of these can also be found in the sidebar.
+Each of these can also be found in the sidebar, as well as other complementary documents.

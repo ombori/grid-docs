@@ -2,6 +2,8 @@
 
 !> Data Model is still in development phase, so there might be breaking changes
 
+
+To learn about the definition of each field, check out the [Field Definitions](/gps/field-definitions) reference guide.
 ## GridProduct
 ```
 interface GridProduct {
@@ -217,5 +219,3 @@ enum IsoLanguageIds {
 
 }
 ```
-
-## Field Definitions

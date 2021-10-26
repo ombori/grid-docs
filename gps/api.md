@@ -5,7 +5,7 @@ This is the API reference for the GPS integration.
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
 
-> Download our [Postman Collection](https://www.getpostman.com/collections/80d6e41ef0aaaf9f1887) that's linked to the dev environent with a dev database.<br>After downloading the Postman collection, make sure to replace `tenantIndex` and your `accessKey`.
+> Download our [Postman Collection](https://www.getpostman.com/collections/80d6e41ef0aaaf9f1887) that's linked to the dev environment with a dev database.<br>After downloading the Postman collection, make sure to replace `tenantIndex` and your `accessKey`.
 
 ## URL's overview
 ?> For testing purposes, use the following DEV base URL `https://grid-product-service-dev.azurewebsites.net/api/tenants`.

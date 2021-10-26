@@ -168,6 +168,8 @@ interface GridProduct {
 ```
 
 ## ProductType
+<strong>Note:</strong> 'productTypeId' field should be used as value for a product's ProductType field
+
 ```
 type ProductType = {
   isRoot: boolean;

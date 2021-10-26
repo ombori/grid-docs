@@ -13,7 +13,10 @@ Once it is set up, you will receive
 ## 2. Push Products
 You should now start pushing products into the database, read about this in the [API reference](/gps/api?id=post-push-products). This will populate the database based on your input. 
 
-## 3. Integration Setup
+## 3. Push Product Types
+You can also push product types into the database, read about this in the [API reference](/gps/api?id=post-push-product-types). This will populate the product types database that can be referenced to a product's ProductType value.
+
+## 4. Integration Setup
 Once you start integrating GPS into other apps, you should use the wrapper package `@ombori/grid-product-service`
 
 This package is hosted on [NPM](https://www.npmjs.com/package/@ombori/grid-product-service)

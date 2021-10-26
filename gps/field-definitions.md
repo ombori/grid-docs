@@ -93,11 +93,11 @@ ProductPriceList is a **required** field.
 
 ### CatalogPageLocationProduct
 
-| Field                      | Description                            | Required | Example                                      |
-| -------------------------- | -------------------------------------- | -------- | -------------------------------------------- |
-| Id                         | SKU or Variant ID                      | Yes      |                                              |
-| ProductId                  | Parent ID                              | Yes      |                                              |
-| CatalogType                | Type of the image/media                |          | image/png<br>video/mp4                       |
-| CatalogPage                | Root URL where image/media is found    |          | [https://assets.example.com](':disabled')    |
-| CatalogPageLocation        | ID or route where image/media is found |          | /images/image5.png                           |
-| CatalogPageLocationProduct | Entire URL where image/media is found  | Yes      | https://assets.example.com/images/image5.png |
+| Field                      | Description                            | Required | Example                                                       |
+| -------------------------- | -------------------------------------- | -------- | ------------------------------------------------------------- |
+| Id                         | SKU or Variant ID                      | Yes      |                                                               |
+| ProductId                  | Parent ID                              | Yes      |                                                               |
+| CatalogType                | Type of the image/media                |          | image/png<br>video/mp4                                        |
+| CatalogPage                | Root URL where image/media is found    |          | [https://assets.example.com](/ ':disabled')                   |
+| CatalogPageLocation        | ID or route where image/media is found |          | /images/image5.png                                            |
+| CatalogPageLocationProduct | Entire URL where image/media is found  | Yes      | [https://assets.example.com/images/image5.png](/ ':disabled') |

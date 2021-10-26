@@ -23,13 +23,15 @@ The following endpoints are available in the API currently.
 | GET    | category/hierarchy                   | Returns category hierarchy for the GPS                       |
 | POST   | products/push                        | Pushes products into the database                            |
 | DELETE | products                             | Removes specified product IDs from the database              |
-| PATCH  | products/update-fields               | Update products listed in the database                       |
+| PATCH  | products                             | Update products listed in the database                       |
 
 ### [GET] Products
 
-> **[GET] {base-url}/{tenant-index}/list/products**
+> **[GET] {base-url}/{tenant-index}/list/products** <br> **[POST] {base-url}/{tenant-index}/list/products**
 
 Returns a list of products based on specified query parameters.
+
+?> For large requests (>2k characters) we recommend performing the same call using `POST` method instead to avoid URL-length limitations.
 
 #### Response
 ```
@@ -39,6 +41,9 @@ Returns a list of products based on specified query parameters.
      attributeFilters: { [key]: string[] }
 } 
 ```
+
+Reference: [GridProduct](/gps/data-model?id=gridproduct)
+
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
@@ -117,6 +122,8 @@ Searches products or category by keyword
 }
 ```
 
+Reference: [GridProduct](/gps/data-model?id=gridproduct)
+
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
@@ -165,3 +172,14 @@ Removes products from the GPS database based on specified ID's
 | parameter | type          | Description                                          | Example            |
 | --------- | ------------- | ---------------------------------------------------- | ------------------ |
 | data      | Array<string> | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
+
+### [PATCH] Update Products
+> **[PATCH] {base-url}/{tenant-index}/products**
+
+Updates products with the fields specified in the data object. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects will be completely overwritten.
+
+| parameter | type               | Description                                                    |
+| --------- | ------------------ | -------------------------------------------------------------- |
+| data      | Array<GridProduct> | List of products in GridProduct format to push to the Database |
+
+Reference: [GridProduct](/gps/data-model?id=gridproduct)

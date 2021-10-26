@@ -18,16 +18,16 @@ The following endpoints are available in the API currently.
 | ------ | ------------------------------------ | ------------------------------------------------------------ |
 | GET    | [products](/gps/api?id=get-products) | Returns list of products based on specified query parameters |
 | GET    | products/{id}                        | Retrieves specific product by ID                             |
-| GET    | products-barcode                     | Retrieves specific product by barcode value                  |
-| GET    | search                               | Searches products or category by keyword                     |
-| GET    | category/hierarchy                   | Returns category hierarchy for the GPS                       |
+| GET    | products-barcode/{code}           | Retrieves specific product by barcode value                  |
+| GET    | search                               | Searches products or product types by keyword                     |
 | POST   | products/push                        | Pushes products into the database                            |
-| POST   | products/remove                      | Removes specified product IDs from the database              |
-| PATCH  | products/update-fields               | Update products listed in the database                       |
+| DELETE   | products                      | Removes specified product IDs from the database              |
+| PATCH  | products               | Update products listed in the database                       |
 
+# Products Endpoints
 ### [GET] Products
 
-> **[GET] {base-url}/{tenant-index}/list/products**
+> **[GET] {base-url}/{tenant-index}/products**
 
 Returns a list of products based on specified query parameters.
 
@@ -50,7 +50,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
 | select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `ProductId`, `ProductName`, `ProductDescription` |
 | filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["ProductPriceList/ListPrice", 10]}`     |
-| sort                    | string  | Sort result order definition ${key} (‘asc’ / `‘desc`)                                                                                  | `IntroductionDate asc`, `ProductId desc`         |
+| sort                    | string  | Sort result order definition ${key} (‘asc’ / `‘desc'`)                                                                                  | `IntroductionDate asc`, `ProductId desc`         |
 | includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
 | attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                         |
 | facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `ShellLifeDays`                                  |
@@ -65,9 +65,10 @@ Returns [GridProduct](/gps/data-model?id=gridproduct)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
+
 | parameter  | type   | Description                                             | Example                                          |
 | ---------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| product-id | string | The ID of the Product                                   | `100001`                                         |
+| productId | string | The ID of the Product                                   | `100001`                                         |
 | select     | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
 
 ### [GET] Product by Barcode
@@ -84,7 +85,7 @@ Variants checked:
 #### Response
 ```
 {
-    productDetails: [GridProduct],
+    productDetails: GridProduct,
     variantId: string
 }
 ```
@@ -103,19 +104,21 @@ To use query parameters, add them as `GET` properties to the `URL`.
 
 ?> This endpoint is still in active development
 
-Searches products or category by keyword
+Searches products or product types by keyword
 
 
 #### Response
 
-!> Currently categories is a work in progress. They may not be returned
+!> Currently product types search is a work in progress. They may not be returned or empty
 
 ```
 { 
     products: Array<GridProduct>, 
-    categories: Array<{Id, Title, Parent, IsoLanguageId}
+    productTypes: Array<ProductType>
 }
 ```
+
+Reference: [GridProduct](/gps/data-model?id=gridproduct), [ProductType](/gps/data-model?id=producttype)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -125,37 +128,17 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | term      | string | Query to search for                                     | `Desk`                                           |
 | select    | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
 
-### [GET] Category Hierarchy
-> **[GET] {base-url}/{tenant-index}/category/hierarchy**
-
-Returns list of categories hierarchy involved in the current selected category key (all products' category hierarchy that has the same root category)
-
-!> This endpoint is currently under development and might not work
-
-#### Response
-```
-    Array<string>
-```
-
-#### Query Parameters
-To use query parameters, add them as `GET` properties to the `URL`.
-
-
-| parameter | type   | Description                                      | Example             |
-| --------- | ------ | ------------------------------------------------ | ------------------- |
-| category  | string | Category key. Hierarchy separated by `>` symbol) | `Furniture>Bedroom` |
-
 ### [POST] Push Products
 > **[POST] {base-url}/{tenant-index}/products/push**
 
 Uploads or merges products listing following the GridProduct format
 
-?> Any Product in the pushed set that has a matching key will overwrite the product
+?> Any Product in the pushed set that has a matching ProductId will overwrite the product
 
 #### Body
 The body of the request should be an Array of [GridProducts]((/gps/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
 
-### [POST] Remove Products
-> **[POST] {base-url}/{tenant-index}/products/remove**
+### [DELETE] Remove Products
+> **[DELETE] {base-url}/{tenant-index}/products**

@@ -132,8 +132,8 @@ interface GridProduct {
     CatalogPageLocationProduct: string; // Entire URL value
   }>;
 
-  // Product categories (Converted semi-colon separated into array)
-  ProductType: Array<ProductTypeInterface>; <--- TO BE UPDATED (OCT. 25)
+  // Product Type (referenced from ProductType database)
+  ProductType: Array<string>;
 
   // Product Tags
   ProductLabel?: Array<{
@@ -167,6 +167,20 @@ interface GridProduct {
 }
 ```
 
+## ProductType
+```
+type ProductType = {
+  isRoot: boolean;
+  parentId: string;
+  productTypeId: string;
+  productType: Array<{
+    isoLanguageId: IsoLanguageIds;
+    label: string;
+    path?: string;
+  }>;
+};
+```
+
 ## Enums and Interfaces
 
 ### PriceListType
@@ -189,15 +203,6 @@ enum ProductStatusEnum {
   Obsolete = 'Obsolete',
   Abandoned = 'Abandoned',
   Blocked = 'Blocked',
-}
-```
-### Product Type
-```
-interface ProductTypeInterface {
-  Key: string; // Ex. Key1>Key2
-  CountryId: string;
-  IsoLanguageId: IsoLanguageIds;
-  ProductType: string; // Ex. Furniture>Living Room
 }
 ```
 ### LanguageIDs

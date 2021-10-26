@@ -16,16 +16,21 @@ The following endpoints are available in the API currently.
 
 | Method | Endpoint                             | Description                                                  |
 | ------ | ------------------------------------ | ------------------------------------------------------------ |
-| GET    | [products](/gps/api?id=get-products) | Returns list of products based on specified query parameters |
-| GET    | products/{id}                        | Retrieves specific product by ID                             |
-| GET    | products-barcode/{code}           | Retrieves specific product by barcode value                  |
-| GET    | search                               | Searches products or product types by keyword                     |
-| POST   | products/push                        | Pushes products into the database                            |
-| DELETE | products                             | Removes specified product IDs from the database              |
-| PATCH  | products                             | Update products listed in the database                       |
+| GET    | [products](/gps/api?id=get-post-products) | Returns list of products based on specified query parameters |
+| GET    | [products/{id}](/gps/api?id=get-product-by-id)                        | Retrieves specific product by ID                             |
+| GET    | [products-barcode/{code}](/gps/api?id=get-product-by-barcode)           | Retrieves specific product by barcode value                  |
+| GET    | [search](/gps/api?id=get-search)                               | Searches products or product types by keyword                     |
+| POST   | [products/push](/gps/api?id=post-push-products)                        | Pushes products into the database                            |
+| DELETE | [products](/gps/api?id=delete-remove-products)                             | Removes specified product IDs from the database              |
+| PATCH  | [products](/gps/api?id=patch-update-products)                             | Update products listed in the database                       |
+| GET  | [product-types](/gps/api?id=get-product-types-list)                             | Returns list of product types associated with the tenant index                       |
+| GET  | [product-types/{id}](/gps/api?id=get-product-type-details)                             | Retrieves specific product type by id (productTypeId)                       |
+| POST  | [product-types](/gps/api?id=post-push-product-types)                             | Pushes product types into the database                       |
+| DELETE  | [product-types](/gps/api?id=delete-remove-product-types)                             | Removes specified product type IDs (productTypeId) from the database                       |
 
-# Products Endpoints
-### [GET] Products
+
+# Products
+### [GET | POST] Products
 
 > **[GET] {base-url}/{tenant-index}/products** <br> **[POST] {base-url}/{tenant-index}/products**
 
@@ -55,7 +60,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
 | select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `ProductId`, `ProductName`, `ProductDescription` |
 | filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["ProductPriceList/ListPrice", 10]}`     |
-| sort                    | string  | Sort result order definition ${key} (‘asc’ / `‘desc'`)                                                                                  | `IntroductionDate asc`, `ProductId desc`         |
+| sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                  | `IntroductionDate asc`, `ProductId desc`         |
 | includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
 | attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                         |
 | facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `ShellLifeDays`                                  |
@@ -145,7 +150,7 @@ The body of the request should be an Array of [GridProducts]((/gps/data-model?id
 
 | parameter | type          | Description                                          | Example            |
 | --------- | ------------- | ---------------------------------------------------- | ------------------ |
-| data      | Array<GridProduct> | List of GridProduct format to push to the Database | |
+| data      | `Array<GridProduct>` | List of produts in GridProduct format to push to the Database | |
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
 
@@ -156,7 +161,7 @@ Removes products from the GPS database based on specified ID's
 
 | parameter | type          | Description                                          | Example            |
 | --------- | ------------- | ---------------------------------------------------- | ------------------ |
-| data      | Array<string> | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
+| data      | `Array<string>` | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
 
 ### [PATCH] Update Products
 > **[PATCH] {base-url}/{tenant-index}/products**
@@ -165,6 +170,67 @@ Updates products with the fields specified in the data object. Shallow-update is
 
 | parameter | type               | Description                                                    |
 | --------- | ------------------ | -------------------------------------------------------------- |
-| data      | Array<GridProduct> | List of products with fields in GridProduct format to update to the Database |
+| data      | `Array<GridProduct>` | List of products with fields in GridProduct format to update to the Database |
 
-Reference: [GridProduct](/gps/data-model?id=gridproduct)
+Reference: [GridProduct](/gps/data-model?id=gridproduct) 
+
+# Product Types
+
+### [GET] Product Types List
+> **[GET] {base-url}/{tenant-index}/product-types**
+
+Returns list of product types associated with the tenant index
+
+#### Response
+Returns Array<[ProductType](/gps/data-model?id=producttype)>
+
+| parameter | type               | Description               | Example                                     |
+| --------- | ----------------- - | -------------------------------------------------------------- | --------- |
+| ids      | string | List of product types ids to be returned | Furniture, Tech   |
+
+
+### [GET] Product Type Details
+> **[GET] {base-url}/{tenant-index}/product-types/{productTypeId}**
+
+Returns details of a specific product type
+
+#### Response
+Returns [ProductType](/gps/data-model?id=producttype)
+
+| parameter | type          | Description                                          | Example            |
+| --------- | ----------------- - | -------------------------------------------------------------- | -----------|
+| productTypeId      | string | Product type ID to be returned |  Furniture |
+
+
+### [POST] Push Product Types
+> **[POST] {base-url}/{tenant-index}/product-types**
+
+Update or insert product types to database
+
+
+#### Response
+Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/api/@azure/cosmos/operationresponse?view=azure-node-latest)>
+
+| parameter | type          | Description                                          | 
+| --------- | ----------------- - | -------------------------------------------------------------- |
+| data      | `Array<ProductType>` | List of formatted ProductTypes to push to the GPS Database  |
+
+Reference: [ProductType](/gps/data-model?id=producttype)
+
+### [DELETE] Remove Product Types
+> **[DELETE] {base-url}/{tenant-index}/product-types**
+
+Removes product types from the GPS database based on specified ids
+
+
+#### Response
+Returns Array<{
+    id: string;
+    status: number;
+}>
+
+| parameter | type          | Description                                          |  Example  |
+| --------- | ----------------- - | -------------------------------------------------------------- | -------- |
+| data      | `Array<string>` | List of product type IDs to remove from GPS database  | ["Furniture", "Tech"] |
+
+Reference: [ProductType](/gps/data-model?id=producttype)

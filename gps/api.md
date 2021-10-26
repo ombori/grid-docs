@@ -21,15 +21,17 @@ The following endpoints are available in the API currently.
 | GET    | products-barcode/{code}           | Retrieves specific product by barcode value                  |
 | GET    | search                               | Searches products or product types by keyword                     |
 | POST   | products/push                        | Pushes products into the database                            |
-| DELETE   | products                      | Removes specified product IDs from the database              |
-| PATCH  | products               | Update products listed in the database                       |
+| DELETE | products                             | Removes specified product IDs from the database              |
+| PATCH  | products                             | Update products listed in the database                       |
 
 # Products Endpoints
 ### [GET] Products
 
-> **[GET] {base-url}/{tenant-index}/products**
+> **[GET] {base-url}/{tenant-index}/products** <br> **[POST] {base-url}/{tenant-index}/products**
 
 Returns a list of products based on specified query parameters.
+
+?> For large requests (>2k characters) we recommend performing the same call using `POST` method instead to avoid URL-length limitations.
 
 #### Response
 ```
@@ -39,6 +41,9 @@ Returns a list of products based on specified query parameters.
      attributeFilters: { [key]: string[] }
 } 
 ```
+
+Reference: [GridProduct](/gps/data-model?id=gridproduct)
+
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
@@ -138,7 +143,28 @@ Uploads or merges products listing following the GridProduct format
 #### Body
 The body of the request should be an Array of [GridProducts]((/gps/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
 
+| parameter | type          | Description                                          | Example            |
+| --------- | ------------- | ---------------------------------------------------- | ------------------ |
+| data      | Array<GridProduct> | List of GridProduct format to push to the Database | |
+
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
 
 ### [DELETE] Remove Products
 > **[DELETE] {base-url}/{tenant-index}/products**
+
+Removes products from the GPS database based on specified ID's
+
+| parameter | type          | Description                                          | Example            |
+| --------- | ------------- | ---------------------------------------------------- | ------------------ |
+| data      | Array<string> | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
+
+### [PATCH] Update Products
+> **[PATCH] {base-url}/{tenant-index}/products**
+
+Updates products with the fields specified in the data object. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects will be completely overwritten.
+
+| parameter | type               | Description                                                    |
+| --------- | ------------------ | -------------------------------------------------------------- |
+| data      | Array<GridProduct> | List of products with fields in GridProduct format to update to the Database |
+
+Reference: [GridProduct](/gps/data-model?id=gridproduct)

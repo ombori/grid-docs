@@ -51,7 +51,7 @@ Open `package.json` and customize the package name. This should be in the format
 
 ?> It is recommended you use kebab-case for the naming of your app.
 
-To find the org-slug you're part of, use the `omg org list` command on the CLI you can read more about in the [reference](cli/reference?id=list-organisations).
+To find the org-slug you're part of, use the `omg org list` command on the CLI you can read more about in the [reference](cli/reference?id=list-organizations).
 
 ### App and Developer name
 To visually display the app name and developer name correctly in the Ombori Grid, you need to change these in `DESCRIPTION.md` listed in the root of your new application.

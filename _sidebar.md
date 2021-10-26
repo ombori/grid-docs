@@ -14,6 +14,8 @@
 * **CLI**
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)
+* **Integration**
+  * [Grid Product Service](/gps/)
 * **General**
   * [Console Release Notes](/console/releasenotes/)
   * [Settings Schema](/general/schema.md)

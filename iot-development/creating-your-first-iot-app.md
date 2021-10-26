@@ -39,7 +39,7 @@ Once you've created your IoT app you need to configure it correctly to be able t
 ### App Name
 The format of the name is `[org-slug].[app-name]`.
 
-To get the slug of your organisation, run `omg org list` command ([Reference](/cli/reference?id=list-organisations)). 
+To get the slug of your organisation, run `omg org list` command ([Reference](/cli/reference?id=list-organizations)). 
 
 You can set the name of the IoT App in `package.json` name property. 
 

@@ -3,11 +3,6 @@ This document contains the definition of all fields mentioned in the GPS data-mo
 
 Nested structures are indicated by separate headers. 
 
-| Field | Description | Required | Example |
-| ----- | ----------- | -------- | ------- |
-|       |             |          |         |
-
-
 | Field                  | Description                                                                                   | Required | Example            |
 | ---------------------- | --------------------------------------------------------------------------------------------- | -------- | ------------------ |
 | ProductId              | Primary ID of the product                                                                     | Yes      | product1           |

@@ -132,7 +132,7 @@ interface GridProduct {
     CatalogPageLocationProduct: string; // Entire URL value
   }>;
 
-  // Product Type (referenced from ProductType database)
+  // Product Type (referenced from ProductType's "productTypeId" database)
   ProductType: Array<string>;
 
   // Product Tags
@@ -144,7 +144,7 @@ interface GridProduct {
 
   // Product Promotion
   ProductPromotion?: {
-    PromotionId: string; // Referenced from Promotions Index or external data
+    PromotionId: string; // Referenced from Promotions Index or an external data (WIP)
     PeriodStartTimestamp?: string;
     PeriodEndTimestamp?: string;
   };

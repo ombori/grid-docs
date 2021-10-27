@@ -1,9 +1,9 @@
-# GPS Data Models
+# Grid-PIM Data Models
 
 !> Data Model is still in development phase, so there might be breaking changes
 
 
-To learn about the definition of each field, check out the [Field Definitions](/gps/field-definitions) reference guide.
+To learn about the definition of each field, check out the [Field Definitions](/grid-pim/field-definitions) reference guide.
 ## GridProduct
 ```
 interface GridProduct {

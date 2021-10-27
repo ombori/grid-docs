@@ -1,4 +1,4 @@
-[Grid PRIM](/grid-pim/)
+[Grid PIM](/grid-pim/)
 
 
 

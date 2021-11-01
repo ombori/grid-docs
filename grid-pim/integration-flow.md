@@ -3,7 +3,7 @@ To Integrate with Grid Product Information Management, or Grid-PIM, there are se
 
 ## 1. Setting Up
 
-Setting up with Grid-PIM requires an database initialisation. This step is done by Ombori, your Ombori Contact should be able to set this up for you or has already done so.
+Setting up with Grid-PIM requires a database initialization. This step is done by Ombori, your Ombori Contact should be able to set this up for you or has already done so.
 
 Once it is set up, you will receive
 - tenant-index

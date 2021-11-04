@@ -3,7 +3,7 @@ To Integrate with Grid Product Information Management, or Grid-PIM, there are se
 
 ## 1. Setting Up
 
-Setting up with Grid-PIM requires an database initialisation. This step is done by Ombori, your Ombori Contact should be able to set this up for you or has already done so.
+Setting up with Grid-PIM requires a database initialization. This step is done by Ombori, your Ombori Contact should be able to set this up for you or has already done so.
 
 Once it is set up, you will receive
 - tenant-index
@@ -11,7 +11,7 @@ Once it is set up, you will receive
 - Grid-PIM integration URL
 
 ## 2. Push Products
-You should now start pushing products into the database. There are 2 ways of doing this, either through a backend integration for which you can use our NPM package, or through our API interface.
+You should now start pushing products into the database. There are 2 ways of doing this, either through a backend integration for which you can use our NPM package or through our API interface.
 
 **Integrate using your backend**
 
@@ -40,7 +40,7 @@ yarn add @ombori/grid-product-service
 ```
 
 ### Integrate into frontend
-To integrate into a front-end application, use `GridProductServiceClient` for readonly operations. Make sure to enter your `tenantIndex` and `accessKey` into the code sample below.
+To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. Make sure to enter your `tenantIndex` and `accessKey` into the code sample below.
 
 ```javascript
 import { GridProductServiceClient } from '@ombori/grid-product-service';

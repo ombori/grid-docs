@@ -6,6 +6,10 @@ The Flappy Bird demo implementation we have set up for you has several features.
 - Communication between any mobile phone/secondary device to a screen application
 - Console-side configuration of certain settings within the game, such as gravity and gap-size
 
+This demo has also been discussed on Microsoft's IoT Developers YouTube channel. You can see the video below. In the video, the code and functionality are explained in detail.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2OO2BoJE2WM" title="YouTube video player" frameborder="0" allow="clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+
 These are some highlights of what you can expect from the Flappy bird implementation.
 
 ## Getting into the source-code

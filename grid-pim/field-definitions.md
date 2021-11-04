@@ -13,7 +13,7 @@ Nested structures are indicated by separate headers.
 | ShellLifeDays          |                                                                                               |          | 30                 |
 | ProductType            | List of Product Type IDs applicable to this product as a reference from ProductTypes Database |          | ["item1", "item2"] |
 ### ProductName
-ProductName is a **required** property which contains an Array of Objects, one is required, which each has the following properties
+ProductName is a **required** property that contains an Array of Objects, one is required, which each has the following properties
 
 | Field         | Description                           | Required | Example                                              |
 | ------------- | ------------------------------------- | -------- | ---------------------------------------------------- |
@@ -22,7 +22,7 @@ ProductName is a **required** property which contains an Array of Objects, one i
 | CountryId     | Country ID                            | Yes      | 46                                                   |
 
 ### ProductDescription
-ProductDescription is a **required** property which contains an Array of Objects, one is required, which each has the following properties
+ProductDescription is a **required** property that contains an Array of Objects, one is required, which each has the following properties
 
 | Field              | Description                                  | Required | Example                                              |
 | ------------------ | -------------------------------------------- | -------- | ---------------------------------------------------- |
@@ -98,7 +98,7 @@ ProductPriceList is a **required** field.
 | CatalogPageLocationProduct | Entire URL where image/media is found  | Yes      | [https://assets.example.com/images/image5.png](/ ':disabled') |
 
 ### ProductLabel
-ProductName is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+ProductName is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field         | Description                            | Required | Example                                              |
 | ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
@@ -121,7 +121,7 @@ The inventory quantity
 
 
 ### ProductShortDescription
-ProductShortDescription is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+ProductShortDescription is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field                   | Description                                        | Required | Example                                              |
 | ----------------------- | -------------------------------------------------- | -------- | ---------------------------------------------------- |
@@ -131,7 +131,7 @@ ProductShortDescription is *not* a required property which contains an Array of 
 
 
 ### ProductInternalName
-ProductInternalName is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+ProductInternalName is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field               | Description                            | Required | Example                                              |
 | ------------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
@@ -140,7 +140,7 @@ ProductInternalName is *not* a required property which contains an Array of Obje
 | CountryId           | Country ID                             | Yes      | 46                                                   |
 
 ### StorageInstructions
-StorageInstructions is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+StorageInstructions is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field               | Description                             | Required | Example                                              |
 | ------------------- | --------------------------------------- | -------- | ---------------------------------------------------- |
@@ -150,7 +150,7 @@ StorageInstructions is *not* a required property which contains an Array of Obje
 
 
 ### ConsumerStorageInstruction
-ConsumerStorageInstruction is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+ConsumerStorageInstruction is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field                      | Description                                              | Required | Example                                              |
 | -------------------------- | -------------------------------------------------------- | -------- | ---------------------------------------------------- |
@@ -160,7 +160,7 @@ ConsumerStorageInstruction is *not* a required property which contains an Array 
 
 
 ### ProductShippingInstruction
-ProductShippingInstruction is *not* a required property which contains an Array of Objects, one is required, which each has the following properties.
+ProductShippingInstruction is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field                      | Description                              | Required | Example                                              |
 | -------------------------- | ---------------------------------------- | -------- | ---------------------------------------------------- |

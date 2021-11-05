@@ -177,7 +177,7 @@ type ProductType = {
   isRoot: boolean;
   parentId: string;
   productTypeId: string;
-  productType: Array<{
+  title: Array<{
     isoLanguageId: IsoLanguageIds;
     label: string;
     path?: string;

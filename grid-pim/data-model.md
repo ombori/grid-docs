@@ -134,7 +134,7 @@ interface GridProduct {
     CatalogPageLocationProduct: string; // Entire URL value
   }>;
 
-  // Product Type (referenced from ProductType's "productTypeId" database)
+  // Product Type (referenced from ProductType's "ProductTypeId" database)
   ProductType: Array<string>;
 
   // Product Tags
@@ -170,17 +170,17 @@ interface GridProduct {
 ```
 
 ## ProductType
-<strong>Note:</strong> 'productTypeId' field should be used as value for a product's ProductType field
+<strong>Note:</strong> 'ProductTypeId' field should be used as value for a product's ProductType field
 
 ```
 type ProductType = {
-  isRoot: boolean;
-  parentId: string;
-  productTypeId: string;
-  title: Array<{
-    isoLanguageId: IsoLanguageIds;
-    label: string;
-    path?: string;
+  IsRoot: boolean;
+  ParentId: string;
+  ProductTypeId: string;
+  Title: Array<{
+    IsoLanguageId: IsoLanguageIds;
+    Label: string;
+    Path?: string;
   }>;
 };
 ```

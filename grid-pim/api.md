@@ -24,9 +24,9 @@ The following endpoints are available in the API currently.
 | DELETE | [products](/grid-pim/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-pim/api?id=patch-update-products)                 | Update products listed in the database                               |
 | GET    | [product-types](/grid-pim/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
-| GET    | [product-types/{id}](/grid-pim/api?id=get-product-type-details)    | Retrieves specific product type by id (productTypeId)                |
+| GET    | [product-types/{id}](/grid-pim/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
 | POST   | [product-types](/grid-pim/api?id=post-push-product-types)          | Pushes product types into the database                               |
-| DELETE | [product-types](/grid-pim/api?id=delete-remove-product-types)      | Removes specified product type IDs (productTypeId) from the database |
+| DELETE | [product-types](/grid-pim/api?id=delete-remove-product-types)      | Removes specified product type IDs (ProductTypeId) from the database |
 
 
 # Products
@@ -214,6 +214,8 @@ Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/ap
 | parameter | type                 | Description                                                     |
 | --------- | -------------------- | --------------------------------------------------------------- |
 | data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid-PIM Database |
+
+?> Limitations: <br> - 100 product types documents per batch<br>
 
 Reference: [ProductType](/grid-pim/data-model?id=producttype)
 

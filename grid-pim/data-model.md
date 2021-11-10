@@ -21,8 +21,8 @@ interface GridProduct {
     IsoLanguageId: IsoLanguageIds;
     ProductInternalName: string;
   }>;
-  IntroductionDate?: string; // Start Date (optional) - main date added on RelatedProduct(Variant)
-  PlannedAbandonmentDate?: string; // End Date (optional) - main date added on RelatedProduct(Variant)
+  IntroductionDate?: string;
+  PlannedAbandonmentDate?: string;
   StorageInstructions?: Array<{
     CountryId: string;
     IsoLanguageId: IsoLanguageIds;
@@ -52,6 +52,12 @@ interface GridProduct {
     CountryId: string;
     IsoLanguageId: IsoLanguageIds;
     ProductDescription: string;
+  }>;
+
+  // Related Products / Recommendations
+  RelatedProducts?: Array<{
+    RelatedProductId: string;
+    ProductRelationshipType: string;
   }>;
 
   // Variants
@@ -91,7 +97,7 @@ interface GridProduct {
 
   // Array of translation
   ProductStatus: Array<{
-    ProductStatus: ProductStatusEnum; // Ex. Active OR Inactive
+    ProductStatus: ProductStatusEnum;
     CountryId: string;
     IsoLanguageId: IsoLanguageIds;
     StoreId?: string;

@@ -30,8 +30,18 @@ ProductDescription is a **required** property that contains an Array of Objects,
 | IsoLanguageId      | Iso Language ID in BCP-47 format             | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
 | CountryId          | Country ID                                   | Yes      | 46                                                   |
 
+### RelatedProducts
+RelatedProducts is *not* required.
+
+| Field              | Description                                  | Required | Example                                              |
+| ------------------ | -------------------------------------------- | -------- | ---------------------------------------------------- |
+| RelatedProductId | ID of the related product | Yes      |                                                      |
+| ProductRelationshipType      | Relationship of the related product to the product             | Yes      | Recommended
+   
+
+
 ### Variants
-Varients is a **required** field
+Variants is a **required** field
 
 | Field                 | Description                                                                                                             | Required | Example                                                   |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------- |
@@ -98,7 +108,7 @@ ProductPriceList is a **required** field.
 | CatalogPageLocationProduct | Entire URL where image/media is found  | Yes      | [https://assets.example.com/images/image5.png](/ ':disabled') |
 
 ### ProductLabel
-ProductName is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
+ProductLabel is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
 
 | Field         | Description                            | Required | Example                                              |
 | ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |

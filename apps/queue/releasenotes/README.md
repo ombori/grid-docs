@@ -1,6 +1,20 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-11-11
+#### Changes
+- Added verification by email if the booking is using emails only.
+- Now on the booking page, the customer will see timeslot durations instead of time range.
+- New logic for Special bookings hours: Values only from this section will be applied for the specified date. Settings from regular hours or Separate bookings hours will be overwritten.
+- In the queue manager UI, serving person initials will be created from the person's display name if possible. Otherwise, the email address will be used.
+
+#### Features
+- Order pickup: now in Order manager UI you will be able to find all links for issued orders which weren't booked by customers yet
+
+#### Breaking change
+
+!> New logic for Special bookings hours: Values from this section will only be applied for the specified date. Settings from regular hours or from Separate bookings hours won't be used at all.
+
 ## 2021-10-12
 #### Changes
 - Added registration information to the booking calendar. Now, staff can get booking information directly from the calendar.

@@ -71,7 +71,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 Retrieves a specific product by ID
 
 #### Response
-Returns [Partial<GridProduct>](/grid-pim/data-model?id=gridproduct)
+Returns Partial<[`GridProduct`](/grid-pim/data-model?id=gridproduct)>
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.

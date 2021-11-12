@@ -41,7 +41,7 @@ Returns a list of products based on specified query parameters.
 #### Response
 ```
 {
-     list: Array<GridProduct>, 
+     list: Array<Partial<GridProduct>>, 
      facets:  {  [propertyName]: FacetResults[] },
      attributeFilters: { [key]: string[] }
 } 
@@ -71,7 +71,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 Retrieves a specific product by ID
 
 #### Response
-Returns [GridProduct](/grid-pim/data-model?id=gridproduct)
+Returns [Partial<GridProduct>](/grid-pim/data-model?id=gridproduct)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -95,7 +95,7 @@ Variants checked:
 #### Response
 ```
 {
-    productDetails: GridProduct,
+    productDetails: Partial<GridProduct>,
     variantId: string
 }
 ```
@@ -123,7 +123,7 @@ Searches products or product types by keyword
 
 ```
 { 
-    products: Array<GridProduct>, 
+    products: Array<Partial<GridProduct>>, 
     productTypes: Array<ProductType>
 }
 ```
@@ -150,7 +150,7 @@ The body of the request should be an Array of [GridProducts]((/grid-pim/data-mod
 
 | parameter | type                 | Description                                                   | Example |
 | --------- | -------------------- | ------------------------------------------------------------- | ------- |
-| data      | `Array<GridProduct>` | List of produts in GridProduct format to push to the Database |         |
+| data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
 
@@ -170,7 +170,7 @@ Updates products with the fields specified in the data object. Shallow-update is
 
 | parameter | type                 | Description                                                                  |
 | --------- | -------------------- | ---------------------------------------------------------------------------- |
-| data      | `Array<GridProduct>` | List of products with fields in GridProduct format to update to the Database |
+| data      | `Array<Partial<GridProduct>>` | List of products with fields in GridProduct format to update to the Database |
 
 Reference: [GridProduct](/grid-pim/data-model?id=gridproduct) 
 

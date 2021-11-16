@@ -1,6 +1,15 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-11-17
+#### Features
+- Order pickup: now customers will be able to Cancel order pickup
+- Order pickup: now customers will be able to send feedback about order pickup experience
+
+#### Bugfixes
+- Fixed duration label for bookings
+- Fixed notifications for disabled both SMS and email notifications 
+
 ## 2021-11-11
 #### Changes
 - Added verification by email if the booking is using emails only.

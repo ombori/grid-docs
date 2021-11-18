@@ -26,6 +26,8 @@
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
   * [Queue Management](/apps/queue/setting-up)
+  * [Web Kiosk](/apps/web-kiosk/)
+
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
 

@@ -9,3 +9,7 @@
   * [Order Pickup](/apps/queue/order-pickup)
   * [Customize Booking Page](/apps/queue/customize-booking)
   * [Release Notes](/apps/queue/releasenotes/)
+* [**Web Kiosk**](/apps/web-kiosk/)
+  * [Setting up](/apps/web-kiosk/setting-up.md)
+  * [Adding Content](/apps/web-kiosk/adding-content.md)
+  * [Device Configuration](/apps/web-kiosk/device-configuration.md)

@@ -1,6 +1,18 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-11-23
+#### Changes
+- New waiting time mechanism: now we will use more accurate mechanism for time prediction. 
+If serving mode and email login flow are enabled we will take average serving time, divide by amount of active counters / sales persons (active users in Queue manager) and multiply by ticket number in the queue.
+If it's not serving or it's pin login flow, for idea above instead of exact serving time we will consider time difference when two near tickets were called to come into location. Amount of active counters / sales persons will be always 1.
+
+### Features
+- Auto checkout: now you can specify time after which tickets from "Serving" column are checked out automatically
+
+#### Bugfixes
+- Fixed information about Active Directory users for servedBy property
+
 ## 2021-11-17
 #### Features
 - Order pickup: now customers will be able to Cancel order pickup

@@ -15,8 +15,8 @@ If it's not serving or it's pin login flow, for idea above instead of exact serv
 
 ## 2021-11-17
 #### Features
-- Order pickup: now customers will be able to Cancel order pickup
-- Order pickup: now customers will be able to send feedback about order pickup experience
+- Order pickup: Customers will be able to Cancel order pickup
+- Order pickup: Customers will be able to send feedback about the order pickup experience
 
 #### Bugfixes
 - Fixed duration label for bookings

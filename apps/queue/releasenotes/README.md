@@ -3,8 +3,8 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-11-17
 #### Features
-- Order pickup: now customers will be able to Cancel order pickup
-- Order pickup: now customers will be able to send feedback about order pickup experience
+- Order pickup: Customers will be able to Cancel order pickup
+- Order pickup: Customers will be able to send feedback about the order pickup experience
 
 #### Bugfixes
 - Fixed duration label for bookings

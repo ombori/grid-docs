@@ -3,10 +3,10 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-11-22
 #### Changes
-- New waiting time mechanism: now we will use more accurate mechanism for time prediction. 
-If serving mode and email login flow are enabled we will take average serving time, divide by amount of active counters / sales persons (active users in Queue manager) and multiply by ticket number in the queue.
-If it's not serving or it's pin login flow, for idea above instead of exact serving time we will consider time difference between two tickets called into location. Amount of active counters / sales persons will be always 1.
-- Staff notifications: system won't send notifications about waiting time if there are no people in queue 
+- New waiting time mechanism is introduced to be more accurate
+    - If serving mode and email login flow are enabled we will take average serving time, divided by the number of active users in Queue Manager, and then multiply by ticket number in the queue.
+    - If it's not in serving mode, or using pin login flow, the average waiting time is calculated based on the time difference between tickets called multiplied by the number of tickets in the queue. 
+- No staff notifications about waiting time will be sent if there are no active tickets in the queue.
 
 #### Bugfixes
 - Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 

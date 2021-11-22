@@ -10,7 +10,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 #### Bugfixes
 - Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 
-- Fixed ability to create two booking for the same slot if timezone for queue and customer is different (only when there special hours which are the same by day of week and time)
+- Fixed an issue where a customer would see duplicate slots when the customer timezone was different than the queue timezone.
 
 ## 2021-11-17
 #### Features

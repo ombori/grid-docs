@@ -14,6 +14,7 @@ If it's not serving or it's pin login flow, for idea above instead of exact serv
 #### Bugfixes
 - Fixed information about Active Directory users for servedBy property
 - Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 
+- Fixed ability to create two booking for the same slot if timezone for queue and customer is different (only when there special hours which are the same by day of week and time)
 
 ## 2021-11-17
 #### Features

@@ -8,11 +8,7 @@ If serving mode and email login flow are enabled we will take average serving ti
 If it's not serving or it's pin login flow, for idea above instead of exact serving time we will consider time difference between two tickets called into location. Amount of active counters / sales persons will be always 1.
 - Staff notifications: system won't send notifications about waiting time if there are no people in queue 
 
-### Features
-- Auto checkout: now you can specify time after which tickets from "Serving" column are checked out automatically
-
 #### Bugfixes
-- Fixed information about Active Directory users for servedBy property
 - Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 
 - Fixed ability to create two booking for the same slot if timezone for queue and customer is different (only when there special hours which are the same by day of week and time)
 

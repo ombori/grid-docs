@@ -91,6 +91,27 @@ omg dev modules <device-name>
 ```
 > You should replace `<device-name>` with the name of the device you can find using `omg dev list`.
 
+### Logs
+To retrieve logs from any installed module or app on a device, you can use this command. 
+
+The format for the call is as follows
+
+```bash
+omg dev logs <device-name> <module-name> [flags]
+```
+
+> You should replace `<device-name>` with the device slug, which you can find through `omg dev list`.<br>
+> You should replace `<module-name>` with the module slug which you can find through `omg dev modules`
+
+Then of course there are several, optional, flags you can add to the command
+
+| Flag                                      | Description                                                               |
+| ----------------------------------------- | ------------------------------------------------------------------------- |
+| `-n <numlines>` <br> `--lines <numlines>` | Number of lines (`<numlines>`) to return                                  |
+| `-t`<br> `--timestamp`                    | Add the timestamp to the log                                              |
+| `-f`<br> `--follow`                       | Tail the logs, this will keep streaming logs to you while this is running |
+| `--filter <query>`                        | Only display log messages which match your `<query>`.                     |
+
 ## Applications
 This subsection is dedicated to app development and management, and is nested under `omg app`.
 

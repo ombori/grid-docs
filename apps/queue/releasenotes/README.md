@@ -1,6 +1,17 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-11-22
+#### Changes
+- New waiting time mechanism is introduced to be more accurate
+    - If serving mode and email login flow are enabled we will take average serving time, divided by the number of active users in Queue Manager, and then multiply by ticket number in the queue.
+    - If it's not in serving mode, or using pin login flow, the average waiting time is calculated based on the time difference between tickets called multiplied by ticket number in the queue. 
+- No staff notifications about waiting time will be sent if there are no active tickets in the queue.
+
+#### Bugfixes
+- Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 
+- Fixed an issue where a customer would see duplicate slots when the customer timezone was different than the queue timezone if Special hours are specified 
+
 ## 2021-11-17
 #### Features
 - Order pickup: Customers will be able to Cancel order pickup

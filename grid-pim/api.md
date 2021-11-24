@@ -8,9 +8,15 @@ For easy configuration and testing, here's a Postman collection you can import i
 > Download our [Postman Collection](https://www.getpostman.com/collections/80d6e41ef0aaaf9f1887) that's linked to the dev environment with a dev database.<br>After downloading the Postman collection, make sure to replace `tenantIndex` and your `accessKey`.
 
 ## URL's overview
-?> For testing purposes, use the following DEV base URL `https://grid-product-service-dev.azurewebsites.net/api/tenants`.
 
-?> With the creation of your tenant a tenant index name will be generated for you, if you do not have this please reach out to your contact within Ombori. Once you've received your Tenant index, you can insert this into the URL's where we've put `{tenant-index}`. 
+The `{base-url}` of the Grid-PIM API depends on the environment you're working with.
+
+- DEV base URL: `https://grid-product-service-dev.azurewebsites.net/api/tenants/`
+- PROD base URL: `https://grid-pim-prod-searchdb.search.windows.net/api/tenants/`
+
+> In every endpoint you will need to replace `{base-url}` with the URL specified above.
+
+?> With the creation of your tenant a tenant index name will be generated for you, if you do not have this please reach out to your contact within Ombori. Once you've received your Tenant index, you can insert this into the URL's where you'll see `{tenant-index}`. 
 
 The following endpoints are available in the API currently.
 
@@ -148,8 +154,8 @@ Uploads or merges products listing following the GridProduct format
 #### Body
 The body of the request should be an Array of [GridProducts]((/grid-pim/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
 
-| parameter | type                 | Description                                                   | Example |
-| --------- | -------------------- | ------------------------------------------------------------- | ------- |
+| parameter | type                 | Description                                                    | Example |
+| --------- | -------------------- | -------------------------------------------------------------- | ------- |
 | data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
 
 ?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
@@ -168,8 +174,8 @@ Removes products from the Grid-PIM database based on specified ID's
 
 Updates products with the fields specified in the data object. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects will be completely overwritten.
 
-| parameter | type                 | Description                                                                  |
-| --------- | -------------------- | ---------------------------------------------------------------------------- |
+| parameter | type                          | Description                                                                  |
+| --------- | ----------------------------- | ---------------------------------------------------------------------------- |
 | data      | `Array<Partial<GridProduct>>` | List of products with fields in GridProduct format to update to the Database |
 
 Reference: [GridProduct](/grid-pim/data-model?id=gridproduct) 

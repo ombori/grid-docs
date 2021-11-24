@@ -117,6 +117,15 @@ ProductLabel is *not* a required property that contains an Array of Objects, one
 | CountryId     | Country ID                             | Yes      | 46                                                   |
 
 
+### ProductTags
+ProductTags is *not* a required property that contains an Array of Objects, one is required, which each has the following properties. This field could help in searchability of a product.
+
+| Field         | Description                            | Required | Example                                              |
+| ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
+| ProductTags  | Array of translated strings of the tags | Yes      |                                                      |
+| IsoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+
+
 
 ### ProductItemQuantity
 The inventory quantity

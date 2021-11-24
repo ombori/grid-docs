@@ -106,10 +106,9 @@ interface GridProduct {
     ProductStatusNote?: string;
   }>;
 
-  // Equivalent to productDetails in GPF used for filters and data display
   ProductFeature?: Array<{
     Id: string; // SKU or variant Id
-    ProductFeatureType: string; // Key of productDetails in GPF
+    ProductFeatureType: string;
     CountryId: string;
     IsoLanguageId: IsoLanguageIds;
     ProductFeatureValue: string;
@@ -143,12 +142,18 @@ interface GridProduct {
   // Product Type (referenced from ProductType's "ProductTypeId" database)
   ProductType: Array<string>;
 
-  // Product Tags
+  // Product Labels - displayed like stickers
   ProductLabel?: Array<{
     CountryId: string;
     IsoLanguageId: IsoLanguageIds;
     ProductLabel: string; // Ex. [Online Exclusive]
   }>;
+
+  // Product Tags
+  ProductTags?: Array<{
+    IsoLanguageId: IsoLanguageIds;
+    ProductTags: string[];
+  }>
 
   // Product Promotion
   ProductPromotion?: {

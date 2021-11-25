@@ -159,7 +159,7 @@ The body of the request should be an Array of [GridProducts]((/grid-pim/data-mod
 | --------- | -------------------- | -------------------------------------------------------------- | ------- |
 | data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
 
-?> Limitations: <br> - 1000 product documents per batch<br> - 15MB request limit per batch
+?> Limitations: <br> - 100 products per batch
 
 ### [DELETE] Remove Products
 > **[DELETE] {base-url}/{tenant-index}/products**

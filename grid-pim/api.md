@@ -12,7 +12,8 @@ For easy configuration and testing, here's a Postman collection you can import i
 The `{base-url}` of the Grid-PIM API depends on the environment you're working with.
 
 - DEV base URL: `https://grid-product-service-dev.azurewebsites.net/api/tenants/`
-- PROD base URL: `https://grid-pim-prod-searchdb.search.windows.net/api/tenants/`
+- QA base URL: `https://grid-pim-qa.azurewebsites.net/api/tenants/`
+- PROD base URL: `https://grid-pim-prod.azurewebsites.net/api/tenants/`
 
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.
 

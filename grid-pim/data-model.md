@@ -155,13 +155,6 @@ interface GridProduct {
     ProductTags: string[];
   }>
 
-  // Product Promotion
-  ProductPromotion?: {
-    PromotionId: string; // Referenced from Promotions Index or an external data (WIP)
-    PeriodStartTimestamp?: string;
-    PeriodEndTimestamp?: string;
-  };
-
   // Product Quantity
   ProductItemQuantity?: Array<{
     Id: string; // SKU or variant Id

@@ -12,7 +12,6 @@ To get started with Session Manager, it is recommended to go to the [Getting Sta
 ### Further Reading
 Then there are several other pages that you can read about Session Manager.
 
-- [Reference](/session-manager/reference)
 - [Main Functions](/session-manager/main-functions)
 - [Standard Session Events](/session-manager/standard-session-events)
 - [Session API](/session-manager/session-api)

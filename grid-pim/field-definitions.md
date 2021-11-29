@@ -33,10 +33,10 @@ ProductDescription is a **required** property that contains an Array of Objects,
 ### RelatedProducts
 RelatedProducts is *not* required.
 
-| Field              | Description                                  | Required | Example                                              |
-| ------------------ | -------------------------------------------- | -------- | ---------------------------------------------------- |
-| RelatedProductId | ID of the related product | Yes      |                                                      |
-| ProductRelationshipType      | Relationship of the related product to the product             | Yes      | Recommended
+| Field                   | Description                                        | Required | Example     |
+| ----------------------- | -------------------------------------------------- | -------- | ----------- |
+| RelatedProductId        | ID of the related product                          | Yes      |             |
+| ProductRelationshipType | Relationship of the related product to the product | Yes      | Recommended |
    
 
 
@@ -115,6 +115,15 @@ ProductLabel is *not* a required property that contains an Array of Objects, one
 | ProductLabel  | Translation value of the product label | Yes      |                                                      |
 | IsoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
 | CountryId     | Country ID                             | Yes      | 46                                                   |
+
+
+### ProductTags
+ProductTags is *not* a required property that contains an Array of Objects, one is required, which each has the following properties. This field could help in the searchability of a product.
+
+| Field         | Description                             | Required | Example                                              |
+| ------------- | --------------------------------------- | -------- | ---------------------------------------------------- |
+| ProductTags   | Array of translated strings of the tags | Yes      |                                                      |
+| IsoLanguageId | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
 
 
 

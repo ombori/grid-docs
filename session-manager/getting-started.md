@@ -62,7 +62,10 @@ You don't need to invoke a `session end` event. The last event within the specif
 There are two ways to track events:
 
 1. as [Standard Session Event](/session-manager/standard-session-events)
-2. as [Custom Session Event](/session-manager/main-functions?id=track-event)
+2. as [Custom Session Event](/session-manager/main-functions?id=trackevent)
+
+## Offline Support
+Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when device is offline or having an intermittent internet connection.
 
 ## Develop in NodeJs
 The Grid Session Manager is not limited to react or Web-Based Applications, it can also be used for sending any session events from a server using NodeJS.

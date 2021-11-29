@@ -6,7 +6,7 @@ Grid Session Manager is a library used to:
 - subscribe to session and "space" events and updates
 
 ## Getting Started
-Install the `Grid Session Manager library` and `the Grid Settings helper library` from npm to any of your screen, mobile or node gridapp.
+Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen, mobile or node gridapp.
 
 npm:
 ```js
@@ -22,13 +22,13 @@ yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest
 - It is required to invoke `init` everytime your app starts
 - The `init` function requires arguments, which can be fetched out-of-the-box from `@ombori/ga-settings`
 - Before sending any events or fetching states, it is required to create a session by calling `createSession()`. It will generate sessionId and session start timestamp
-- When `init` is invoked, APP_START event is also sent to analytics service by default.
+- When `init` is invoked, `APP_START` event is also sent to analytics service by default.
 
 
 In the index.js or entry point of your app, do like:
 ```js
 import React from 'react';
-import { init, createSession } from '@ombori/grid-session-manager';
+import { init, createSession, standardSessionEvents } from '@ombori/grid-session-manager';
 import { useSessionManagerInitProps } from '@ombori/ga-settings';
 
 const Index = () => {
@@ -49,7 +49,18 @@ const Index = () => {
     return <div>Initializing App</div>;
   }
 
-  return <div>Hello World!</div>;
+  return <MainPage />;
+}
+
+const MainPage = () => {
+  const [isSessionInitialized, setIsSessionInitialized] = useState(false);
+  const sessionParams = useSessionManagerInitProps();
+  
+  React.useEffect(() => {
+    standardSessionEvents.sendContentView({ title: 'main_page' });
+  }, []);
+
+  return <div>Welcome to the main page!</div>;
 }
 ```
 

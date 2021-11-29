@@ -1,8 +1,9 @@
 [Session Mananger](/session-manager/)
 
 * **Reference documents**
-  * [Common](/session-manager/common)
+  * [Main Functions](/session-manager/main-functions)
   * [Standard Event Methods](/session-manager/standard-session-events)
-  * [Standard Event Methods](/session-manager/standard-session-events)
+  * [Custom Event](/session-manager/custom-session-events)
+  * [Session API](/session-manager/session-api)
   
 [< Back to all documentation](/)

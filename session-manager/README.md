@@ -6,7 +6,7 @@ Grid Session Manager is a library used to:
 - subscribe to session and "space" events and updates
 
 ## Getting Started
-Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen, mobile or node gridapp.
+Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen or mobile gridapp.
 
 npm:
 ```js
@@ -25,7 +25,7 @@ yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest
 - When `init` is invoked, `APP_START` event is also sent to analytics service by default.
 
 
-In the index.js or entry point of your app, do like:
+Example in React:
 ```js
 import React from 'react';
 import { init, createSession, standardSessionEvents } from '@ombori/grid-session-manager';
@@ -68,7 +68,13 @@ const MainPage = () => {
 You don't need to invoke a `session end` event. The last event within the specific session is considered as the session end timestamp.
 
 
-## Sending Events
-There are two ways to send events:
-1. Standard Session Events 
-2. Custom Session Events
+## Tracking Events
+There are two ways to track events:
+
+1. as [Standard Session Event](/session-manager/standard-session-events)
+2. as [Custom Session Event](/session-manager/custom-session-events)
+
+## Develop in NodeJs
+The Grid Session Manager is not limited to react or webapps, it can also be used for sending any session events from a server.
+
+Refer to the [Session API] page for the usage(/session-manager/session-api)

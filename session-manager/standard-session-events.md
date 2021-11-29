@@ -1,7 +1,13 @@
-# Predefined Event Types
-The session manager supports a number of predefined event types. These are used to define the structure of the session object when you want to use these standard event types.
+# Standard Session Events
+Standard Session Events are pre-defined events that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
 
-This list contains a list of predefined event types, group by usage.
+## Usage
+
+## E-commerce Events
+
+## User-based Events
+
+## Behavior-based Events
 
 ## Generic Events
 The Generic Events are intended for generic purposes that can apply in many situations.

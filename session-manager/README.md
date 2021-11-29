@@ -1,7 +1,21 @@
 # Grid Session Manager
 
-Grid Session Manager is a library used to:
-- send app events to Grid Analytics
-- fetch session states based on previous events
-- subscribe to Session and [Space]() events and updates
+Grid Session Manager is there for you to manage sessions, identify users, and tie different sessions of the same user together. Furthermore you can use it to manage spaces. A space within the session manager is a group of physical devices that share the same state.
 
+You could, for example, group all devices within a single store together as a space, and then track the activities of all users within that space. This is incredibly useful to understand what is happening within a space.
+
+With the session manager, you can also track the activities of a single user across multiple devices. This is useful to understand what is happening within a single user's context. This can be useful when you hand over the session from a screen to the mobile device of the user. You can then easily transfer session information, like cart contents, or the current page, to the user without issues.
+
+## Getting started
+To get started with Session Manager, it is recommended to go to the [Getting Started](/session-manager/getting-started) page.
+
+### Further Reading
+Then there are several other pages that you can read about Session Manager.
+
+- [Reference](/session-manager/reference)
+- [Main Functions](/session-manager/main-functions)
+- [Standard Session Events](/session-manager/standard-session-events)
+- [Session API](/session-manager/session-api)
+
+## Transparancy and GDPR
+To comply with GDPR we recommend informing your users about any information that can be tracked as a common practice. We do our best to protect your users' privacy, and for this we have the Contacts API. Any personable information that is sent to the session manager is stored separately from the session information, and only the session-id is used in tracking further events.

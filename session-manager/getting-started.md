@@ -46,9 +46,6 @@ const Index = () => {
 }
 
 const MainPage = () => {
-  const [isSessionInitialized, setIsSessionInitialized] = useState(false);
-  const sessionParams = useSessionManagerInitProps();
-  
   React.useEffect(() => {
     standardSessionEvents.sendContentView({ title: 'main_page' });
   }, []);

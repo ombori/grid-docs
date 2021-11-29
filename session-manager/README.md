@@ -1,6 +1,6 @@
 # Grid Session Manager
 
-Grid Session Manager is there for you to manage sessions, identify users, and tie different sessions of the same user together. Furthermore you can use it to manage spaces. A space within the session manager is a group of physical devices that share the same state.
+Grid Session Manager is there for you to manage sessions, identify users, and tie different sessions of the same user together. Furthermore you can use it to manage spaces. A space within the session manager is a group of physical devices and virtual entities that share the same state.
 
 You could, for example, group all devices within a single store together as a space, and then track the activities of all users within that space. This is incredibly useful to understand what is happening within a space.
 

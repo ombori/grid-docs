@@ -1,47 +1,63 @@
-# Session Manager
+# Grid Session Manager
 
-Session Manager is [insert short definition here]
+Grid Session Manager is a library used to:
+- send app events to Grid Analytics
+- fetch session states based on previous events
+- subscribe to session and "space" events and updates
 
-To get started with the Session Manager you will first have to understand how session manager works. For everything being discussed in this getting started guide, you can find in-depth information in the [Reference Guide](/session-manager/reference).
+## Getting Started
+Install the `Grid Session Manager library` and `the Grid Settings helper library` from npm to any of your screen, mobile or node gridapp.
 
-## Setup
-To start with the session manager, you will need to include the session manager in your project.
-
+npm:
 ```js
-// add include code
+npm install @ombori/grid-session-manager@latest @ombori/ga-settings@latest 
 ```
 
-Once it is included, run the init function to initialize the session manager.
-
+yarn:
 ```js
-// add session manager init method
+yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest 
 ```
 
-## Identifying your user
+## Usage
+- It is required to invoke `init` everytime your app starts
+- The `init` function requires arguments, which can be fetched out-of-the-box from `@ombori/ga-settings`
+- Before sending any events or fetching states, it is required to create a session by calling `createSession()`. It will generate sessionId and session start timestamp
+- When `init` is invoked, APP_START event is also sent to analytics service by default.
 
-Whenever a user starts interacting with your application, you should create a new session.
 
+In the index.js or entry point of your app, do like:
 ```js
-// add session create code here
-```
+import React from 'react';
+import { init, createSession } from '@ombori/grid-session-manager';
+import { useSessionManagerInitProps } from '@ombori/ga-settings';
 
-And as soon as you know any user identifier, you can specify this to the session manager so the session manager can try to identify the user, or create a new user for your Tenant
+const Index = () => {
+  const [isSessionInitialized, setIsSessionInitialized] = useState(false);
+  const sessionParams = useSessionManagerInitProps();
+  
+  React.useEffect(() => {
+    const initSession = async () => {
+      if (sessionParams) {
+        await init();
+        createSession(); // you have the freedom to start a session at any point in your app
+        setIsSessionInitialized(true);
+      }
+    }
+  }, [sessionParams]);
 
-```js
-// add code to set user email/phone/etc
-```
+  if (!isSessionInitialized) {
+    return <div>Initializing App</div>;
+  }
 
-## Tracking actions
-
-Now that you have a user session, you can track actions that the user performs. For this you can add custom fields, but also use pre-defined fields. To see the full list of fields you can provide check the [Reference Guide](/session-manager/reference).
-
-```js
-// add code for custom payload event
+  return <div>Hello World!</div>;
+}
 ```
 
 ## Ending a session
-Once the user is done interacting with your application, you can end the session.
+You don't need to invoke a `session end` event. The last event within the specific session is considered as the session end timestamp.
 
-```js
-// add end session code here
-```
+
+## Sending Events
+There are two ways to send events:
+1. Standard Session Events 
+2. Custom Session Events

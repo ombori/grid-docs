@@ -3,7 +3,7 @@
 Grid Session Manager is a library used to:
 - send app events to Grid Analytics
 - fetch session states based on previous events
-- subscribe to session and "space" events and updates
+- subscribe to Session and [Space]() events and updates
 
 ## Getting Started
 Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen or mobile gridapp.
@@ -72,7 +72,7 @@ You don't need to invoke a `session end` event. The last event within the specif
 There are two ways to track events:
 
 1. as [Standard Session Event](/session-manager/standard-session-events)
-2. as [Custom Session Event](/session-manager/custom-session-events)
+2. as [Custom Session Event](/session-manager/main-functions?id=track-event)
 
 ## Develop in NodeJs
 The Grid Session Manager is not limited to react or webapps, it can also be used for sending any session events from a server.

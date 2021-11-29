@@ -68,6 +68,6 @@ There are two ways to track events:
 2. as [Custom Session Event](/session-manager/main-functions?id=track-event)
 
 ## Develop in NodeJs
-The Grid Session Manager is not limited to react or webapps, it can also be used for sending any session events from a server.
+The Grid Session Manager is not limited to react or Web-Based Applications, it can also be used for sending any session events from a server using NodeJS.
 
 Refer to the [Session API](/session-manager/session-api) page for the usage.

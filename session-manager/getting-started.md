@@ -31,7 +31,6 @@ const App = () => {
   React.useEffect(() => {
     const initSession = async () => {
       if (sessionParams) {
-        console.log('YAWA:', sessionParams);
         await init(sessionParams);
         setIsSessionInitialized(true);
       }

@@ -97,10 +97,10 @@ Instance
 | appVersion             | string   | List of Product Type IDs applicable to this product as a reference from ProductTypes Database |
 | installationId         | string   | The id of the installation in Grid Console                                                    |
 | installationVersion    | string   | Build id of the installation                                                                  |
-| deviceId               | string / undefined   | Id of the device in console. If deviceId is not passed, virtual deviceId is created |
+| deviceId               | string \| undefined   | Id of the device in console. If deviceId is not passed, virtual deviceId is created |
 | clientId               | string   | Client id of the requestor. clientId is same as deviceId for registered devices in console    |
 | clientCreated          | string   | Date when the client id is created                                                            |
 | clientUserAgent        | string   | Requestor user agent                                                                          |                               
-| locationAccuracy       | number / undefined   | Geographic coordinates accuracy                                                   |
-| latitude               | number / undefined   | Geographic latitude of the device or requestor                                    |
-| longitude              | number / undefined   | Geographic longitude of the device or requestor                                   |
+| locationAccuracy       | number \| undefined   | Geographic coordinates accuracy                                                   |
+| latitude               | number \| undefined   | Geographic latitude of the device or requestor                                    |
+| longitude              | number \| undefined   | Geographic longitude of the device or requestor                                   |

@@ -1,5 +1,11 @@
 # List of Standard Session Events
-Standard Session Events are pre-defined events that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
+Standard Session Events are predefined events that are common across different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
+
+- [E-commerce Events](/session-manager/standard-session-events?id=e-commerce-events)
+- [Contact Events](/session-manager/standard-session-events?id=contact-events)
+- [Generic Events](/session-manager/standard-session-events?id=generic-events)
+
+## E-commerce Events
 
 - [sendCartView](/session-manager/standard-session-events?id=e-commerce-events)
 - [sendCartAdd](/session-manager/standard-session-events?id=sendcartadd)

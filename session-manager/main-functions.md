@@ -48,11 +48,11 @@ Start a new session. You should call this method every time a new user starts in
 const instance = getInstance();
 ```
 
-This will return the instance object of the session, it will contain the properties listed below.
+This will return the instance object of the session. You should call this method after initiating the session manager.
 
 ### Returns
 
-These are the instance properties:
+These are the instance properties that are returned from the `getInstance()` method.
 
 | Key                 | Type   | Description                                                                                   |
 | ------------------- | ------ | --------------------------------------------------------------------------------------------- |

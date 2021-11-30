@@ -21,21 +21,23 @@ yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest
 Example in React:
 ```js
 import React from 'react';
-import { init, createSession, standardSessionEvents } from '@ombori/grid-session-manager';
-import { useSessionManagerInitProps } from '@ombori/ga-settings';
+import { init, eventTracking } from '@ombori/grid-session-manager';
+import { useSessionManagerInitParams} from '@ombori/ga-settings';
 
-const Index = () => {
-  const [isSessionInitialized, setIsSessionInitialized] = useState(false);
-  const sessionParams = useSessionManagerInitProps();
+const App = () => {
+  const [isSessionInitialized, setIsSessionInitialized] = React.useState(false);
+  const sessionParams = useSessionManagerInitParams();
   
   React.useEffect(() => {
     const initSession = async () => {
       if (sessionParams) {
-        await init();
-        createSession(); // you have the freedom to start a session at any point in your app
+        console.log('YAWA:', sessionParams);
+        await init(sessionParams);
         setIsSessionInitialized(true);
       }
     }
+    
+    initSession();
   }, [sessionParams]);
 
   if (!isSessionInitialized) {
@@ -47,11 +49,13 @@ const Index = () => {
 
 const MainPage = () => {
   React.useEffect(() => {
-    standardSessionEvents.sendContentView({ title: 'main_page' });
+    eventTracking.sendContentView({ title: 'main_page' });
   }, []);
 
   return <div>Welcome to the main page!</div>;
 }
+
+export default App;
 ```
 
 ## Ending a session
@@ -61,8 +65,8 @@ You don't need to invoke a `session end` event. The last event within the specif
 ## Tracking Events
 There are two ways to track events:
 
-1. as [Standard Session Event](/session-manager/standard-session-events)
-2. as [Custom Session Event](/session-manager/main-functions?id=trackevent)
+1. as [Standard Session Event](/session-manager/event-trackig)
+2. as [Custom Session Event](/session-manager/event-tracking?id=custom-event)
 
 ## Offline Support
 Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.

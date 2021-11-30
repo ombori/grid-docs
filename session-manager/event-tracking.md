@@ -1,6 +1,7 @@
-# List of Standard Session Events
-Standard Session Events are pre-defined events that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
+# Event Tracking
+Standard Session Events are pre-defined methods that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
 
+## E-commerce Events
 - [sendCartView](/session-manager/standard-session-events?id=e-commerce-events)
 - [sendCartAdd](/session-manager/standard-session-events?id=sendcartadd)
 - [sendCartRemove](/session-manager/standard-session-events?id=sendcartremove)
@@ -11,7 +12,6 @@ Standard Session Events are pre-defined events that are common accross different
 - [sendProductView](/session-manager/standard-session-events?id=sendproductview)
 - [sendPurchase](/session-manager/standard-session-events?id=sendpurchase)
 
-## E-commerce Events
 ### sendCartView
 ▸ `Const` **sendCartView**(): Promise<void\>
 
@@ -29,10 +29,10 @@ Adding a product to the cart
 
 #### Parameters
 
-| Key | Type | Required |
-| :------ | :------ | :------ |
-| `productId` | string | yes | 
-| `quantity` | number | yes |
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `productId` | string | Product primary id used in PIM | yes |
+| `quantity` | number | Product quantity added into the cart | yes |
 
 #### Returns
 
@@ -56,10 +56,10 @@ Removing a product from the cart
 
 #### Parameters
 
-| Key | Type | Required |
-| :------ | :------ | :------ |
-| `productId` | string | yes |
-| `quantity` | number | yes |
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `productId` | string | Product primary id used in PIM | yes |
+| `quantity` | number | Product quantity removed from the cart | yes |
 
 #### Returns
 
@@ -73,9 +73,9 @@ Browsing products under a category
 
 #### Parameters
 
-| Key | Type | Required |
-| :------ | :------ | :------ |
-| `categoryId` | string | yes |
+| Key | Type | Description |Required |
+| :------ | :------ | :------ | :------ |
+| `categoryId` | string | Category primary id used in PIM | yes |
 
 #### Returns
 
@@ -115,9 +115,9 @@ Viewing a specific product page
 
 #### Parameters
 
-| Key | Type | Required |
-| :------ | :------ | :------ |
-| `productId` | string | yes |
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `productId` | string | Product primary id used in PIM | yes |
 
 #### Returns
 
@@ -147,7 +147,7 @@ Promise<void\>
 ## Contact Events
 
 - [sendContactIdentify](/session-manager/standard-session-events?id=sendcontactidentify)
-- [sendContactMetaData](/session-manager/standard-session-events?id=sendcontactmetadata)
+- [sendContactMetadata](/session-manager/standard-session-events?id=sendcontactmetadata)
 - [sendDetectAge](/session-manager/standard-session-events?id=senddetectage)
 - [sendDetectGender](/session-manager/standard-session-events?id=senddetectgender)
 - [sendDetectMood](/session-manager/standard-session-events?id=senddetectmood)
@@ -170,9 +170,9 @@ Identifying the customer based on a known identifyer
 
 Promise<void\>
 
-### sendContactMetaData
+### sendContactMetadata
 
-▸ `Const` **sendContactMetaData**(`params`): Promise<void\>
+▸ `Const` **sendContactMetadata**(`params`): Promise<void\>
 
 Identifying the customer based on a known identifyer
 
@@ -286,7 +286,7 @@ Promise<void\>
 
 ### sendRating
 
-▸ `Const` **sendRating**(`__namedParameters`): Promise<void\>
+▸ `Const` **sendRating**(`params`): Promise<void\>
 
 User's rate of the experience
 
@@ -304,7 +304,7 @@ Promise<void\>
 
 ### sendSearch
 
-▸ `Const` **sendSearch**(`__namedParameters`): Promise<void\>
+▸ `Const` **sendSearch**(`params`): Promise<void\>
 
 Searching a product, category, or anything in the app
 
@@ -312,8 +312,7 @@ Searching a product, category, or anything in the app
 
 | Name | Type |
 | :------ | :------ |
-| `__namedParameters` | Object |
-| `__namedParameters.searchQueryString` | string |
+| `searchQueryString` | string |
 
 #### Returns
 
@@ -328,3 +327,35 @@ Searching a product, category, or anything in the app
 #### Returns
 
 Promise<void\>
+
+## Custom Event
+
+- [trackEvent](/session-manager/event-tracking?id=custom-event)
+
+▸ `Const` **sendCustomEvent**(`eventParams`): Promise<void\>
+
+Used for tracking custom  events outside the standard session event methods.
+
+#### Event Parameters
+
+| Key         | Type    | Description                                                       | Required |
+| ----------- | ------- | ----------------------------------------------------------------- | -------- |
+| eventType   | string  | Event type outside the standard event types (Example: TEST_EVENT) | yes      |
+| interaction | boolean | If the event is triggered by a user                               | yes      |
+| productId   | string  | Product id related to the event                                   | no       |
+| categoryId  | string  | Category id related to the event                                  | no       |
+| int1        | number  | Integer type field related to the event                           | no       |
+| int2        | number  | Integer type field related to the event                           | no       |
+| int3        | number  | Integer type field related to the event                           | no       |
+| int4        | number  | Integer type field related to the event                           | no       |
+| int5        | number  | Integer type field related to the event                           | no       |
+| str1        | string  | String type field related to the event                            | no       |
+| str2        | string  | String type field related to the event                            | no       |
+| str3        | string  | String type field related to the event                            | no       |
+| str4        | string  | String type field related to the event                            | no       |
+| str5        | string  | String type field related to the event                            | no       |
+#### Returns
+
+Promise<void\>
+
+___

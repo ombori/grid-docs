@@ -2,8 +2,7 @@
 
 - [init](session-manager/main-functions?id=init)
 - [createSession](session-manager/main-functions?id=createsession)
-- [trackEvent](undefined)
-- [getInstance](undefined)
+- [getInstance](/session-manager/main-functions?id=getinstance)
 
 ## init
 
@@ -38,43 +37,12 @@ Promise<void\>
 
 ▸ `Const` **createSession**(): Promise<void\>
 
-Start a new session. This will send a SESSION_START event to the analytics service
+Start a new session
 
 ### Returns
 
 Promise<void\>
 
-___
-
-## trackEvent
-
-▸ `Const` **trackEvent**(`eventParams`): Promise<void\>
-
-Used for tracking custom  events outside the standard session event methods.
-
-#### Event Parameters
-
-| Key         | Type    | Description                                                       | Required |
-| ----------- | ------- | ----------------------------------------------------------------- | -------- |
-| eventType   | string  | Event type outside the standard event types (Example: TEST_EVENT) | yes      |
-| interaction | boolean | If the event is triggered by a user                               | yes      |
-| productId   | string  | Product id related to the event                                   | no       |
-| categoryId  | string  | Category id related to the event                                  | no       |
-| int1        | number  | Integer type field related to the event                           | no       |
-| int2        | number  | Integer type field related to the event                           | no       |
-| int3        | number  | Integer type field related to the event                           | no       |
-| int4        | number  | Integer type field related to the event                           | no       |
-| int5        | number  | Integer type field related to the event                           | no       |
-| str1        | string  | String type field related to the event                            | no       |
-| str2        | string  | String type field related to the event                            | no       |
-| str3        | string  | String type field related to the event                            | no       |
-| str4        | string  | String type field related to the event                            | no       |
-| str5        | string  | String type field related to the event                            | no       |
-### Returns
-
-Promise<void\>
-
-___
 ## getInstance
 
 ▸ `Const` **getInstance**(): Instance

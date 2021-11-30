@@ -12,10 +12,10 @@ yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest
 ```
 
 ## Usage
-- It is required to invoke `init` everytime your app starts
+- It is required to invoke `init` every time your app starts
 - The `init` function requires arguments, which can be fetched out-of-the-box from `@ombori/ga-settings`
-- Before sending any events or fetching states, it is required to create a session by calling `createSession()`. It will generate sessionId and session start timestamp
-- When `init` is invoked, `APP_START` event is also sent to analytics service by default.
+- Before sending any events or fetching states, it is required to create a session by calling `createSession()`. It will generate a `sessionId` and session-start timestamp
+- When `init` is invoked, `APP_START` event is also sent to the analytics service by default.
 
 
 Example in React:
@@ -65,7 +65,7 @@ There are two ways to track events:
 2. as [Custom Session Event](/session-manager/main-functions?id=trackevent)
 
 ## Offline Support
-Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when device is offline or having an intermittent internet connection.
+Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.
 
 ## Develop in NodeJs
 The Grid Session Manager is not limited to react or Web-Based Applications, it can also be used for sending any session events from a server using NodeJS.

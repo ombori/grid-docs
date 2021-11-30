@@ -2,20 +2,17 @@
 
 When integrating Grid Session Manager on server side, you may want to just directly send events to the Grid Session API.
 
-## Functions
-- [sendClient](undefined)
-- [sendEvent](undefined)
-- [sendSession](undefined)
+- [sendClient](/session-manager/session-api?id=sendclient)
+- [sendSession](/session-manager/session-api?id=sendsession)
+- [sendEvent](/session-manager/session-api?id=sendevent)
 
-## Functions
-
-### sendClient
+## sendClient
 
 ▸ `Const` **sendClient**(`client`): Promise<void\>
 
 Send device client information
 
-#### Parameters
+### Parameters
 
 | Key | Type | Required |
 | :------ | :------ | :------ |
@@ -33,18 +30,50 @@ Send device client information
 | `clientScreenColorDepth` | number | no |
 | `clientScreenPixelDepth` | number | no |
 
-#### Returns
+### Returns
 
 Promise<void\>
 
 
-### sendEvent
+
+## sendSession
+
+▸ `Const` **sendSession**(`session`): Promise<void\>
+
+Start or create a session
+
+### Parameters
+
+| Key | Type | Required |
+| :------ | :------ | :------ |
+| `tenantId` | string | yes | 
+| `sessionId` | string | yes |
+| `sessionCreated` | string | yes |
+| `environment` | number | yes |
+| `dataResidency` | string | yes |
+| `country` | string | yes |
+| `spaceId` | string | yes |
+| `appId` | string | yes |
+| `appVersion` | string | yes |
+| `installationId` | string | yes |
+| `installationVersion` | string | yes |
+| `deviceId` | string | yes |
+| `clientId` | string | yes |
+| `locationAccuracy` | number | no |
+| `latitude` | number | no |
+| `longitude` | number | no |
+
+### Returns
+
+Promise<void\>
+
+## sendEvent
 
 ▸ `Const` **sendEvent**(`event`): Promise<void\>
 
 Track session events
 
-#### Parameters
+### Parameters
 
 | Key | Type | Required |
 | :------ | :------ | :------ |
@@ -67,37 +96,6 @@ Track session events
 | `str3` | string | no |
 | `str4` | string | no |
 | `str5` | string | no |
-#### Returns
-
-Promise<void\>
-
-### sendSession
-
-▸ `Const` **sendSession**(`session`): Promise<void\>
-
-Start or create a session
-
-#### Parameters
-
-| Key | Type | Required |
-| :------ | :------ | :------ |
-| `tenantId` | string | yes | 
-| `sessionId` | string | yes |
-| `sessionCreated` | string | yes |
-| `environment` | number | yes |
-| `dataResidency` | string | yes |
-| `country` | string | yes |
-| `spaceId` | string | yes |
-| `appId` | string | yes |
-| `appVersion` | string | yes |
-| `installationId` | string | yes |
-| `installationVersion` | string | yes |
-| `deviceId` | string | yes |
-| `clientId` | string | yes |
-| `locationAccuracy` | number | no |
-| `latitude` | number | no |
-| `longitude` | number | no |
-
-#### Returns
+### Returns
 
 Promise<void\>

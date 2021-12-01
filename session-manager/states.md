@@ -31,15 +31,6 @@ const currentSessionState = await states.getSpaceState({
 });
 ```
 
-
-### Parameters
-
-| Key        | Type   | Description        | Required |
-| :--------- | :----- | :----------------- | :------- |
-| `username` | string | browser id         | yes      |
-| `password` | string | browser access key | yes      |
-
-
 ## subscribeSessionState
 
 Subscribes the application to a session state.

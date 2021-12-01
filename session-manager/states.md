@@ -9,9 +9,7 @@ You can fetch the latest states or subscribe to changes of the sessions and spac
 
 ## getSessionState
 
-▸ `Const` **getSessionState**(): Promise<AxiosResponse<any, any\>\>
-
-### Example
+Returns the current session state as a promise.
 
 ```js
 import { states } from '@ombori/session-manager';
@@ -20,24 +18,8 @@ import { states } from '@ombori/session-manager';
 const currentSessionState = await states.getSessionState();
 ```
 
-### Returns
-
-Promise<AxiosResponse<any, any\>\>
-
-
 ## getSpaceState
-
-▸ `Const` **getSpaceState**(`params`): Promise<AxiosResponse<any, any\>\>
-
-### Parameters
-
-| Key | Type | Description | Required | 
-| :------ | :------ | :------ | :------ |
-| `username` | string | browser id | yes |
-| `password` | string | browser access key | yes |
-
-
-### Example
+Returns the current space state as a promise.
 
 ```js
 import { states } from '@ombori/session-manager';
@@ -49,23 +31,18 @@ const currentSessionState = await states.getSpaceState({
 });
 ```
 
-### Returns
 
-Promise<AxiosResponse<any, any\>\>
+### Parameters
+
+| Key        | Type   | Description        | Required |
+| :--------- | :----- | :----------------- | :------- |
+| `username` | string | browser id         | yes      |
+| `password` | string | browser access key | yes      |
 
 
 ## subscribeSessionState
 
-▸ `Const` **subscribeSessionState**(`params`): Promise<Object\>
-
-### Parameters
-
-| Key | Type | Description | Required | 
-| :------ | :------ | :------ | :------ |
-| `username` | string | browser id | yes |
-| `password` | string | browser access key | yes |
-
-### Example
+Subscribes the application to a session state.
 
 ```js
 import { states } from '@ombori/session-manager';
@@ -75,28 +52,21 @@ const onSessionStateEvent = (data) => alert(data);
 const sessionState = await states.subscribeSessionState();
 sessionState.subscribe(onSessionStateEvent);
 
-...
-
 // Gracefully stop state subscription
 await sessionState.stop();
 ```
 
-#### Returns
-
-Promise<Object\>
-
-___
-
-## subscribeSpaceState
-
-▸ `Const` **subscribeSpaceState**(`params`): Promise<Object\>
 
 ### Parameters
 
-| Key | Type | Description | Required | 
-| :------ | :------ | :------ | :------ |
-| `username` | string | browser id | yes |
-| `password` | string | browser access key | yes |
+| Key        | Type   | Description        | Required |
+| :--------- | :----- | :----------------- | :------- |
+| `username` | string | browser id         | yes      |
+| `password` | string | browser access key | yes      |
+
+
+## subscribeSpaceState
+Subscribes the current application to a space state.
 
 ```js
 import { states } from '@ombori/session-manager';
@@ -111,7 +81,10 @@ spaceState.subscribe(onSpaceSateEvent);
 // Gracefully stop state subscription
 await spaceState.stop();
 ```
+### Parameters
 
-#### Returns
+| Key        | Type   | Description        | Required |
+| :--------- | :----- | :----------------- | :------- |
+| `username` | string | browser id         | yes      |
+| `password` | string | browser access key | yes      |
 
-Promise<Object\>

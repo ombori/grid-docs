@@ -5,10 +5,10 @@ When integrating Grid Session Manager on server-side, you may want to just direc
 - [sendClient](/session-manager/session-api?id=sendclient)
 - [sendSession](/session-manager/session-api?id=sendsession)
 - [sendEvent](/session-manager/session-api?id=sendevent)
-- [getSessionState](undefined)
-- [getSpaceState](undefined)
-- [subscribeSessionState](undefined)
-- [subscribeSpaceState](undefined)
+- [getSessionState](/session-manager/session-api?id=getsessionstate)
+- [getSpaceState](/session-manager/session-api?id=getspacestate)
+- [subscribeSessionState](/session-manager/session-api?id=subscribesessionstate)
+- [subscribeSpaceState](/session-manager/session-api?id=subscribespacestate)
 
 ## sendClient
 
@@ -111,27 +111,46 @@ Promise<void\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | GetSessionStateParams |
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `username` | string | Browser id | yes |
+| `password` | string | Browser access key | yes |
+| `tenantId` | string | Tenant id in console | yes |
+| `sessionId` | string | Session id | yes |
+| `dataResidency` | string | Tenant data residency in console | yes |
 
 #### Returns
 
-Promise<AxiosResponse<any, any\>\>
+Promise<GetSessionStateResponse\>
+
+#### GetSessionStateResponse
+
+```js
+  session: {
+    CART: {
+      [productId: string]: number;
+    };
+    SEARCH: string[];
+  }
+``` 
 
 ## getSpaceState
 
-▸ `Const` **getSpaceState**(`params`): Promise<AxiosResponse<any, any\>\>
+▸ `Const` **getSpaceState**(`params`): Promise<GetSpaceStateParamsResponse\>
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | GetSpaceStateParams |
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `username` | string | Browser id | yes |
+| `password` | string | Browser access key | yes |
+| `tenantId` | string | Tenant id in console | yes |
+| `sessionId` | string | Session id | yes |
+| `dataResidency` | string | Tenant data residency in console | yes |
 
 ### Returns
 
-Promise<AxiosResponse<any, any\>\>
+Promise<GetSpaceStateParamsResponse>
 
 ## subscribeSessionState
 

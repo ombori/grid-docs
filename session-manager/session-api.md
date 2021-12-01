@@ -152,6 +152,20 @@ Promise<GetSessionStateResponse\>
 
 Promise<GetSpaceStateParamsResponse>
 
+#### GetSpaceStateParamsResponse
+
+```js
+  session: {
+    CART: {
+      [productId: string]: {
+        contacts: number;
+        quantity: number;
+      };
+    };
+    SEARCH: string[];
+  }
+``` 
+
 ## subscribeSessionState
 
 ▸ `Const` **subscribeSessionState**(`params`): Promise<Object\>
@@ -164,7 +178,7 @@ Promise<GetSpaceStateParamsResponse>
 
 ### Returns
 
-Promise<Object\>
+Promise<SubscribeStateResponse\>
 
 ## subscribeSpaceState
 
@@ -178,4 +192,4 @@ Promise<Object\>
 
 ### Returns
 
-Promise<Object\>
+Promise<SubscribeStateResponse\>

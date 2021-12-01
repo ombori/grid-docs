@@ -94,16 +94,15 @@ Send session events
 | `str5`          | string  | no       |
 ### Returns
 
-Promise<void\>
+Promise<void/>
 
 ## getSessionState
+Get session state
 
 #### Parameters
 
 | Key | Type | Description | Required |
 | :------ | :------ | :------ | :------ |
-| `username` | string | Browser id | yes |
-| `password` | string | Browser access key | yes |
 | `tenantId` | string | Tenant id in console | yes |
 | `sessionId` | string | Session id | yes |
 | `dataResidency` | string | Tenant data residency in console | yes |
@@ -124,26 +123,7 @@ Promise<GetSessionStateResponse\>
 ``` 
 
 ## getSpaceState
-
-▸ `Const` **getSpaceState**(`params`): Promise<GetSpaceStateParamsResponse\>
-
-### Parameters
-
-| Key | Type | Description | Required |
-| :------ | :------ | :------ | :------ |
-| `username` | string | Browser id | yes |
-| `password` | string | Browser access key | yes |
-| `tenantId` | string | Tenant id in console | yes |
-| `sessionId` | string | Session id | yes |
-| `dataResidency` | string | Tenant data residency in console | yes |
-
-### Returns
-
-Promise<GetSpaceStateParamsResponse>
-
-## getSpaceStateRows
-
-▸ `Const` **getSpaceStateRows**(`params`): Promise<GetSpaceStateRowsResponse\>
+Get space state based on sessionId
 
 ### Parameters
 
@@ -157,11 +137,54 @@ Promise<GetSpaceStateParamsResponse>
 
 ### Returns
 
-Promise<GetSpaceStateParamsResponse>
+Promise<GetSpaceStateResponse>
 
-#### GetSpaceStateParamsResponse
+#### GetSpaceStateResponse
 
 ```js
+{
+  RATING: {
+    type: string;
+    value: {
+      min: number;
+      max: number;
+      mean: number;
+      length: number;
+    },
+    expiry: number;
+    created: string;
+    updated: string;
+  },
+  CART: {
+    [productId: string]: {
+      quantity: number;
+      contacts: number;
+    };
+  };
+}
+``` 
+
+
+## getSpaceStateRows
+Get space state from multiple sessions based on session id
+### Parameters
+
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `username` | string | Browser id | yes |
+| `password` | string | Browser access key | yes |
+| `tenantId` | string | Tenant id in console | yes |
+| `sessionId` | string | Session id | yes |
+| `dataResidency` | string | Tenant data residency in console | yes |
+
+### Returns
+
+Promise<GetSpaceStateRowsResponse>
+
+#### GetSpaceStateRowsResponse
+
+```js
+{
   RATING: {
     [sessionId: string]: {
       value: number;
@@ -178,11 +201,11 @@ Promise<GetSpaceStateParamsResponse>
       };
     };
   };
+}
 ``` 
 
 ## createSessionStateSubscription
-
-▸ `Const` **createSessionStateSubscription**(`params`): Promise<SubscribeStateResponse\>
+Create session state subscription
 
 ### Parameters
 
@@ -193,11 +216,25 @@ Promise<GetSpaceStateParamsResponse>
 
 ### Returns
 
-Promise<SubscribeStateResponse\>
+```js
+{
+  subscribe(callbackFn<SubscribeStateResponse>),
+  stop,
+}
+```
+
+#### SubscribeStateResponse
+```js
+{
+  CART: {
+    [productId: string]: number;
+  };
+  SEARCH: string[];
+}
+```
 
 ## createSessionEventSubscription
-
-▸ `Const` **createSessionEventSubscription**(`params`): Promise<CreateEventSubscriptionResponse\>
+Create session event subscription
 
 ### Parameters
 
@@ -205,10 +242,14 @@ Promise<SubscribeStateResponse\>
 | :------ | :------ |
 | `sessionId` | string |
 | `dataResidency` | string |
-
 ### Returns
 
-Promise<CreateEventSubscriptionResponse\>
+```js
+{
+  subscribe(callbackFn<CreateEventSubscriptionResponse>),
+  stop,
+}
+```
 
 #### CreateEventSubscriptionResponse
 
@@ -239,5 +280,94 @@ Promise<CreateEventSubscriptionResponse\>
 
 
 ## createSpaceStateSubscription
+Create space state subscription
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `username` | string |
+| `password` | string |
+| `spaceId` | string |
+| `dataResidency` | string |
+
+### Returns
+
+```js
+{
+  subscribe(callbackFn<CreateSpaceStateSubscriptionResponse>),
+  stop,
+}
+```
+
+#### CreateSpaceStateSubscriptionResponse
+```js
+{
+  RATING: {
+    type: string;
+    value: {
+      min: number;
+      max: number;
+      mean: number;
+      length: number;
+    },
+    expiry: number;
+    created: string;
+    updated: string;
+  },
+  CART: {
+    [productId: string]: {
+      quantity: number;
+      contacts: number;
+    };
+  };
+}
+```
 
 ## createSpaceEventSubscription
+Create space event subscription
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `username` | string |
+| `password` | string |
+| `spaceId` | string |
+| `dataResidency` | string |
+
+### Returns
+
+```js
+{
+  subscribe(callbackFn<CreateEventSubscriptionResponse>),
+  stop,
+}
+```
+
+#### CreateEventSubscriptionResponse
+
+```js
+{
+  captureId: string;
+  clientId: string;
+  dataResidency: string;
+  eventTime: string;
+  eventType: string;
+  interaction: boolean;
+  ip: string;
+  productId: string;
+  sessionId: string;
+  tenantId: string;
+  int1?: number;
+  int2?: number;
+  int3?: number;
+  int4?: number;
+  int5?: number;
+  str1?: string;
+  str2?: string;
+  str3?: string;
+  str4?: string;
+  str5?: string;
+}
+``` 

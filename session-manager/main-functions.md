@@ -50,7 +50,7 @@ const instance = getInstance();
 
 This will return the instance object of the session. You should call this method after initiating the session manager.
 
-### Returns
+#### Returns
 
 These are the instance properties that are returned from the `getInstance()` method.
 

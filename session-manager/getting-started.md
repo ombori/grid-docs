@@ -1,45 +1,36 @@
 # Getting Started
 Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen or mobile gridapp.
 
-npm:
+## Set-up
+### React
 ```js
-npm install @ombori/grid-session-manager@latest @ombori/ga-settings@latest 
+npm install @ombori/grid-session-manager-react
+or
+yarn add @ombori/grid-session-manager-react
 ```
 
-yarn:
+### Javascript
 ```js
-yarn add @ombori/grid-session-manager@latest @ombori/ga-settings@latest 
+npm install @ombori/grid-session-manager @ombori/ga-settings 
+or
+yarn add @ombori/grid-session-manager @ombori/ga-settings 
 ```
+
+#### Note
+- `@ombori/grid-session-manager-react` is a package with `@ombori/grid-session-manager` and `@ombori/ga-settings` as dependencies, built for easier initialization and better support for React applications. Everything that you can import from `@ombori/grid-session-manager` is also in `@ombori/grid-session-manager-react`.
+- You can use `@ombori/grid-session-manager` package for other JS libraries or server side applications.
 
 ## Usage
-- It is required to invoke `init` every time your app starts
-- The `init` function requires arguments, which can be fetched out-of-the-box from `@ombori/ga-settings`
-- Before sending any events or fetching states, it is required to create a session by calling `createSession()`. It will generate a `sessionId` and session-start timestamp
-- When `init` is invoked, `APP_START` event is also sent to the analytics service by default.
 
-
-Example in React:
+#### Example in React:
 ```js
 import React from 'react';
-import { init, eventTracking } from '@ombori/grid-session-manager';
-import { useSessionManagerInitParams} from '@ombori/ga-settings';
+import { useSessionManager } from '@ombori/grid-session-manager-react';
 
 const App = () => {
-  const [isSessionInitialized, setIsSessionInitialized] = React.useState(false);
-  const sessionParams = useSessionManagerInitParams();
-  
-  React.useEffect(() => {
-    const initSession = async () => {
-      if (sessionParams) {
-        await init(sessionParams);
-        setIsSessionInitialized(true);
-      }
-    }
-    
-    initSession();
-  }, [sessionParams]);
+  const isReady = useSessionManager();
 
-  if (!isSessionInitialized) {
+  if (!isReady) {
     return <div>Initializing App</div>;
   }
 
@@ -51,10 +42,24 @@ const MainPage = () => {
     eventTracking.sendContentView({ title: 'main_page' });
   }, []);
 
-  return <div>Welcome to the main page!</div>;
+  return (
+    <div>
+      <div>Welcome to the main page!</div>
+    </div>
+  );
 }
 
 export default App;
+```
+
+## Creating a session
+By default, during init, it creates an initial session under the hood. You can create or start a new session by invoking `createSession` function anywhere in your app. 
+
+```js
+import { useSessionManager, createSession } from '@ombori/grid-session-manager-react';
+...
+createSession();
+...
 ```
 
 ## Ending a session

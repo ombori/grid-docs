@@ -101,11 +101,11 @@ Get session state
 
 #### Parameters
 
-| Key | Type | Description | Required |
-| :------ | :------ | :------ | :------ |
-| `tenantId` | string | Tenant id in console | yes |
-| `sessionId` | string | Session id | yes |
-| `dataResidency` | string | Tenant data residency in console | yes |
+| Key             | Type   | Description                      | Required |
+| :-------------- | :----- | :------------------------------- | :------- |
+| `tenantId`      | string | Tenant id in console             | yes      |
+| `sessionId`     | string | Session id                       | yes      |
+| `dataResidency` | string | Tenant data residency in console | yes      |
 
 #### Returns
 
@@ -127,13 +127,13 @@ Get space state based on sessionId
 
 ### Parameters
 
-| Key | Type | Description | Required |
-| :------ | :------ | :------ | :------ |
-| `username` | string | Browser id | yes |
-| `password` | string | Browser access key | yes |
-| `tenantId` | string | Tenant id in console | yes |
-| `sessionId` | string | Session id | yes |
-| `dataResidency` | string | Tenant data residency in console | yes |
+| Key             | Type   | Description                      | Required |
+| :-------------- | :----- | :------------------------------- | :------- |
+| `username`      | string | Browser id                       | yes      |
+| `password`      | string | Browser access key               | yes      |
+| `tenantId`      | string | Tenant id in console             | yes      |
+| `sessionId`     | string | Session id                       | yes      |
+| `dataResidency` | string | Tenant data residency in console | yes      |
 
 ### Returns
 
@@ -169,13 +169,13 @@ Promise<GetSpaceStateResponse>
 Get space state from multiple sessions based on session id
 ### Parameters
 
-| Key | Type | Description | Required |
-| :------ | :------ | :------ | :------ |
-| `username` | string | Browser id | yes |
-| `password` | string | Browser access key | yes |
-| `tenantId` | string | Tenant id in console | yes |
-| `sessionId` | string | Session id | yes |
-| `dataResidency` | string | Tenant data residency in console | yes |
+| Key             | Type   | Description                      | Required |
+| :-------------- | :----- | :------------------------------- | :------- |
+| `username`      | string | Browser id                       | yes      |
+| `password`      | string | Browser access key               | yes      |
+| `tenantId`      | string | Tenant id in console             | yes      |
+| `sessionId`     | string | Session id                       | yes      |
+| `dataResidency` | string | Tenant data residency in console | yes      |
 
 ### Returns
 
@@ -209,9 +209,9 @@ Create session state subscription
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sessionId` | string |
+| Name            | Type   |
+| :-------------- | :----- |
+| `sessionId`     | string |
 | `dataResidency` | string |
 
 ### Returns
@@ -238,9 +238,9 @@ Create session event subscription
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `sessionId` | string |
+| Name            | Type   |
+| :-------------- | :----- |
+| `sessionId`     | string |
 | `dataResidency` | string |
 ### Returns
 
@@ -284,11 +284,11 @@ Create space state subscription
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `username` | string |
-| `password` | string |
-| `spaceId` | string |
+| Name            | Type   |
+| :-------------- | :----- |
+| `username`      | string |
+| `password`      | string |
+| `spaceId`       | string |
 | `dataResidency` | string |
 
 ### Returns
@@ -329,11 +329,11 @@ Create space event subscription
 
 ### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `username` | string |
-| `password` | string |
-| `spaceId` | string |
+| Name            | Type   |
+| :-------------- | :----- |
+| `username`      | string |
+| `password`      | string |
+| `spaceId`       | string |
 | `dataResidency` | string |
 
 ### Returns

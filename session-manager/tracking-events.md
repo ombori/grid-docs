@@ -2,10 +2,66 @@
 Standard Session Events are pre-defined methods that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
 
 Standard Session Events are predefined events that are common across different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
+- [Generic Events](/session-manager/tracking-events?id=generic-events)
 - [E-commerce Events](/session-manager/tracking-events?id=e-commerce-events)
 - [Contact Events](/session-manager/tracking-events?id=contact-events)
-- [Generic Events](/session-manager/tracking-events?id=generic-events)
+- [Custom Events](/session-manager/tracking-events?id=custom-event)
 
+## Generic Events
+
+- [sendAppStart](/session-manager/standard-session-events?id=sendappstart)
+- [sendContentView](/session-manager/standard-session-events?id=sendcontentview)
+- [sendRating](/session-manager/standard-session-events?id=sendrating)
+- [sendSearch](/session-manager/standard-session-events?id=sendsearch)
+- [sendSearchClear](/session-manager/standard-session-events?id=sendsearchclear)
+
+### sendAppStart
+
+▸ `Const` **sendAppStart**(): Promise<void\>
+
+This function is executed by default when [init](/session-manager/main-functions?id=init) is invoked.
+### sendContentView
+
+▸ `Const` **sendContentView**(`params`): Promise<void\>
+
+Viewing a generic piece of content, equivalent to a "pageview" in old school web analytics
+
+#### Parameters
+
+| Name              | Type   | Required |
+| :---------------- | :----- | :------- |
+| `localizedTitle?` | string | no       |
+| `title`           | string | yes      |
+| `url?`            | string | no       |
+### sendRating
+
+▸ `Const` **sendRating**(`params`): Promise<void\>
+
+User's rate of the experience
+
+#### Parameters
+
+| Name               | Type                  | Required |
+| :----------------- | :-------------------- | :------- |
+| `comment`          | string                | yes      |
+| `interactionDelay` | number                | yes      |
+| `rating`           | 1 \| 2 \| 3 \| 4 \| 5 | yes      |
+### sendSearch
+
+▸ `Const` **sendSearch**(`params`): Promise<void\>
+
+Searching a product, category, or anything in the app
+
+#### Parameters
+
+| Name                | Type   |
+| :------------------ | :----- |
+| `searchQueryString` | string |
+### sendSearchClear
+
+▸ `Const` **sendSearchClear**(): Promise<void\>
+
+Searching a product, category, or anything in the app
 ## E-commerce Events
 - [sendCartView](/session-manager/standard-session-events?id=e-commerce-events)
 - [sendCartAdd](/session-manager/standard-session-events?id=sendcartadd)
@@ -183,68 +239,12 @@ If CONTACT_METADATA event is used directly, then the value is not logged for rep
 | :---------- | :---------------------------------------------------------------------------- | :------- |
 | `certainty` | number                                                                        | yes      |
 | `mood`      | "ANGRY" \| "DISGUST" \| "FEAR" \| "HAPPY" \| "SAD" \| "SURPRISE" \| "NEUTRAL" | yes      |
-## Generic Events
 
-- [sendAppStart](/session-manager/standard-session-events?id=sendappstart)
-- [sendContentView](/session-manager/standard-session-events?id=sendcontentview)
-- [sendRating](/session-manager/standard-session-events?id=sendrating)
-- [sendSearch](/session-manager/standard-session-events?id=sendsearch)
-- [sendSearchClear](/session-manager/standard-session-events?id=sendsearchclear)
-
-### sendAppStart
-
-▸ `Const` **sendAppStart**(): Promise<void\>
-
-This function is executed by default when [init](/session-manager/main-functions?id=init) is invoked.
-### sendContentView
-
-▸ `Const` **sendContentView**(`params`): Promise<void\>
-
-Viewing a generic piece of content, equivalent to a "pageview" in old school web analytics
-
-#### Parameters
-
-| Name              | Type   | Required |
-| :---------------- | :----- | :------- |
-| `localizedTitle?` | string | no       |
-| `title`           | string | yes      |
-| `url?`            | string | no       |
-### sendRating
-
-▸ `Const` **sendRating**(`params`): Promise<void\>
-
-User's rate of the experience
-
-#### Parameters
-
-| Name               | Type                  | Required |
-| :----------------- | :-------------------- | :------- |
-| `comment`          | string                | yes      |
-| `interactionDelay` | number                | yes      |
-| `rating`           | 1 \| 2 \| 3 \| 4 \| 5 | yes      |
-### sendSearch
-
-▸ `Const` **sendSearch**(`params`): Promise<void\>
-
-Searching a product, category, or anything in the app
-
-#### Parameters
-
-| Name                | Type   |
-| :------------------ | :----- |
-| `searchQueryString` | string |
-### sendSearchClear
-
-▸ `Const` **sendSearchClear**(): Promise<void\>
-
-Searching a product, category, or anything in the app
 ## Custom Event
-
-- [trackEvent](/session-manager/event-tracking?id=custom-event)
 
 ▸ `Const` **sendCustomEvent**(`eventParams`): Promise<void\>
 
-Used for tracking custom  events outside the standard session event methods.
+Used for tracking custom events outside the standard session event methods.
 
 #### Event Parameters
 
@@ -264,5 +264,3 @@ Used for tracking custom  events outside the standard session event methods.
 | str3        | string  | String type field related to the event                            | no       |
 | str4        | string  | String type field related to the event                            | no       |
 | str5        | string  | String type field related to the event                            | no       |
-
-___

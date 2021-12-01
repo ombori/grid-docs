@@ -64,8 +64,11 @@ You don't need to invoke a `session end` event. The last event within the specif
 ## Tracking Events
 There are two ways to track events:
 
-1. as [Standard Session Event](/session-manager/event-trackig)
-2. as [Custom Session Event](/session-manager/event-tracking?id=custom-event)
+1. as [Standard Session Event](/session-manager/tracking-events)
+2. as [Custom Session Event](/session-manager/tracking-events?id=custom-event)
+
+## States
+You can fetch the latest states or subscribe to state changes of the sessions and spaces. Go to [States reference page](/session-manager/states) for the details.
 
 ## Offline Support
 Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.

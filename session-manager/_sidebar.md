@@ -3,6 +3,7 @@
 * **Reference documents**
   * [Main Functions](/session-manager/main-functions)
   * [Event Tracking](/session-manager/tracking-events)
-  * [Session API](/session-manager/session-api)
+  * [States](/session-manager/states)
+  * [Session API](/session-manager/states)
   
 [< Back to all documentation](/)

@@ -15,6 +15,7 @@ Then there are several other pages that you can read about Session Manager.
 - [Main Functions](/session-manager/main-functions)
 - [Standard Session Events](/session-manager/standard-session-events)
 - [Session API](/session-manager/session-api)
+- [States](/session-manager/states)
 
 ## Transparency and GDPR
 To comply with GDPR we recommend informing your users about any information that can be tracked as a common practice. We do our best to protect your users' privacy, and for this, we have the Contacts API. Any personable information that is sent to the session manager is stored separately from the session information, and only the session-id is used in tracking further events. However, when you sent personable information through custom events there is no way for us to know this is personal and should be split up.

@@ -7,13 +7,13 @@ When integrating Grid Session Manager on server-side, you may want to just direc
 - [sendEvent](/session-manager/session-api?id=sendevent)
 - [getSessionState](/session-manager/session-api?id=getsessionstate)
 - [getSpaceState](/session-manager/session-api?id=getspacestate)
-- [subscribeSessionState](/session-manager/session-api?id=subscribesessionstate)
-- [subscribeSpaceState](/session-manager/session-api?id=subscribespacestate)
+- [getSpaceStateRows](/session-manager/session-api?id=getspacestaterows)
+- [createSessionStateSubscription](/session-manager/session-api?id=createsessionstatesubscription)
+- [createSessionEventSubscription](/session-manager/session-api?id=createsessioneventsubscription)
+- [createSpaceStateSubscription](/session-manager/session-api?id=createspacestatesubscription)
+- [createSpaceEventSubscription](/session-manager/session-api?id=createspaceeventsubscription)
 
 ## sendClient
-
-▸ `Const` **sendClient**(`client`): Promise<void\>
-
 Send device client information
 
 ### Parameters
@@ -38,13 +38,8 @@ Send device client information
 
 Promise<void\>
 
-
-
 ## sendSession
-
-▸ `Const` **sendSession**(`session`): Promise<void\>
-
-Start or create a session
+Send new session information
 
 ### Parameters
 
@@ -72,10 +67,7 @@ Start or create a session
 Promise<void\>
 
 ## sendEvent
-
-▸ `Const` **sendEvent**(`event`): Promise<void\>
-
-Track session events
+Send session events
 
 ### Parameters
 
@@ -104,10 +96,7 @@ Track session events
 
 Promise<void\>
 
-
 ## getSessionState
-
-▸ `Const` **getSessionState**(`params`): Promise<AxiosResponse<any, any\>\>
 
 #### Parameters
 
@@ -152,44 +141,103 @@ Promise<GetSessionStateResponse\>
 
 Promise<GetSpaceStateParamsResponse>
 
+## getSpaceStateRows
+
+▸ `Const` **getSpaceStateRows**(`params`): Promise<GetSpaceStateRowsResponse\>
+
+### Parameters
+
+| Key | Type | Description | Required |
+| :------ | :------ | :------ | :------ |
+| `username` | string | Browser id | yes |
+| `password` | string | Browser access key | yes |
+| `tenantId` | string | Tenant id in console | yes |
+| `sessionId` | string | Session id | yes |
+| `dataResidency` | string | Tenant data residency in console | yes |
+
+### Returns
+
+Promise<GetSpaceStateParamsResponse>
+
 #### GetSpaceStateParamsResponse
 
 ```js
-  session: {
-    CART: {
-      [productId: string]: {
-        contacts: number;
-        quantity: number;
+  RATING: {
+    [sessionId: string]: {
+      value: number;
+      expiry: number;
+      updated: string;
+    };
+  },
+  CART: {
+    [sessionId: string]: {
+      expiry: string;
+      updated: string;
+      value: {
+        [productId: string]: number;
       };
     };
-    SEARCH: string[];
-  }
+  };
 ``` 
 
-## subscribeSessionState
+## createSessionStateSubscription
 
-▸ `Const` **subscribeSessionState**(`params`): Promise<Object\>
-
-### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `params` | SubscribeSessionStateParams |
-
-### Returns
-
-Promise<SubscribeStateResponse\>
-
-## subscribeSpaceState
-
-▸ `Const` **subscribeSpaceState**(`params`): Promise<Object\>
+▸ `Const` **createSessionStateSubscription**(`params`): Promise<SubscribeStateResponse\>
 
 ### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `params` | SubscribeSpaceStateParams |
+| `sessionId` | string |
+| `dataResidency` | string |
 
 ### Returns
 
 Promise<SubscribeStateResponse\>
+
+## createSessionEventSubscription
+
+▸ `Const` **createSessionEventSubscription**(`params`): Promise<CreateEventSubscriptionResponse\>
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sessionId` | string |
+| `dataResidency` | string |
+
+### Returns
+
+Promise<CreateEventSubscriptionResponse\>
+
+#### CreateEventSubscriptionResponse
+
+```js
+{
+  captureId: string;
+  clientId: string;
+  dataResidency: string;
+  eventTime: string;
+  eventType: string;
+  interaction: boolean;
+  ip: string;
+  productId: string;
+  sessionId: string;
+  tenantId: string;
+  int1?: number;
+  int2?: number;
+  int3?: number;
+  int4?: number;
+  int5?: number;
+  str1?: string;
+  str2?: string;
+  str3?: string;
+  str4?: string;
+  str5?: string;
+}
+``` 
+
+
+## createSpaceStateSubscription
+
+## createSpaceEventSubscription

@@ -5,6 +5,10 @@ When integrating Grid Session Manager on server-side, you may want to just direc
 - [sendClient](/session-manager/session-api?id=sendclient)
 - [sendSession](/session-manager/session-api?id=sendsession)
 - [sendEvent](/session-manager/session-api?id=sendevent)
+- [getSessionState](undefined)
+- [getSpaceState](undefined)
+- [subscribeSessionState](undefined)
+- [subscribeSpaceState](undefined)
 
 ## sendClient
 
@@ -99,3 +103,60 @@ Track session events
 ### Returns
 
 Promise<void\>
+
+
+## getSessionState
+
+▸ `Const` **getSessionState**(`params`): Promise<AxiosResponse<any, any\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | GetSessionStateParams |
+
+#### Returns
+
+Promise<AxiosResponse<any, any\>\>
+
+## getSpaceState
+
+▸ `Const` **getSpaceState**(`params`): Promise<AxiosResponse<any, any\>\>
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | GetSpaceStateParams |
+
+### Returns
+
+Promise<AxiosResponse<any, any\>\>
+
+## subscribeSessionState
+
+▸ `Const` **subscribeSessionState**(`params`): Promise<Object\>
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | SubscribeSessionStateParams |
+
+### Returns
+
+Promise<Object\>
+
+## subscribeSpaceState
+
+▸ `Const` **subscribeSpaceState**(`params`): Promise<Object\>
+
+### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | SubscribeSpaceStateParams |
+
+### Returns
+
+Promise<Object\>

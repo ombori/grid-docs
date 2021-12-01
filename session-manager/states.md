@@ -2,11 +2,10 @@
 
 You can fetch the latest states or subscribe to changes of the sessions and spaces
 
-- [getSessionState](undefined)
-- [getSpaceState](undefined)
-- [subscribeSessionState](undefined)
-- [subscribeSpaceState](undefined)
-
+- [getSessionState](/session-manager/states?id=getsessionstate)
+- [getSpaceState](/session-manager/states?id=getspacestate)
+- [subscribeSessionState](/session-manager/states?id=subscribesessionstate)
+- [subscribeSpaceState](/session-manager/states?id=subscribespacestate)
 
 ## getSessionState
 

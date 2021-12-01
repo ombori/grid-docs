@@ -34,7 +34,7 @@ Promise<AxiosResponse<any, any\>\>
 
 | Key | Type | Description | Required | 
 | :------ | :------ | :------ | :------ |
-| `username` | string | browserId | yes |
+| `username` | string | browser id | yes |
 | `password` | string | browser access key | yes |
 
 
@@ -63,7 +63,7 @@ Promise<AxiosResponse<any, any\>\>
 
 | Key | Type | Description | Required | 
 | :------ | :------ | :------ | :------ |
-| `username` | string | browserId | yes |
+| `username` | string | browser id | yes |
 | `password` | string | browser access key | yes |
 
 ### Example
@@ -96,7 +96,7 @@ ___
 
 | Key | Type | Description | Required | 
 | :------ | :------ | :------ | :------ |
-| `username` | string | browserId | yes |
+| `username` | string | browser id | yes |
 | `password` | string | browser access key | yes |
 
 ```js

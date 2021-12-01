@@ -7,6 +7,19 @@ Standard Session Events are predefined events that are common across different t
 - [Contact Events](/session-manager/tracking-events?id=contact-events)
 - [Custom Events](/session-manager/tracking-events?id=custom-event)
 
+To use a method, take a look at this sample.
+
+```javascript
+import { eventTracking } from '@ombori/grid-session-manager';
+
+eventTracking.sendRating({
+    rating: 5,
+    comment: "Amazing event tracking",
+    interactionDelay: 988
+});
+```
+
+All methods below are available on the `eventTracking` object, just like the `sendRating` method above. But just make sure you only send events *after* session manager is initialized.
 ## Generic Events
 
 - [sendAppStart](/session-manager/standard-session-events?id=sendappstart)

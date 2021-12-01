@@ -215,7 +215,7 @@ Identifying the customer based on a known identifier.
 | Key           | Type    | Required | Description                                        |
 | ------------- | ------- | -------- | -------------------------------------------------- |
 | `interaction` | boolean | yes      | Whether the event was triggered by the user or not |
-| `str1`        | string  | yes      | `PHONE`, `EMAIL` and `CLIENT_ID`                   |
+| `str1`        | string  | yes      | Provide any of `PHONE`, `EMAIL` and `CLIENT_ID`    |
 | `str2`        | string  | yes      | The value of the `str1` field                      |
 ### sendDetectAge
 ```javascript
@@ -244,11 +244,11 @@ If `CONTACT_METADATA` event is used directly, then the value is not logged for r
 
 #### Parameters
 
-| Key           | Type               | Required |
-| ------------- | ------------------ | -------- |
-| `certainty`   | number             | yes      |
-| `gender`      | "FEMALE" \| "MALE" | yes      |
-| `interaction` | boolean            | yes      |
+| Key           | Type    | Required | Description                                                                |
+| ------------- | ------- | -------- | -------------------------------------------------------------------------- |
+| `certainty`   | number  | yes      | The certainty of the mood, provided by computer vision                     |
+| `gender`      | string  | yes      | Any of the following: `FEMALE`, `MALE`                                     |
+| `interaction` | boolean | yes      | If the user provided this value or if it was detected from computer vision |
 ### sendDetectMood
 ```javascript
 eventTracking.sendDetectMood(params);
@@ -259,10 +259,10 @@ If `CONTACT_METADATA` event is used directly, then the value is not logged for r
 
 #### Parameters
 
-| Key         | Type                                                                          | Required |
-| ----------- | ----------------------------------------------------------------------------- | -------- |
-| `certainty` | number                                                                        | yes      |
-| `mood`      | "ANGRY" \| "DISGUST" \| "FEAR" \| "HAPPY" \| "SAD" \| "SURPRISE" \| "NEUTRAL" | yes      |
+| Key         | Type   | Required | Description                                                                              |
+| ----------- | ------ | -------- | ---------------------------------------------------------------------------------------- |
+| `certainty` | number | yes      | The certainty of the mood, provided by computer vision                                   |
+| `mood`      | string | yes      | Any of the following: `ANGRY`, `DISGUST` , `FEAR`, `HAPPY`, `SAD`, `SURPRISE`, `NEUTRAL` |
 
 ## Custom Event
 ```javascript

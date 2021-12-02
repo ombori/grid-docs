@@ -198,11 +198,11 @@ Identifying the customer based on a known identifier
 
 #### Parameters
 
-| Key           | Type                               | Required |
-| ------------- | ---------------------------------- | -------- |
-| `contact`     | string                             | yes      |
-| `contactType` | "PHONE" \| "EMAIL" \| "CLIENT\_ID" | yes      |
-| `interaction` | boolean                            | yes      |
+| Key           | Type    | Required | Description                                        |
+| ------------- | ------- | -------- | -------------------------------------------------- |
+| `contactType` | STRING  | yes      | Provide any of `PHONE`, `EMAIL` and `CLIENT_ID`    |
+| `contact`     | string  | yes      | Enter the value of `contactType`                   |
+| `interaction` | boolean | yes      | Whether the event was triggered by the user or not |
 ### sendContactMetadata
 ```javascript
 eventTracking.sendContactMetadata(params);

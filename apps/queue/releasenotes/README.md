@@ -1,6 +1,14 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-11-30
+### Features
+- Auto checkout: You can now specify the time after which tickets from "Serving" column are checked out automatically
+- You can now override the sender of an SMS notification. 
+
+#### Bugfixes
+- Fixed information about Active Directory users for servedBy property
+
 ## 2021-11-22
 #### Changes
 - New waiting time mechanism is introduced to be more accurate

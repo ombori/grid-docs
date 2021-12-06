@@ -3,8 +3,8 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-11-30
 ### Features
-- Auto checkout: now you can specify time after which tickets from "Serving" column are checked out automatically
-- From property for notifications: now you will be able to specify from property as Sender ID / Sender name / From for SMS notification services
+- Auto checkout: You can now specify the time after which tickets from "Serving" column are checked out automatically
+- You can now override the sender of an SMS notification. 
 
 #### Bugfixes
 - Fixed information about Active Directory users for servedBy property

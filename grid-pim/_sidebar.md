@@ -7,5 +7,5 @@
   * [API Reference](/grid-pim/api)
   * [Data Models](/grid-pim/data-model)
   * [Field Definitions](/grid-pim/field-definitions)
-  
+  * [Release Notes](/grid-pim/releasenotes/)
 [< Back to all documentation](/)

@@ -9,7 +9,8 @@ To learn about the definition of each field, check out the [Field Definitions](/
 interface GridProduct {
   ProductId: string;
   Tenant: string;
-  Customers?: string[];
+  // Customers will hold the list of StoreIds where item is visible
+  Customers?: Array<string>;
   // Main default details
   ProductShortDescription?: Array<{
     CountryId: string;
@@ -57,17 +58,17 @@ interface GridProduct {
   // Related Products / Recommendations
   RelatedProducts?: Array<{
     RelatedProductId: string;
-    ProductRelationshipType: string;
+    ProductRelationshipType: ProductRelationshipTypes;
   }>;
 
   // Variants
   Variants: Array<{
     Id: string; // Item variant Id
     ProductId: string; // Parent product Id
-    GlobalTradeItemNumber?: string;
-    GtinName?: string;
-    EuropeanArticleNumber?: string;
-    UniversalProductCode?: string;
+    GlobalTradeItemNumber?: Array<string>;
+    GtinName?: Array<string>;
+    EuropeanArticleNumber?: Array<string>;
+    UniversalProductCode?: Array<string>;
 
     // Item variant name (optional)
     ProductName?: Array<{
@@ -152,7 +153,7 @@ interface GridProduct {
   // Product Tags
   ProductTags?: Array<{
     IsoLanguageId: IsoLanguageIds;
-    ProductTags: string[];
+    ProductTags: Array<string>;
   }>
 
   // Product Quantity
@@ -213,6 +214,14 @@ enum ProductStatusEnum {
   Blocked = 'Blocked',
 }
 ```
+
+### ProductRelationshipTypes
+```
+enum ProductRelationshipTypes {
+    Recommended = "Recommended"
+}
+```
+
 ### LanguageIDs
 For Language IDs we use BCP-47 tags, meaning `language-region` structure. Some examples below.
 ```

@@ -6,5 +6,6 @@ To understand how to integrate Grid-PIM there are several documents that can hel
 - [Integration Flow](/grid-pim/integration-flow)
 - [API Reference](/grid-pim/api)
 - [Data Models](/grid-pim/data-model)
+- [Release notes](/grid-pim/releasenotes)
 
 Each of these can also be found in the sidebar, as well as other complementary documents.

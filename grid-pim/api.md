@@ -27,6 +27,7 @@ The following endpoints are available in the API currently.
 | GET    | [products/{id}](/grid-pim/api?id=get-product-by-id)                | Retrieves specific product by ID                                     |
 | GET    | [products-barcode/{code}](/grid-pim/api?id=get-product-by-barcode) | Retrieves specific product by barcode value                          |
 | GET    | [search](/grid-pim/api?id=get-search)                              | Searches products or product types by keyword                        |
+| GET  | [product-recommendations/{id}](/grid-pim/api?id=get-product-recommendations-by-id)                 | Retrieves list of product recommendations by ID                               |
 | POST   | [products/push](/grid-pim/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-pim/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-pim/api?id=patch-update-products)                 | Update products listed in the database                               |
@@ -119,14 +120,9 @@ To use query parameters, add them as `GET` properties to the `URL`.
 ### [GET] Search
 > **[GET] {base-url}/{tenant-index}/search**
 
-?> This endpoint is still in active development
-
 Searches products or product types by keyword
 
-
 #### Response
-
-!> Currently product types search is a work in progress. They may not be returned or empty
 
 ```
 { 
@@ -144,6 +140,28 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | term      | string | Query to search for                                     | `Desk`                                           |
 | select    | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
+
+### [GET] Product Recommendations by ID
+> **[GET] {base-url}/{tenant-index}/product-recommendations/{productId}**
+
+Retrieves list of product recommendations taken from RelatedProducts field
+
+
+#### Response
+
+```
+Array<Partial<GridProduct>>
+
+```
+
+Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| parameter | type   | Description                                             | Example                                          |
+| --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
+| productId | string | The ID of the Product                                   | `100001`                                         |
 
 ### [POST] Push Products
 > **[POST] {base-url}/{tenant-index}/products/push**

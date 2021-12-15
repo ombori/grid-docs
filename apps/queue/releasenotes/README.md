@@ -3,8 +3,8 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 
 ## 2021-12-15
 #### Features
-- Queue manager UI: added display name property for AD users for booking page. Booking view for admins will try to use it instead of emails (if provided by AD)
-- Waiting time: now system will check if queue is open or not. If not it will add time extra waiting until opening.
+- Queue Manager UI: When Active Directory has a name for the user in addition to an e-mail address, the name will be visible in the Admin Booking View. 
+- Waiting time: When the queue is closed, waiting time will include the time until the queue opens according to the defined schedule.
 
 ## 2021-11-30
 #### Features

@@ -3,6 +3,7 @@
 * [**Signage Playlist**](/apps/signage/)
   * [Setting up](/apps/signage/setting-up)
   * [Adding Content](/apps/signage/adding-content)
+  * [Nesting Playlists](/apps/signage/nesting-playlists)
   * [Using Triggers](/apps/signage/using-triggers)
 * [**Queue Management**](/apps/queue/)
   * [Setting up a queue](/apps/queue/setting-up)

@@ -1,6 +1,11 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-12-15
+#### Features
+- Queue Manager UI: When Active Directory has a name for the user in addition to an e-mail address, the name will be visible in the Admin Booking View. 
+- Waiting time: When the queue is closed, waiting time will include the time until the queue opens according to the defined schedule.
+
 ## 2021-11-30
 #### Features
 - Auto checkout: You can now specify the time after which tickets from "Serving" column are checked out automatically

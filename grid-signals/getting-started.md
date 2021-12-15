@@ -1,5 +1,5 @@
 # Getting Started
-Install the `Grid Session Manager library` and the `Grid Settings helper library` to any of your screen or mobile gridapp.
+Install the `Grid Signals library` and the `Grid Settings helper library` to any of your screen or mobile gridapp.
 
 ## Set-up
 ### React
@@ -69,16 +69,16 @@ You don't need to invoke a `session end` event. The last event within the specif
 ## Tracking Events
 There are two ways to track events:
 
-1. as [Standard Session Event](/session-manager/tracking-events)
-2. as [Custom Session Event](/session-manager/tracking-events?id=custom-event)
+1. as [Standard Session Event](/grid-signals/tracking-events)
+2. as [Custom Session Event](/grid-signals/tracking-events?id=custom-event)
 
 ## States
-You can fetch the latest states or subscribe to state changes of the sessions and spaces. Go to [States reference page](/session-manager/states) for the details.
+You can fetch the latest states or subscribe to state changes of the sessions and spaces. Go to [States reference page](/grid-signals/states) for the details.
 
 ## Offline Support
-Grid Session Manager library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.
+Grid Signals library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.
 
 ## Develop in NodeJs
-The Grid Session Manager is not limited to react or Web-Based Applications, it can also be used for sending any session events from a server using NodeJS.
+The Grid Signals Library is not limited to react or Web-Based Applications, it can also be used for sending any session events from a server using NodeJS.
 
-Refer to the [Session API](/session-manager/session-api) page for the usage.
+Refer to the [Session API](/grid-signals/session-api) page for the usage.

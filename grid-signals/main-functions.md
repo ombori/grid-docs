@@ -2,7 +2,7 @@
 
 - [init](session-manager/main-functions?id=init)
 - [createSession](session-manager/main-functions?id=createsession)
-- [getInstance](/session-manager/main-functions?id=getinstance)
+- [getInstance](/grid-signals/main-functions?id=getinstance)
 
 ## init
 
@@ -13,9 +13,9 @@ init({
 })
 ```
 
-Initialize session manager instance. You must pass an object to the init function which consists of the following properties.
+Initialize Grid Signals instance. You must pass an object to the init function which consists of the following properties.
 
-Calling this method will return a promise that will always succeed, so there's no need to monitor the outcome. If you need to know the outcome, you can use the [getInstance](/session-manager/main-functions?id=getinstance) method.
+Calling this method will return a promise that will always succeed, so there's no need to monitor the outcome. If you need to know the outcome, you can use the [getInstance](/grid-signals/main-functions?id=getinstance) method.
 
 #### Parameters
 
@@ -48,7 +48,7 @@ Start a new session. You should call this method every time a new user starts in
 const instance = getInstance();
 ```
 
-This will return the instance object of the session. You should call this method after initiating the session manager.
+This will return the instance object of the session. You should call this method after initiating Grid Signals.
 
 #### Returns
 

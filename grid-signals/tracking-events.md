@@ -2,10 +2,10 @@
 Standard Session Events are pre-defined methods that are common accross different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
 
 Standard Session Events are predefined events that are common across different types of apps within the Grid. It is created so that the same events will have the same payload so we can easily build reports from the collected analytics data.
-- [Generic Events](/session-manager/tracking-events?id=generic-events)
-- [E-commerce Events](/session-manager/tracking-events?id=e-commerce-events)
-- [Contact Events](/session-manager/tracking-events?id=contact-events)
-- [Custom Events](/session-manager/tracking-events?id=custom-event)
+- [Generic Events](/grid-signals/tracking-events?id=generic-events)
+- [E-commerce Events](/grid-signals/tracking-events?id=e-commerce-events)
+- [Contact Events](/grid-signals/tracking-events?id=contact-events)
+- [Custom Events](/grid-signals/tracking-events?id=custom-event)
 
 To use a method, take a look at this sample.
 
@@ -19,16 +19,16 @@ eventTracking.sendRating({
 });
 ```
 
-All methods below are available on the `eventTracking` object, just like the `sendRating` method above. But just make sure you only send events *after* session manager is initialized.
+All methods below are available on the `eventTracking` object, just like the `sendRating` method above. But just make sure you only send events *after* Grid Signals is initialized.
 
 All events return a promise that resolves when the event is sent to the server, or the local cache in case the server is not available. There is no need to monitor the promise, as there also is no fail state. You can always assume the event is sent, either to cache or the server.
 
 ## Generic Events
 
-- [sendContentView](/session-manager/standard-session-events?id=sendcontentview)
-- [sendRating](/session-manager/standard-session-events?id=sendrating)
-- [sendSearch](/session-manager/standard-session-events?id=sendsearch)
-- [sendSearchClear](/session-manager/standard-session-events?id=sendsearchclear)
+- [sendContentView](/grid-signals/standard-session-events?id=sendcontentview)
+- [sendRating](/grid-signals/standard-session-events?id=sendrating)
+- [sendSearch](/grid-signals/standard-session-events?id=sendsearch)
+- [sendSearchClear](/grid-signals/standard-session-events?id=sendsearchclear)
 
 ### sendContentView
 ```javascript
@@ -74,15 +74,15 @@ eventTracking.sendSearchClear();
 ```
 Searching a product, category, or anything in the app
 ## E-commerce Events
-- [sendCartView](/session-manager/standard-session-events?id=e-commerce-events)
-- [sendCartAdd](/session-manager/standard-session-events?id=sendcartadd)
-- [sendCartRemove](/session-manager/standard-session-events?id=sendcartremove)
-- [sendCartClear](/session-manager/standard-session-events?id=sendcartclear)
-- [sendCategoryView](/session-manager/standard-session-events?id=sendcategoryview)
-- [sendCheckout](/session-manager/standard-session-events?id=sendcheckout)
-- [sendLookView](/session-manager/standard-session-events?id=sendlookview)
-- [sendProductView](/session-manager/standard-session-events?id=sendproductview)
-- [sendPurchase](/session-manager/standard-session-events?id=sendpurchase)
+- [sendCartView](/grid-signals/standard-session-events?id=e-commerce-events)
+- [sendCartAdd](/grid-signals/standard-session-events?id=sendcartadd)
+- [sendCartRemove](/grid-signals/standard-session-events?id=sendcartremove)
+- [sendCartClear](/grid-signals/standard-session-events?id=sendcartclear)
+- [sendCategoryView](/grid-signals/standard-session-events?id=sendcategoryview)
+- [sendCheckout](/grid-signals/standard-session-events?id=sendcheckout)
+- [sendLookView](/grid-signals/standard-session-events?id=sendlookview)
+- [sendProductView](/grid-signals/standard-session-events?id=sendproductview)
+- [sendPurchase](/grid-signals/standard-session-events?id=sendpurchase)
 
 ### sendCartView
 ```javascript
@@ -183,11 +183,11 @@ Payment success
 | `transactionId` | string | yes      |
 ## Contact Events
 
-- [sendContactIdentify](/session-manager/standard-session-events?id=sendcontactidentify)
-- [sendContactMetadata](/session-manager/standard-session-events?id=sendcontactmetadata)
-- [sendDetectAge](/session-manager/standard-session-events?id=senddetectage)
-- [sendDetectGender](/session-manager/standard-session-events?id=senddetectgender)
-- [sendDetectMood](/session-manager/standard-session-events?id=senddetectmood)
+- [sendContactIdentify](/grid-signals/standard-session-events?id=sendcontactidentify)
+- [sendContactMetadata](/grid-signals/standard-session-events?id=sendcontactmetadata)
+- [sendDetectAge](/grid-signals/standard-session-events?id=senddetectage)
+- [sendDetectGender](/grid-signals/standard-session-events?id=senddetectgender)
+- [sendDetectMood](/grid-signals/standard-session-events?id=senddetectmood)
 
 ### sendContactIdentify
 ```javascript

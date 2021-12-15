@@ -2,13 +2,13 @@
 
 You can fetch the latest states or subscribe to changes of the sessions and spaces
 
-- [getSessionState](/session-manager/states?id=getsessionstate)
-- [getSpaceState](/session-manager/states?id=getspacestate)
-- [getSpaceStateRows](/session-manager/states?id=getspacestaterows)
-- [createSessionStateSubscription](/session-manager/states?id=createsessionstatesubscription)
-- [createSessionEventSubscription](/session-manager/states?id=createsessioneventsubscription)
-- [createSpaceStateSubscription](/session-manager/states?id=createspacestatesubscription)
-- [createSpaceEventSubscription](/session-manager/states?id=createspaceeventsubscription)
+- [getSessionState](/grid-signals/states?id=getsessionstate)
+- [getSpaceState](/grid-signals/states?id=getspacestate)
+- [getSpaceStateRows](/grid-signals/states?id=getspacestaterows)
+- [createSessionStateSubscription](/grid-signals/states?id=createsessionstatesubscription)
+- [createSessionEventSubscription](/grid-signals/states?id=createsessioneventsubscription)
+- [createSpaceStateSubscription](/grid-signals/states?id=createspacestatesubscription)
+- [createSpaceEventSubscription](/grid-signals/states?id=createspaceeventsubscription)
 
 ## getSessionState
 

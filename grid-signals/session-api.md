@@ -1,17 +1,17 @@
-# Grid Session APIs
+# Grid Signals APIs
 
-When integrating Grid Session Manager on server-side, you may want to just directly send events to the Grid Session API.
+When integrating Grid Signals on server-side, you may want to just directly send events to the Grid Session API.
 
-- [sendClient](/session-manager/session-api?id=sendclient)
-- [sendSession](/session-manager/session-api?id=sendsession)
-- [sendEvent](/session-manager/session-api?id=sendevent)
-- [getSessionState](/session-manager/session-api?id=getsessionstate)
-- [getSpaceState](/session-manager/session-api?id=getspacestate)
-- [getSpaceStateRows](/session-manager/session-api?id=getspacestaterows)
-- [createSessionStateSubscription](/session-manager/session-api?id=createsessionstatesubscription)
-- [createSessionEventSubscription](/session-manager/session-api?id=createsessioneventsubscription)
-- [createSpaceStateSubscription](/session-manager/session-api?id=createspacestatesubscription)
-- [createSpaceEventSubscription](/session-manager/session-api?id=createspaceeventsubscription)
+- [sendClient](/grid-signals/session-api?id=sendclient)
+- [sendSession](/grid-signals/session-api?id=sendsession)
+- [sendEvent](/grid-signals/session-api?id=sendevent)
+- [getSessionState](/grid-signals/session-api?id=getsessionstate)
+- [getSpaceState](/grid-signals/session-api?id=getspacestate)
+- [getSpaceStateRows](/grid-signals/session-api?id=getspacestaterows)
+- [createSessionStateSubscription](/grid-signals/session-api?id=createsessionstatesubscription)
+- [createSessionEventSubscription](/grid-signals/session-api?id=createsessioneventsubscription)
+- [createSpaceStateSubscription](/grid-signals/session-api?id=createspacestatesubscription)
+- [createSpaceEventSubscription](/grid-signals/session-api?id=createspaceeventsubscription)
 
 ## sendClient
 Send device client information

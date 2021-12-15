@@ -1,4 +1,4 @@
-[Grid PIM](/grid-products/)
+[Grid Products](/grid-products/)
 
 
 

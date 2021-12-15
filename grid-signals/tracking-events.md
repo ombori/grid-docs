@@ -101,7 +101,7 @@ Adding a product to the cart
 
 | Key         | Type   | Description                          | Required |
 | ----------- | ------ | ------------------------------------ | -------- |
-| `productId` | string | Product primary id used in PIM       | yes      |
+| `productId` | string | Product primary id used in Products  | yes      |
 | `quantity`  | number | Product quantity added into the cart | yes      |
 ### sendCartClear
 ```javascript
@@ -120,7 +120,7 @@ Removing a product from the cart
 
 | Key         | Type   | Description                            | Required |
 | ----------- | ------ | -------------------------------------- | -------- |
-| `productId` | string | Product primary id used in PIM         | yes      |
+| `productId` | string | Product primary id used in Products    | yes      |
 | `quantity`  | number | Product quantity removed from the cart | yes      |
 ### sendCategoryView
 ```javascript
@@ -131,9 +131,9 @@ Browsing products under a category
 
 #### Parameters
 
-| Key          | Type   | Description                     | Required |
-| ------------ | ------ | ------------------------------- | -------- |
-| `categoryId` | string | Category primary id used in PIM | yes      |
+| Key          | Type   | Description                          | Required |
+| ------------ | ------ | ------------------------------------ | -------- |
+| `categoryId` | string | Category primary id used in Products | yes      |
 ### sendCheckout
 ```javascript
 eventTracking.sendCheckout();
@@ -161,9 +161,9 @@ Viewing a specific product page
 
 #### Parameters
 
-| Key         | Type   | Description                    | Required |
-| ----------- | ------ | ------------------------------ | -------- |
-| `productId` | string | Product primary id used in PIM | yes      |
+| Key         | Type   | Description                         | Required |
+| ----------- | ------ | ----------------------------------- | -------- |
+| `productId` | string | Product primary id used in Products | yes      |
 ### sendPurchase
 ```javascript
 eventTracking.sendPurchase(params);

@@ -15,8 +15,8 @@
   * [CLI Setup](cli/setup.md)
   * [CLI Reference](/cli/reference.md)
 * **Integration**
-  * [Session Manager](/session-manager/)
-  * [Grid Product Information Management](/grid-pim/)
+  * [Grid Signals](/grid-signals/)
+  * [Grid Products](/grid-products/)
 * **General**
   * [Console Release Notes](/console/releasenotes/)
   * [Settings Schema](/general/schema.md)

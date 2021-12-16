@@ -1,19 +1,22 @@
-# Grid-PIM API Reference
+# Grid Products API Reference
 
-This is the API reference for Grid-PIM integration. 
+This is the API reference for Grid-Products integration. 
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
-
-> Download our [Postman Collection](https://www.getpostman.com/collections/80d6e41ef0aaaf9f1887) that's linked to the dev environment with a dev database.<br>After downloading the Postman collection, make sure to replace `tenantIndex` and your `accessKey`.
+// TODO: Postman
 
 ## URL's overview
 
-The `{base-url}` of the Grid-PIM API depends on the environment you're working with.
+The `{base-url}` of the Grid-Products API depends on the environment you're working with.
 
-- DEV base URL: `https://grid-product-service-dev.azurewebsites.net/api/tenants/`
-- QA base URL: `https://grid-pim-qa.azurewebsites.net/api/tenants/`
-- PROD base URL: `https://grid-pim-prod.azurewebsites.net/api/tenants/`
+- EU base URL: `https://product-eu.azurewebsites.net/api/tenants/`
+- US base URL: `https://product-us.azurewebsites.net/api/tenants/`
+- IN base URL: `https://product-in.azurewebsites.net/api/tenants/`
+- AU base URL: `https://product-au.azurewebsites.net/api/tenants/`
+- UAE base URL: `https://product-uae.azurewebsites.net/api/tenants/`
+
+
 
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.
 
@@ -182,7 +185,7 @@ The body of the request should be an Array of [GridProducts]((/grid-pim/data-mod
 ### [DELETE] Remove Products
 > **[DELETE] {base-url}/{tenant-index}/products**
 
-Removes products from the Grid-PIM database based on specified ID's
+Removes products from the Grid-Products database based on specified ID's
 
 | parameter | type            | Description                                          | Example            |
 | --------- | --------------- | ---------------------------------------------------- | ------------------ |
@@ -238,7 +241,7 @@ Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/ap
 
 | parameter | type                 | Description                                                     |
 | --------- | -------------------- | --------------------------------------------------------------- |
-| data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid-PIM Database |
+| data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid-Products Database |
 
 ?> Limitations: <br> - 100 product types documents per batch<br>
 
@@ -247,7 +250,7 @@ Reference: [ProductType](/grid-pim/data-model?id=producttype)
 ### [DELETE] Remove Product Types
 > **[DELETE] {base-url}/{tenant-index}/product-types**
 
-Removes product types from the Grid-PIM database based on specified ids
+Removes product types from the Grid-Products database based on specified ids
 
 
 #### Response
@@ -258,6 +261,6 @@ Returns Array<{
 
 | parameter | type            | Description                                               | Example               |
 | --------- | --------------- | --------------------------------------------------------- | --------------------- |
-| data      | `Array<string>` | List of product type IDs to remove from Grid-PIM database | ["Furniture", "Tech"] |
+| data      | `Array<string>` | List of product type IDs to remove from Grid-Products database | ["Furniture", "Tech"] |
 
 Reference: [ProductType](/grid-pim/data-model?id=producttype)

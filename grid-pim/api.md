@@ -4,11 +4,11 @@ This is the API reference for Grid-Products integration.
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
-// TODO: Postman
+// TODO: New postman collection
 
 ## URL's overview
 
-The `{base-url}` of the Grid-Products API depends on the environment you're working with.
+The `{base-url}` of the Grid-Products API depends on the data residency you're working with.
 
 - EU base URL: `https://product-eu.azurewebsites.net/api/tenants/`
 - US base URL: `https://product-us.azurewebsites.net/api/tenants/`
@@ -17,10 +17,10 @@ The `{base-url}` of the Grid-Products API depends on the environment you're work
 - UAE base URL: `https://product-uae.azurewebsites.net/api/tenants/`
 
 
-
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.
 
-?> With the creation of your tenant a tenant index name will be generated for you, if you do not have this please reach out to your contact within Ombori. Once you've received your Tenant index, you can insert this into the URL's where you'll see `{tenant-index}`. 
+?> `{tenant-id}` is your tenant id in the grid console
+?> `{environment}` is any defined environment you have in grid console where you want your products data to live.
 
 The following endpoints are available in the API currently.
 
@@ -34,7 +34,7 @@ The following endpoints are available in the API currently.
 | POST   | [products/push](/grid-pim/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-pim/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-pim/api?id=patch-update-products)                 | Update products listed in the database                               |
-| GET    | [product-types](/grid-pim/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
+| GET    | [product-types](/grid-pim/api?id=get-product-types-list)           | Returns list of product types associated with the tenant id and environment       |
 | GET    | [product-types/{id}](/grid-pim/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
 | POST   | [product-types](/grid-pim/api?id=post-push-product-types)          | Pushes product types into the database                               |
 | DELETE | [product-types](/grid-pim/api?id=delete-remove-product-types)      | Removes specified product type IDs (ProductTypeId) from the database |
@@ -43,7 +43,7 @@ The following endpoints are available in the API currently.
 # Products
 ### [GET | POST] Products
 
-> **[GET] {base-url}/{tenant-index}/products** <br> **[POST] {base-url}/{tenant-index}/products**
+> **[GET] {base-url}/{tenant-id}/${environment}/products** <br> **[POST] {base-url}/{tenant-id}/${environment}/products**
 
 Returns a list of products based on specified query parameters.
 
@@ -66,18 +66,18 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter               | type    | Description                                                                                                                            | Example                                          |
 | ----------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | search                  | string  | Keyword to search                                                                                                                      | `Desks`                                          |
-| searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `ProductName`                                    |
+| searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `productName`                                    |
 | limit                   | number  | Maximum number of item count to retrieve `Default: 50`                                                                                 | `100`                                            |
 | page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
-| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `ProductId`, `ProductName`, `ProductDescription` |
-| filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["ProductPriceList/ListPrice", 10]}`     |
-| sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `IntroductionDate asc`, `ProductId desc`         |
+| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `ProductId`, `productName`, `productDescription` |
+| filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`     |
+| sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `introductionDate asc`, `productId desc`         |
 | includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
 | attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                         |
-| facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `ShellLifeDays`                                  |
+| facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `shellLifeDays`                                  |
 
 ### [GET] Product by ID
-> **[GET] {base-url}/{tenant-index}/products/{productId}**
+> **[GET] {base-url}/{tenant-id}/${environment}/products/{productId}**
 
 Retrieves a specific product by ID
 
@@ -90,18 +90,18 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | productId | string | The ID of the Product                                   | `100001`                                         |
-| select    | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
+| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
 
 ### [GET] Product by Barcode
 
-> **[GET] {base-url}/{tenant-index}/products-barcode/{barcode}**
+> **[GET] {base-url}/{tenant-id}/${environment}/products-barcode/{barcode}**
 
 Retrieves a specific product by barcode ID.
 
 Variants checked:
-- GlobalTradeItemNumber
-- EuropeanArticleNumber
-- UniversalProductCode
+- globalTradeItemNumber
+- europeanArticleNumber
+- universalProductCode
 
 #### Response
 ```
@@ -118,10 +118,10 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | barcode   | string | Barcode ID                                              | `0999999999993`                                  |
-| select    | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
+| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
 
 ### [GET] Search
-> **[GET] {base-url}/{tenant-index}/search**
+> **[GET] {base-url}/{tenant-id}/${environment}/search**
 
 Searches products or product types by keyword
 
@@ -142,10 +142,10 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | term      | string | Query to search for                                     | `Desk`                                           |
-| select    | string | List of selected fields to be returned(comma separated) | `ProductId`, `ProductName`, `ProductDescription` |
+| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
 
 ### [GET] Product Recommendations by ID
-> **[GET] {base-url}/{tenant-index}/product-recommendations/{productId}**
+> **[GET] {base-url}/{tenant-id}/${environment}/product-recommendations/{productId}**
 
 Retrieves list of product recommendations taken from RelatedProducts field
 
@@ -167,7 +167,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | productId | string | The ID of the Product                                   | `100001`                                         |
 
 ### [POST] Push Products
-> **[POST] {base-url}/{tenant-index}/products/push**
+> **[POST] {base-url}/{tenant-id}/${environment}/products/push**
 
 Uploads or merges products listing following the GridProduct format
 
@@ -183,7 +183,7 @@ The body of the request should be an Array of [GridProducts]((/grid-pim/data-mod
 ?> Limitations: <br> - 100 products per batch
 
 ### [DELETE] Remove Products
-> **[DELETE] {base-url}/{tenant-index}/products**
+> **[DELETE] {base-url}/{tenant-id}/${environment}/products**
 
 Removes products from the Grid-Products database based on specified ID's
 
@@ -192,7 +192,7 @@ Removes products from the Grid-Products database based on specified ID's
 | data      | `Array<string>` | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
 
 ### [PATCH] Update Products
-> **[PATCH] {base-url}/{tenant-index}/products**
+> **[PATCH] {base-url}/{tenant-id}/${environment}/products**
 
 Updates products with the fields specified in the data object. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects will be completely overwritten.
 
@@ -205,9 +205,9 @@ Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
 # Product Types
 
 ### [GET] Product Types List
-> **[GET] {base-url}/{tenant-index}/product-types**
+> **[GET] {base-url}/{tenant-id}/${environment}/product-types**
 
-Returns list of product types associated with the tenant index
+Returns list of product types associated with the tenant id and environment
 
 #### Response
 Returns Array<[ProductType](/grid-pim/data-model?id=producttype)>
@@ -218,7 +218,7 @@ Returns Array<[ProductType](/grid-pim/data-model?id=producttype)>
 
 
 ### [GET] Product Type Details
-> **[GET] {base-url}/{tenant-index}/product-types/{productTypeId}**
+> **[GET] {base-url}/{tenant-id}/${environment}/product-types/{productTypeId}**
 
 Returns details of a specific product type
 
@@ -231,7 +231,7 @@ Returns [ProductType](/grid-pim/data-model?id=producttype)
 
 
 ### [POST] Push Product Types
-> **[POST] {base-url}/{tenant-index}/product-types**
+> **[POST] {base-url}/{tenant-id}/${environment}/product-types**
 
 Update or insert product types to database
 
@@ -248,7 +248,7 @@ Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/ap
 Reference: [ProductType](/grid-pim/data-model?id=producttype)
 
 ### [DELETE] Remove Product Types
-> **[DELETE] {base-url}/{tenant-index}/product-types**
+> **[DELETE] {base-url}/{tenant-id}/${environment}/product-types**
 
 Removes product types from the Grid-Products database based on specified ids
 

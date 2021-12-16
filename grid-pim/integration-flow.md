@@ -1,16 +1,32 @@
 # Grid-PIM Integration Flow
-To Integrate with Grid Product Information Management, or Grid-PIM, there are several steps you need to follow.
+To Integrate with Grid Products, there are several steps you need to follow.
 
-## 1. Setting Up
+## 1. Prerequisite
 
-Setting up with Grid-PIM requires a database initialization. This step is done by Ombori, your Ombori Contact should be able to set this up for you or has already done so.
+You need to make sure that you have an account in the Ombori Grid Console.
 
-Once it is set up, you will receive
-- tenant-index
-- access-key
-- Grid-PIM integration URL
+You'll need the following information:
+1. Your tenant id in Grid Console
+2. Any Environment id that you have defined in the Grid Console (e.g. prod)
+3. Access Token
+  - You need to generate an Access Token under "Developers" tab to be used later on for every request
 
-## 2. Push Products
+## 2. Push Spaces
+
+This step is applicable if you want your data to be visible only to a specific store / location only for example.
+
+TODO: Insert Spaces API reference here
+
+The returned `spaceId` will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
+
+## 3. Push ProductTypes
+
+The next step would be to push your product categories or product types that will be used later on for the `productType` field of your products.
+
+To Read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-pim/api?id=post-push-product-types) in the API reference.
+
+
+## 4. Push Products
 You should now start pushing products into the database. There are 2 ways of doing this, either through a backend integration for which you can use our NPM package or through our API interface.
 
 **Integrate using your backend**
@@ -23,35 +39,34 @@ If you want to integrate using our API from any other system, you can check the 
 
 To read about how to upload products in the database using our API, check the  [Push Products endpoint](/grid-pim/api?id=post-push-products) in the API reference.
 
-To Read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-pim/api?id=post-push-product-types) in the API reference.
+?> After downloading the Postman collection, make sure to replace `tenant-id` and `environment` value and set the request Header's `x-api-key` with your generated access token in Grid Console.
 
-?> After downloading the Postman collection, make sure to replace `tenantIndex` and your `accessKey`.
+## 5. Integration Setup
+Once you start integrating Grid Products into other apps, you should use the wrapper package `@ombori/grid-products`
 
-## 3. Integration Setup
-Once you start integrating Grid-PIM into other apps, you should use the wrapper package `@ombori/grid-product-service`
-
-This package is hosted on [NPM](https://www.npmjs.com/package/@ombori/grid-product-service)
+This package is hosted on [NPM](https://www.npmjs.com/package/@ombori/grid-products)
 
 To install, use npm or yarn
 
 ```bash
-npm i @ombori/grid-product-service
-yarn add @ombori/grid-product-service
+npm i @ombori/grid-products
+yarn add @ombori/grid-products
 ```
 
 ### Integrate into frontend
-To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. Make sure to enter your `tenantIndex` and `accessKey` into the code sample below.
+To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. Make sure to enter your `tenantId`, `environment`, and `accessToken` into the code sample below.
 
 ```javascript
-import { GridProductServiceClient } from '@ombori/grid-product-service';
+import { GridProductServiceClient } from '@ombori/grid-products';
 
 const gridpimClient = new GridProductServiceClient({
-  tenantIndex: 'test-index',
-  accessKey: 'xxx-xxx-xxx',
+  tenantId: 'test',
+  environment: 'staging',
+  accessToken: 'xxx-xxx-xxx',
 });
 
 const product = await gridpimClient.getProductById("123456", {
-  select: 'ProductId,ProductName'
+  select: 'productId,productName'
 })
 
 console.log(product);
@@ -62,14 +77,15 @@ To integrate into a backend application, use `GridProductServiceAdmin` so you ca
 
 Pushing products into the database is limited, for accurate limitations see the `Push Products` section in the [API reference](/grid-pim/api?id=post-push-products).
 
- Make sure to enter your `tenantIndex` and `accessKey` into the code sample below.
+ Make sure to enter your `tenantId`, `environment`, and `accessToken` into the code sample below.
 
 ```javascript
 import { GridProductServiceAdmin } from '@ombori/grid-product-service';
 
 const gridpimAdmin = new GridProductServiceAdmin({
-  tenantIndex: 'test-index',
-  accessKey: 'xxx-xxx-xxx',
+  tenantId: 'test-index',
+  environment: 'staging',
+  accessToken: 'xxx-xxx-xxx',
 });
 
 const idsToRemove = ["ID1", "ID2", "ID3"];

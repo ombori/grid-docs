@@ -6,6 +6,10 @@ This is the API reference for Grid-Products integration.
 For easy configuration and testing, here's a Postman collection you can import into Postman.
 // TODO: New postman collection
 
+## Request authentication
+- In Grid Console, you need to generate an Access Token under the "Developer" tab.
+- You then need to add "x-api-key" in the request header, with the generated access token value.
+
 ## URL's overview
 
 The `{base-url}` of the Grid-Products API depends on the data residency you're working with.
@@ -18,6 +22,7 @@ The `{base-url}` of the Grid-Products API depends on the data residency you're w
 
 
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.
+
 
 ?> `{tenant-id}` is your tenant id in the grid console
 ?> `{environment}` is any defined environment you have in grid console where you want your products data to live.

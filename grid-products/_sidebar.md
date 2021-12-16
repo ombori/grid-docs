@@ -1,6 +1,4 @@
-[Grid PIM](/grid-products/)
-
-
+[Grid Products](/grid-products/)
 
 * [Integration Flow](/grid-products/integration-flow)
 * **Reference documents**

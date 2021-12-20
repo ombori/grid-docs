@@ -17,7 +17,7 @@ This step is applicable if you want your data to be visible only to a specific s
 
 TODO: Insert Spaces API reference here
 
-The returned `_id` value will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
+The returned `id` value will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
 
 ## 3. Push ProductTypes
 

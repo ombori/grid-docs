@@ -210,3 +210,17 @@ enum IsoLanguageIds {
 
 }
 ```
+
+### Space
+```
+type Space {
+  {
+    organizationId: string;
+    displayName: string;
+    type: 'location' | 'section' | 'custom'; // defaults to location
+    longitude: number;
+    latitude: number;
+    notes?: string;
+    externalId: string;
+  },
+}

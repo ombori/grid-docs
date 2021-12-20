@@ -13,11 +13,11 @@ You'll need the following information:
 
 ## 2. Push Spaces
 
-This step is applicable if you want your data to be visible only to a specific store / location only for example.
+This step is applicable if you want your data to be visible only to a specific store / location for example.
 
 TODO: Insert Spaces API reference here
 
-The returned `spaceId` will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
+The returned `_id` value will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
 
 ## 3. Push ProductTypes
 

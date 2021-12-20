@@ -1,5 +1,5 @@
 # Field Definitions
-This document contains the definition of all fields mentioned in the Grid-PIM data-model document.
+This document contains the definition of all fields mentioned in the Grid Products data-model document.
 
 Nested structures are indicated by separate headers. 
 
@@ -17,7 +17,7 @@ productName is a **required** property that contains an Array of Objects, one is
 | Field         | Description                           | Required | Example                                              |
 | ------------- | ------------------------------------- | -------- | ---------------------------------------------------- |
 | productName   | Translation value of the product name | Yes      |                                                      |
-| isoLanguageId | Iso Language ID in BCP-47 format      | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId | Iso Language ID in BCP-47 format      | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 ### productDescription
@@ -26,7 +26,7 @@ productDescription is a **required** property that contains an Array of Objects,
 | Field              | Description                                  | Required | Example                                              |
 | ------------------ | -------------------------------------------- | -------- | ---------------------------------------------------- |
 | productDescription | Translation value of the product description | Yes      |                                                      |
-| isoLanguageId      | Iso Language ID in BCP-47 format             | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId      | Iso Language ID in BCP-47 format             | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 ### relatedProducts
 relatedProducts is *not* required.
@@ -51,7 +51,7 @@ variants is a **required** field
 | universalProductCode  | Array of variant's Universal Product Code                                                                                                                                           |          |                                                     []      |
 | periodStartDate       | Date when variant was added                                                                                             |          | 2021-01-01                                                |
 | periodEndDate         | Date when variant will end                                                                                              |          | 2024-03-04                                                |
-| productName           | The Name of the product variant, using the [productName](/grid-pim/field-definitions?id=productname) structure as above |          | [productName](/grid-pim/field-definitions?id=productname) |
+| productName           | The Name of the product variant, using the [productName](/grid-products/field-definitions?id=productname) structure as above |          | [productName](/grid-products/field-definitions?id=productname) |
 
 ### productStatus
 productStatus is a **required** field.
@@ -59,7 +59,7 @@ productStatus is a **required** field.
 | Field             | Description                                 | Required | Example                                              |
 | ----------------- | ------------------------------------------- | -------- | ---------------------------------------------------- |
 | productStatus     | Status value of the product                 | Yes      | `active` or `inactive`                               |
-| isoLanguageId     | Iso Language ID in BCP-47 format            | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId     | Iso Language ID in BCP-47 format            | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 | spaceId           | Store ID where product status is applicable |          |                                                      |
 | periodStartDate   | Status duration start                       |          |                                                      |
 | periodEndDate     | Status duration end                         |          |                                                      |
@@ -73,7 +73,7 @@ productFeature is *not* required.
 | id                  | Variant ID                       | Yes      |                                                      |
 | productFeatureType  | Key of the product feature              | Yes      |                                                      |
 | productFeatureValue | Translated value of the product feature | Yes      |                                                      |
-| isoLanguageId       | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId       | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 ### productPriceList
 productPriceList is a **required** field.
@@ -83,7 +83,7 @@ productPriceList is a **required** field.
 | id                   | Variant ID                    | Yes      |                                                                                                                      |
 | priceListType        | Standard or Promotional              | Yes      | Standard                                                                                                             |
 | spaceId              | Space where price list is applicable |          |                                                                                                                      |
-| isoLanguageId        | Iso Language ID in BCP-47 format     | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids)                                                                 |
+| isoLanguageId        | Iso Language ID in BCP-47 format     | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids)                                                                 |
 | isoCurrencyCode      | Iso Currency Code                    | Yes      | [IsoCurrencyCode List](https://docs.1010data.com/1010dataReferenceManual/DataTypesAndFormats/currencyUnitCodes.html) |
 | pricingUomId         |                                      |          |                                                                                                                      |
 | periodStartTimestamp | Price applicable start date          |          |                                                                                                                      |
@@ -108,7 +108,7 @@ productLabel is *not* a required property that contains an Array of Objects, one
 | Field         | Description                            | Required | Example                                              |
 | ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
 | productLabel  | Translation value of the product label | Yes      |                                                      |
-| isoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 ### productTags
@@ -117,7 +117,7 @@ productTags is *not* a required property that contains an Array of Objects, one 
 | Field         | Description                             | Required | Example                                              |
 | ------------- | --------------------------------------- | -------- | ---------------------------------------------------- |
 | productTags   | Array of translated strings of the tags | Yes      |                                                      |
-| isoLanguageId | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 
@@ -139,7 +139,7 @@ productShortDescription is *not* a required property that contains an Array of O
 | Field                   | Description                                        | Required | Example                                              |
 | ----------------------- | -------------------------------------------------- | -------- | ---------------------------------------------------- |
 | productShortDescription | Translation value of the short product description | Yes      |                                                      |
-| isoLanguageId           | Iso Language ID in BCP-47 format                   | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId           | Iso Language ID in BCP-47 format                   | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 ### productInternalName
@@ -148,7 +148,7 @@ productInternalName is *not* a required property that contains an Array of Objec
 | Field               | Description                            | Required | Example                                              |
 | ------------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
 | productInternalName | Translation of the internal name value | Yes      |                                                      |
-| isoLanguageId       | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId       | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 ### storageInstructions
 storageInstructions is *not* a required property that contains an Array of Objects, one is required, which each has the following properties.
@@ -156,7 +156,7 @@ storageInstructions is *not* a required property that contains an Array of Objec
 | Field               | Description                             | Required | Example                                              |
 | ------------------- | --------------------------------------- | -------- | ---------------------------------------------------- |
 | storageInstructions | Translation of the storage instructions | Yes      |                                                      |
-| isoLanguageId       | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId       | Iso Language ID in BCP-47 format        | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 ### consumerStorageInstruction
@@ -165,7 +165,7 @@ consumerStorageInstruction is *not* a required property that contains an Array o
 | Field                      | Description                                              | Required | Example                                              |
 | -------------------------- | -------------------------------------------------------- | -------- | ---------------------------------------------------- |
 | ConsumerStorageInstruction | Translation of the storage instructions for the consumer | Yes      |                                                      |
-| isoLanguageId              | Iso Language ID in BCP-47 format                         | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId              | Iso Language ID in BCP-47 format                         | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 
 ### productShippingInstruction
@@ -174,4 +174,4 @@ productShippingInstruction is *not* a required property that contains an Array o
 | Field                      | Description                              | Required | Example                                              |
 | -------------------------- | ---------------------------------------- | -------- | ---------------------------------------------------- |
 | productShippingInstruction | Translation of the shipping instructions | Yes      |                                                      |
-| isoLanguageId              | Iso Language ID in BCP-47 format         | Yes      | [ISOLanguageID](/grid-pim/data-model?id=languageids) |
+| isoLanguageId              | Iso Language ID in BCP-47 format         | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |

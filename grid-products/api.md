@@ -1,6 +1,6 @@
 # Grid Products API Reference
 
-This is the API reference for Grid-Products integration. 
+This is the API reference for Grid Products integration. 
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
@@ -12,7 +12,7 @@ For easy configuration and testing, here's a Postman collection you can import i
 
 ## URL's overview
 
-The `{base-url}` of the Grid-Products API depends on the data residency you're working with.
+The `{base-url}` of the Grid Products API depends on the data residency you're working with.
 
 - EU base URL: `https://product-eu.azurewebsites.net/api/tenants/`
 - US base URL: `https://product-us.azurewebsites.net/api/tenants/`
@@ -29,20 +29,19 @@ The `{base-url}` of the Grid-Products API depends on the data residency you're w
 
 The following endpoints are available in the API currently.
 
-| Method | Endpoint                                                           | Description                                                          |
-| ------ | ------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| GET    | [products](/grid-pim/api?id=get-post-products)                     | Returns list of products based on specified query parameters         |
-| GET    | [products/{id}](/grid-pim/api?id=get-product-by-id)                | Retrieves specific product by ID                                     |
-| GET    | [products-barcode/{code}](/grid-pim/api?id=get-product-by-barcode) | Retrieves specific product by barcode value                          |
-| GET    | [search](/grid-pim/api?id=get-search)                              | Searches products or product types by keyword                        |
-| GET  | [product-recommendations/{id}](/grid-pim/api?id=get-product-recommendations-by-id)                 | Retrieves list of product recommendations by ID                               |
-| POST   | [products/push](/grid-pim/api?id=post-push-products)               | Pushes products into the database                                    |
-| DELETE | [products](/grid-pim/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
-| PATCH  | [products](/grid-pim/api?id=patch-update-products)                 | Update products listed in the database                               |
-| GET    | [product-types](/grid-pim/api?id=get-product-types-list)           | Returns list of product types associated with the tenant id and environment       |
-| GET    | [product-types/{id}](/grid-pim/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
-| POST   | [product-types](/grid-pim/api?id=post-push-product-types)          | Pushes product types into the database                               |
-| DELETE | [product-types](/grid-pim/api?id=delete-remove-product-types)      | Removes specified product type IDs (ProductTypeId) from the database |
+| Method | Endpoint                                                                | Description                                                          |
+| ------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| GET    | [products](/grid-products/api?id=get-post-products)                     | Returns list of products based on specified query parameters         |
+| GET    | [products/{id}](/grid-products/api?id=get-product-by-id)                | Retrieves specific product by ID                                     |
+| GET    | [products-barcode/{code}](/grid-products/api?id=get-product-by-barcode) | Retrieves specific product by barcode value                          |
+| GET    | [search](/grid-products/api?id=get-search)                              | Searches products or product types by keyword                        |
+| POST   | [products/push](/grid-products/api?id=post-push-products)               | Pushes products into the database                                    |
+| DELETE | [products](/grid-products/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
+| PATCH  | [products](/grid-products/api?id=patch-update-products)                 | Update products listed in the database                               |
+| GET    | [product-types](/grid-products/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
+| GET    | [product-types/{id}](/grid-products/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
+| POST   | [product-types](/grid-products/api?id=post-push-product-types)          | Pushes product types into the database                               |
+| DELETE | [product-types](/grid-products/api?id=delete-remove-product-types)      | Removes specified product type IDs (ProductTypeId) from the database |
 
 
 # Products
@@ -63,7 +62,7 @@ Returns a list of products based on specified query parameters.
 } 
 ```
 
-Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
+Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -74,7 +73,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `productName`                                    |
 | limit                   | number  | Maximum number of item count to retrieve `Default: 50`                                                                                 | `100`                                            |
 | page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
-| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `ProductId`, `productName`, `productDescription` |
+| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `productId`, `productName`, `productDescription` |
 | filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`     |
 | sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `introductionDate asc`, `productId desc`         |
 | includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
@@ -87,7 +86,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 Retrieves a specific product by ID
 
 #### Response
-Returns Partial<[`GridProduct`](/grid-pim/data-model?id=gridproduct)>
+Returns Partial<[`GridProduct`](/grid-products/data-model?id=gridproduct)>
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -115,7 +114,7 @@ Variants checked:
     variantId: string
 }
 ```
-Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
+Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -139,7 +138,7 @@ Searches products or product types by keyword
 }
 ```
 
-Reference: [GridProduct](/grid-pim/data-model?id=gridproduct), [ProductType](/grid-pim/data-model?id=producttype)
+Reference: [GridProduct](/grid-products/data-model?id=gridproduct), [ProductType](/grid-products/data-model?id=producttype)
 
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
@@ -179,7 +178,7 @@ Uploads or merges products listing following the GridProduct format
 ?> Any Product in the pushed set that has a matching ProductId will overwrite the product
 
 #### Body
-The body of the request should be an Array of [GridProducts]((/grid-pim/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
+The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
 
 | parameter | type                 | Description                                                    | Example |
 | --------- | -------------------- | -------------------------------------------------------------- | ------- |
@@ -190,7 +189,7 @@ The body of the request should be an Array of [GridProducts]((/grid-pim/data-mod
 ### [DELETE] Remove Products
 > **[DELETE] {base-url}/{tenant-id}/${environment}/products**
 
-Removes products from the Grid-Products database based on specified ID's
+Removes products from the Grid Products database based on specified ID's
 
 | parameter | type            | Description                                          | Example            |
 | --------- | --------------- | ---------------------------------------------------- | ------------------ |
@@ -205,7 +204,7 @@ Updates products with the fields specified in the data object. Shallow-update is
 | --------- | ----------------------------- | ---------------------------------------------------------------------------- |
 | data      | `Array<Partial<GridProduct>>` | List of products with fields in GridProduct format to update to the Database |
 
-Reference: [GridProduct](/grid-pim/data-model?id=gridproduct) 
+Reference: [GridProduct](/grid-products/data-model?id=gridproduct) 
 
 # Product Types
 
@@ -215,7 +214,7 @@ Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
 Returns list of product types associated with the tenant id and environment
 
 #### Response
-Returns Array<[ProductType](/grid-pim/data-model?id=producttype)>
+Returns Array<[ProductType](/grid-products/data-model?id=producttype)>
 
 | parameter | type   | Description                              | Example         |
 | --------- | ------ | ---------------------------------------- | --------------- |
@@ -228,7 +227,7 @@ Returns Array<[ProductType](/grid-pim/data-model?id=producttype)>
 Returns details of a specific product type
 
 #### Response
-Returns [ProductType](/grid-pim/data-model?id=producttype)
+Returns [ProductType](/grid-products/data-model?id=producttype)
 
 | parameter     | type   | Description                    | Example   |
 | ------------- | ------ | ------------------------------ | --------- |
@@ -246,16 +245,16 @@ Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/ap
 
 | parameter | type                 | Description                                                     |
 | --------- | -------------------- | --------------------------------------------------------------- |
-| data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid-Products Database |
+| data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid Products Database |
 
 ?> Limitations: <br> - 100 product types documents per batch<br>
 
-Reference: [ProductType](/grid-pim/data-model?id=producttype)
+Reference: [ProductType](/grid-products/data-model?id=producttype)
 
 ### [DELETE] Remove Product Types
 > **[DELETE] {base-url}/{tenant-id}/${environment}/product-types**
 
-Removes product types from the Grid-Products database based on specified ids
+Removes product types from the Grid Products database based on specified ids
 
 
 #### Response
@@ -266,6 +265,6 @@ Returns Array<{
 
 | parameter | type            | Description                                               | Example               |
 | --------- | --------------- | --------------------------------------------------------- | --------------------- |
-| data      | `Array<string>` | List of product type IDs to remove from Grid-Products database | ["Furniture", "Tech"] |
+| data      | `Array<string>` | List of product type IDs to remove from Grid Products database | ["Furniture", "Tech"] |
 
-Reference: [ProductType](/grid-pim/data-model?id=producttype)
+Reference: [ProductType](/grid-products/data-model?id=producttype)

@@ -1,4 +1,4 @@
-# Grid-PIM Integration Flow
+# Grid Products Integration Flow
 To Integrate with Grid Products, there are several steps you need to follow.
 
 ## 1. Prerequisite
@@ -31,13 +31,13 @@ You should now start pushing products into the database. There are 2 ways of doi
 
 **Integrate using your backend**
 
-If you want to integrate it in your own backend using our JavaScript npm package, proceed with the [Integration Setup](/grid-pim/integration-flow?id=integration-setup) section of this guide.
+If you want to integrate it in your own backend using our JavaScript npm package, proceed with the [Integration Setup](/grid-products/integration-flow?id=integration-setup) section of this guide.
 
 **Integrate using APIs**
 
-If you want to integrate using our API from any other system, you can check the [API Reference](/grid-pim/api), we have a Postman collection you can import into [Postman](https://www.postman.com/) and explore the API as well.
+If you want to integrate using our API from any other system, you can check the [API Reference](/grid-products/api), we have a Postman collection you can import into [Postman](https://www.postman.com/) and explore the API as well.
 
-To read about how to upload products in the database using our API, check the  [Push Products endpoint](/grid-pim/api?id=post-push-products) in the API reference.
+To read about how to upload products in the database using our API, check the  [Push Products endpoint](/grid-products/api?id=post-push-products) in the API reference.
 
 ?> After downloading the Postman collection, make sure to replace `tenant-id` and `environment` value and set the request Header's `x-api-key` with your generated access token in Grid Console.
 
@@ -75,7 +75,7 @@ console.log(product);
 ### Integrate into backend
 To integrate into a backend application, use `GridProductServiceAdmin` so you can add/remove and update products.
 
-Pushing products into the database is limited, for accurate limitations see the `Push Products` section in the [API reference](/grid-pim/api?id=post-push-products).
+Pushing products into the database is limited, for accurate limitations see the `Push Products` section in the [API reference](/grid-products/api?id=post-push-products).
 
  Make sure to enter your `tenantId`, `environment`, and `accessToken` into the code sample below.
 

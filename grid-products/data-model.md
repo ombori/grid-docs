@@ -7,168 +7,147 @@ To learn about the definition of each field, check out the [Field Definitions](/
 ## GridProduct
 ```
 interface GridProduct {
-  ProductId: string;
-  Tenant: string;
-  Customers?: string[];
-  // Main default details
-  ProductShortDescription?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductShortDescription: string;
+  productId: string;
+  // spaces will hold the list of spaceIds where item is visible
+  // visible to all if empty
+  spaces?: Array<string>;
+  productShortDescription?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productShortDescription: string;
   }>;
-  ProductInternalName?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductInternalName: string;
+  productInternalName?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productInternalName: string;
   }>;
-  IntroductionDate?: string;
-  PlannedAbandonmentDate?: string;
-  StorageInstructions?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    StorageInstructions: string;
+  introductionDate?: string;
+  plannedAbandonmentDate?: string;
+  storageInstructions?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    storageInstructions: string;
   }>;
-  ShellLifeDays?: number;
-  ConsumerStorageInstruction?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ConsumerStorageInstruction: string;
+  shellLifeDays?: number;
+  consumerStorageInstruction?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    consumerStorageInstruction: string;
   }>;
-  ProductShippingInstruction?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductShippingInstruction: string;
+  productShippingInstruction?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productShippingInstruction: string;
   }>;
-  
-  // Array of translation
-  ProductName: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductName: string;
+  productName: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productName: string;
   }>;
-
-  // Array of translation
-  ProductDescription: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductDescription: string;
+  productDescription: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productDescription: string;
   }>;
-
-  // Related Products / Recommendations
-  RelatedProducts?: Array<{
-    RelatedProductId: string;
-    ProductRelationshipType: string;
+  relatedProducts?: Array<{
+    relatedProductId: string;
+    productRelationshipType: ProductRelationshipTypes;
   }>;
 
   // Variants
-  Variants: Array<{
-    Id: string; // Item variant Id
-    ProductId: string; // Parent product Id
-    GlobalTradeItemNumber?: string;
-    GtinName?: string;
-    EuropeanArticleNumber?: string;
-    UniversalProductCode?: string;
+  variants: Array<{
+    id: string; // Item variant Id
+    productId: string; // Parent product Id
+    globalTradeItemNumber?: Array<string>;
+    gtinName?: Array<string>;
+    europeanArticleNumber?: Array<string>;
+    universalProductCode?: Array<string>;
 
     // Item variant name (optional)
-    ProductName?: Array<{
-      CountryId: string;
-      IsoLanguageId: IsoLanguageIds;
-      ProductName: string;
+    productName?: Array<{
+      isoLanguageId: IsoLanguageIds;
+      productName: string;
     }>;
 
-    PeriodStartDate?: string;
-    PeriodEndDate?: string;
+    periodStartDate?: string;
+    periodEndDate?: string;
 
-    // Added custom field for variants
-    Color?: string;
-    Style?: string;
-    Size?: string;
+    color?: string;
+    style?: string;
+    size?: string;
   }>;
 
-  Brand?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    BrandName: string;
-    BrandDescription?: string;
-    BrandMark?: string;
-    BrandTrademark?: string;
-    BrandLogo?: string;
+  brand?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    brandName: string;
+    brandDescription?: string;
+    brandMark?: string;
+    brandTrademark?: string;
+    brandLogo?: string;
   }>;
 
-  // Array of translation
-  ProductStatus: Array<{
-    ProductStatus: ProductStatusEnum;
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    StoreId?: string;
-    PeriodStartDate?: string;
-    PeriodEndDate?: string;
-    ProductStatusNote?: string;
+  productStatus: Array<{
+    productStatus: ProductStatusEnum;
+    isoLanguageId: IsoLanguageIds;
+    spaceId?: string;
+    periodStartDate?: string;
+    periodEndDate?: string;
+    productStatusNote?: string;
   }>;
 
-  ProductFeature?: Array<{
-    Id: string; // SKU or variant Id
-    ProductFeatureType: string;
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductFeatureValue: string;
+  productFeature?: Array<{
+    id: string; // Variant Id
+    isoLanguageId: IsoLanguageIds;
+    productFeatureType: string;
+    productFeatureValue: string;
   }>;
 
-  // Product Price based on type
-  ProductPriceList: Array<{
-    Id: string; // SKU or variant Id
-    PriceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
-    StoreId?: string;
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    IsoCurrencyCode: string;
-    PricingUomId?: string;
-    PeriodStartTimestamp?: string;
-    PeriodEndTimestamp?: string;
-    SuggestedRetailPrice?: number;
-    ListPrice: number;
+  // Product Price based on type (Standard or Promotional)
+  productPriceList: Array<{
+    id: string; // Variant Id
+    priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
+    listPrice: number;
+    spaceId?: string;
+    isoLanguageId: IsoLanguageIds;
+    isoCurrencyCode: string;
+    pricingUomId?: string;
+    periodStartTimestamp?: string;
+    periodEndTimestamp?: string;
+    suggestedRetailPrice?: number;
   }>;
 
-  // Images and links
-  CatalogPageLocationProduct: Array<{
-    Id: string; // SKU or variant Id
-    ProductId: string; // Parent Id
-    CatalogType: string; // Ex. "image/png", "video/mp4"
-    CatalogPage?: string; // Ex. Root URL of client media site
-    CatalogPageLocation?: string; // Ex. Product URL appended to root URL of client page
-    CatalogPageLocationProduct: string; // Entire URL value
+  // Images
+  catalogPageLocationProduct: Array<{
+    id: string; // Variant Id
+    productId: string;
+    catalogType: string; // Ex. "image/png", "video/mp4"
+    catalogPage?: string; // Ex. Root URL of client media site
+    catalogPageLocation?: string; // Ex. Product URL appended to root URL of client page
+    catalogPageLocationProduct: string; // Entire URL value
   }>;
 
   // Product Type (referenced from ProductType's "ProductTypeId" database)
-  ProductType: Array<string>;
+  productType: Array<string>;
 
   // Product Labels - displayed like stickers
-  ProductLabel?: Array<{
-    CountryId: string;
-    IsoLanguageId: IsoLanguageIds;
-    ProductLabel: string; // Ex. [Online Exclusive]
+  productLabel?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productLabel: string; // Ex. [Online Exclusive]
   }>;
 
-  // Product Tags
-  ProductTags?: Array<{
-    IsoLanguageId: IsoLanguageIds;
-    ProductTags: string[];
+  // Product Tags to increase searchability of a product
+  productTags?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productTags: Array<string>;
   }>
 
-  // Product Quantity
-  ProductItemQuantity?: Array<{
-    Id: string; // SKU or variant Id
-    StoreId?: string;
-    ProductItemQuantityStartDate?: string;
-    ProductItemQuantityEndDate?: string;
-    ProductItemQuantity: number;
+  // Product Quantity per variant
+  productItemQuantity?: Array<{
+    id: string; // Variant Id
+    spaceId?: string;
+    productItemQuantityStartDate?: string;
+    productItemQuantityEndDate?: string;
+    productItemQuantity: number;
   }>;
 
-  ProductVendor?: Array<{
-    VendorId: string;
-    ProductVendor: string;
-    PeriodStartDate?: string;
-    PeriodEndDate?: string;
+  productVendor?: Array<{
+    vendorId: string;
+    productVendor: string;
+    periodStartDate?: string;
+    periodEndDate?: string;
   }>;
 }
 ```
@@ -178,13 +157,13 @@ interface GridProduct {
 
 ```
 type ProductType = {
-  IsRoot: boolean;
-  ParentId: string;
-  ProductTypeId: string;
-  Title: Array<{
-    IsoLanguageId: IsoLanguageIds;
-    Label: string;
-    Path?: string;
+  isRoot: boolean;
+  parentId: string;
+  productTypeId: string;
+  title: Array<{
+    isoLanguageId: IsoLanguageIds;
+    label: string;
+    path?: string;
   }>;
 };
 ```
@@ -213,6 +192,14 @@ enum ProductStatusEnum {
   Blocked = 'Blocked',
 }
 ```
+
+### ProductRelationshipTypes
+```
+enum ProductRelationshipTypes {
+    Recommended = "Recommended"
+}
+```
+
 ### LanguageIDs
 For Language IDs we use BCP-47 tags, meaning `language-region` structure. Some examples below.
 ```
@@ -221,5 +208,22 @@ enum IsoLanguageIds {
   en_US = 'en-US',
   se_SE = 'se-SE',
 
+}
+```
+
+### Space
+
+```
+type Space = {
+  {
+    id: string; // auto-generated
+    organizationId: string;
+    displayName: string;
+    type: 'location' | 'section' | 'custom'; // defaults to location
+    longitude: number;
+    latitude: number;
+    notes?: string;
+    externalId: string;
+  },
 }
 ```

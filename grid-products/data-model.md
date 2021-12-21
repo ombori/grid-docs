@@ -96,9 +96,9 @@ interface GridProduct {
   }>;
 
   // Product Price based on type (Standard or Promotional)
-  ProductPriceList: Array<{
+  productPriceList: Array<{
     id: string; // Variant Id
-    oriceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
+    priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
     listPrice: number;
     spaceId?: string;
     isoLanguageId: IsoLanguageIds;
@@ -110,8 +110,8 @@ interface GridProduct {
   }>;
 
   // Images
-  CatalogPageLocationProduct: Array<{
-    Id: string; // Variant Id
+  catalogPageLocationProduct: Array<{
+    id: string; // Variant Id
     productId: string;
     catalogType: string; // Ex. "image/png", "video/mp4"
     catalogPage?: string; // Ex. Root URL of client media site
@@ -135,8 +135,8 @@ interface GridProduct {
   }>
 
   // Product Quantity per variant
-  ProductItemQuantity?: Array<{
-    Id: string; // Variant Id
+  productItemQuantity?: Array<{
+    id: string; // Variant Id
     spaceId?: string;
     productItemQuantityStartDate?: string;
     productItemQuantityEndDate?: string;
@@ -212,9 +212,11 @@ enum IsoLanguageIds {
 ```
 
 ### Space
+
 ```
-type Space {
+type Space = {
   {
+    id: string; // auto-generated
     organizationId: string;
     displayName: string;
     type: 'location' | 'section' | 'custom'; // defaults to location
@@ -224,3 +226,4 @@ type Space {
     externalId: string;
   },
 }
+```

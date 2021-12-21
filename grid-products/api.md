@@ -4,6 +4,7 @@ This is the API reference for Grid Products integration.
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
+
 // TODO: New postman collection
 
 ## Request authentication
@@ -25,6 +26,7 @@ The `{base-url}` of the Grid Products API depends on the data residency you're w
 
 
 ?> `{tenant-id}` is your tenant id in the grid console
+
 ?> `{environment}` is any defined environment you have in grid console where you want your products data to live.
 
 The following endpoints are available in the API currently.
@@ -47,7 +49,7 @@ The following endpoints are available in the API currently.
 # Products
 ### [GET | POST] Products
 
-> **[GET] {base-url}/{tenant-id}/${environment}/products** <br> **[POST] {base-url}/{tenant-id}/${environment}/products**
+> **[GET] {base-url}/{tenant-id}/{environment}/products** <br> **[POST] {base-url}/{tenant-id}/{environment}/products**
 
 Returns a list of products based on specified query parameters.
 
@@ -81,7 +83,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `shellLifeDays`                                  |
 
 ### [GET] Product by ID
-> **[GET] {base-url}/{tenant-id}/${environment}/products/{productId}**
+> **[GET] {base-url}/{tenant-id}/{environment}/products/{productId}**
 
 Retrieves a specific product by ID
 
@@ -98,7 +100,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 
 ### [GET] Product by Barcode
 
-> **[GET] {base-url}/{tenant-id}/${environment}/products-barcode/{barcode}**
+> **[GET] {base-url}/{tenant-id}/{environment}/products-barcode/{barcode}**
 
 Retrieves a specific product by barcode ID.
 
@@ -125,7 +127,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
 
 ### [GET] Search
-> **[GET] {base-url}/{tenant-id}/${environment}/search**
+> **[GET] {base-url}/{tenant-id}/{environment}/search**
 
 Searches products or product types by keyword
 
@@ -149,7 +151,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
 
 ### [GET] Product Recommendations by ID
-> **[GET] {base-url}/{tenant-id}/${environment}/product-recommendations/{productId}**
+> **[GET] {base-url}/{tenant-id}/{environment}/product-recommendations/{productId}**
 
 Retrieves list of product recommendations taken from RelatedProducts field
 
@@ -171,7 +173,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | productId | string | The ID of the Product                                   | `100001`                                         |
 
 ### [POST] Push Products
-> **[POST] {base-url}/{tenant-id}/${environment}/products/push**
+> **[POST] {base-url}/{tenant-id}/{environment}/products/push**
 
 Uploads or merges products listing following the GridProduct format
 
@@ -187,7 +189,7 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 ?> Limitations: <br> - 100 products per batch
 
 ### [DELETE] Remove Products
-> **[DELETE] {base-url}/{tenant-id}/${environment}/products**
+> **[DELETE] {base-url}/{tenant-id}/{environment}/products**
 
 Removes products from the Grid Products database based on specified ID's
 
@@ -196,7 +198,7 @@ Removes products from the Grid Products database based on specified ID's
 | data      | `Array<string>` | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
 
 ### [PATCH] Update Products
-> **[PATCH] {base-url}/{tenant-id}/${environment}/products**
+> **[PATCH] {base-url}/{tenant-id}/{environment}/products**
 
 Updates products with the fields specified in the data object. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects will be completely overwritten.
 
@@ -209,7 +211,7 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 # Product Types
 
 ### [GET] Product Types List
-> **[GET] {base-url}/{tenant-id}/${environment}/product-types**
+> **[GET] {base-url}/{tenant-id}/{environment}/product-types**
 
 Returns list of product types associated with the tenant id and environment
 
@@ -222,7 +224,7 @@ Returns Array<[ProductType](/grid-products/data-model?id=producttype)>
 
 
 ### [GET] Product Type Details
-> **[GET] {base-url}/{tenant-id}/${environment}/product-types/{productTypeId}**
+> **[GET] {base-url}/{tenant-id}/{environment}/product-types/{productTypeId}**
 
 Returns details of a specific product type
 
@@ -235,7 +237,7 @@ Returns [ProductType](/grid-products/data-model?id=producttype)
 
 
 ### [POST] Push Product Types
-> **[POST] {base-url}/{tenant-id}/${environment}/product-types**
+> **[POST] {base-url}/{tenant-id}/{environment}/product-types**
 
 Update or insert product types to database
 
@@ -252,7 +254,7 @@ Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/ap
 Reference: [ProductType](/grid-products/data-model?id=producttype)
 
 ### [DELETE] Remove Product Types
-> **[DELETE] {base-url}/{tenant-id}/${environment}/product-types**
+> **[DELETE] {base-url}/{tenant-id}/{environment}/product-types**
 
 Removes product types from the Grid Products database based on specified ids
 

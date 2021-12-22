@@ -4,7 +4,9 @@ This is the API reference for Grid Products integration.
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
-> [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+
+?> Download the [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+
 - URL: 
   - Please change the values for `<tenant-id>`, `<environment>`, and `<space-id>`
   - Please change the value of `<data-residency>` with either `eu`, `us`, `in`, `au`, or `uae`.
@@ -14,25 +16,21 @@ For easy configuration and testing, here's a Postman collection you can import i
 
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.
-- You then need to add "x-api-key" in the request header, with the generated access token value.
+- You then need to add `x-api-key` in the request header, with the generated access token value.
 
 ## URL's overview
 
-The `{base-url}` of the Grid Products API depends on the data residency you're working with.
+The `{base-url}` of the Grid Products API depends on the data residency you're working with. Make sure you use the correct URL for the data residency you're working with.
 
-- EU base URL: `https://product-eu.omborigrid.com/api/tenants`
-- US base URL: `https://product-us.omborigrid.com/api/tenants`
-- IN base URL: `https://product-in.omborigrid.com/api/tenants`
-- AU base URL: `https://product-au.omborigrid.com/api/tenants`
-- UAE base URL: `https://product-uae.omborigrid.com/api/tenants`
+| Region | URL                                              |
+| ------ | ------------------------------------------------ |
+| EU     | `https://product-eu.omborigrid.com/api/tenants`  |
+| US     | `https://product-us.omborigrid.com/api/tenants`  |
+| IN     | `https://product-in.omborigrid.com/api/tenants`  |
+| AU     | `https://product-au.omborigrid.com/api/tenants`  |
+| UAE    | `https://product-uae.omborigrid.com/api/tenants` |
 
-
-> In every endpoint you will need to replace `{base-url}` with the URL specified above.
-
-
-?> `{tenant-id}` is your tenant id in the grid console
-
-?> `{environment}` is any defined environment you have in grid console where you want your products data to live.
+?> `{tenant-id}` is your tenant id in the grid console. <br> `{environment}` is any defined environment you have in grid console where you want your products data to live.
 
 The following endpoints are available in the API currently.
 
@@ -173,9 +171,9 @@ Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter | type   | Description                                             | Example                                          |
-| --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| productId | string | The ID of the Product                                   | `100001`                                         |
+| parameter | type   | Description           | Example  |
+| --------- | ------ | --------------------- | -------- |
+| productId | string | The ID of the Product | `100001` |
 
 ### [POST] Push Products
 > **[POST] {base-url}/{tenant-id}/{environment}/products/push**
@@ -250,8 +248,8 @@ Update or insert product types to database
 #### Response
 Returns Array<[OperationResponse](https://docs.microsoft.com/en-us/javascript/api/@azure/cosmos/operationresponse?view=azure-node-latest)>
 
-| parameter | type                 | Description                                                     |
-| --------- | -------------------- | --------------------------------------------------------------- |
+| parameter | type                 | Description                                                          |
+| --------- | -------------------- | -------------------------------------------------------------------- |
 | data      | `Array<ProductType>` | List of formatted ProductTypes to push to the Grid Products Database |
 
 ?> Limitations: <br> - 100 product types documents per batch<br>
@@ -270,8 +268,8 @@ Returns Array<{
     status: number;
 }>
 
-| parameter | type            | Description                                               | Example               |
-| --------- | --------------- | --------------------------------------------------------- | --------------------- |
+| parameter | type            | Description                                                    | Example               |
+| --------- | --------------- | -------------------------------------------------------------- | --------------------- |
 | data      | `Array<string>` | List of product type IDs to remove from Grid Products database | ["Furniture", "Tech"] |
 
 Reference: [ProductType](/grid-products/data-model?id=producttype)

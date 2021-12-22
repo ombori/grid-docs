@@ -13,7 +13,6 @@ For easy configuration and testing, here's a Postman collection you can import i
 - Request Headers: 
   - Please change the `<accessToken>` in the (Product) `x-api-key` or (Space) `Authorization` value with your generated access token in grid console.
 
-
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.
 - You then need to add "Authorization" in the API request header, with the `Bearer <access token>` as value for the SPACES related endpoints below.

@@ -4,8 +4,13 @@ This is the API reference for Grid Products integration.
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
+> [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+- URL: 
+  - Please change the values for `<tenant-id>`, `<environment>`, and `<space-id>`
+  - Please change the value of `<data-residency>` with either `eu`, `us`, `in`, `au`, or `uae`.
+- Request Headers: 
+  - Please change the `<accessToken>` in the (Product) `x-api-key` or (Space) `Authorization` value with your generated access token in grid console.
 
-// TODO: New postman collection
 
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.
@@ -15,11 +20,11 @@ For easy configuration and testing, here's a Postman collection you can import i
 
 The `{base-url}` of the Grid Products API depends on the data residency you're working with.
 
-- EU base URL: `https://product-eu.azurewebsites.net/api/tenants/`
-- US base URL: `https://product-us.azurewebsites.net/api/tenants/`
-- IN base URL: `https://product-in.azurewebsites.net/api/tenants/`
-- AU base URL: `https://product-au.azurewebsites.net/api/tenants/`
-- UAE base URL: `https://product-uae.azurewebsites.net/api/tenants/`
+- EU base URL: `https://product-eu.omborigrid.com/api/tenants`
+- US base URL: `https://product-us.omborigrid.com/api/tenants`
+- IN base URL: `https://product-in.omborigrid.com/api/tenants`
+- AU base URL: `https://product-au.omborigrid.com/api/tenants`
+- UAE base URL: `https://product-uae.omborigrid.com/api/tenants`
 
 
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.

@@ -4,8 +4,13 @@ This is the API reference for Spaces integration.
 
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
+> [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+- URL: 
+  - Please change the values for `<tenant-id>`, `<environment>`, and `<space-id>`
+  - Please change the value of `<data-residency>` with either `eu`, `us`, `in`, `au`, or `uae`.
+- Request Headers: 
+  - Please change the `<accessToken>` in the (Product) `x-api-key` or (Space) `Authorization` value with your generated access token in grid console.
 
-// TODO: New postman collection
 
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.

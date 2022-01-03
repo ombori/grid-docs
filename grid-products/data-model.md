@@ -8,9 +8,8 @@ To learn about the definition of each field, check out the [Field Definitions](/
 ```
 interface GridProduct {
   productId: string;
-  // spaces will hold the list of spaceIds where item is visible
-  // visible to all if empty
-  spaces?: Array<string>;
+  // spaceIds will hold the list of spaceIds where item is visible
+  spaceIds?: Array<string>;
   productShortDescription?: Array<{
     isoLanguageId: IsoLanguageIds;
     productShortDescription: string;
@@ -82,7 +81,7 @@ interface GridProduct {
   productStatus: Array<{
     productStatus: ProductStatusEnum;
     isoLanguageId: IsoLanguageIds;
-    spaceId?: string;
+    spaceId: string;
     periodStartDate?: string;
     periodEndDate?: string;
     productStatusNote?: string;
@@ -100,7 +99,7 @@ interface GridProduct {
     id: string; // Variant Id
     priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
     listPrice: number;
-    spaceId?: string;
+    spaceId: string;
     isoLanguageId: IsoLanguageIds;
     isoCurrencyCode: string;
     pricingUomId?: string;
@@ -137,7 +136,7 @@ interface GridProduct {
   // Product Quantity per variant
   productItemQuantity?: Array<{
     id: string; // Variant Id
-    spaceId?: string;
+    spaceId: string;
     productItemQuantityStartDate?: string;
     productItemQuantityEndDate?: string;
     productItemQuantity: number;

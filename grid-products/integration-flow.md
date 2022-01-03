@@ -58,18 +58,21 @@ yarn add @ombori/grid-products
 ```
 
 ### Integrate into frontend
-To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. Make sure to enter your `tenantId`, `environment`, and `accessToken` into the code sample below.
+To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. 
+Make sure to pass down the `tenantId`, `environment`, and `dataResidency` into the code sample below using the [ga-settings](https://www.npmjs.com/package/@ombori/ga-settings) package.
 
 ```javascript
+import { useGridSignalsInitParams } from '@ombori/ga-settings';
 import { GridProductServiceClient } from '@ombori/grid-products';
+import { DataResidency } from '@ombori/grid-products/dist/types/data-residency';
 
 const gridProductClient = new GridProductServiceClient({
-  tenantId: 'test',
-  environment: 'staging',
-  accessToken: 'xxx-xxx-xxx',
+  tenantId: gridSignalsInfo.tenantId,
+  environment: gridSignalsInfo.environment,
+  dataResidency: gridSignalsInfo.dataResidency.toLowerCase() as DataResidency,
 });
 
-const product = await gridpimClient.getProductById("123456", {
+const product = await gridProductClient.getProductById("123456", {
   select: 'productId,productName'
 })
 
@@ -81,18 +84,19 @@ To integrate into a backend application, use `GridProductServiceAdmin` so you ca
 
 Pushing products into the database is limited, for accurate limitations see the `Push Products` section in the [API reference](/grid-products/api?id=post-push-products).
 
- Make sure to enter your `tenantId`, `environment`, and `accessToken` into the code sample below.
+ Make sure to enter your `tenantId`, `environment`, `dataResidency`, and `accessToken` into the code sample below.
 
 ```javascript
 import { GridProductServiceAdmin } from '@ombori/grid-products';
 
 const gridProductAdmin = new GridProductServiceAdmin({
-  tenantId: 'test-index',
+  tenantId: 'xxxxxxxxxxxx',
   environment: 'staging',
   accessToken: 'xxx-xxx-xxx',
+  dataResidency: 'eu'
 });
 
 const idsToRemove = ["ID1", "ID2", "ID3"];
 
-await gridpimAdmin.removeProducts(idsToRemove);
+await gridProductAdmin.removeProducts(idsToRemove);
 ```

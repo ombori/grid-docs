@@ -23,7 +23,7 @@ The Grid Products receives continuous updates. All the recent release notes can 
 - Set `relatedProducts.productRelationshipType` type to `ProductRelationshipTypes`
 - Added `ProductRelationshipTypes` enum definition
 
-### API Updates
+#### API Updates
 - Updated available API endpoints per data residency (`eu`, `us`, `uae`, `in`, `au`)
 
 #### Features

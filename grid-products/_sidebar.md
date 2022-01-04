@@ -2,6 +2,7 @@
 
 * [Integration Flow](/grid-products/integration-flow)
 * **Reference documents**
+  * [Release Notes](/grid-products/releasenotes/)
   * [Grid Products API Reference](/grid-products/api)
   * [Spaces API Reference](/grid-products/spaces-api)
   * [Data Models](/grid-products/data-model)

@@ -19,7 +19,7 @@ This step is applicable if you want your data to be visible only to a specific s
 
 To Read about how to create spaces into the database using our API, check the [Create Space endpoint](/grid-pim/api?id=post-space) in the API reference.
 
-The returned `id` value will be used as values for `spaces` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
+The returned `id` value will be used as values for `spaceIds` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
 
 ## 3. Push ProductTypes
 
@@ -59,7 +59,7 @@ yarn add @ombori/grid-products
 
 ### Integrate into frontend
 To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. 
-Make sure to pass down the `tenantId`, `environment`, and `dataResidency` into the code sample below using the [ga-settings](https://www.npmjs.com/package/@ombori/ga-settings) package.
+Make sure to pass down the `tenantId`, `environment`, and `dataResidency` into the code sample below using the [ga-settings package](https://www.npmjs.com/package/@ombori/ga-settings).
 
 ```javascript
 import { useGridSignalsInitParams } from '@ombori/ga-settings';

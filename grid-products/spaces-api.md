@@ -40,8 +40,8 @@ The following endpoints are available in the Spaces API currently.
 
 # Spaces
 ### [GET] Spaces List
-
 > **[GET] {base-url}/spaces**
+
 Returns a list of tenant's spaces.
 
 #### Query Parameters
@@ -58,6 +58,7 @@ Array<Space>
 
 ### [GET] Get Space by ID
 > **[GET] {base-url}/spaces/{id}**
+
 Retrieves specific space by ID.
 
 #### Query Parameters
@@ -75,6 +76,7 @@ Reference: [Space](/grid-products/data-model?id=space)
 
 ### [POST] Create Space
 > **[POST] {base-url}/spaces**
+
 Creates a space record
 
 #### Body
@@ -98,6 +100,7 @@ Reference: [Space](/grid-products/data-model?id=space)
 
 ### [PUT] Update Space
 > **[PUT] {base-url}/spaces/{id}**
+
 Updates a space record
 
 #### Query Parameters
@@ -126,6 +129,7 @@ Reference: [Space](/grid-products/data-model?id=space)
 
 ### [DELETE] Remove Space
 > **[DELETE] {base-url}/spaces/{id}**
+
 Deletes a space record
 
 #### Query Parameters

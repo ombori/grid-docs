@@ -96,7 +96,7 @@ const gridProductAdmin = new GridProductServiceAdmin({
   tenantId: 'xxxxxxxxxxxx',
   environment: 'staging',
   accessToken: 'xxx-xxx-xxx',
-  dataResidency: 'eu'
+  dataResidency: 'EU'
 });
 
 const idsToRemove = ["ID1", "ID2", "ID3"];

@@ -23,7 +23,7 @@ The returned `id` value will be used as values for `spaceIds` and `spaceId` fiel
 
 ## 3. Push ProductTypes
 
-The next step would be to push your product categories or product types that will be used later on for the `productType` field of your products.
+The next step is to push your product categories or product types that will be used later on for your products' `productType` field.
 
 A specific example for ProductTypes usage is category navigation in an "Endless Aisle" application.
 

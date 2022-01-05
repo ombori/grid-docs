@@ -3,7 +3,7 @@ To Integrate with Grid Products, there are several steps you need to follow.
 
 ## 1. Prerequisite
 
-You need to make sure that you have an account in the Ombori Grid Console.
+You need to make sure you have an account in the Ombori Grid Console.
 
 You'll need the following information:
 1. Your tenant id in Grid Console
@@ -15,9 +15,9 @@ You'll need the following information:
 
 ## 2. Push Spaces
 
-This step is applicable if you want your data to be visible only to a specific store / location for example.
+This step is applicable if you want your data to be visible only to a specific store/location.
 
-To Read about how to create spaces into the database using our API, check the [Create Space endpoint](/grid-pim/api?id=post-space) in the API reference.
+To read about creating spaces into the database using our API, check the [Create Space endpoint](/grid-pim/api?id=post-space) in the API reference.
 
 The returned `id` value will be used as values for `spaceIds` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
 
@@ -25,13 +25,13 @@ The returned `id` value will be used as values for `spaceIds` and `spaceId` fiel
 
 The next step would be to push your product categories or product types that will be used later on for the `productType` field of your products.
 
-Specific example for ProductTypes usage is for the category navigation in Endless Aisle application.
+A specific example for ProductTypes usage is category navigation in an "Endless Aisle" application.
 
-To Read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-pim/api?id=post-push-product-types) in the API reference.
+To read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-pim/api?id=post-push-product-types) in the API reference.
 
 
 ## 4. Push Products
-You should now start pushing products into the database. There are 2 ways of doing this, either through a backend integration for which you can use our NPM package or through our API interface.
+You can now start pushing products into the database. There are 2 ways of doing this, either through a backend integration for which you can use our NPM package or through our API interface.
 
 **Integrate using your backend**
 

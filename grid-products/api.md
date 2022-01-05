@@ -16,7 +16,7 @@ For easy configuration and testing, here's a Postman collection you can import i
 
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.
-- You then need to add `x-api-key` in the request header, with the generated access token value.
+- Add `x-api-key` in the request header, with the generated access token value.
 
 ## URL's overview
 

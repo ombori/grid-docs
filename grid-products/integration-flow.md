@@ -73,7 +73,7 @@ yarn add @ombori/grid-products
 To integrate into a React front-end application, use `useGridProductsClient` hooks from `@ombori/grid-products-client-react` package. 
 
 ```javascript
-import { GridProductServiceClient } from '@ombori/grid-products-client-react';
+import { useGridProductsClient } from '@ombori/grid-products-client-react';
 
 const gridProductsClient = useGridProductsClient();
 

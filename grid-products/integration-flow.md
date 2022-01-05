@@ -46,8 +46,20 @@ To read about how to upload products in the database using our API, check the  [
 ?> After downloading the Postman collection, make sure to replace `tenant-id` and `environment` value and set the request Header's `x-api-key` with your generated access token in Grid Console.
 
 ## 5. Integration Setup
-Once you start integrating Grid Products into other apps, you should use the wrapper package `@ombori/grid-products`
+Once you start integrating Grid Products into other apps, you should use the following wrapper packages: 
+1. `@ombori/grid-products-client-react` for your react frontend applications
+- This package helps you to initialize the service without the need of manually entering the required parameters like tenantId, environment, dataResidency.
+- The package will automatically detect these parameters from the devices running your application.
+This package is hosted on [NPM](https://www.npmjs.com/package/@ombori/grid-products-client-react)
 
+To install, use npm or yarn
+
+```bash
+npm i @ombori/grid-products-client-react
+yarn add @ombori/grid-products-client-react
+```
+
+2. `@ombori/grid-products` for any frontend/backend applications
 This package is hosted on [NPM](https://www.npmjs.com/package/@ombori/grid-products)
 
 To install, use npm or yarn
@@ -57,26 +69,17 @@ npm i @ombori/grid-products
 yarn add @ombori/grid-products
 ```
 
-### Integrate into frontend
-To integrate into a front-end application, use `GridProductServiceClient` for read-only operations. 
-Make sure to pass down the `tenantId`, `environment`, and `dataResidency` into the code sample below using the [ga-settings package](https://www.npmjs.com/package/@ombori/ga-settings).
+### Integrate into React frontend
+To integrate into a React front-end application, use `useGridProductsClient` hooks from `@ombori/grid-products-client-react` package. 
 
 ```javascript
-import { useGridSignalsInitParams } from '@ombori/ga-settings';
-import { GridProductServiceClient } from '@ombori/grid-products';
-import { DataResidency } from '@ombori/grid-products/dist/types/data-residency';
+import { GridProductServiceClient } from '@ombori/grid-products-client-react';
 
-const gridProductClient = new GridProductServiceClient({
-  tenantId: gridSignalsInfo.tenantId,
-  environment: gridSignalsInfo.environment,
-  dataResidency: gridSignalsInfo.dataResidency.toLowerCase() as DataResidency,
-});
+const gridProductsClient = useGridProductsClient();
 
-const product = await gridProductClient.getProductById("123456", {
-  select: 'productId,productName'
-})
+const products = await gridProductClient.getProductList();
 
-console.log(product);
+console.log(products.list);
 ```
 
 ### Integrate into backend

@@ -24,7 +24,7 @@ The Grid Products receives continuous updates. All the recent release notes can 
 - Added `ProductRelationshipTypes` enum definition
 
 #### API Updates
-- Updated available API endpoints per data residency (`eu`, `us`, `uae`, `in`, `au`)
+- Updated available API endpoints per data residency (`EU`, `US`, `UAE`, `IN`, `AU`)
 
 #### Features
 - Get Product Recommendations by ID

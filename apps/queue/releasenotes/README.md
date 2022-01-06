@@ -1,6 +1,53 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-12-15
+#### Features
+- Queue Manager UI: When Active Directory has a name for the user in addition to an e-mail address, the name will be visible in the Admin Booking View. 
+- Waiting time: When the queue is closed, waiting time will include the time until the queue opens according to the defined schedule.
+
+## 2021-11-30
+#### Features
+- Auto checkout: You can now specify the time after which tickets from "Serving" column are checked out automatically
+- You can now override the sender of an SMS notification. 
+
+#### Bugfixes
+- Fixed information about Active Directory users for servedBy property
+
+## 2021-11-22
+#### Changes
+- New waiting time mechanism is introduced to be more accurate
+    - If serving mode and email login flow are enabled we will take average serving time, divided by the number of active users in Queue Manager, and then multiply by ticket number in the queue.
+    - If it's not in serving mode, or using pin login flow, the average waiting time is calculated based on the time difference between tickets called multiplied by ticket number in the queue. 
+- No staff notifications about waiting time will be sent if there are no active tickets in the queue.
+
+#### Bugfixes
+- Fixed enabling iOS notifications when SMS and emails and collecting customer information are disabled 
+- Fixed an issue where a customer would see duplicate slots when the customer timezone was different than the queue timezone if Special hours are specified 
+
+## 2021-11-17
+#### Features
+- Order pickup: Customers will be able to Cancel order pickup
+- Order pickup: Customers will be able to send feedback about the order pickup experience
+
+#### Bugfixes
+- Fixed duration label for bookings
+- Fixed notifications for disabled both SMS and email notifications 
+
+## 2021-11-11
+#### Changes
+- Added verification by email if the booking is using emails only.
+- Now on the booking page, the customer will see timeslot durations instead of time range.
+- New logic for Special bookings hours: Values only from this section will be applied for the specified date. Settings from regular hours or Separate bookings hours will be overwritten.
+- In the queue manager UI, serving person initials will be created from the person's display name if possible. Otherwise, the email address will be used.
+
+#### Features
+- Order pickup: now in Order manager UI you will be able to find all links for issued orders which weren't booked by customers yet
+
+#### Breaking change
+
+!> New logic for Special bookings hours: Values from this section will only be applied for the specified date. Settings from regular hours or from Separate bookings hours won't be used at all.
+
 ## 2021-10-12
 #### Changes
 - Added registration information to the booking calendar. Now, staff can get booking information directly from the calendar.

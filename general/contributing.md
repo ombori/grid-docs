@@ -1,23 +1,59 @@
 # Contributing to Documentation
-The Ombori Grid Documentation is a growing and evolving project, and far from everything has been added to the documentation.
+The Ombori Grid Documentation is an ever-evolving source of information. Ombori is rapidly changing all the time, and so is the documentation.
 
-In the end, the goal is to make the documentation the single source of truth for the Ombori Grid.
+As with any project, there will always be sections that are not yet complete, missing, or outdated. This is an unavoidable consequence of the rapid changes that occur.
 
-When you want to add new content to the documentation, check carefully where it fits in the documentation structure, and make sure to check the relevant section of this guide.
+This guide is here to help you figure out how to improve the documentation for all the situations that might arise.
 
-## New Guides
-When adding a new guide, make sure to add them to the section it's relevant to. For example, when it is relevant to any published marketplace apps, add it to the section "Marketplace Apps". Queue Management is a good example, as there are already several guides nested under it. As for other marketplace apps we don't even have a setup guide yet.
+## Running the documentation locally
+The documentation is running on Docsify. This is a very easy tool to run documentation. All you have to do is install Docsify locally
 
-If the guides are relevant to app development, add them to the relevant app type, so for IoT apps, add them to the section "IoT Apps". When they're a subsection of different guides, make sure to link them from the guide it relates to. Not all guides need to be added to the sidebar, only those that are great standalone.
+```bash
+    npm i docsify-cli -g
+```
 
-When a section in the sidebar is growing to get more guides, at some point we will need to migrate to a standalone sidebar for said section. This is something that cannot be defined when this is important, but it is something we will need to discuss when the time comes.
+Once this is done, you can run the documentation locally by running the following command:
 
-For any guide that is going to be added, follow the following guidelines:
+```bash
+    yarn start
+```
 
-- The guide should be added to the right folder structure.
-- Consider when the guide should be added to the sidebar.
-- Add screenshots and code samples to every step that can use clarification.
-- Link the guide in other documents where it can be helpful.
+For simplicity, a `package.json` file was added to this project to launch the documentation. However, this is not mandatory for a Docsify project. 
 
-When you're done with a new guide, submit a PR, and if you're in contact with one of the core maintainers, ask them to review the PR. This can also be submitted on [Slack](https://join.slack.com/t/slack-pgo5586/shared_invite/zt-s1ajca83-k8i1f2mqgCMD0vDfpCk4Bg).
+## Adding Docsify Plugins
+This Docsify Installation has several plugins added to it. By default, the Docsify Plugins are added by including a Script Tag; however, for faster loading, all these plugins are added to the same `scripts.js` file you can find at the project's root. 
+## Adding missing information on an existing page
+Whenever information is missing from a particular document, and you know the solution, we recommend submitting a small PR to add the missing information. 
 
+Follow these steps to ensure correct adjustment of the documentation:
+
+1. Fork the repository or create a branch if you have permission.
+2. Find the file you want to adjust. The file's path is a copy of the URL, but you can also press the "Edit on Github" button on the bottom of every page.
+3. Find the place in the file that is missing information. 
+4. Add the adjustment to the file, whether this is a single word change, an added sentence, or a change to a whole paragraph.
+5. Commit, push, and submit a PR.
+
+Don't try to change too many things at once. Especially if they're unrelateed to each other. Submit a PR for multiple changes, even if they're in the same file, when they're not related to each other.
+
+## Adding a page to an existing subject
+When you want to expand on a subject already covered in the documentation, you can create a new page within that subject. But of course in order to be able to keep the structure intact, there can be several steps to do this.
+
+Keep in mind, there can't be *hard* rules about how to structure documentation, it still boils down to preference in most cases.
+
+- If the subject currently resides in "general", you need to consider if an added page is the right solution, or if an added section to the same document is sufficient.
+- If you come to the conclusion a new page is required, try to figure out if it needs to move away from General to a standalone directory.
+- When you create a new directory, check the next section of this guide about creating a new section.
+
+Whatever is decided, it is important to keep simplicity in mind. Don't create new pages that could fit within another page, but also don't bloat pages too much. There's a fine line in-between. 
+
+## Creating a new documentation section
+When you want to create a new documentation section, you can do so by creating a new directory.
+
+Rules for a new section:
+- The directory name should be short and descriptive.
+- The directory name should follow kebab-case.
+- The directory should contain a `README.md` file as the introduction to the subject
+- The directory should contain a `_sidebar.md` file with links to relevant documentation. Check existing directories for examples. 
+- Always add a link back to "all documentation" at the bottom or top of the sidebar.
+- Any images that are part of the section should be under `[sectionname]/assets`.
+- When adding releasenotes to a section, add those to a directory called `releasenotes`, then add the releasenotes to the `README.md` file within that directory. Any images that are part of the releasenotes should be under `[sectionname]/releasenotes/assets`.

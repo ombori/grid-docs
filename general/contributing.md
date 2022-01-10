@@ -39,7 +39,7 @@ Follow these steps to ensure correct adjustment of the documentation:
 4. Add the adjustment to the file, whether this is a single word change, an added sentence, or a change to a whole paragraph.
 5. Commit, push, and submit a PR.
 
-Don't try to change too many things at once especially if they're unrelated to each other. Submit a PR for every change, even if they're in the same file. 
+Don't try to change too many things at once, especially if they're unrelated to each other. Submit a PR for every change, even if they're in the same file. 
 ## Adding a page to an existing subject
 When you want to expand on a subject already covered in the documentation, you can create a new page within that subject. But of course, in order to be able to keep the structure intact, there can be several steps to do this.
 
@@ -63,7 +63,7 @@ Rules for a new section:
 - Any images that are part of the section should be under `[sectionname]/assets`.
 - When adding release notes to a section, add those to a directory called `releasenotes`, then add the release notes to the `README.md` file within that directory. Any images that are part of the release notes should be under `[sectionname]/releasenotes/assets`.
 
-Now that you have an entire new section, the writing begins. Try to follow the same rules and structure as the rest of the documentation. Stick to logical filenames and directories, split things up if they become too complicated or if they're trying to achieve more than one thing.
+Now that you have an entirely new section, the writing begins. Try to follow the same rules and structure as the rest of the documentation. Stick to logical filenames and directories, split things up if they become too complicated or if they're trying to achieve more than one thing.
 
 ## Updating release notes
 Every section can have release notes, but keep in mind they should be written only for "products" or "solutions" the users interact with separately. These release notes should also be structured to be with the rest of the documentation of said product or solution.
@@ -76,6 +76,15 @@ When adding a new version, stick to the `release notes format` as described abov
 
 - Always add the newest version on top
 - Separate the bugfixes from the features
-- Add screenshots to features that can improve clarity of descriptions
+- Add screenshots to features that can improve the clarity of descriptions
 - Put screenshots, or other images, in the `assets` directory in the `releasenotes` directory.
-- When a release notes page is getting too long, consider "archiving" older release notes to a separate file and link this from the bottom of the release notes main page.
+- When a release notes page is getting too long, consider "archiving" older release notes to a separate file and link this from the bottom of the release notes page.
+
+After you've added a new version, it is time to make sure the documentation is no longer outdated. This is, of course, something that should've been scoped before the release; however, now is as good a time as any.
+
+## Keeping the documentation up to date
+Code is ever-changing, and with changing code, breaking changes and new features, guides, references and other documentation will start to get outdated. Therefore, it is essential to check the documentation whenever breaking or major changes are made to something that is documented.
+
+So with the addition of a release note, you will have to check the rest of the documentation for required changes. So whenever a new version, feature, or breaking change is scheduled, go over the documented content.
+
+

@@ -1,6 +1,12 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2021-01-07
+### Installations
+- Transferred Overview tab dashboard & its contents to Legacy Overview with same access constraints
+- Repurposed Overview tab to contain initial tenant powerbi analytics (contents of analytics remain a work in progress)
+- Add the Overview tab to other types of installations i.e. Queue or cloud-based installations
+
 ## 2021-09-10
 
 ### Devices

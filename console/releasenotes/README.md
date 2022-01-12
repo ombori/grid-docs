@@ -5,7 +5,8 @@ The [Ombori Grid Console](https://console.omborigrid.com) is being updated frequ
 ### Installations
 - Transferred Overview tab dashboard & its contents to Legacy Overview with same access constraints
 - Repurposed Overview tab to contain initial tenant powerbi analytics
-- Add the Overview tab to other types of installations i.e. Queue or cloud-based installations
+- Add the Overview tab to other types of installations
+  - For cloud-based installations such as Queue, reports may be empty for now
 
 ## 2021-09-10
 

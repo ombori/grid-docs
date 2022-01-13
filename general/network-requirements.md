@@ -38,7 +38,17 @@ Unless otherwise specified, all domains are using port `443`.
 | *.data.mcr.microsoft.com                             | IoT Edge Hub                         |
 | mcr.microsoft.com                                    | IoT Edge Hub                         |
 | gridhealth.blob.core.windows.net                     | Screenshot and device status service |
-
+| signal-qa.omborigrid.com                             | Grid Signals QA                      |
+| signal-au.omborigrid.com                             | Grid Signals Prod Australia          |
+| signal-eu.omborigrid.com                             | Grid Signals Prod Europe             |
+| signal-in.omborigrid.com                             | Grid Signals Prod India              |
+| signal-uae.omborigrid.com                            | Grid Signals Prod UAE                |
+| signal-us.omborigrid.com                             | Grid Signals Prod United States      |
+| grid-signal-au.service.signalr.net                   | Grid Signals - SignalR Australia     |
+| grid-signal-eu.service.signalr.net                   | Grid Signals - SignalR Europe        |
+| grid-signal-in.service.signalr.net                   | Grid Signals - SignalR India         |
+| grid-signal-uae.service.signalr.net                  | Grid Signals - SignalR UAE           |
+| grid-signal-us.service.signalr.net                   | Grid Signals - SignalR US            |
 
 ### Queue Management
 For Queue Management, we have a specific set of domains.

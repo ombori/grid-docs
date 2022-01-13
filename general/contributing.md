@@ -68,10 +68,17 @@ Rules for a new section:
 Now that you have an entirely new section, the writing begins. Try to follow the same rules and structure as the rest of the documentation. Stick to logical filenames and directories, split things up if they become too complicated or if they're trying to achieve more than one thing.
 
 ## Updating release notes
-Every section can have release notes, but keep in mind they should be written only for "products" or "solutions" the users interact with separately. These release notes should also be structured to be with the rest of the documentation of said product or solution.
+Every section can have release notes, but they should be written only for "products" or "solutions" the users interact with separately. These release notes should also be structured to be with the rest of the documentation of said product or solution.
 
 ### Release Notes Format
-There are 2 defined release notes formats. The format is determined by the release schedule. If it is a product the user cannot change the version of, like the Console, then a `YYY-MM-DD` format should be kept. If the user can choose version, then the version number should be used for the release notes. Check `console release notes` and `queue manager release notes` respectively for examples.
+There are 2 defined release notes formats. The format is determined by the release schedule. If it is a product the user cannot change the version of, like the Console, then a `YYY-MM-DD` format should be kept. If the user can choose the version, then the version number should be used for the release notes. Check `console release notes` and `queue manager release notes` respectively for examples.
+
+Formatting the Release Notes headers in Markdown should be done as follows:
+
+- Version should have a secondary header, like `## [Version]`
+- Sub-headers dividing different sections, like bug/features, or distinctions between categories, should have the 4th header, like `#### [Subheader]`
+
+This header distinction is made to have the sidebar populated accordingly and not show all the sub-headers.
 
 ### Adding a new version
 When adding a new version, stick to the `release notes format` as described above. There are some rules to follow.
@@ -85,7 +92,7 @@ When adding a new version, stick to the `release notes format` as described abov
 After you've added a new version, it is time to make sure the documentation is no longer outdated. This is, of course, something that should've been scoped before the release; however, now is as good a time as any.
 
 ## Keeping the documentation up to date
-Code is ever-changing, and with changing code, breaking changes and new features, guides, references and other documentation will start to get outdated. Therefore, it is essential to check the documentation whenever breaking or major changes are made to something that is documented.
+Code is ever-changing, and with changing code, breaking changes and new features, guides, references, and other documentation will start to get outdated. Therefore, it is essential to check the documentation whenever breaking or major changes are made to something that is documented.
 
 So with the addition of a release note, you will have to check the rest of the documentation for required changes. So whenever a new version, feature, or breaking change is scheduled, go over the documented content.
 

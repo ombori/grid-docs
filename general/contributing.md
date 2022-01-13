@@ -6,19 +6,21 @@ As with any project, there will always be sections that are not yet complete, mi
 This guide is here to help you figure out how to improve the documentation for all the situations that might arise.
 
 ## Running the documentation locally
-The documentation is running on Docsify. This is a very easy tool to run documentation. All you have to do is install Docsify locally
+The documentation is running on Docsify, which is a simple tool to run documentation. All you have to do is install Docsify locally
 
 ```bash
     npm i docsify-cli -g
 ```
 
-Once this is done, you can run the documentation locally by running the following command:
+The next step is to clone the repository, and step into the directory on the Terminal.
+
+Once cloning is complete, you can run the documentation locally by running the following command inside the directory:
 
 ```bash
     yarn start
 ```
 
-For simplicity, a `package.json` file was added to this project to launch the documentation. However, this is not mandatory for a Docsify project. 
+For simplicity, a `package.json` file is available to this project to launch the documentation. However, this is not mandatory for a Docsify project. 
 
 ## Adding Docsify Plugins
 This Docsify Installation has several plugins added to it. By default, the Docsify Plugins are added by including a Script Tag; however, for faster loading, all these plugins are added to the same `scripts.js` file you can find at the project's root. 

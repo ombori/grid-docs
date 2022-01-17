@@ -78,15 +78,15 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `productName`                                    |
 | limit                   | number  | Maximum number of item count to retrieve `Default: 50`                                                                                 | `100`                                            |
 | page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
-| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `productId`, `productName`, `productDescription` |
+| select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `productGroupId`, `productName`, `productDescription` |
 | filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`     |
-| sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `introductionDate asc`, `productId desc`         |
+| sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `introductionDate asc`, `productGroupId desc`         |
 | includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
 | attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                         |
 | facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `shellLifeDays`                                  |
 
 ### [GET] Product by ID
-> **[GET] {base-url}/{tenant-id}/{environment}/products/{productId}**
+> **[GET] {base-url}/{tenant-id}/{environment}/products/{productGroupId}**
 
 Retrieves a specific product by ID
 
@@ -98,8 +98,8 @@ To use query parameters, add them as `GET` properties to the `URL`.
 
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| productId | string | The ID of the Product                                   | `100001`                                         |
-| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
+| productGroupId | string | The ID of the Product                                   | `100001`                                         |
+| select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Product by Barcode
 
@@ -127,7 +127,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | barcode   | string | Barcode ID                                              | `0999999999993`                                  |
-| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
+| select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Search
 > **[GET] {base-url}/{tenant-id}/{environment}/search**
@@ -151,12 +151,12 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | parameter | type   | Description                                             | Example                                          |
 | --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
 | term      | string | Query to search for                                     | `Desk`                                           |
-| select    | string | List of selected fields to be returned(comma separated) | `productId`, `productName`, `productDescription` |
+| select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Product Recommendations by ID
-> **[GET] {base-url}/{tenant-id}/{environment}/product-recommendations/{productId}**
+> **[GET] {base-url}/{tenant-id}/{environment}/product-recommendations/{productGroupId}**
 
-Retrieves list of product recommendations taken from RelatedProducts field
+Retrieves list of product recommendations taken from RelatedProductGroups field
 
 
 #### Response
@@ -173,14 +173,14 @@ To use query parameters, add them as `GET` properties to the `URL`.
 
 | parameter | type   | Description           | Example  |
 | --------- | ------ | --------------------- | -------- |
-| productId | string | The ID of the Product | `100001` |
+| productGroupId | string | The ID of the Product | `100001` |
 
 ### [POST] Push Products
 > **[POST] {base-url}/{tenant-id}/{environment}/products/push**
 
 Uploads or merges products listing following the GridProduct format
 
-?> Any Product in the pushed set that has a matching ProductId will overwrite the product
+?> Any Product in the pushed set that has a matching productGroupId will overwrite the product
 
 #### Body
 The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.

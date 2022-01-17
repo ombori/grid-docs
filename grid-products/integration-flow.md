@@ -5,10 +5,12 @@ To Integrate with Grid Products, there are several steps you need to follow.
 
 You need to make sure that you have an account in the Ombori Grid Console.
 
-You'll need the following information:
-1. Your tenant id in Grid Console
-2. Any Environment id that you have defined in the Grid Console (e.g. prod)
-3. Access Token
+**You'll need the following information:**
+1. Your **tenant id** in Grid Console
+  - Can be taken from the URL (after `organisations/`) when you open your tenant in Grid Console https://console.omborigrid.com/organisations/{tenantId}
+2. Any **Environment** id that you have created in the Grid Console (e.g. dev)
+  - Can be created under "Library" > "Environments" tab
+3. **Access Token**
   - You need to generate an Access Token under "Developers" tab to be used later on for every request
      - [Products API](/grid-products/api?id=request-authentication)
      - [Spaces API](/grid-products/spaces-api?id=request-authentication)

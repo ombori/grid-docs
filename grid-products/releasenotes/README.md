@@ -1,6 +1,12 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-01-17
+
+#### Model Updates
+- Added `spaceId` on `productLabel` fields
+- Fixed links
+
 ## 2021-01-04
 
 #### Integration Flow

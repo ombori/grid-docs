@@ -9,7 +9,7 @@ To learn about the definition of each field, check out the [Field Definitions](/
 interface GridProduct {
   productId: string;
   // spaceIds will hold the list of spaceIds where item is visible
-  spaceIds?: Array<string>;
+  spaceIds: Array<string>;
   productShortDescription?: Array<{
     isoLanguageId: IsoLanguageIds;
     productShortDescription: string;
@@ -124,7 +124,8 @@ interface GridProduct {
   // Product Labels - displayed like stickers
   productLabel?: Array<{
     isoLanguageId: IsoLanguageIds;
-    productLabel: string; // Ex. [Online Exclusive]
+    spaceId: string;
+    productLabel: string; // Ex. Online Exclusive
   }>;
 
   // Product Tags to increase searchability of a product

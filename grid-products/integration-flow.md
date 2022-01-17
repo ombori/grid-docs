@@ -10,16 +10,16 @@ You'll need the following information:
 2. Any Environment id that you have defined in the Grid Console (e.g. prod)
 3. Access Token
   - You need to generate an Access Token under "Developers" tab to be used later on for every request
-     - [Products API](/grid-pim/api?id=request-authentication)
-     - [Spaces API](/grid-pim/spaces-api?id=request-authentication)
+     - [Products API](/grid-products/api?id=request-authentication)
+     - [Spaces API](/grid-products/spaces-api?id=request-authentication)
 
 ## 2. Push Spaces
 
 This step is applicable if you want your data to be visible only to a specific store / location for example.
 
-To Read about how to create spaces into the database using our API, check the [Create Space endpoint](/grid-pim/api?id=post-space) in the API reference.
+To Read about how to create spaces into the database using our API, check the [Create Space endpoint](/grid-products/api?id=post-space) in the API reference.
 
-The returned `id` value will be used as values for `spaceIds` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-pim/data-model?id=gridproduct) format
+The returned `id` value will be used as values for `spaceIds` and `spaceId` fields later on when you format your product data into the [GridProduct](/grid-products/data-model?id=gridproduct) format
 
 ## 3. Push ProductTypes
 
@@ -27,7 +27,7 @@ The next step would be to push your product categories or product types that wil
 
 Specific example for ProductTypes usage is for the category navigation in Endless Aisle application.
 
-To Read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-pim/api?id=post-push-product-types) in the API reference.
+To Read about how to push product types into the database using our API, check the [Push Product Types endpoint](/grid-products/api?id=post-push-product-types) in the API reference.
 
 
 ## 4. Push Products

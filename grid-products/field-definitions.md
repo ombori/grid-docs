@@ -60,7 +60,7 @@ productStatus is a **required** field.
 | ----------------- | ------------------------------------------- | -------- | ---------------------------------------------------- |
 | productStatus     | Status value of the product                 | Yes      | `active` or `inactive`                               |
 | isoLanguageId     | Iso Language ID in BCP-47 format            | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
-| spaceId           | Store ID where product status is applicable |          |                                                      |
+| spaceId           | Space where product status is applicable |          |                                                      |
 | periodStartDate   | Status duration start                       |          |                                                      |
 | periodEndDate     | Status duration end                         |          |                                                      |
 | productStatusNote |                                             |          |                                                      |
@@ -108,6 +108,7 @@ productLabel is *not* a required property that contains an Array of Objects, one
 | Field         | Description                            | Required | Example                                              |
 | ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
 | productLabel  | Translation value of the product label | Yes      |                                                      |
+| spaceId  | Space where product label is applicable | Yes      |                                                      |
 | isoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 

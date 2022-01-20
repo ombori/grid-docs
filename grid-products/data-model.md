@@ -152,6 +152,54 @@ interface GridProduct {
 }
 ```
 
+## VariantUpdateFields
+```
+interface VariantUpdateFields {
+  productId: string; // variant's productId
+  globalTradeItemNumber?: Array<string>;
+  gtinName?: Array<string>;
+  europeanArticleNumber?: Array<string>;
+  universalProductCode?: Array<string>;
+  productName?: VariantProductName[];
+  periodStartDate?: string;
+  periodEndDate?: string;
+  color?: string;
+  style?: string;
+  size?: string;
+
+  // Values only pertaining to the specified productId of variant
+  productPriceList?: Array<{
+    productId: string;
+    priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
+    listPrice: number;
+    spaceId: string;
+    isoLanguageId: IsoLanguageIds;
+    isoCurrencyCode: string;
+    pricingUomId?: string;
+    periodStartTimestamp?: string;
+    periodEndTimestamp?: string;
+    suggestedRetailPrice?: number;
+  }>;
+  
+  // Values only pertaining to the specified productId of variant
+  productFeature?: Array<{
+    productId: string;
+    isoLanguageId: IsoLanguageIds;
+    productFeatureType: string;
+    productFeatureValue: string;
+  }>;
+
+  // Values only pertaining to the specified productId of variant
+  productItemQuantity?: Array<{
+    productId: string;
+    spaceId: string;
+    productItemQuantityStartDate?: string;
+    productItemQuantityEndDate?: string;
+    productItemQuantity: number;
+  }>;
+}
+```
+
 ## ProductType
 <strong>Note:</strong> 'ProductTypeId' field should be used as value for a product's ProductType field
 

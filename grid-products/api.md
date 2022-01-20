@@ -43,6 +43,7 @@ The following endpoints are available in the API currently.
 | POST   | [products/push](/grid-products/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-products/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-products/api?id=patch-update-products)                 | Update products listed in the database                               |
+| PATCH  | [variants](/grid-products/api?id=patch-update-variants)                 | Update variants level information in the database                               |
 | GET    | [product-types](/grid-products/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
 | GET    | [product-types/{id}](/grid-products/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
 | POST   | [product-types](/grid-products/api?id=post-push-product-types)          | Pushes product types into the database                               |
@@ -209,7 +210,21 @@ Updates products with the fields specified in the data object. Shallow-update is
 | --------- | ----------------------------- | ---------------------------------------------------------------------------- |
 | data      | `Array<Partial<GridProduct>>` | List of products with fields in GridProduct format to update to the Database |
 
+?> Limitations: <br> - 100 records per batch
+
 Reference: [GridProduct](/grid-products/data-model?id=gridproduct) 
+
+### [PATCH] Update Variants
+> **[PATCH] {base-url}/{tenant-id}/{environment}/variants**
+
+Updates variants with the fields specified in the data object without requiring the product's `productGroupId`. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects with the matching specified variant's productId only will be overwritten and upserted.
+
+| parameter | type                          | Description                                                                  |
+| --------- | ----------------------------- | ---------------------------------------------------------------------------- |
+| data      | `Array<Partial<VariantUpdateFields>>` | List of variants level information with fields in VariantUpdateFields format to update to the Database |
+| upsertSpaceIds      | boolean | Flag to upsert spaceId values from the `productItemQuantity` and `productPriceList` fields to the main product's `spaceIds` field|
+
+Reference: [VariantUpdateFields](/grid-products/data-model?id=variantupdatefields) 
 
 # Product Types
 

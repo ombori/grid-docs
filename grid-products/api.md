@@ -43,7 +43,7 @@ The following endpoints are available in the API currently.
 | POST   | [products/push](/grid-products/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-products/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-products/api?id=patch-update-products)                 | Update products listed in the database                               |
-| PATCH  | [variants](/grid-products/api?id=patch-update-variants)                 | Update variants level information in the database                               |
+| PATCH  | [variants](/grid-products/api?id=patch-update-variants)                 | Update variants level information in the database                    |
 | GET    | [product-types](/grid-products/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
 | GET    | [product-types/{id}](/grid-products/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
 | POST   | [product-types](/grid-products/api?id=post-push-product-types)          | Pushes product types into the database                               |
@@ -73,18 +73,18 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter               | type    | Description                                                                                                                            | Example                                          |
-| ----------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| search                  | string  | Keyword to search                                                                                                                      | `Desks`                                          |
-| searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `productName`                                    |
-| limit                   | number  | Maximum number of item count to retrieve `Default: 50`                                                                                 | `100`                                            |
-| page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                              |
+| parameter               | type    | Description                                                                                                                            | Example                                               |
+| ----------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| search                  | string  | Keyword to search                                                                                                                      | `Desks`                                               |
+| searchField             | string  | Specific searchable field to search (one search field at a time only)                                                                  | `productName`                                         |
+| limit                   | number  | Maximum number of item count to retrieve `Default: 50`                                                                                 | `100`                                                 |
+| page                    | number  | Current pagination result `Default: 1  `                                                                                               | `1`                                                   |
 | select                  | string  | List of selected fields to be returned(comma separated)                                                                                | `productGroupId`, `productName`, `productDescription` |
-| filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`     |
+| filter                  | object  | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`          |
 | sort                    | string  | Sort result order definition ${key} (‘asc’ / 'desc')                                                                                   | `introductionDate asc`, `productGroupId desc`         |
-| includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                             |
-| attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                         |
-| facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `shellLifeDays`                                  |
+| includeAttributeFilters | boolean | Flag to include in response the filters generated from ProductFeature data of resulting products                                       | true                                                  |
+| attributeFilters        | string  | List of ProductFeature.ProductFeatureType that will be generated for resulting filters                                                 | `Dimensions`, `Material`                              |
+| facets                  | string  | List of Facetable keys where facets will be returned based on product listing results                                                  | `shellLifeDays`                                       |
 
 ### [GET] Product by ID
 > **[GET] {base-url}/{tenant-id}/{environment}/products/{productGroupId}**
@@ -97,10 +97,10 @@ Returns Partial<[`GridProduct`](/grid-products/data-model?id=gridproduct)>
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter | type   | Description                                             | Example                                          |
-| --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| productGroupId | string | The ID of the Product                                   | `100001`                                         |
-| select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
+| parameter      | type   | Description                                             | Example                                               |
+| -------------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
+| productGroupId | string | The ID of the Product                                   | `100001`                                              |
+| select         | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Product by Barcode
 
@@ -125,9 +125,9 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter | type   | Description                                             | Example                                          |
-| --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| barcode   | string | Barcode ID                                              | `0999999999993`                                  |
+| parameter | type   | Description                                             | Example                                               |
+| --------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
+| barcode   | string | Barcode ID                                              | `0999999999993`                                       |
 | select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Search
@@ -149,9 +149,9 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct), [ProductType
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter | type   | Description                                             | Example                                          |
-| --------- | ------ | ------------------------------------------------------- | ------------------------------------------------ |
-| term      | string | Query to search for                                     | `Desk`                                           |
+| parameter | type   | Description                                             | Example                                               |
+| --------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
+| term      | string | Query to search for                                     | `Desk`                                                |
 | select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
 
 ### [GET] Product Recommendations by ID
@@ -172,8 +172,8 @@ Reference: [GridProduct](/grid-pim/data-model?id=gridproduct)
 #### Query Parameters
 To use query parameters, add them as `GET` properties to the `URL`.
 
-| parameter | type   | Description           | Example  |
-| --------- | ------ | --------------------- | -------- |
+| parameter      | type   | Description           | Example  |
+| -------------- | ------ | --------------------- | -------- |
 | productGroupId | string | The ID of the Product | `100001` |
 
 ### [POST] Push Products
@@ -199,7 +199,7 @@ Removes products from the Grid Products database based on specified ID's
 
 | parameter | type            | Description                                          | Example            |
 | --------- | --------------- | ---------------------------------------------------- | ------------------ |
-| data      | `Array<string>` | List of product ID's to be removed from the database | `[“1001”, “1002”]` |
+| data      | `Array<string>` | List of product ID's to be removed from the database | `["1001", "1002"]` |
 
 ### [PATCH] Update Products
 > **[PATCH] {base-url}/{tenant-id}/{environment}/products**
@@ -217,12 +217,12 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 ### [PATCH] Update Variants
 > **[PATCH] {base-url}/{tenant-id}/{environment}/variants**
 
-Updates variants with the fields specified in the data object without requiring the product's `productGroupId`. Shallow-update is performed. Fields not passed in this call will remain the same. Fields containing Arrays or Objects with the matching specified variant's productId only will be overwritten and upserted.
+Updates variants with the fields specified in the data object without requiring the product's `productGroupId`. Shallow-update is performed. Fields not passed in this call stay the same. Fields containing Arrays or Objects with the matching specified variant's productId only will be overwritten and upserted.
 
-| parameter | type                          | Description                                                                  |
-| --------- | ----------------------------- | ---------------------------------------------------------------------------- |
-| data      | `Array<Partial<VariantUpdateFields>>` | List of variants level information with fields in VariantUpdateFields format to update to the Database |
-| upsertSpaceIds      | boolean | Flag to upsert spaceId values from the `productItemQuantity` and `productPriceList` fields to the main product's `spaceIds` field|
+| parameter      | type                                  | Description                                                                                                                       |
+| -------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| data           | `Array<Partial<VariantUpdateFields>>` | List of variants level information with fields in VariantUpdateFields format to update to the Database                            |
+| upsertSpaceIds | boolean                               | Flag to upsert spaceId values from the `productItemQuantity` and `productPriceList` fields to the main product's `spaceIds` field |
 
 Reference: [VariantUpdateFields](/grid-products/data-model?id=variantupdatefields) 
 

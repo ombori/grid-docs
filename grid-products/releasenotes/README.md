@@ -1,6 +1,14 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2021-01-20
+
+#### Features
+- Update Variants Endpoint
+
+#### Model
+- Added `VariantUpdateFields` type
+
 ## 2021-01-18
 
 #### Model Updates

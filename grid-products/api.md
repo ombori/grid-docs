@@ -217,7 +217,7 @@ Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
 ### [PATCH] Update Variants
 > **[PATCH] {base-url}/{tenant-id}/{environment}/variants**
 
-Updates variants with the fields specified in the data object without requiring the product's `productGroupId`. Shallow-update is performed. Fields not passed in this call stay the same. Fields containing Arrays or Objects with the matching specified variant's productId only will be overwritten and upserted.
+Updates variants with the fields specified in the data object without requiring the product's `productGroupId`. Shallow-update is performed. Fields not passed in this call stay the same. Fields containing Arrays or Objects (`productPriceList` and `productItemQuantity`) with the matching specified variant's productId and spaceId only will be upserted.
 
 | parameter      | type                                  | Description                                                                                                                       |
 | -------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

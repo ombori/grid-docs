@@ -1,6 +1,6 @@
 # Grid Products Data Models
 
-!> Data Model is still in the development phase, so there might be breaking changes, which will be announced when you're actively using Grid Products. 
+!> Grid Products is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
 
 
 To learn about the definition of each field, check out the [Field Definitions](/grid-products/field-definitions) reference guide.

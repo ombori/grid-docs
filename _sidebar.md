@@ -16,6 +16,7 @@
   * [CLI Reference](/cli/reference.md)
 * **Integration**
   * [Grid Products](/grid-products/)
+  * [Grid Signals](/grid-signals/)
 * **General**
   * [Console Release Notes](/console/releasenotes/)
   * [Settings Schema](/general/schema.md)

@@ -1,2 +1,2 @@
 ---
-Ombori Grid Documentation 2021 - [Visit our site](https://ombori.com)
+Ombori Grid Documentation 2022 - [Visit our site](https://ombori.com)

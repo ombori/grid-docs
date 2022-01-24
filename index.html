@@ -12,6 +12,13 @@
         <div id="app"></div>
         <script>
             window.$docsify = {
+                tabs: {
+                    persist    : true,      // default
+                    sync       : true,      // default
+                    theme      : 'classic', // default
+                    tabComments: true,      // default
+                    tabHeadings: true       // default
+                },
                 search: {
                     depth: 6,
                     hideOtherSidebarContent: false,
@@ -52,12 +59,17 @@
             };
         </script>
         <script src="/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
         <style>
             :root {
                 --theme-color: #5f06e4;
                 --sidebar-nav-pagelink-background-image--active: url("data:image/svg+xml,%3Csvg height='8' viewBox='0 0 14 8' width='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m0 0 6 6 6-6' fill='none' stroke='%235f06e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'/%3E%3C/svg%3E%0A");
                 --sidebar-background: #f5f5fc;
                 --sidebar-width: 20rem;
+                --notice-important-border-color: #ffc107;
+                --notice-important-background: 	#FFFFEC;
+                --docsifytabs-border-color: #f5f5fc;
+                --docsifytabs-tab-highlight-color: #5f06e4;
             }
         </style>
     </body>

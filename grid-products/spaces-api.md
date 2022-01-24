@@ -20,7 +20,7 @@ For easy configuration and testing, here's a Postman collection you can import i
 ## URL's overview
 
 Grid Admin API:
-https://api.omborigrid.com
+https://api.omborigrid.com/api
 
 
 > In every endpoint you will need to replace `{base-url}` with the URL specified above.
@@ -86,7 +86,7 @@ The body of the request should be a [Space]((/grid-products/data-model?id=space)
 | -------------- | ------ | ------------------------------------------------------- | -------------------- |
 | organizationId | string | The organization/tenant where the space will be created | `61cxxxxxxxxxxxxxxx` |
 | displayName    | string | The name of the space to be displayed                   | `Store #1`           |
-| type           | string | The type of the space ('location'                       | 'section'            | 'custom') | `location` |
+| type           | string | The type of the space (`location`,`section`,`custom`) | `location` |
 | longitude      | number | Longitude of the space                                  | `59.32960273523599`  |
 | latitude       | number | Latitude of the space                                   | `18.06886331765492`  |
 | externalId     | string | Id of the space managed externally                      | `store_1`            |

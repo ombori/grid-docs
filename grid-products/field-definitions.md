@@ -28,12 +28,12 @@ productDescription is a **required** property that contains an Array of Objects,
 | productDescription | Translation value of the product description | Yes      |                                                      |
 | isoLanguageId      | Iso Language ID in BCP-47 format             | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
-### relatedProducts
-relatedProducts is *not* required.
+### relatedProductGroups
+relatedProductGroups is *not* required.
 
 | Field                   | Description                                        | Required | Example     |
 | ----------------------- | -------------------------------------------------- | -------- | ----------- |
-| relatedProductId        | ID of the related product                          | Yes      |             |
+| relatedProductGroupId        | ID of the related product                          | Yes      |             |
 | productRelationshipType | Relationship of the related product to the product | Yes      | Recommended |
    
 
@@ -43,8 +43,8 @@ variants is a **required** field
 
 | Field                 | Description                                                                                                             | Required | Example                                                   |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------- | --------------------------------------------------------- |
-| id                    | Variant ID                                                                                                              | Yes      |                                                           |
-| productId             | Product ID where variant belongs to                                                                                     | Yes      | product1                                                  |
+| productId                    | Variant's product ID                                                                                                              | Yes      |                                                           |
+| productGroupId             | Product Group ID where variant belongs to                                                                                     | Yes      | productGroup1                                                  |
 | globalTradeItemNumber | Array of variant's Global Trade Item Number                                                                                                                         |          | []                                                          |
 | gtinName              |   Array of variant's Gtin Name                                                                                                                       |          |                                                           []|
 | europeanArticleNumber |Array of variant's European Article Number                                                                                                                         |          |[]                                                           |
@@ -60,7 +60,7 @@ productStatus is a **required** field.
 | ----------------- | ------------------------------------------- | -------- | ---------------------------------------------------- |
 | productStatus     | Status value of the product                 | Yes      | `active` or `inactive`                               |
 | isoLanguageId     | Iso Language ID in BCP-47 format            | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
-| spaceId           | Store ID where product status is applicable |          |                                                      |
+| spaceId           | Space where product status is applicable |          |                                                      |
 | periodStartDate   | Status duration start                       |          |                                                      |
 | periodEndDate     | Status duration end                         |          |                                                      |
 | productStatusNote |                                             |          |                                                      |
@@ -108,6 +108,7 @@ productLabel is *not* a required property that contains an Array of Objects, one
 | Field         | Description                            | Required | Example                                              |
 | ------------- | -------------------------------------- | -------- | ---------------------------------------------------- |
 | productLabel  | Translation value of the product label | Yes      |                                                      |
+| spaceId  | Space where product label is applicable | Yes      |                                                      |
 | isoLanguageId | Iso Language ID in BCP-47 format       | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 

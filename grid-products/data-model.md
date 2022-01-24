@@ -7,9 +7,9 @@ To learn about the definition of each field, check out the [Field Definitions](/
 ## GridProduct
 ```
 interface GridProduct {
-  productId: string;
-  // spaceIds will hold the list of spaceIds where item is visible
-  spaceIds?: Array<string>;
+  productGroupId: string;
+  // spaceIds will hold the list of spaceId where item is visible
+  spaceIds: Array<string>;
   productShortDescription?: Array<{
     isoLanguageId: IsoLanguageIds;
     productShortDescription: string;
@@ -41,15 +41,15 @@ interface GridProduct {
     isoLanguageId: IsoLanguageIds;
     productDescription: string;
   }>;
-  relatedProducts?: Array<{
-    relatedProductId: string;
+  relatedProductGroups?: Array<{
+    relatedProductGroupId: string;
     productRelationshipType: ProductRelationshipTypes;
   }>;
 
   // Variants
   variants: Array<{
-    id: string; // Item variant Id
-    productId: string; // Parent product Id
+    productId: string; // Item variant Id
+    productGroupId: string;
     globalTradeItemNumber?: Array<string>;
     gtinName?: Array<string>;
     europeanArticleNumber?: Array<string>;
@@ -88,7 +88,7 @@ interface GridProduct {
   }>;
 
   productFeature?: Array<{
-    id: string; // Variant Id
+    productId: string; // variant's productId
     isoLanguageId: IsoLanguageIds;
     productFeatureType: string;
     productFeatureValue: string;
@@ -96,7 +96,7 @@ interface GridProduct {
 
   // Product Price based on type (Standard or Promotional)
   productPriceList: Array<{
-    id: string; // Variant Id
+    productId: string; // variant's productId
     priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
     listPrice: number;
     spaceId: string;
@@ -110,8 +110,8 @@ interface GridProduct {
 
   // Images
   catalogPageLocationProduct: Array<{
-    id: string; // Variant Id
-    productId: string;
+    productId: string; // variant's productId
+    productGroupId: string;
     catalogType: string; // Ex. "image/png", "video/mp4"
     catalogPage?: string; // Ex. Root URL of client media site
     catalogPageLocation?: string; // Ex. Product URL appended to root URL of client page
@@ -124,7 +124,8 @@ interface GridProduct {
   // Product Labels - displayed like stickers
   productLabel?: Array<{
     isoLanguageId: IsoLanguageIds;
-    productLabel: string; // Ex. [Online Exclusive]
+    spaceId: string;
+    productLabel: string; // Ex. Online Exclusive
   }>;
 
   // Product Tags to increase searchability of a product
@@ -135,7 +136,7 @@ interface GridProduct {
 
   // Product Quantity per variant
   productItemQuantity?: Array<{
-    id: string; // Variant Id
+    productId: string; // variant's productId
     spaceId: string;
     productItemQuantityStartDate?: string;
     productItemQuantityEndDate?: string;
@@ -147,6 +148,54 @@ interface GridProduct {
     productVendor: string;
     periodStartDate?: string;
     periodEndDate?: string;
+  }>;
+}
+```
+
+## VariantUpdateFields
+```
+interface VariantUpdateFields {
+  productId: string; // variant's productId
+  globalTradeItemNumber?: Array<string>;
+  gtinName?: Array<string>;
+  europeanArticleNumber?: Array<string>;
+  universalProductCode?: Array<string>;
+  productName?: VariantProductName[];
+  periodStartDate?: string;
+  periodEndDate?: string;
+  color?: string;
+  style?: string;
+  size?: string;
+
+  // Values only pertaining to the specified productId of variant
+  productPriceList?: Array<{
+    productId: string;
+    priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
+    listPrice: number;
+    spaceId: string;
+    isoLanguageId: IsoLanguageIds;
+    isoCurrencyCode: string;
+    pricingUomId?: string;
+    periodStartTimestamp?: string;
+    periodEndTimestamp?: string;
+    suggestedRetailPrice?: number;
+  }>;
+  
+  // Values only pertaining to the specified productId of variant
+  productFeature?: Array<{
+    productId: string;
+    isoLanguageId: IsoLanguageIds;
+    productFeatureType: string;
+    productFeatureValue: string;
+  }>;
+
+  // Values only pertaining to the specified productId of variant
+  productItemQuantity?: Array<{
+    productId: string;
+    spaceId: string;
+    productItemQuantityStartDate?: string;
+    productItemQuantityEndDate?: string;
+    productItemQuantity: number;
   }>;
 }
 ```
@@ -215,7 +264,7 @@ enum IsoLanguageIds {
 ```
 type Space = {
   {
-    id: string; // auto-generated
+    id: string;
     organizationId: string;
     displayName: string;
     type: 'location' | 'section' | 'custom'; // defaults to location

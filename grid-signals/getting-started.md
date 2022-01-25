@@ -103,8 +103,8 @@ await gs.init({
   dataResidency: 'EU',
   country: 'SE',
   installationVersion: 'XXXXXXXXXXXXXXXXXXXXXXXX',
-  username: 'XXXX',
-  password: 'XXXX',
+  accessId: 'XXXX',
+  accessToken: 'XXXX',
 });
 
 await gs.sendCustomEvent({

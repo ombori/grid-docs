@@ -306,7 +306,7 @@ Browse a category's page
 ```js
 import { getInstance as gs } from '@ombori/grid-signals-react';
 ...
-gs().sendCheckout(params);
+gs().sendCheckout();
 ...
 ```
 
@@ -316,7 +316,7 @@ import GridSignals from '@ombori/grid-signals';
 ...
 const gs = new GridSignals();
 await gs.init(<init-params>); // Check NodeJS App Integration page for init params reference
-await gs.sendCheckout(params);
+await gs.sendCheckout();
 ...
 ```
 <!-- tabs:end -->

@@ -5,11 +5,11 @@
 This page describes how you can integrate your React-based App to Grid Signals.
 
 #### Functions
-- [useGridSignals](grid-signals/react-apps-integration?id=useGridSignals)
-- [useGridSignalsWithExternalParams](grid-signals/react-apps-integration?id=createsession)
-- [getInstance](/grid-signals/react-apps-integration?id=getinstance)
-- [getInstanceProps](/grid-signals/react-apps-integration?id=getinstanceprops)
-- [createSession](/grid-signals/react-apps-integration?id=createsession)
+- [useGridSignals](grid-signals/react-app-integration?id=useGridSignals)
+- [useGridSignalsWithExternalParams](grid-signals/react-app-integration?id=createsession)
+- [getInstance](/grid-signals/react-app-integration?id=getinstance)
+- [getInstanceProps](/grid-signals/react-app-integration?id=getinstanceprops)
+- [createSession](/grid-signals/react-app-integration?id=createsession)
 
 #### States and Events
 - [Event Tracking](grid-signals/tracking-events)
@@ -37,7 +37,7 @@ const App = () => {
 }
 ```
 
-Ideally, you don't need to override the parameters when using this function. However, we provide the ability to override the [Grid Signals Init Parameters](grid-signals/react-apps-integration?id=grid-signals-init-parameters) for flexibility.
+Ideally, you don't need to override the parameters when using this function. However, we provide the ability to override the [Grid Signals Init Parameters](grid-signals/react-app-integration?id=grid-signals-init-parameters) for flexibility.
 
 
 ```js
@@ -50,7 +50,7 @@ const isReady = useGridSignals({
 ## useGridSignalsWithExternalParams
 Use this hook if your app is not using `@ombori/ga-settings`.
 
-It initializes the Grid Signals instance with the required [Init Parameters](grid-signals/react-apps-integration?id=grid-signals-init-parameters).
+It initializes the Grid Signals instance with the required [Init Parameters](grid-signals/react-app-integration?id=grid-signals-init-parameters).
 
 #### Usage
 ```js

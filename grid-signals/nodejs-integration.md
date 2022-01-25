@@ -42,8 +42,8 @@ await gs.init({
   dataResidency: 'EU',
   country: 'SE',
   installationVersion: 'XXXXXXXXXXXXXXXXXXXXXXXX',
-  username: 'XXXX',
-  password: 'XXXX',
+  accessId: 'XXXX',
+  accessToken: 'XXXX',
 });
 
 await gs.sendCustomEvent({
@@ -74,8 +74,8 @@ await gs.sendCustomEvent({
 | locationAccuracy    | number | Geographic coordinates accuracy                                                               | no       |                               |
 | latitude            | number | Geographic latitude of the device or requestor                                                | no       | -90 to 90                     |
 | longitude           | number | Geographic longitude of the device or requestor                                               | no       | -180 to 180                   |
-| username            | string | Credentials used when subscribing to session or space state or events                         | no       |                               |
-| password            | string | Credentials used when subscribing to session or space state or events                         | no       |                               |
+| accessId            | string | Credentials used when subscribing to session or space state or events                         | no       |                               |
+| accessToken         | string | Credentials used when subscribing to session or space state or events                         | no       |                               |
 
 ## Event Tracking
 See [Event Tracking](grid-signals/tracking-events) page for more details.

@@ -6,6 +6,9 @@ In Grid Signals, we classify events to be tracked as:
 
 #### Standard Events
 predefined functions and events that are common across different types of apps within the Grid. It is created so that the same events will have the same payload, then, we can easily build reports from the collected analytics data
+
+When tracking user identity, `identifyContact` and `sendContactMetadata` should be used.
+
 - [detectAge](/grid-signals/tracking-events?id=detectage)
 - [detectGender](/grid-signals/tracking-events?id=detectgender)
 - [detectMood](/grid-signals/tracking-events?id=detectmood)

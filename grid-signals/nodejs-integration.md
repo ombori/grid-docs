@@ -2,7 +2,7 @@
 
 !> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
 
-This page describes how you can integrate your NodeJS or Non-react javascript-based gridapps.
+This page describes how you can integrate your NodeJS or Non-react JavaScript-based gridapps.
 
 #### Functions
 - [init](grid-signals/nodejs-integration?id=init)

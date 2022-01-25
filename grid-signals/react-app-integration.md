@@ -17,9 +17,9 @@ This page describes how you can integrate your React-based App to Grid Signals.
 
 
 ## useGridSignals
-Use this hook if your app is built from `omg app create` template, or is using `@ombori/ga-settings`.
+Use this hook if your app is built from the `omg app create` template or is using `@ombori/ga-settings`.
 
-It initializes the Grid Signals instance using the application settings. Under the hood, it uses `@ombori/ga-settings` to automatically get the required Grid Signals parameters for initialization.
+This will initialize the Grid Signals instance using the application settings. Under the hood, it uses `@ombori/ga-settings` to automatically get the required Grid Signals parameters for initialization.
 
 You can only start invoking any other functions when Grid Signals is ready.
 
@@ -48,9 +48,9 @@ const isReady = useGridSignals({
 ```
 
 ## useGridSignalsWithExternalParams
-Use this hook if your app is not using `@ombori/ga-settings`.
+Use this hook if your app is **not** using `@ombori/ga-settings`.
 
-It initializes the Grid Signals instance with the required [Init Parameters](grid-signals/react-app-integration?id=grid-signals-init-parameters).
+This will initialize the Grid Signals instance with the required [Init Parameters](grid-signals/react-app-integration?id=grid-signals-init-parameters).
 
 #### Usage
 ```js
@@ -82,7 +82,7 @@ const App = () => {
 ```
 
 ## getInstanceProps
-This will return the instance object of the session. Ideally your don't need to get the instance props. However, we added it for flexibility.
+This will return the instance object of the session. Ideally, you don't need to get the instance props. This is provided for flexibility.
 
 Usage
 ```js
@@ -116,7 +116,7 @@ These are the instance properties that are returned from the `getInstance()` met
 | locationAccuracy    | number | Geographic coordinates accuracy                                                               |
 | latitude            | number | Geographic latitude of the device or requestor                                                |
 | longitude           | number | Geographic longitude of the device or requestor                                               |
-| lastActivity        | string | Date string of the last invoked function                                                             |
+| lastActivity        | string | Date string of the last invoked function                                                      |
 
 
 ## createSession

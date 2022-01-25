@@ -22,7 +22,7 @@ yarn add @ombori/grid-signals
 
 #### Notes
 - `@ombori/grid-signals-react` is a package with `@ombori/grid-signals` and `@ombori/ga-settings` as dependencies, built for easier initialization and better support for React-based applications. Everything that you can import from `@ombori/grid-signals` is also in `@ombori/grid-signals-react`.
-- You can use `@ombori/grid-signals` package for other JS libraries or server side applications.
+- You can use `@ombori/grid-signals` package for other JS libraries or server-side applications.
 
 ## Basic Usage
 

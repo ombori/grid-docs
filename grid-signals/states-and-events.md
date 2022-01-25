@@ -13,7 +13,7 @@ You can fetch the latest states or subscribe to changes of the sessions and spac
 - [subscribeSpaceEvent](/grid-signals/states-and-events?id=subscribespaceevent)
 
 # getSessionState
-Returns the current session state as a promise.
+Returns the current session-state as a promise.
 
 <!-- tabs:start -->
 ## **React**
@@ -46,7 +46,7 @@ Response
 ```
 
 # getSpaceState
-Returns the current space state as a promise.
+Returns the current space-state as a promise.
 <!-- tabs:start -->
 ## **React**
 ```js
@@ -92,7 +92,7 @@ Response
 ```
 
 # getSpaceStateRows
-Returns the latest space state by session
+Returns the latest space-state by session
 
 <!-- tabs:start -->
 ## **React**
@@ -138,7 +138,7 @@ Response
 ```
 
 # subscribeSessionState
-Subscribes to the latest session state changes
+Subscribes to the latest session-state changes
 
 <!-- tabs:start -->
 ## **React**
@@ -240,7 +240,7 @@ Session event data format
 ```
 
 # subscribeSpaceState
-Subscribes the current application to a space state.
+Subscribes the current application to a space-state.
 
 <!-- tabs:start -->
 ## **React**
@@ -271,7 +271,7 @@ spaceSubscription.stop();
 ```
 <!-- tabs:end -->
 
-Space state data format
+Space-state data format
 ```js
 {
   RATING: {

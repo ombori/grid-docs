@@ -5,7 +5,7 @@
 In Grid Signals, we classify events to be tracked as:
 
 #### Standard Events
-predefined functions and events that are common across different types of apps within the Grid. It is created so that the same events will have the same payload, then, we can easily build reports from the collected analytics data
+Predefined functions and events that are common across different types of apps within the Grid. These standard functions exist so that the same events always have the same payload, so analytics data is consistent across different types of apps, which makes for easier reporting.
 
 When tracking user identity, `identifyContact` and `sendContactMetadata` should be used.
 
@@ -58,7 +58,8 @@ await gs.detectAge(params);
 <!-- tabs:end -->
 
 Information about the user, returned from computer vision, 3rd party services, or selected by a user in the UI
-Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
+
+> Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
 If `CONTACT_METADATA` event is used directly, then the value is not logged for reports
 
 #### Parameters
@@ -91,7 +92,8 @@ await gs.detectGender(params);
 <!-- tabs:end -->
 
 Information about the user, returned from computer vision, 3rd party services, or selected by a user in the UI
-Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
+
+> Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
 If `CONTACT_METADATA` event is used directly, then the value is not logged for reports
 
 #### Parameters
@@ -124,7 +126,8 @@ await gs.detectMood(params);
 ```
 <!-- tabs:end -->
 Information about the user, return from computer vision or selected by a user in the UI
-Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
+
+> Note, this method will update the Contact Metadata but it will also log the values for analytics purposes.
 If `CONTACT_METADATA` event is used directly, then the value is not logged for reports
 
 #### Parameters
@@ -413,10 +416,10 @@ Send user's feedback on the experience
 
 #### Parameters
 
-| Key                | Type                  | Required |
-| ------------------ | --------------------- | -------- |
-| `feedback`         | string                | yes      |
-| `rating`           | 1 \| 2 \| 3 \| 4 \| 5 | no       |
+| Key        | Type                  | Required |
+| ---------- | --------------------- | -------- |
+| `feedback` | string                | yes      |
+| `rating`   | 1 \| 2 \| 3 \| 4 \| 5 | no       |
 
 # sendLookView
 <!-- tabs:start -->
@@ -567,9 +570,9 @@ Searching a product, category, or anything in the app
 
 #### Parameters
 
-| Key                | Type                  | Required |
-| ------------------ | --------------------- | -------- |
-| `searchQueryString`| string                | yes      |
+| Key                 | Type   | Required |
+| ------------------- | ------ | -------- |
+| `searchQueryString` | string | yes      |
 
 
 # sendSearchClear

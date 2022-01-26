@@ -29,7 +29,6 @@ Every script has a `// [name]` on top of it, to identify the plugin. This can al
 
 To then finally include the updated scripts, minify the file into `scripts.min.js`, which is included in the `index.html` file.
 
-
 ## Adding missing information on an existing page
 Whenever information is missing from a particular document, and you know the solution, we recommend submitting a small PR to add the missing information. 
 
@@ -52,6 +51,25 @@ Keep in mind; there can't be *hard* rules about how to structure documentation, 
 - When you create a new directory, check the next section of this guide about creating a new section.
 
 Whatever is decided, it is crucial to keep simplicity in mind. Don't create new pages that could fit within another page, but also don't bloat pages too much. There's a fine line in-between. 
+
+## Adding images
+When you want to add an image to the documentation, always include it in the repository. Follow these steps to make sure the image is optimally included:
+
+- Resize the image as small as possible without losing information.
+- Compress the image after resizing. This typically saves another 30-50% of the file size. You could use a tool like [TinyPNG](https://tinypng.com/).
+- Add it to the assets directory in the section you're working on.
+
+Now that you have the image in the repository, you can add it to the documentation. This is done using a simple line with a relative path to the image. For example
+
+```markdown
+![](/assets/filename.png ":size=400")
+```
+
+You can define the default image size in pixels using the `:size=400` flag. By default images are zoomable, but you can also use the `:no-zoom` flag to disable this if it adds no value.
+## Formatting
+Markdown formatting is important, and this can be done automatically. Especially with Tables!
+
+For this the Visual Studio Code extension [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) is recommended.
 
 ## Creating a new documentation section
 When you want to create a new documentation section, you can create a new directory.

@@ -55,6 +55,8 @@ On page load, the Web Signals will be initialized.
 
 To send events, import `window.globalGridSignals` in your app.
 
+See [Event Tracking](grid-signals/tracking-events) page for the list of available event functions.
+
 ```js
 ...
   const gs = window.globalGridSignals;
@@ -65,7 +67,7 @@ To send events, import `window.globalGridSignals` in your app.
 ...
 ```
 
-## Step 4: Real-time dashboards
+## Step 4: View real-time data
 Real-time dashboards are available in the [Grid Console](https://console.omborigrid.com)
 
 ![](https://media.omborigrid.com/media/5cbac8a388e174147b878cdd/b72b6b70-7eb1-11ec-bec9-4dcd0899bd02 ":size=600:no-zoom")

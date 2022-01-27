@@ -69,5 +69,3 @@ To send events, import `window.globalGridSignals` in your app.
 
 ## Step 3: Real-time dashboards
 Real-time dashboards are available in the [Grid Console](https://console.omborigrid.com)
-
-![](https://media.omborigrid.com/media/5cbac8a388e174147b878cdd/b72b6b70-7eb1-11ec-bec9-4dcd0899bd02 ":size=600:no-zoom")

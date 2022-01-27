@@ -51,7 +51,7 @@ Example:
 </html>
 ```
 
-## Step 4: Send events
+## Step 3: Send events
 On page load, the Web Signals will be initialized.
 
 To send events, use `gridSignal('<function-name>', <args>)` function in your app.
@@ -67,6 +67,6 @@ See [Event Tracking](grid-signals/tracking-events) page for the list of availabl
 ...
 ```
 
-## Step 3: Real-time dashboards
+## Step 4: Real-time dashboards
 
 Real-time dashboards are available in the [Grid Console](https://console.omborigrid.com)

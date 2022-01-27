@@ -40,10 +40,10 @@ Example:
     <script>
       window.gridDataLayer = window.gridDataLayer || [];
       function gridSignal(){gridDataLayer.push(arguments);}
-      gridSignal('init', 'tenantId', '5f2b2a4728292736dbf414c4');
-      gridSignal('init', 'installationId', '61f120b3d99e1600073d33ee');
-      gridSignal('init', 'spaceId', '5f3fb98274219c4c874b878c');
-      gridSignal('init', 'dataResidency', 'QA');
+      gridSignal('init', 'tenantId', 'XXXXXX');
+      gridSignal('init', 'installationId', 'XXXXXX');
+      gridSignal('init', 'spaceId', 'XXXXXX');
+      gridSignal('init', 'dataResidency', 'EU');
       gridSignal('init', 'country', 'SE');
     </script>
     <div id="root"></div>
@@ -61,7 +61,7 @@ See [Event Tracking](grid-signals/tracking-events) page for the list of availabl
 ```js
 ...
   gridSignal('sendCartAdd', {
-    productId: 'XXXXXXXXXXXXXXXXXXXXXXXX',
+    productId: 'XXXXXX',
     quantity: 1
   });
 ...

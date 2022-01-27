@@ -50,22 +50,23 @@ Example:
   </body>
 </html>
 ```
-<!---
-## Step 3: Send events
+
+## Step 4: Send events
 On page load, the Web Signals will be initialized.
 
-To send events, import `window.globalGridSignals` in your app.
+To send events, use `gridSignal('<function-name>', <args>)` function in your app.
+
+See [Event Tracking](grid-signals/tracking-events) page for the list of available functions.
 
 ```js
 ...
-  const gs = window.globalGridSignals;
-  gs.sendContentView({
-    title: 'omborigrid_homepage',
-    url: 'https://omborigrid.com'
+  gridSignal('sendCartAdd', {
+    productId: 'XXXXXXXXXXXXXXXXXXXXXXXX',
+    quantity: 1
   });
 ...
 ```
--->
 
 ## Step 3: Real-time dashboards
+
 Real-time dashboards are available in the [Grid Console](https://console.omborigrid.com)

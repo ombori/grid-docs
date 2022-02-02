@@ -13,7 +13,7 @@
 * **CLI**
   * [CLI Setup](/development/cli/setup)
   * [CLI Reference](/development/cli/reference)
-* **Integration**
+* **Tooling**
   * [Grid Products](/development/grid/products/)
   * [Grid Signals](/development/grid/signals/)
 * **General**

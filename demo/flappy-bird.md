@@ -118,7 +118,7 @@ Now that we're understanding how the game works, let's install it on Ombori Grid
 
 ?> If you haven't yet signed up for an account on Ombori Grid, create a free account now [via our website](https://omborigrid.com).
 
-- Install the CLI and authenticate yourself. Follow [the installation guide](/cli/setup) to find out how to.
+- Install the CLI and authenticate yourself. Follow [the installation guide](/development/cli/setup) to find out how to.
 - Step into the `screenapp` directory in the cloned repository, and open `package.json`.
 - Change the name of the application to include your tenant
 
@@ -162,7 +162,7 @@ This process is actually really easy.
 - Wait until the build is done (you can see progress in the `builds` tab)
 - Press the blue `app` box to open the application, or connect a device through the devices tab. 
 
-?> To Connect a device and install the application on it, follow the [Adding Device](/general/adding-device.md) guide.
+?> To Connect a device and install the application on it, follow the [Adding Device](/development/general/adding-device.md) guide.
 
 When the application opens, you should be able to scan the QR code with your phone, and play Flappy Bird!
 

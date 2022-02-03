@@ -9,3 +9,8 @@
   * [Order Pickup](/apps/queue/order-pickup)
   * [Customize Booking Page](/apps/queue/customize-booking)
   * [Release Notes](/apps/queue/releasenotes/)
+* [**Queue Ticket Signage**](/apps/queue-ticket-signage/)
+  * [Setting up](/apps/queue-ticket-signage/setting-up)
+  * [Adding Contents](/apps/queue-ticket-signage/adding-content)
+  * [Requirements](/apps/queue-ticket-signage/requirements)
+  * [Release Notes](/apps/queue-ticket-signage/releasenotes)

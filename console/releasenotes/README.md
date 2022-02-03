@@ -1,7 +1,12 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2021-01-07
+## 2022-01-07
+#### Installations
+- Introducing Web Signals in the Grid Marketplace
+- Introducing Contacts in Or
+
+## 2022-01-07
 #### Installations
 - Transferred Overview tab dashboard & its contents to Legacy Overview with same access constraints
 - Repurposed Overview tab to contain initial tenant PowerBi analytics

@@ -1,10 +1,38 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-02-09
+#### Devices
+
+- Added `Space` as a required field under `Screen` tab in device details page
+
+  ![](/assets/space-in-device-details.png ":size=300 :no-zoom")
+
+- Added `Space` as a required field during device set-up
+
+  ![](/assets/space-in-device-setup.png ":size=300 :no-zoom")
+
+#### Special Instructions
+
+To make Grid Signals work, make sure spaces feature is supported in your current installation.
+- For Tizen devices, Grid Signals is supported from version `http://tizen.omborigrid.com/2.170.0` and up.
+- Update @ombori/grid-signals-react dependency in your gridapps to latest by running `yarn add @ombori/grid-signals-react@latest`
+- Update @ombori/ga-settings dependency in your gridapp to latest by running `yarn add @ombori/ga-settings@latest`
+- Update `GridApp Boot Release` Under Installation > `Settings` tab. Make sure you are using `GridApp v2.170.0` or above
+
+    ![](/assets/gridapp-boot-release-grid-signals.png ":size=300 :no-zoom")
+
+## 2022-02-03
+#### Marketplace
+- Introducing Web Signals MVP in the Grid Marketplace
+
+#### Tenant
+- Introducing Contacts MVP in tenant's details page.
+
 ## 2022-01-07
 #### Installations
 - Introducing Web Signals in the Grid Marketplace
-- Introducing Contacts in Or
+- Introducing Contacts in organization's details page.
 
 ## 2022-01-07
 #### Installations

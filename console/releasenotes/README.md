@@ -15,7 +15,8 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 #### Special Instructions
 
 To make Grid Signals work, make sure spaces feature is supported in your current installation.
-- For Tizen devices, Grid Signals is supported from version `http://tizen.omborigrid.com/2.170.0` and up.
+- For Tizen devices, Grid Signals is supported from version `http://tizen.omborigrid.com/2.170.0` and up
+- For Edge devices, `Screen Module v0.0.6 and up` should be used to enable Grid Signals
 - Update @ombori/grid-signals-react dependency in your gridapps to latest by running `yarn add @ombori/grid-signals-react@latest`
 - Update @ombori/ga-settings dependency in your gridapp to latest by running `yarn add @ombori/ga-settings@latest`
 - Update `GridApp Boot Release` Under Installation > `Settings` tab. Make sure you are using `GridApp v2.170.0` or above

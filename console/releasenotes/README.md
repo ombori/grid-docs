@@ -1,6 +1,18 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-02-11
+#### Devices
+
+- Updated the device detail's page to use colored tags for the list of related installations
+
+#### IoT Apps and Installations
+
+- Fixed new device set-up on an IoT App installation
+- Fixed connect device to an IoT App installation
+- Fixed devices status under IoT App installations
+- Fixed disconnect device from an IoT App installation
+
 ## 2022-02-09
 #### Devices
 

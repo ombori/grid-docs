@@ -5,6 +5,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 #### Devices
 
 - Updated the device detail's page to use colored tags for the list of related installations
+  ![](/assets/devices-related-installations.png ":size=300 :no-zoom")
 
 #### IoT Apps and Installations
 

@@ -63,6 +63,7 @@ Returns a list of products based on specified query parameters.
 ```
 {
      list: Array<Partial<GridProduct>>, 
+     count: number,
      facets:  {  [propertyName]: FacetResults[] },
      attributeFilters: { [key]: string[] }
 } 
@@ -117,7 +118,7 @@ Variants checked:
 ```
 {
     productDetails: Partial<GridProduct>,
-    variantId: string
+    productId: string
 }
 ```
 Reference: [GridProduct](/grid-products/data-model?id=gridproduct)

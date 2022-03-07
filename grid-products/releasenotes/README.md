@@ -7,7 +7,7 @@ Grid Product receives continuous updates. All the recent release notes can be fo
 - Add `count` on [Products API](/grid-products/api?id=get-post-products) response
 - Add `includeProductsByVariantsByGroupId` flag on [Product API](/grid-products/api?id=get-product-by-id) and [Product-Barcode API](/grid-products/api?id=get-product-by-barcode) request parameter
 
-### Model
+### Grid Product Model
 - Add `variantsGroupId` field
 - Add `colorImageUrl` on `variants` field
 

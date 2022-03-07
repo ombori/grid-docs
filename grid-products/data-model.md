@@ -150,6 +150,8 @@ interface GridProduct {
     periodStartDate?: string;
     periodEndDate?: string;
   }>;
+
+  variantsGroupId?: string;
 }
 ```
 

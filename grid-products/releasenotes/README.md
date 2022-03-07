@@ -14,7 +14,7 @@ Grid Product receives continuous updates. All the recent release notes can be fo
 ## 2022-01-20
 
 #### Features
-- Update Variants Endpoint
+- [Update Variants](/grid-products/api?id=patch-update-variants) Endpoint
 
 #### Model
 - Added `VariantUpdateFields` type

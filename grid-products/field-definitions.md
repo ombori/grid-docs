@@ -168,7 +168,7 @@ consumerStorageInstruction is *not* a required property that contains an Array o
 
 | Field                      | Description                                              | Required | Example                                              |
 | -------------------------- | -------------------------------------------------------- | -------- | ---------------------------------------------------- |
-| ConsumerStorageInstruction | Translation of the storage instructions for the consumer | Yes      |  Keep regrigerated                                                    |
+| ConsumerStorageInstruction | Translation of the storage instructions for the consumer | Yes      |  Keep refrigerated                                                    |
 | isoLanguageId              | Iso Language ID in BCP-47 format                         | Yes      | [ISOLanguageID](/grid-products/data-model?id=languageids) |
 
 

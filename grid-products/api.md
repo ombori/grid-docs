@@ -63,6 +63,7 @@ Returns a list of products based on specified query parameters.
 ```
 {
      list: Array<Partial<GridProduct>>, 
+     count: number,
      facets:  {  [propertyName]: FacetResults[] },
      attributeFilters: { [key]: string[] }
 } 
@@ -101,6 +102,8 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | -------------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
 | productGroupId | string | The ID of the Product                                   | `100001`                                              |
 | select         | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
+| filter         | string | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`          |
+| includeProductsByVariantsByGroupId         | boolean | Flag to merge in response the variants related info based on matching `variantsByGroupId` field | false |
 
 ### [GET] Product by Barcode
 
@@ -117,7 +120,7 @@ Variants checked:
 ```
 {
     productDetails: Partial<GridProduct>,
-    variantId: string
+    productId: string
 }
 ```
 Reference: [GridProduct](/grid-products/data-model?id=gridproduct)
@@ -129,6 +132,8 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | --------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
 | barcode   | string | Barcode ID                                              | `0999999999993`                                       |
 | select    | string | List of selected fields to be returned(comma separated) | `productGroupId`, `productName`, `productDescription` |
+| filter         | string | Query string to use for filtering results based on filterable fields.(operators and string values should be enclosed in double quotes) | `{"gt": ["productPriceList/listPrice", 10]}`          |
+| includeProductsByVariantsByGroupId         | boolean | Flag to merge in response the variants related info based on matching `variantsByGroupId` field | false |
 
 ### [GET] Search
 > **[GET] {base-url}/{tenant-id}/{environment}/search**

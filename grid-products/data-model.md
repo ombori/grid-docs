@@ -24,7 +24,7 @@ interface GridProduct {
     isoLanguageId: IsoLanguageIds;
     storageInstructions: string;
   }>;
-  shellLifeDays?: number;
+  shellLifeDays?: number; // int32
   consumerStorageInstruction?: Array<{
     isoLanguageId: IsoLanguageIds;
     consumerStorageInstruction: string;
@@ -65,6 +65,7 @@ interface GridProduct {
     periodEndDate?: string;
 
     color?: string;
+    colorImageUrl?: string;
     style?: string;
     size?: string;
   }>;
@@ -98,14 +99,14 @@ interface GridProduct {
   productPriceList: Array<{
     productId: string; // variant's productId
     priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
-    listPrice: number;
+    listPrice: number; // float32
     spaceId: string;
     isoLanguageId: IsoLanguageIds;
     isoCurrencyCode: string;
     pricingUomId?: string;
     periodStartTimestamp?: string;
     periodEndTimestamp?: string;
-    suggestedRetailPrice?: number;
+    suggestedRetailPrice?: number; // float32
   }>;
 
   // Images
@@ -140,7 +141,7 @@ interface GridProduct {
     spaceId: string;
     productItemQuantityStartDate?: string;
     productItemQuantityEndDate?: string;
-    productItemQuantity: number;
+    productItemQuantity: number; // int32
   }>;
 
   productVendor?: Array<{
@@ -149,6 +150,8 @@ interface GridProduct {
     periodStartDate?: string;
     periodEndDate?: string;
   }>;
+
+  variantsGroupId?: string;
 }
 ```
 
@@ -171,14 +174,14 @@ interface VariantUpdateFields {
   productPriceList?: Array<{
     productId: string;
     priceListType: PriceListTypeEnum; // 'Standard' OR 'Promotional'
-    listPrice: number;
+    listPrice: number; // float32
     spaceId: string;
     isoLanguageId: IsoLanguageIds;
     isoCurrencyCode: string;
     pricingUomId?: string;
     periodStartTimestamp?: string;
     periodEndTimestamp?: string;
-    suggestedRetailPrice?: number;
+    suggestedRetailPrice?: number; // float32
   }>;
   
   // Values only pertaining to the specified productId of variant
@@ -195,7 +198,7 @@ interface VariantUpdateFields {
     spaceId: string;
     productItemQuantityStartDate?: string;
     productItemQuantityEndDate?: string;
-    productItemQuantity: number;
+    productItemQuantity: number; // int32
   }>;
 }
 ```
@@ -248,8 +251,8 @@ enum ProductRelationshipTypes {
 }
 ```
 
-### LanguageIDs
-For Language IDs we use BCP-47 tags, meaning `language-region` structure. Some examples below.
+### IsoLanguageIds
+For IsoLanguageIds we use BCP-47 tags, meaning `language-region` structure. Some examples below.
 ```
 enum IsoLanguageIds {
   en_GB = 'en-GB',

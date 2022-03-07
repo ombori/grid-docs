@@ -1,7 +1,17 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
 
-## 2021-01-20
+## 2022-03-07
+
+### Features
+- Add `count` on [Products API](/grid-products/api?id=get-post-products) response
+- Add `includeProductsByVariantsByGroupId` flag on [Product API](/grid-products/api?id=get-product-by-id) and [Product-Barcode API](/grid-products/api?id=get-product-by-barcode) request parameter
+
+### Model
+- Add `variantsGroupId` field
+- Add `colorImageUrl` on `variants` field
+
+## 2022-01-20
 
 #### Features
 - Update Variants Endpoint
@@ -9,7 +19,7 @@ Grid Product receives continuous updates. All the recent release notes can be fo
 #### Model
 - Added `VariantUpdateFields` type
 
-## 2021-01-18
+## 2022-01-18
 
 #### Model Updates
 Renamed the ff. fields:
@@ -24,13 +34,13 @@ Renamed the ff. fields:
 - catalogPageLocationProduct.`productId` => catalogPageLocationProduct.`productGroupId`
 - productItemQuantity.`id` => productItemQuantity.`productId`
 
-## 2021-01-17
+## 2022-01-17
 
 #### Model Updates
 - Added `spaceId` on `productLabel` fields
 - Fixed links
 
-## 2021-01-04
+## 2022-01-04
 
 #### Integration Flow
 - Introduced Spaces which are used to identify to which space-specific data => visible (if set)

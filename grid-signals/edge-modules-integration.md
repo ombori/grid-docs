@@ -1,0 +1,54 @@
+# Integrating Grid Signals on IoT Apps and Edge Modules
+
+!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
+
+This page describes how you can integrate your IoT Apps and Edge Modules to Grid Signals.
+
+Today, ony NodeJS-based modules are supported in our SDK. For python, c#, and other languages, you can use the [Grid Signals REST API](/grid-signals/rest-api) to integrate your modules.
+
+## Set-up
+
+<!-- tabs:start -->
+### **NodeJS**
+```js
+npm install @ombori/ga-modules@latest
+or
+yarn install @ombori/ga-modules@latest
+```
+
+<!-- tabs:end -->
+
+## Initialization
+The `@ombori/ga-module` library automatically initializes grid signals on invoking `connect` function.
+
+<!-- tabs:start -->
+### NodeJS
+```js
+import { connect, signals } from '@ombori/ga-module';
+...
+const module = await connect();
+```
+<!-- tabs:end -->
+
+
+#### States and Events
+- [Event Tracking](grid-signals/tracking-events)
+- [States and Events Subscription](grid-signals/states-and-events)
+
+## Event Tracking
+
+<!-- tabs:start -->
+### NodeJS
+```js
+import { connect, signals } from '@ombori/ga-module';
+...
+const module = await connect();
+
+await signals.detectMood({ cetainty: 80, mood: 'HAPPY' });
+```
+<!-- tabs:end -->
+
+See [Event Tracking](grid-signals/tracking-events) page for more details.
+
+## States and Events Subscription
+See [States and Events Subscription](grid-signals/states-and-events) page for more details.

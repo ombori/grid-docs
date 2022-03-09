@@ -68,6 +68,6 @@ Usage
 import { connect, signals } from '@ombori/ga-module';
 
 ...
-  signals.getInstanceProps();
+  console.log(signals.getInstanceProps());
 ...
 ```

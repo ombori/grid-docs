@@ -39,7 +39,7 @@ import { connect, signals } from '@ombori/ga-module';
 ...
 const module = await connect();
 
-await signals.detectMood({ cetainty: 80, mood: 'HAPPY' });
+await signals.detectMood({ certainty: 80, mood: 'HAPPY' });
 ```
 <!-- tabs:end -->
 

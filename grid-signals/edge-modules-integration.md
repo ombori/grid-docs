@@ -19,7 +19,7 @@ yarn install @ombori/ga-modules@latest
 <!-- tabs:end -->
 
 ## Initialization
-The `@ombori/ga-module` library automatically initializes grid signals on invoking `connect` function.
+The `@ombori/ga-module` library automatically initializes grid signals upon invoking `connect` function.
 
 <!-- tabs:start -->
 ### NodeJS

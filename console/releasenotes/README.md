@@ -1,6 +1,25 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-03-10
+### IoT Apps
+- Support Grid Signals on IoT Apps
+  - For existing IoT Apps, update your `@ombori/ga-modules` dependency to latest, by running `yarn add @ombori/ga-modules@latest`.
+  - New IoT Apps that will be initialized through `omg app create`, will have Grid Signals support out-of-the-box
+  - Related documentation: https://developer.omborigrid.com/#/grid-signals/edge-modules-integration
+- Fixed device disconnect when associated to multiple IoT type installations
+- Fixed build and deployment flow
+
+### Devices
+- Fixed fallback space value when moving device from one organization to another through `omg move` command
+
+### Contacts
+- UI Improvements in console `(Library > Contacts)`
+
+### Products
+- UI Improvements in console `(Library > Products)`
+- Environment support
+
 ## 2022-02-11
 #### Devices
 

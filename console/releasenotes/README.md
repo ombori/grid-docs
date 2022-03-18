@@ -1,6 +1,12 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-03-18
+### Devices
+- Device list optimisation (internal caching and logic optisations)
+- Added logo and title for Tizen, Android, and generic browser device types
+- Added `Include legacy windows devices` checkbox to show legacy windows devices
+
 ## 2022-03-10
 ### IoT Apps
 - Support Grid Signals on IoT Apps

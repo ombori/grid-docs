@@ -55,3 +55,9 @@ Supported application types: Screen App
 
 - 8GB disk space
 - 2GB RAM
+
+# Installation Instructions
+Most of the devices integrates out-of-the-box to the Grid. There are some devices which need special steps to configure. Soon, these special steps will be included it in our core releases.
+
+## Elo i2 <MODEL>
+Instructions here

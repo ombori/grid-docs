@@ -62,7 +62,9 @@ There are some devices which need special steps to configure during installation
 ## Elo i2 <MODEL>
 Elo i2 devices requires additional configuration for black screen stucks.
 
-```cd ~
+```
+cd ~
 sudo git clone https://github.com/ugur-ombori/KMS-FixForBlackScreen.git
 cd KMS-FixForBlackScreen
-sudo bash fix_blackscreen.sh```
+sudo bash fix_blackscreen.sh
+```

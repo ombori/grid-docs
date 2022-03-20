@@ -60,4 +60,9 @@ Supported application types: Screen App
 There are some devices which need special steps to configure during installation. Soon, these special steps will be included in our core releases.
 
 ## Elo i2 <MODEL>
-Instructions here
+Elo i2 devices requires additional configuration for black screen stucks.
+
+```cd ~
+sudo git clone https://github.com/ugur-ombori/KMS-FixForBlackScreen.git
+cd KMS-FixForBlackScreen
+sudo bash fix_blackscreen.sh```

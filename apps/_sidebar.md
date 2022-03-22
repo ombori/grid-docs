@@ -14,3 +14,8 @@
   * [Adding Contents](/apps/queue-ticket-signage/adding-content)
   * [Requirements](/apps/queue-ticket-signage/requirements)
   * [Release Notes](/apps/queue-ticket-signage/releasenotes)
+* [**Kiosk Endless Aisle**](/apps/kiosk-endless-aisle/)
+  * [Setting up](/apps/kiosk-endless-aisle/setting-up)
+  * [Adding Contents](/apps/kiosk-endless-aisle/adding-content)
+  * [Release Notes](/apps/kiosk-endless-aisle/releasenotes/)
+  

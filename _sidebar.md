@@ -29,7 +29,7 @@
   * [Signage Playlist](/apps/signage/)
   * [Queue Management](/apps/queue/setting-up)
   * [Queue Ticket Signage](/apps/queue-ticket-signage/)
-  * [Endless Aisle](/apps/endless-aisle/)
+  * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
 

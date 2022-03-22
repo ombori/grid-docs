@@ -131,15 +131,68 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 
 - **CTA** - label for the call to action button<br/>
 
+- **Type** - either image or video media. Click on `Pick an asset` to upload and choose the media to display
+
 #### Styles and On Click
 ![](/assets/banner-2.png ":size=500")
-- Default banner<br/>
+- Default banner display<br/>
 ![](/assets/banner-default.png ":size=300")
 
-- **Styles** - overrides CSS styling for the banner element (Banners make use of [Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout))
+- **Styles** - overrides CSS styling for the banner element (Banners container make use of [Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout))
 
 - **On click**
     - **CLICK_PRODUCT** - redirects to product info page. Need to specify `productGroupId` from Grid Products
     - **CLICK_CATEGORY** - redirects to product listing page for selected category. Need to specify `productTypeId` from Grid Products product types data
     - **NONE** - no action
 
+
+### Categories
+![](/assets/category.png ":size=500")<br/>
+
+- **ID** - specify the `productTypeId` from Grid Products product types data. On category click, redirects to the product listing page for the configured category.
+
+- **Title** - label to be displayed on the tile
+
+- **Type** - either image or video media. Click on `Pick an asset` to upload and choose the media to display
+
+- Default category display<br/>
+![](/assets/category-default.png ":size=300")
+
+- **Styles** - overrides CSS styling for the category element (Categories container make use of [Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout))
+
+
+### Fonts
+![](/assets/fonts.png ":size=500")
+- Set font files for light, regular, and bold font weights.
+- Click on `Pick an asset` to upload and choose a valid font file for app to use
+
+### Product Card Style
+![](/assets/product-card-style.png ":size=500")
+- Allows overriding the CSS styles of different elements of the product card displayed on product listing pag
+- Default product card display<br/>
+![](/assets/product-card-default.png ":size=300")
+
+### Theme
+![](/assets/theme-1.png ":size=500")
+![](/assets/theme-2.png ":size=500")
+- **Theme style** - either `LIGHT` or `DARK` which inverts the text colors based on configured theme colors.
+
+- **Buttons border type**
+    - **ROUNDED** - all button elements will have rounded corners
+    - **STRAIGHT** - all button elements will have sharp/straight corners
+
+- #### Colors
+    - **Primary** - used on buttons, headers, stickers, active buttons
+    - **Secondary** - used on buttons, notifications, loading indicators
+    - **Danger**
+    - **Light** - used on texts, buttons
+    - **Dark** - used on texts, buttons
+    - **Promo** - used on promotional price label
+    - **Border** - user on border styles
+    - **Omnibar and Keyboard Background** - used in omnibar and keyboard
+    - **Main Screen Background** - used as default background color and most parts of the app
+    - **Secondary Screen Background** - used as background color on most parts of the app
+    - **Background for variant selector** - used on variant selector (inactive)
+
+- #### Shadows
+    - Configuration for shadow css styling in app

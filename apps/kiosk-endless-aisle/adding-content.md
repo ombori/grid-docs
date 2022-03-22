@@ -142,14 +142,14 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 
 - **On click**
     - **CLICK_PRODUCT** - redirects to product info page. Need to specify `productGroupId` from Grid Products
-    - **CLICK_CATEGORY** - redirects to product listing page for selected category. Need to specify `productTypeId` from Grid Products product types data
+    - **CLICK_CATEGORY** - redirects to product listing page for selected category. Need to specify `productTypeId` from Grid Products [product types](http://localhost:3000/#/grid-products/data-model?id=producttype) data
     - **NONE** - no action
 
 
 ### Categories
 ![](/assets/category.png ":size=500")<br/>
 
-- **ID** - specify the `productTypeId` from Grid Products product types data. On category click, redirects to the product listing page for the configured category.
+- **ID** - specify the `productTypeId` from Grid Products [product types](http://localhost:3000/#/grid-products/data-model?id=producttype) data. On category click, redirects to the product listing page for the configured category.
 
 - **Title** - label to be displayed on the tile
 
@@ -196,3 +196,26 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 
 - #### Shadows
     - Configuration for shadow css styling in app
+
+
+## Publishing to device
+Now that you have updated the content and configuration of your app, you can publish a build to your Kiosk Endless Aisle device. If you don't have a device attached to your installation, do so now. 
+
+?> To learn more about how to add a device to the Ombori grid, visit the [Add a device](/general/adding-device.md) documentation.
+
+?> Also please take note of the [Additional device setup instructions](/apps/kiosk-endless-aisle/setting-up.md?id=device-setup-instructions)
+
+`Save all changes` button appears when you do any update on the content tab.
+![](/assets/save-changes.png ":size=400 :no-zoom")
+
+After you've pressed `Save all changes` a new button appears, this is the `Publish` button.
+
+![](/assets/publish-prod.png ":size=400 :no-zoom")
+
+Once you press `Publish` button, the Kiosk Endless Aisle application will start building, and then will be automatically downloaded to the devices added to the installation having `Prod` environment settings. 
+
+![](/assets/publish-others.png ":size=400 :no-zoom")
+
+You can also deploy your application to other environments (other than `Prod`) after saving changes. Click on the 3 dots button beside "Publish" and choose what environment you want to deploy, it will then be automatically downloaded to the devices having the specified environment settings.
+
+You will notice on the screen of your device a progress bar will display notifying you of it downloading the assets, and then it will start showing the content you've configured.

@@ -154,6 +154,40 @@ interface GridProduct {
   variantsGroupId?: string;
 }
 ```
+## VariantInfo
+```
+interface VariantInfo {
+  productId: string;
+  productGroupId: string;
+  globalTradeItemNumber?: Array<string>;
+  gtinName?: Array<string>;
+  europeanArticleNumber?: Array<string>;
+  universalProductCode?: Array<string>;
+
+  // Item variant name (optional)
+  productName?: Array<{
+    isoLanguageId: IsoLanguageIds;
+    productName: string;
+  }>;
+
+  periodStartDate?: string;
+  periodEndDate?: string;
+
+  color?: string;
+  colorImageUrl?: string;
+  style?: string;
+  size?: string;
+  
+  // Fields related to productGroup but response is filtered with the specified productId
+  spaceIds: string[];
+  productName: ProductName[];
+  productDescription: ProductDescription[];
+  catalogPageLocationProduct: CatalogPageLocationProduct[];
+  productLabel: ProductLabel[];
+  productPriceList: ProductPriceList[];
+  productItemQuantity: ProductItemQuantity[];
+};
+```
 
 ## VariantUpdateFields
 ```

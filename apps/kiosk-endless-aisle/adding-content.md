@@ -19,20 +19,36 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 - **Logo** - logo to be displayed on the home screen of the application
 
 #### Sticker Properties
-- **Border Type** - type of sticker display <br/>
-Options: 
+- **Border Type** - type of sticker display 
   - **ROUNDED**: displayed on upper left of product card
   - **STRAIGHT**: displayed on bottom part of product card 
 
-- **Sticker Display Type** - how sticker is presented in Product Info Page<br/>
-Options: 
+- **Sticker Display Type** - how sticker is presented in Product Info Page
   - **Text Only**: displayed as text above the product name
   - **Beside Price**: displayed sticker beside the price label 
 
 ![](/assets/layout-2.png ":size=500")
-- **Traditional Layout** <br/>
-Options:
+- **Traditional Layout**
   - **Checked**: Logo is placed on home screen's top center followed by banners and categories
   ![](/assets/traditional.png ":size=300")
   - **Unchecked**: Logo is placed on home screen's header with option to place header label
   ![](/assets/non-traditional.png ":size=300")
+
+- **Product Gallery Orientation**
+  - **LANDSCAPE**<br/>
+  ![](/assets/gallery-landscape.png ":size=300")
+  - **PORTRAIT**<br/>
+  ![](/assets/gallery-portrait.png ":size=300")
+  
+- **Product Description Placement**
+  - **SLIDE-OUT** - display description sliding out from the left with a click of a button
+  - **BUILT-IN** - display description within the container (toggable)
+
+- **Prices alignment** - price alignment on product listing and product info page
+
+- **Omnibar Layout**
+  - **ROUNDED** - with border radius display
+  - **STRAIGHT** - with straigth borders
+
+### Features
+---

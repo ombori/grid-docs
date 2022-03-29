@@ -55,3 +55,16 @@ Supported application types: Screen App
 
 - 8GB disk space
 - 2GB RAM
+
+# Installation Instructions
+There are some devices which need special steps to configure during installation. Soon, these special steps will be included in our core releases.
+
+## Elo i2 15"
+Elo i2 devices require additional configuration for black screen issues.
+
+```
+cd ~
+sudo git clone https://github.com/ugur-ombori/KMS-FixForBlackScreen.git
+cd KMS-FixForBlackScreen
+sudo bash fix_blackscreen.sh
+```

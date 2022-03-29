@@ -59,8 +59,8 @@ Supported application types: Screen App
 # Installation Instructions
 There are some devices which need special steps to configure during installation. Soon, these special steps will be included in our core releases.
 
-## Elo i2 <MODEL>
-Elo i2 devices requires additional configuration for black screen stucks.
+## Elo i2 15"
+Elo i2 devices require additional configuration for black screen issues.
 
 ```
 cd ~

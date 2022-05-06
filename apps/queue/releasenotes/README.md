@@ -5,6 +5,7 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 #### Features
 - Now Queue Management + Bambuser solution is publicly available on the Marketplace
 - Now we have full support in the IN region
+- Norwegian language is supported now
 
 #### Bugfixes
 - Queue manager integration: provided additional information for Digital Call (Bambuser)

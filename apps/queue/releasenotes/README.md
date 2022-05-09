@@ -1,6 +1,17 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2022-05-05
+#### Features
+- Now Queue Management + Bambuser solution is publicly available on the Marketplace
+- Now we have full support in the IN region
+- Norwegian language is supported now
+
+#### Bugfixes
+- Queue manager integration: provided additional information for Digital Call (Bambuser)
+- Fixed the problem with not reaching store level call for Bambuser system integration
+- Fixed a bug with order pickup rebooking with some corner cases conditions
+
 ## 2021-12-15
 #### Features
 - Queue Manager UI: When Active Directory has a name for the user in addition to an e-mail address, the name will be visible in the Admin Booking View. 

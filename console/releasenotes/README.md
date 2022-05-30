@@ -16,6 +16,14 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Updated grid signals support
 - Update your existing mobile app to `@ombori/ga-settings@latest`
 
+### Products (Library > Products)
+- Added excel file upload feature
+
+  ![](/assets/20220530-console-products-1.png ":size=300 :no-zoom")
+
+  ![](/assets/20220530-console-products-2.png ":size=300 :no-zoom")
+
+
 ### Devices
 - Device list optimisation (internal caching and logic optisations)
 - Added logo and title for Tizen, Android, and generic browser device types

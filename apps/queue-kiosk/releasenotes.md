@@ -1,5 +1,5 @@
-# Queue Queue Kiosk Release Notes
-The Queue Ticket Signage is continuously being improved. All the recent release notes can be found below. 
+# Queue Kiosk Release Notes
+The Queue Kiosk is continuously being improved. All the recent release notes can be found below. 
 
 ## v1.0.0
 #### Features

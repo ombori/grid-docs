@@ -14,3 +14,7 @@
   * [Adding Contents](/apps/queue-ticket-signage/adding-content)
   * [Requirements](/apps/queue-ticket-signage/requirements)
   * [Release Notes](/apps/queue-ticket-signage/releasenotes)
+* [**Queue Kiosk**](/apps/queue-kiosk/)
+  * [Setting up](/apps/queue-kiosk/setting-up)
+  * [Requirements](/apps/queue-kiosk/requirements)
+  * [Release Notes](/apps/queue-kiosk/releasenotes)

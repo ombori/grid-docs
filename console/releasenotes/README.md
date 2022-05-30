@@ -1,6 +1,26 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-05-30
+### Mobile Endpoints
+- Out-of-the-box Grid Signals support on app publish or deploy
+- Disable ability to edit existing mobile endpoint properties. If you need to change a mobile endpoint, you need to delete and re-use the mobile endpoint id
+
+### @ombori/ga-settings
+- Added mobile endpoint properties on useAppInfo
+- Updated grid signals support
+- Update your existing mobile app to `@ombori/ga-settings@latest`
+- Update your existing console installation GridApp Boot release in `installation > settings > release ? <select the latest>`
+
+### @ombori/grid-signals-react
+- Updated grid signals support
+- Update your existing mobile app to `@ombori/ga-settings@latest`
+
+### Devices
+- Device list optimisation (internal caching and logic optisations)
+- Added logo and title for Tizen, Android, and generic browser device types
+- Added `Include legacy windows devices` checkbox to show legacy windows devices
+
 ## 2022-03-18
 ### Devices
 - Device list optimisation (internal caching and logic optisations)

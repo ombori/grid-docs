@@ -24,6 +24,8 @@
   * [Hardware requirements](/general/hardware-requirements)
   * [Network Requirements](/general/network-requirements)
   * [Contribution Guide](/general/contributing)
+* **GridOS**
+  * [GridOS Release Notes](/gridos/releasenotes/)
 * **Marketplace Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)

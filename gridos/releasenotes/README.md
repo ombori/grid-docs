@@ -30,4 +30,5 @@
 
     ![](/assets/v1.1.0/6-apply-changes.png ":size=300 :no-zoom")
 
-  
+- [Download GridOS v1.1.0](http://os.omborigrid.com/gridos.1.1.0.amd64.img.xz)
+

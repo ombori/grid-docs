@@ -28,7 +28,7 @@ You can update your existing GridOS Device over-the-air, through `Ombori Agent` 
 
 #### Features
 - [Hidden Wifi Support](/gridos/set-up/v1/?id=hidden-wifi)
-- [VPN Support](/gridos/set-up/v1/?id=network-whitelisting)
+- [Better network configuration support](/gridos/set-up/v1/?id=network-whitelisting)
 - Based on Ubuntu 22.04
 - Improved provisioning interface
 - Improved provisioning security

@@ -3,7 +3,7 @@
 ## Networking
 
 ### Network whitelisting
-GridOS v1.0.3 has VPN support embedded in the OS. Before in GridOS 0.9.X, you would net to whitelist numerous IP addresses to allow requests from device through a restricted network.
+GridOS v1.0.3 has better network configuration support. Before in GridOS 0.9.X, you would net to whitelist numerous IP addresses to allow requests from device through a restricted network.
 
 [See IP addresses to whitelist for GridOS v1](/general/network-requirements?id=gridos-v1)
 

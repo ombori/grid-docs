@@ -14,6 +14,7 @@
 * **CLI**
   * [CLI Setup](cli/setup)
   * [CLI Reference](/cli/reference)
+  * [CLI Release Notes](/cli/releasenotes)
 * **Integration**
   * [Grid Products](/grid-products/)
   * [Grid Signals](/grid-signals/)

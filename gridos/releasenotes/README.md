@@ -1,6 +1,21 @@
 # GridOS Release Notes
 
 ## v1.0.3 (Stable Release)
+#### Instructions
+- Update `Screen module version to v3.1.0 or higher`
+- Update `Ombori Agent version to v1.8.9 or higher`
+
+  ![](/assets/v1.0.3/gridos-v1.0.3-modules.png ":size=300 :no-zoom")
+
+#### Over-the-air (OTA) Update 
+You can update your existing GridOS Device over-the-air, through `Ombori Agent` module.
+
+*WARNING: If the existing device is connected to a network with firewall or network whitelist, you need to add the IP addresses, [from this link](/gridos/set-up/v1/?id=network-whitelisting), based on your tenant residency. Additionally, make sure you have tested the new GridOS on the same hardware model before any updating production devices. You don't need to upgrade existing devices, if you don't have any reasons to do so. Existing devices running 0.9.X will still be supported long term, until further notice.*
+
+- For amd64-based devices (i.e. Intel NUC), OTA update from v0.9.5 to v1.0.3 is supported. You can rollback to v0.9.5 when you need to.
+
+- For rpi4 devices, OTA update from v0.9.4 to v1.0.3 is supported. You can rollback to v0.9.4 when you need to.
+
 #### Features
 - [Hidden Wifi Support](/gridos/set-up/v1/?id=hidden-wifi)
 - [VPN Support](/gridos/set-up/v1/?id=network-whitelisting)

@@ -1,4 +1,4 @@
-# Customize the appearance of the Draft ticket Page
+# Customize the appearance of the Confirmed Booking ticket page
 
 Draft ticket page is the page that the user sees after booking an appointment.
 

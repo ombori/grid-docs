@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start-ssr": "docsify start .",
-        "start": "docsify serve --open"
+        "start": "docsify serve --open --port 4000"
     },
     "repository": {
         "type": "git",

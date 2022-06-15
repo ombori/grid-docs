@@ -1,6 +1,6 @@
 # Customize the appearance of the Confirmed Booking ticket page
 
-Draft ticket page is the page that the user sees after booking an appointment.
+Confirmed Booking ticket page is the page that the user sees after booking an appointment.
 
 ![](/assets/draft-ticket.png ":size=400")
 
@@ -12,7 +12,7 @@ Elements are targeted via data-theme attributes.
 
 ## Available attributes
 
-List of available data-theme attributes and the corresponding elements. Look at examples to see how to use the properties inside css. Check the screenshots section for reference to each number
+List of available data-theme attributes and the corresponding elements. Look at examples to see how to use the properties inside css. Check the screenshots section for reference to each number.
 
 
 | #   | data-theme attribute                  | description                          |

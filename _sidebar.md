@@ -25,6 +25,7 @@
   * [Network Requirements](/general/network-requirements)
   * [Contribution Guide](/general/contributing)
 * **GridOS**
+  * [Setting-up GridOS](/gridos/set-up/v1/)
   * [GridOS Release Notes](/gridos/releasenotes/)
 * **Marketplace Apps**
   * [Apps Documentation](/apps/)

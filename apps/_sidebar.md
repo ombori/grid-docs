@@ -8,7 +8,7 @@
   * [Setting up a queue](/apps/queue/setting-up)
   * [Order Pickup](/apps/queue/order-pickup)
   * [Customize Booking Page](/apps/queue/customize-booking)
-  * [Customize Draft ticket Page](/apps/queue/customize-draft-ticket)
+  * [Customize Confirmed Booking ticket page](/apps/queue/customize-confirmed-booking-ticket)
   * [Release Notes](/apps/queue/releasenotes/)
 * [**Queue Ticket Signage**](/apps/queue-ticket-signage/)
   * [Setting up](/apps/queue-ticket-signage/setting-up)

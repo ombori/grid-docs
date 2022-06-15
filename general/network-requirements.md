@@ -15,20 +15,20 @@ Unless otherwise specified, all domains are using port `443`.
 For devices which are running GridOS v1.0.3 or higher, you only need to whitelist following IP addresses, based on your region or data-residency.
 
 #### EU
-| IP Address      | Port | Porotocol  | Description       |
+| IP Address      | Port | Protocol  | Description       |
 | --------------- |----- | ---------- | ----------------  |
 | 20.103.183.92   | 443  | UDP        | Provisioning      |
 | 20.126.185.169  | 443  | UDP        | Post-provisioning |
 | 20.126.162.189  | 443  | UDP        | Post-provisioning |
 
 #### IN
-| IP Address      | Port | Porotocol  | Description       |
+| IP Address      | Port | Protocol  | Description       |
 | --------------- |----- | ---------- | ----------------  |
 | 20.103.183.92   | 443  | UDP        | Provisioning      |
 | 20.219.43.36    | 443  | UDP        | Post-provisioning |
 
 #### UAE
-| IP Address      | Port | Porotocol  | Description       |
+| IP Address      | Port | Protocol  | Description       |
 | --------------- |----- | ---------- | ----------------  |
 | 20.103.183.92   | 443  | UDP        | Provisioning      |
 | 20.233.13.206   | 443  | UDP        | Post-provisioning |
@@ -40,7 +40,7 @@ For devices which are running GridOS v1.0.3 or higher, you only need to whitelis
 | 20.121.94.131   | 443  | UDP        | Post-provisioning |
 
 #### AU
-| IP Address      | Port | Porotocol  | Description       |
+| IP Address      | Port | Protocol  | Description       |
 | --------------- |----- | ---------- | ----------------  |
 | 20.103.183.92   | 443  | UDP        | Provisioning      |
 | 20.211.138.232   | 443 | UDP        | Post-provisioning |

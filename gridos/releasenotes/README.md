@@ -1,9 +1,19 @@
 # GridOS Release Notes
 
 ## v1.0.3 (Stable Release)
+
+### Direct Download Links
+- [Download GridOS v1.0.3 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Raspberry Pi 4 (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
+
 #### Instructions
+For new devices, you can immediately download the GridOS from the above direct links and follow the instructions on the screen or cli during the installation.
+
+For existing GridOS devices, you need to update below modules.
+
 - Update `Screen module version to v3.1.0 or higher`
-- Update `Ombori Agent version to v1.8.9 or higher`
+- Update `Ombori Agent module version to v1.8.9 or higher`
 
   ![](/assets/v1.0.3/gridos-v1.0.3-modules.png ":size=300 :no-zoom")
 
@@ -22,9 +32,7 @@ You can update your existing GridOS Device over-the-air, through `Ombori Agent` 
 - Based on Ubuntu 22.04
 - Improved provisioning interface
 - Improved provisioning security
-- [Download GridOS v1.0.3 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
-- [Download GridOS v1.0.3 for Raspberry Pi 4 (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
-- [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
+- Embedded core modules, Screen and Ombori Agent, for faster boot-up time and less initial required resources to download
 
 ## v1.1.0 (Beta)
 #### Features

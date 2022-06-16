@@ -1,6 +1,6 @@
 # Customize the appearance of the Walk-in ticket page
 
-Walk-in ticket page is the page that the user sees after creating a regular ticket.
+Walk-in ticket page is the page that the user sees after creating a walk in (by scanning QR code) ticket.
 
 ![](/assets/walk-in-ticket.png ":size=400")
 

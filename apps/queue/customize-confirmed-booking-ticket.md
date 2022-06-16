@@ -19,7 +19,7 @@ List of available data-theme attributes and the corresponding elements. Look at 
 | --- |---------------------------------------|--------------------------------------|
 | 1   | page__position                        | page background                      |
 | 2   | queue-common__header                  | logo and title area                  |
-| 3   | page-position__confirmation-messag    | booking confirmation message         |
+| 3   | page-position__confirmation-message   | booking confirmation message         |
 | 4   | page-position__booking-info           | content area                         |
 | 5   | page-position__booking-info__date     | booking date                         |
 | 6   | page-position__booking-info__time     | booking time                         |

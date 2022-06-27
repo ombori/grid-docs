@@ -1,6 +1,14 @@
 # Queue Manager Release notes
 The Queue Manager receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 20222-06-27
+#### Features
+- The Customer can cancel digital call (Queue Management + Bambuser solution)
+- Third-party solutions can integrate Grid Signals based on all Queue solutions (you can connect your application to Grid Signals using information from the solution)
+- Added Customer-facing customizable language specific title for Queue solution. It will be visible for customers if specified, otherwise default one will be used
+- "Keep safe distant" text on the ticket is now customizable
+- More sections are available for customizations with CSS injections, please check [documentation](https://developer.omborigrid.com/#/apps/queue) for more details.
+
 ## 2022-05-05
 #### Features
 - Now Queue Management + Bambuser solution is publicly available on the Marketplace

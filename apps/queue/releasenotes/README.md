@@ -6,8 +6,11 @@ The Queue Manager receives continuous updates. All the recent release notes can 
 - The Customer can cancel digital call (Queue Management + Bambuser solution)
 - Third-party solutions can integrate Grid Signals based on all Queue solutions (you can connect your application to Grid Signals using information from the solution)
 - Added Customer-facing customizable language specific title for Queue solution. It will be visible for customers if specified, otherwise default one will be used
+![](/assets/customizable_display_title.png ":size=400")
 - "Keep safe distant" text on the ticket is now customizable
+![](/assets/customizable-keep-safe-distance-label.png ":size=400")
 - More sections are available for customizations with CSS injections, please check [documentation](https://developer.omborigrid.com/#/apps/queue) for more details.
+![](/assets/customizable_text_and_title_ticket_view.png ":size=400")
 
 ## 2022-05-05
 #### Features

@@ -14,6 +14,15 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Added device name validation in the form
 - Enforce kebab-case naming convention for all device names when adding new or editing existing device.
 
+### Screen Module (v3.2.3)
+- Hotfixes
+- Fixed Disabled Websecurity feature
+
+### Thermal Printer Module (v1.4.2)
+- Hotfixes
+- Printer status support
+- Printer cut-off fix
+
 ## 2022-05-30
 ### Mobile Endpoints
 - Out-of-the-box Grid Signals support on app publish or deploy

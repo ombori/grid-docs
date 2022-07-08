@@ -23,6 +23,10 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Printer status support
 - Printer cut-off fix
 
+### RFID Reader Module (v2.1.1)
+- Zebra FX9600 Support
+- Advantech RFID
+
 ## 2022-05-30
 ### Mobile Endpoints
 - Out-of-the-box Grid Signals support on app publish or deploy

@@ -1,6 +1,19 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-07-08
+### Devices
+
+![](/assets/20220530-console-products-1.png ":size=300 :no-zoom")
+
+- Deployed the first batch of changes for an improved devices management UI. More changes like filters, sorting, and more will be deployed in the coming days
+- Added device statistics report in Devices page
+- Added listview or thumbnail view mode options
+
+### Device Details Page
+- Added device name validation in the form
+- Enforce kebab-case naming convention for all device names when adding new or editing existing device.
+
 ## 2022-05-30
 ### Mobile Endpoints
 - Out-of-the-box Grid Signals support on app publish or deploy

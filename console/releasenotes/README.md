@@ -4,7 +4,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2022-07-08
 ### Devices
 
-![](/assets/20220530-console-products-1.png ":size=300 :no-zoom")
+![](/assets/20220708/device-list.png ":size=300 :no-zoom")
 
 - Deployed the first batch of changes for an improved devices management UI. More changes like filters, sorting, and more will be deployed in the coming days
 - Added device statistics report in Devices page

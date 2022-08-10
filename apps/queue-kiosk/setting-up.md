@@ -18,6 +18,8 @@ Now you've completed the installation, it's time to configure it. First, find yo
 
 Once you've opened it you can configure your queue kiosk. You can start by [adding a device](/general/adding-device.md).
 
+If you don't see categories buttons or If you are trying to open the app in the browser, you should click on the screen and after press any symbol or digit on your keyboard. It sends a signal that the app is in the test mode.
+
 ### Layout Template
 
 You can select a layout template based on your ideal layout.

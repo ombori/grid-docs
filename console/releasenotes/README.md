@@ -1,6 +1,30 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-08-15
+
+### Devices
+- Ability to filter a paginated list of devices
+- Ability to sort a paginated list of devices
+- Improved devices page search bar
+- Ability to reboot/restart/delete a device from the devices `listview`
+- Bugfixes
+
+
+### Stores
+- Renamed Spaces to `Stores` in the UI
+
+### Installations settings
+`Below features are still invisible to regular users. The General Availability is expected by the end of August.`
+- New Settings overriding UI
+- Paginated Spaces and related devices list
+- Global Settings Form
+- Store settings overriding form
+- Device settings overriding form
+
+### Enterprise Agreements
+- Bug fixes
+
 ## 2022-07-08
 ### Devices
 

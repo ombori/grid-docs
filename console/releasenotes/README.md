@@ -1,6 +1,24 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-08-23-A
+
+### Marketplace
+- Show Marketplace's Public Apps for CSP Subtenants
+- Below is the matrix
+
+  ![](/assets/20220823/marketplace-apps.png ":size=1280 :no-zoom")
+
+### Installations
+- Fixed bug when deleting a queue installation
+
+### Devices Library
+- Temporarily hide sort by device type until the new grid-devices API will be live in approximately 4 weeks
+
+### Stores
+`Below features are invisible to regular users. General Availability will be announced soon.`
+- Improve store create form and stores UI
+
 ## 2022-08-15
 
 ### Devices

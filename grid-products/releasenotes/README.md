@@ -1,6 +1,14 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2022-03-22
+
+### Features
+- [Product Variant](/grid-products/api?id=get-product-variant) Endpoint
+
+### Model
+- Added [VariantInfo](/grid-products/data-model?id=variantinfo) type
+
 ## 2022-03-07
 
 ### Features
@@ -17,7 +25,7 @@ Grid Product receives continuous updates. All the recent release notes can be fo
 - [Update Variants](/grid-products/api?id=patch-update-variants) Endpoint
 
 #### Model
-- Added `VariantUpdateFields` type
+- Added [VariantUpdateFields](/grid-products/data-model?id=variantupdatefields) type
 
 ## 2022-01-18
 

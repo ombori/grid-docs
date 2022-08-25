@@ -34,6 +34,7 @@
   * [Queue Management](/apps/queue/setting-up)
   * [Queue Ticket Signage](/apps/queue-ticket-signage/)
   * [Queue Kiosk](/apps/queue-kiosk/)
+  * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
 

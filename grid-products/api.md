@@ -219,6 +219,21 @@ Updates products with the fields specified in the data object. Shallow-update is
 
 Reference: [GridProduct](/grid-products/data-model?id=gridproduct) 
 
+
+### [GET] Product Variant
+> **[PATCH] {base-url}/{tenant-id}/{environment}/variants/{productId}**
+
+Retrieves a specific variant by ID
+
+#### Response
+Returns [`VariantInfo`](/grid-products/data-model?id=variantinfo)
+
+#### Query Parameters
+| parameter      | type   | Description                                             | Example                                               |
+| -------------- | ------ | ------------------------------------------------------- | ----------------------------------------------------- |
+| productId | string | The ID of the Product variant                                   | `100001`                                              |
+
+
 ### [PATCH] Update Variants
 > **[PATCH] {base-url}/{tenant-id}/{environment}/variants**
 

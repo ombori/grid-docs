@@ -14,6 +14,7 @@
 * **CLI**
   * [CLI Setup](cli/setup)
   * [CLI Reference](/cli/reference)
+  * [CLI Release Notes](/cli/releasenotes)
 * **Integration**
   * [Grid Products](/grid-products/)
   * [Grid Signals](/grid-signals/)
@@ -24,11 +25,15 @@
   * [Hardware requirements](/general/hardware-requirements)
   * [Network Requirements](/general/network-requirements)
   * [Contribution Guide](/general/contributing)
+* **GridOS**
+  * [Setting-up GridOS](/gridos/set-up/v1/)
+  * [GridOS Release Notes](/gridos/releasenotes/)
 * **Marketplace Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)
   * [Queue Management](/apps/queue/setting-up)
   * [Queue Ticket Signage](/apps/queue-ticket-signage/)
+  * [Queue Kiosk](/apps/queue-kiosk/)
   * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)

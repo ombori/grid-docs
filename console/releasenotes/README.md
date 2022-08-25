@@ -1,6 +1,102 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-08-23-A
+
+### Marketplace
+- Show Marketplace's Public Apps for CSP Subtenants
+- Below is the matrix
+
+  ![](/assets/20220823/marketplace-apps.png ":size=1280 :no-zoom")
+
+### Installations
+- Fixed bug when deleting a queue installation
+
+### Devices Library
+- Temporarily hide sort by device type until the new grid-devices API will be live in approximately 4 weeks
+
+### Stores
+`Below features are invisible to regular users. General Availability will be announced soon.`
+- Improve store create form and stores UI
+
+## 2022-08-15
+
+### Devices
+- Ability to filter a paginated list of devices
+- Ability to sort a paginated list of devices
+- Improved devices page search bar
+- Ability to reboot/restart/delete a device from the devices `listview`
+- Bugfixes
+
+
+### Stores
+- Renamed Spaces to `Stores` in the UI
+
+### Installations settings
+`Below features are still invisible to regular users. The General Availability is expected by the end of August.`
+- New Settings overriding UI
+- Paginated Spaces and related devices list
+- Global Settings Form
+- Store settings overriding form
+- Device settings overriding form
+
+### Enterprise Agreements
+- Bug fixes
+
+## 2022-07-08
+### Devices
+
+![](/assets/20220708/device-list.png ":size=300 :no-zoom")
+
+- Deployed the first batch of changes for an improved devices management UI. More changes like filters, sorting, and more will be deployed in the coming days
+- Added device statistics report in Devices page
+- Added listview or thumbnail view mode options
+
+### Device Details Page
+- Added device name validation in the form
+- Enforce kebab-case naming convention for all device names when adding new or editing existing device.
+
+### Screen Module (v3.2.3)
+- Hotfixes
+- Fixed Disabled Websecurity feature
+
+### Thermal Printer Module (v1.4.2)
+- Hotfixes
+- Printer status support
+- Printer cut-off fix
+
+### RFID Reader Module (v2.1.1)
+- Zebra FX9600 Support
+- Advantech RFID
+
+## 2022-05-30
+### Mobile Endpoints
+- Out-of-the-box Grid Signals support on app publish or deploy
+- Disable ability to edit existing mobile endpoint properties. If you need to change a mobile endpoint, you need to delete and re-use the mobile endpoint id
+
+### @ombori/ga-settings
+- Added mobile endpoint properties on useAppInfo
+- Updated grid signals support
+- Update your existing mobile app to `@ombori/ga-settings@latest`
+- Update your existing console installation GridApp Boot release in `installation > settings > release ? <select the latest>`
+
+### @ombori/grid-signals-react
+- Updated grid signals support
+- Update your existing mobile app to `@ombori/ga-settings@latest`
+
+### Products (Library > Products)
+- Added excel file upload feature
+
+  ![](/assets/20220530-console-products-1.png ":size=300 :no-zoom")
+
+  ![](/assets/20220530-console-products-2.png ":size=300 :no-zoom")
+
+
+### Devices
+- Device list optimisation (internal caching and logic optisations)
+- Added logo and title for Tizen, Android, and generic browser device types
+- Added `Include legacy windows devices` checkbox to show legacy windows devices
+
 ## 2022-03-18
 ### Devices
 - Device list optimisation (internal caching and logic optisations)

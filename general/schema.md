@@ -73,6 +73,116 @@ export type Schema = {
 }
 ```
 
+## Media Picker
+
+```javascript
+type Media = {
+  ref: 'media';
+  type: string;
+  id: string;
+  url: string;
+};
+
+export type Schema = {
+  /**
+   * @title Media
+   * @ui mediaPicker
+   */
+   media: Media;
+}
+```
+
+## Queue Picker
+
+```javascript
+type Queue = {
+  /**
+   * @title Queue ID
+   */
+  queueId: string;
+
+  /**
+   * @title Organisation name
+   */
+  organization: string;
+
+  /**
+   * @title Queue endpoint
+   */
+  queueEndpoint: string;
+};
+
+export type Schema = {
+  /**
+   * @title Queue
+   * @ui queuePicker
+   */
+  queue: Queue;
+}
+```
+
+## CSS field
+
+```javascript
+  /**
+   * @title Css
+   * @widget css
+   */
+  css: string;
+```
+
+## Mobile Endpoint picker
+
+```javascript
+  /**
+   * @title Mobile endpoint picker
+   * @ui mobileEndpointPicker
+   */
+  mobileEndpoint: any; // to add proper types
+```
+
+## Color picker
+
+```javascript
+  /**
+   * @title Color Picker
+   * @widget color
+   */
+  color: string;
+```
+
+## Textarea
+
+```javascript
+  /**
+   * @title Text Area
+   * @widget textarea
+   */
+  textarea: string;
+```
+
+## Javascript field
+
+```javascript
+  /**
+   * @title Javascript
+   * @widget javascript
+   */
+  js: string;
+```
+
+## Boolean
+
+```javascript
+  /**
+   * @title Is gate open by default?
+   * @default true
+   */
+  isOpenByDefault: boolean;
+```
+
+
+
 ## Optional Settings
 By default, all fields you've defined in the settings are mandatory If you want to make them optional, you need to add a `?` to the variable definition.
 

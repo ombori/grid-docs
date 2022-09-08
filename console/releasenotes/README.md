@@ -1,6 +1,30 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-09-08
+
+### Installations
+- Fixed bug when deleting a queue installation
+- Queue form fixes
+
+`Below features are still invisible to regular users. The General Availability is expected by the end of September.`
+- Paginated spaces and devices in the new installation settings page with settings overriding
+- Ability to control fields to be shown in global, space or device settings page
+- Added installation name, app version picker, language picker, gridapp boot picker, and installation group fields inside the global settings
+
+### Stores
+`Below features are still invisible to regular users. The General Availability is expected by the end of September.`
+- Store details page
+- New space create form
+- Store weekly schedule widget
+
+### Global Footer
+- Added persistent footer with `Privacy` and `Terms and Conditions` links
+
+### Schema Widgets (for meta-schema)
+- Weekly schedule schema: `'ui:field': 'weeklySchedulePicker',`
+
+
 ## 2022-08-23-A
 
 ### Marketplace

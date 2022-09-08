@@ -3,6 +3,9 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 
 ## 2022-09-08
 
+### Devices
+- Ability to mass restart and reboot in the new Devices Listview page
+
 ### Installations
 - Fixed bug when deleting a queue installation
 - Queue form fixes

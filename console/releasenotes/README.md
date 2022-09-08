@@ -6,6 +6,14 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Devices
 - Ability to mass restart and reboot in the new Devices Listview page
 
+  ![](/assets/20220908/device-restart-reboot.png ":size=360 :no-zoom")
+
+
+- Fixed modules sorting from latest (top) to oldest (bottom)
+- Separated QA and Production module versions. QA versions can be used for advanced feature testing, and should be avoided to be used in production. It is adviced to use production versions on production devices.
+
+  ![](/assets/20220908/modules.png ":size=360 :no-zoom")
+
 ### Installations
 - Fixed bug when deleting a queue installation
 - Queue form fixes
@@ -14,6 +22,8 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Paginated spaces and devices in the new installation settings page with settings overriding
 - Ability to control fields to be shown in global, space or device settings page
 - Added installation name, app version picker, language picker, gridapp boot picker, and installation group fields inside the global settings
+
+  ![](/assets/20220908/modules.png ":size=360 :no-zoom")
 
 ### Stores
 `Below features are still invisible to regular users. The General Availability is expected by the end of September.`
@@ -27,6 +37,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Schema Widgets (for meta-schema)
 - Weekly schedule schema: `'ui:field': 'weeklySchedulePicker',`
 
+  ![](/assets/20220908/weekly-schedule.png ":size=360 :no-zoom")
 
 ## 2022-08-23-A
 

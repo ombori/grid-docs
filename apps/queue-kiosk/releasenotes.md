@@ -1,6 +1,12 @@
 # Queue Kiosk Release Notes
 The Queue Kiosk is continuously being improved. All the recent release notes can be found below. 
 
+## v1.0.9
+#### Features
+- Fixed logo being cut
+- JSON file based translations
+- Updated Digital Focused template to have rounded buttons by default
+
 ## v1.0.0
 #### Features
 - Bug fixes

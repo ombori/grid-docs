@@ -24,6 +24,7 @@
   * [Adding a device](/general/adding-device)
   * [Hardware requirements](/general/hardware-requirements)
   * [Network Requirements](/general/network-requirements)
+  * [Onboarding Guide](/general/onboarding-guide)
   * [Contribution Guide](/general/contributing)
 * **GridOS**
   * [Setting-up GridOS](/gridos/set-up/v1/)

@@ -1,6 +1,6 @@
 # Integrating Grid Signals on IoT Apps and Edge Modules
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
+!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
 
 This page describes how you can integrate your IoT Apps and Edge Modules to Grid Signals.
 

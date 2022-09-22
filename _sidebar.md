@@ -38,5 +38,7 @@
   * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
+* **Packages**
+  * [Javascript](/packages/javascript/)
 
 * [Go to the console](https://console.omborigrid.com/)

@@ -1,6 +1,6 @@
 # Grid Signals REST API
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
+!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
 
 Today, Grid Signals client libraries support only javascript and NodeJS based projects. We are planning to expand it to support more languages, like python.
 

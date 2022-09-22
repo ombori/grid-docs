@@ -1,6 +1,6 @@
 # Session and Space States
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release in March
+!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
 
 You can fetch the latest states or subscribe to changes of the sessions and spaces
 

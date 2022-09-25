@@ -1,8 +1,8 @@
-# Installing the Ombori CLI
+# Installing the Ombori Grid CLI
 
-To install the Ombori CLI you only have one prerequisite, Node.JS. The recommended version is the current LTS.
-
-Install [Node.JS](https://nodejs.org/en/) now, to continue. If you already have Node.JS installed you are good.
+You will need following prerequisites in your dev environment for Ombori Grid CLI to work:
+* [NodeJS 16+](https://nodejs.org/en/) (current LTS version is recommended)
+* Git CLI
 
 ## Install CLI 
 
@@ -21,12 +21,12 @@ Then to authenticate the CLI run the following command.
 omg login
 ```
 
-Then enter the token you just generated/copied, and the CLI will check for you if it's a valid CLI. 
-## Confirm successful authentication
-After you've authenticated, you should confirm everything is connected properly. To do this run a command on the CLI that requires authentication, the best is to run the following command
+Then enter the token you just created.
+## Confirm successfull authentication
+Verify the setup by running a command that lists your tenants:
 
 ```bash
 omg org list
 ```
 
-If that returns devices and not an error, you are good to go.
+If you see your tenant in the result and you don't see any errors, you are good to go!

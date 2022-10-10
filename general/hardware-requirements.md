@@ -68,3 +68,10 @@ sudo git clone https://github.com/ugur-ombori/KMS-FixForBlackScreen.git
 cd KMS-FixForBlackScreen
 sudo bash fix_blackscreen.sh
 ```
+
+## Tizen 6.5
+Tizen 6.5 devices should use the latest Firmware
+
+Example for QM43B, download the latest Firmware from the [samsung support website](https://displaysolutions.samsung.com/support/resources/product-support/QM43B).
+
+You can check how to update your tizen devices to the latest firmware in the [samsung support website](https://www.samsung.com/us/support/answer/ANS00062224/).

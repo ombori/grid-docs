@@ -64,7 +64,7 @@ Elo i2 devices require additional configuration for black screen issues.
 
 ```
 cd ~
-sudo git clone https://github.com/ugur-ombori/KMS-FixForBlackScreen.git
+sudo git clone https://github.com/ombori/omb-elo-i2-15-fix
 cd KMS-FixForBlackScreen
 sudo bash fix_blackscreen.sh
 ```

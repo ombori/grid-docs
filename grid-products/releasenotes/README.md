@@ -1,6 +1,9 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## 2022-10-25
+- Update base URL endpoints to https://api.omborigrid.com/regions/{data-residency}/products/v1/tenants
+
 ## 2022-03-22
 
 ### Features

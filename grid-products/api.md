@@ -24,11 +24,11 @@ The `{base-url}` of the Grid Products API depends on the data residency you're w
 
 | Region | URL                                              |
 | ------ | ------------------------------------------------ |
-| EU     | `https://product-eu.omborigrid.com/api/tenants`  |
-| US     | `https://product-us.omborigrid.com/api/tenants`  |
-| IN     | `https://product-in.omborigrid.com/api/tenants`  |
-| AU     | `https://product-au.omborigrid.com/api/tenants`  |
-| UAE    | `https://product-uae.omborigrid.com/api/tenants` |
+| EU     | `https://api.omborigrid.com/regions/eu/products/v1/tenants`  |
+| US     | `https://api.omborigrid.com/regions/us/products/v1/tenants`  |
+| IN     | `https://api.omborigrid.com/regions/in/products/v1/tenants`  |
+| AU     | `https://api.omborigrid.com/regions/au/products/v1/tenants`  |
+| UAE    | `https://api.omborigrid.com/regions/uae/products/v1/tenants` |
 
 ?> `{tenant-id}` is your tenant id in the grid console. <br> `{environment}` is any defined environment you have in grid console where you want your products data to live.
 

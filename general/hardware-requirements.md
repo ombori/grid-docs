@@ -28,34 +28,6 @@ Supported application types: Screen App, IoT App
 
 A heatsink is not strictly required, but recommended. Depending on what will be running on RPI, the hardware can potentially get hot.
 
-## Samsung Smart Signage Display
-The Samsung Smart Signage displays allow you to run Screen Apps, like Signage Playlist.
-
-Supported application types: Screen App
-
-**Minimum requirements**
-
-- Samsung Tizen v3.5 or above
-
-## Android Tablets
-Android Tablets are great for all kinds of kiosk-like experiences.
-
-Supported application types: Screen App
-
-**Minimum requirements**
-
-- 8GB disk space
-- 2GB RAM
-## Android TVBox
-Android TVBox is capable of running apps on any screen you have in stock.
-
-Supported application types: Screen App
-
-**Minimum requirements**
-
-- 8GB disk space
-- 2GB RAM
-
 # Installation Instructions
 There are some devices which need special steps to configure during installation. Soon, these special steps will be included in our core releases.
 
@@ -68,10 +40,3 @@ sudo git clone https://github.com/ombori/omb-elo-i2-15-fix
 cd KMS-FixForBlackScreen
 sudo bash fix_blackscreen.sh
 ```
-
-## Tizen 6.5
-Tizen 6.5 devices should use the latest Firmware
-
-Example for QM43B, download the latest Firmware from the [samsung support website](https://displaysolutions.samsung.com/support/resources/product-support/QM43B).
-
-You can check how to update your tizen devices to the latest firmware in the [samsung support website](https://www.samsung.com/us/support/answer/ANS00062224/).

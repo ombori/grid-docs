@@ -1,6 +1,33 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-11-17
+
+### General
+- Infrastructure improvements and optimizations
+
+### Authentication (Login)
+- Fixed intermittent login issues
+- Added session expiration after 30 minutes of inactivity
+
+### Tenants List
+- Added caching for faster load time
+
+### Users
+- Added caching for faster load time
+- Fixed bugs in user create and update form
+
+### Devices
+- Updated the stable GridOS released version for x86-64 (Intel NUC) in device set-up to v1.2.1
+- Added caching for faster load time
+
+### Installations
+- Added caching for faster load time
+
+### Stores
+- Partially released new store details page
+
+
 ## 2022-09-08
 
 ### Devices

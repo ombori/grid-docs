@@ -1,10 +1,28 @@
 # GridOS Release Notes
 
+## Latest Stable Versions: Direct Download Links
+- [Download GridOS v1.2.1 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.2.1.amd64.img.xz)
+- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
+
+
+## v1.2.1 (Stable Release for x86-64 arch)
+### Direct Download Link
+- [Download GridOS v1.2.1 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.2.1.amd64.img.xz)
+
+### Change log
+- Fixed incorrect serial number shown on provisioning screen
+- Fixed a bug in the flash disk removal step on fresh GridOS installation
+- Fixed network configuration bugs
+- Added GridOS UI based Multi ethernet port configuration
+- Updated embedded screen and agent modules
+- Added support for open wifi network
+
 ## v1.0.3 (Stable Release)
 
 ### Direct Download Links
 - [Download GridOS v1.0.3 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
-- [Download GridOS v1.0.3 for Raspberry Pi 4 (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
 - [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
 
 #### Instructions

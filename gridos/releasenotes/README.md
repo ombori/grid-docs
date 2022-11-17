@@ -2,7 +2,7 @@
 
 ## Latest Stable Versions: Direct Download Links
 - [Download GridOS v1.2.1 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.2.1.amd64.img.xz)
-- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](https://os.omborigrid.com/gridos.1.0.3.rpi.img.xz)
 - [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
 
 
@@ -22,7 +22,7 @@
 
 ### Direct Download Links
 - [Download GridOS v1.0.3 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
-- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)
+- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](https://os.omborigrid.com/gridos.1.0.3.rpi.img.xz)
 - [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
 
 #### Instructions

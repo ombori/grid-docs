@@ -22,11 +22,20 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Added caching for faster load time
 
 ### Installations
+- Fixed no associated gridapp issue on app install
 - Added caching for faster load time
 
 ### Stores
 - Partially released new store details page
 
+### Media
+- Set max media filename length to 100
+
+### Grid Products
+- Release the new product picker for installation settings
+
+### Gridapp Schema
+- Added the ability to specify which fields are overridable on global, store, or device level (We will create a dedicated page soon about it)
 
 ## 2022-09-08
 

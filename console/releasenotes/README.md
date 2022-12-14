@@ -1,6 +1,46 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-12-14
+Below is the summary of the console and platform updates deploy since November to December 14, 2022.
+
+## General
+- Improved platform infrastructures for ISO 27001 compliance
+- Improved security for multiple services, including OmboriGrid console.
+- General console performance and response time optimization
+
+### Devices
+- Improved device status accuracy
+- Better device monitoring and history
+- Improved device infrastructure, and started building omg-devices service. This service will be available for clients, partners, and integrators who would want to fetch devices information and reports through api requests.
+- Synced devices statuses between the device list and device details page
+- Improved GridOS screen application deployments reliability
+- [Early access] Intel Mini-PC support. Contact Ombori for more information
+
+### Installations
+- Make installation builds instant. Before it takes at least 1minute to build applications. Today, it's instant.
+- Make installation build deployment more reliable
+- SKU is visible in installation settings page
+- Improved installations build page
+- Able to see the latest deployed installation build in builds tab
+
+## Marketplace
+- Moved tenant owned applications from `Marketplace -> Your apps` to `Developer -> Apps`
+- Added ability to expose own applications to subtenants, for CSP tenants
+- Show sku and prices for marketplace applications
+- Show sku and prices on application install dialog
+
+## Billing
+- Bug fixes
+
+## Users
+- Improved user management security
+- Improved login page
+- Bug fixes for login page
+
+## Analytics
+- Improved analytics pages for tenant overview, installations overview, and spaces overview
+
 ## 2022-11-17
 
 ### General

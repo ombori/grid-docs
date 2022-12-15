@@ -77,7 +77,7 @@ There are two ways to track events:
 2. [Custom Session Event](/grid-signals/tracking-events?id=custom-event) - custom events based on your needs
 
 ## States
-You can fetch the latest states or subscribe to state changes of the sessions and spaces. Go to [States reference page](/grid-signals/states) for the details.
+You can fetch the latest states or subscribe to state changes of the sessions and spaces. Go to [States reference page](/grid-signals/states-and-events) for the details.
 
 ## Offline Support
 Grid Signals library stores events in Localstorage for screen and mobile apps out-of-the-box, when the device is offline or has an intermittent internet connection.

@@ -15,9 +15,9 @@ Now that you have CLI setup you can start developing apps. We have 3 kinds of ap
 
 Screen apps are web-based applications that run on a screen. You can develop with any web technology you want. We have templates for ReactJS and Basic HTML, of which the latter can be used to develop anything in your own technology
 
-**IoT Apps**
+**Edge Apps**
 
-IoT Apps are headless applications that can run on your hardware. By default, we support Python, C#, and of course NodeJS. These applications can run on the same hardware as your screen apps, but can also run on standalone devices. IoT Apps are perfect for doing computations, connect to hardware or manage data-flow between different devices or apps. These are for example also perfect to handle any remote API connections.
+Edge Apps are headless applications that can run on your hardware. By default, we support Python, C#, and of course NodeJS. These applications can run on the same hardware as your screen apps, but can also run on standalone devices. IoT Apps are perfect for doing computations, connect to hardware or manage data-flow between different devices or apps. These are for example also perfect to handle any remote API connections.
 
 **Mobile Apps**
 

@@ -36,9 +36,10 @@
   * [Queue Ticket Signage](/apps/queue-ticket-signage/)
   * [Queue Kiosk](/apps/queue-kiosk/)
   * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
+  * [People Counter (Edge App)](/apps/people-counterd/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
-* **Packages**
+* **Packages*d*
   * [Javascript](/packages/javascript/)
 
 * [Go to the console](https://console.omborigrid.com/)

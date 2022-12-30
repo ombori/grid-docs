@@ -24,3 +24,4 @@
   * [Setting up](/apps/kiosk-endless-aisle/setting-up)
   * [Adding Contents](/apps/kiosk-endless-aisle/adding-content)
   * [Release Notes](/apps/kiosk-endless-aisle/releasenotes/)
+* [**People Counter (Edge App)**](/apps/people-counter/)

@@ -39,7 +39,7 @@
   * [People Counter (Edge App)](/apps/people-counterd/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)
-* **Packages*d*
+* **Packages**
   * [Javascript](/packages/javascript/)
 
 * [Go to the console](https://console.omborigrid.com/)

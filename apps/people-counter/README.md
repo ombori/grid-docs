@@ -1,5 +1,5 @@
 # People Counter (Edge App)
-People Counter (Edge App) is one of the Marketplace apps developed by Ombori on top of the Ombori Grid. It is available in thet `Marketplace -> Apps` page.
+People Counter (Edge App) is one of the Marketplace apps developed by Ombori on top of the Ombori Grid. It is available in the `Marketplace -> Apps` page.
 
 To learn more about Edge Apps and different types of apps in the OmboriGrid, please see the [Getting started section](/getting-started?id=app-types).
 

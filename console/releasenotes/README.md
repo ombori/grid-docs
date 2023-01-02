@@ -1,6 +1,27 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2022-12-28
+
+### Locations
+- Stores and Spaces are renamed to `Locations` in the UI
+- `Locations` tab is introduced in the main sidebar tabs
+- `Library` tab options are moved to new `Menu` tab
+- `Admin` tab is moved to `Menu` tab
+- Bug fixes
+
+### Devices
+- Improved devices create, remove, update, and delete apis (omg-devices)
+
+### Installation
+- Improved installation builds logic
+
+### Marketplace
+- Tenant admins can now install public apps from `Marketplace -> Apps`
+- Improved and optimised marketplace api and rendering
+- Bug fixes
+- New apps created will have `bespoke` sku by default
+
 ## 2022-12-14
 Below is the summary of the console and platform updates deploy since November to December 14, 2022.
 

@@ -19,13 +19,15 @@
   * [Grid Products](/grid-products/)
   * [Grid Signals](/grid-signals/)
 * **General**
-  * [Console Release Notes](/console/releasenotes/)
   * [Settings Schema](/general/schema)
   * [Adding a device](/general/adding-device)
   * [Hardware requirements](/general/hardware-requirements)
   * [Network Requirements](/general/network-requirements)
   * [Onboarding Guide](/general/onboarding-guide)
   * [Contribution Guide](/general/contributing)
+  * [General Upcoming Features](/general/upcoming/)
+* **Console**
+  * [Console Release Notes](/console/releasenotes/)
 * **GridOS**
   * [Setting-up GridOS](/gridos/set-up/v1/)
   * [GridOS Release Notes](/gridos/releasenotes/)

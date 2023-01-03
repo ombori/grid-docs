@@ -9,7 +9,7 @@ Below is the list of upcoming platform features:
 - Estimated release date: January 2023
 
 ### Device lease
-- Ability to temporarily move devices from a Certified Service Provider (CSP) type tenant to its subtenant without having the subtenant billed for the device instance.
+- Ability to temporarily move devices from a Certified Solutions Provider (CSP) type tenant to its subtenant without having the subtenant billed for the device instance.
 - Estimated release date: January 2023
 
 ### Grid Analytics

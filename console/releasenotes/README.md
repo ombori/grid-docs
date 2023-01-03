@@ -4,6 +4,14 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2022-12-28
 
 ### Locations
+- Fixed locations list which had max 50 shown. It should show all locations on the side bar now under `Locations` tab
+
+### Installations
+- Fixed mobile type installation deployment for different environments
+
+## 2022-12-28
+
+### Locations
 - Stores and Spaces are renamed to `Locations` in the UI
 - `Locations` tab is introduced in the main sidebar tabs
 - `Library` tab options are moved to new `Menu` tab

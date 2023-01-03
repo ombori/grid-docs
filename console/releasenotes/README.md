@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2022-12-28
+## 2022-01-03
 
 ### Locations
 - Fixed locations list which had max 50 shown. It should show all locations on the side bar now under `Locations` tab

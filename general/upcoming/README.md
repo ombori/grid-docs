@@ -1,4 +1,4 @@
-# General Upcoming features ⭐
+# General upcoming features ⭐
 
 Below is the list of upcoming platform features:
 

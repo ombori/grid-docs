@@ -7,5 +7,6 @@
 * [@ombori/grid-products-client-react](/packages/javascript/grid-products-client-react)
 * [@ombori/grid-signals](/packages/javascript/signals.md)
 * [@ombori/grid-signals-react](/packages/javascript/signals-react.md)
+* [@ombori/grid-reports](/packages/javascript/grid-reports.md)
 
 [< Back to all documentation](/)

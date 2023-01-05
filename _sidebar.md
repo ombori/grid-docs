@@ -18,6 +18,7 @@
 * **Integration**
   * [Grid Products](/grid-products/)
   * [Grid Signals](/grid-signals/)
+  * [Grid Reports](/grid-reports/api.md)
 * **General**
   * [Settings Schema](/general/schema)
   * [Adding a device](/general/adding-device)

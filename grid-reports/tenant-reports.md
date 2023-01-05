@@ -7,7 +7,7 @@ The following endpoints are available in the API for tenant reports.
 | GET    | [events](/grid-reports/tenant-reports?id=get-tenant-events)                       | Returns list of tenant events based on specified query parameters            |
 | GET    | [sessions](/grid-reports/tenant-reports?id=get-tenant-sessions)                   | Returns list of tenant sessions based on specified query parameters          |
 | GET    | [nps](/grid-reports/tenant-reports?id=get-tenant-nps)                             | Returns tenant nps data                                                      |
-| GET    | [events flow](/grid-reports/tenant-reports?id=get-tenant-eventsFlow)              | Returns tenant events flow data                                              |
+| GET    | [events flow](/grid-reports/tenant-reports?id=get-tenant-events-flow)             | Returns tenant events flow data                                              |
 | GET    | [products events](/grid-reports/tenant-reports?id=get-tenant-products-events)     | Returns list of tenant products events based on specified query parameters   |
 | GET    | [categories events](/grid-reports/tenant-reports?id=get-tenant-categories-events) | Returns list of tenant categories events based on specified query parameters |
 

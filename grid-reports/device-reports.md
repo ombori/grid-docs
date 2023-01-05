@@ -7,7 +7,7 @@ The following endpoints are available in the API for device reports.
 | GET    | [events](/grid-reports/device-reports?id=get-device-events)                       | Returns list of device events based on specified query parameters            |
 | GET    | [sessions](/grid-reports/device-reports?id=get-device-sessions)                   | Returns list of device sessions based on specified query parameters          |
 | GET    | [nps](/grid-reports/device-reports?id=get-device-nps)                             | Returns device nps data                                                      |
-| GET    | [events flow](/grid-reports/device-reports?id=get-device-eventsFlow)              | Returns device events flow data                                              |
+| GET    | [events flow](/grid-reports/device-reports?id=get-device-events-flow)             | Returns device events flow data                                              |
 | GET    | [products events](/grid-reports/device-reports?id=get-device-products-events)     | Returns list of device products events based on specified query parameters   |
 | GET    | [categories events](/grid-reports/device-reports?id=get-device-categories-events) | Returns list of device categories events based on specified query parameters |
 

@@ -36,7 +36,7 @@ The `{base-url}` of the Grid reports API depends on the data residency you're wo
 
 The current API implements 4 dimensions for reports:
 
-- [Tenant dimension](/grid-reports/tenant-reports)
-- [Installation dimension](/grid-reports/installation-reports)
-- [Space dimension](/grid-reports/space-reports)
-- [Device dimension](/grid-reports/device-reports)
+- [Tenant reports](/grid-reports/tenant-reports)
+- [Installation reports](/grid-reports/installation-reports)
+- [Space reports](/grid-reports/space-reports)
+- [Device reports](/grid-reports/device-reports)

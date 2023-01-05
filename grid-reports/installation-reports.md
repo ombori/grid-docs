@@ -7,7 +7,7 @@ The following endpoints are available in the API for installation reports.
 | GET    | [events](/grid-reports/installation-reports?id=get-installation-events)                       | Returns list of installation events based on specified query parameters            |
 | GET    | [sessions](/grid-reports/installation-reports?id=get-installation-sessions)                   | Returns list of installation sessions based on specified query parameters          |
 | GET    | [nps](/grid-reports/installation-reports?id=get-installation-nps)                             | Returns installation nps data                                                      |
-| GET    | [events flow](/grid-reports/installation-reports?id=get-installation-eventsFlow)              | Returns installation events flow data                                              |
+| GET    | [events flow](/grid-reports/installation-reports?id=get-installation-events-flow)             | Returns installation events flow data                                              |
 | GET    | [products events](/grid-reports/installation-reports?id=get-installation-products-events)     | Returns list of installation products events based on specified query parameters   |
 | GET    | [categories events](/grid-reports/installation-reports?id=get-installation-categories-events) | Returns list of installation categories events based on specified query parameters |
 

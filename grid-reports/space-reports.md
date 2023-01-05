@@ -7,7 +7,7 @@ The following endpoints are available in the API for space reports.
 | GET    | [events](/grid-reports/space-reports?id=get-space-events)                       | Returns list of space events based on specified query parameters            |
 | GET    | [sessions](/grid-reports/space-reports?id=get-space-sessions)                   | Returns list of space sessions based on specified query parameters          |
 | GET    | [nps](/grid-reports/space-reports?id=get-space-nps)                             | Returns space nps data                                                      |
-| GET    | [events flow](/grid-reports/space-reports?id=get-space-eventsFlow)              | Returns space events flow data                                              |
+| GET    | [events flow](/grid-reports/space-reports?id=get-space-events-flow)             | Returns space events flow data                                              |
 | GET    | [products events](/grid-reports/space-reports?id=get-space-products-events)     | Returns list of space products events based on specified query parameters   |
 | GET    | [categories events](/grid-reports/space-reports?id=get-space-categories-events) | Returns list of space categories events based on specified query parameters |
 

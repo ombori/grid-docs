@@ -3,11 +3,6 @@
 Below is the list of upcoming platform features:
 
 ## Console
-
-### Settings overriding
-- A smarter installations configuration where you will have a global installation settings for an application, and a posibility to override specific settings on location or device level.
-- Estimated release date: January 2023
-
 ### Device lease
 - Ability to temporarily move devices from a Certified Solutions Provider (CSP) type tenant to its subtenant without having the subtenant billed for the device instance.
 - Estimated release date: January 2023
@@ -16,6 +11,10 @@ Below is the list of upcoming platform features:
 - Better analytics dashboards
 - Gridapp analytics schema
 - Estimated release date: January 2023
+
+### Settings overriding
+- A smarter installations configuration where you will have a global installation settings for an application, and a posibility to override specific settings on location or device level.
+- Estimated release date: February 2023
 
 ### Mass software update
 - Ability to mass update devices' screen and agent modules

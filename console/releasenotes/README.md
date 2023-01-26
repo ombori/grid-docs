@@ -1,6 +1,35 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## [Release Candidate] 2023-01-26
+### Installation group
+- Able to edit an installation group, except "My installations".
+- Able to delete installation group. A group cannot be removed if there are installations under it
+
+### Device lease
+- Ability to [Lease a device](/console/device-lease/)
+- Device lease is available for tenant Admins
+
+### Analytics dashboards
+- reports and dashboards ui improvements
+
+### Marketplace
+- prices logic improvements
+
+### Device leases
+- Device leases fixes
+- Able to lease device from to one tenant
+
+### Locations
+- Fixed locations list which had max 50 shown. It should show all locations on the side bar now under `Locations` tab
+
+
+## 2023-01-03
+
+### Locations
+- Fixed locations list which had max 50 shown. It should show all locations on the side bar now under `Locations` tab
+
+
 ## 2023-01-03
 
 ### Locations

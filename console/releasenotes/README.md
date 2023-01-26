@@ -16,14 +16,6 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Marketplace
 - prices logic improvements
 
-### Device leases
-- Device leases fixes
-- Able to lease device from to one tenant
-
-### Locations
-- Fixed locations list which had max 50 shown. It should show all locations on the side bar now under `Locations` tab
-
-
 ## 2023-01-03
 
 ### Locations

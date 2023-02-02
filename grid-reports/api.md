@@ -17,6 +17,7 @@ For easy configuration and testing, here's a Postman collection you can import i
 | `installation-id` | Your installation id in the grid console.                                            |
 | `space-id`        | Your space id in the grid console.                                                   |
 | `device-id`       | Your device id in the grid console.                                                  |
+| `app-id`          | Your app id in the grid console.                                                     |
 
 ## Request authentication
 - In Grid Console, you need to generate an Access Token under the "Developer" tab.
@@ -34,9 +35,10 @@ The `{base-url}` of the Grid reports API depends on the data residency you're wo
 | AU     | `https://api.omborigrid.com/regions/au/reports`  |
 | UAE    | `https://api.omborigrid.com/regions/uae/reports` |
 
-The current API implements 4 dimensions for reports:
+The current API implements 5 dimensions for reports:
 
 - [Tenant reports](/grid-reports/tenant-reports)
 - [Installation reports](/grid-reports/installation-reports)
 - [Space reports](/grid-reports/space-reports)
 - [Device reports](/grid-reports/device-reports)
+- [App reports](/grid-reports/app-reports)

@@ -4,5 +4,6 @@
   * [Installation reports](/grid-reports/installation-reports)
   * [Space reports](/grid-reports/space-reports)
   * [Device reports](/grid-reports/device-reports)
+  * [App reports](/grid-reports/app-reports)
   
 [< Back to all documentation](/)

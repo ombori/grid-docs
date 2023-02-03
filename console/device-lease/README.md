@@ -6,7 +6,7 @@ Device lease is a feature to temporarily move a device from tenantA to tenantB f
 - Settings and contents - the device will acquire the installation settings and contents in tenantB, while being leased.
 - Expiry - the device will be automatically moved back to tenantA by the system after the lease expires. It will restore the device settings to the state before it was leased.
 
-Device lease is a feature developed for users managing multiple tenants. Generally this can be helpful for Certifified Solution Providers (CSPs) and enterprise users.
+Device lease is a feature developed for users managing multiple tenants. Generally this can be helpful for Certified Solution Providers (CSPs) and enterprise users.
 
 ### Leasing a device
 

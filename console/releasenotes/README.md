@@ -1,6 +1,11 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-02-12
+### Queue App and Installations
+- Updated api for `AU` data residency to a new ISO compliant infrastructure
+- All queue APIs for other data residencies will be migrated soon. We will share an advanced notice and instructions for affected customers.
+
 ## 2023-01-26
 ### Installation group
 - Able to edit an installation group, except "My installations".

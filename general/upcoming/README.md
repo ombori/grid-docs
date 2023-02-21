@@ -1,5 +1,7 @@
 # General upcoming features ⭐
 
+`Note`: The features and dates listed below may change. We will update this page incase there are changes.
+
 Below is the list of upcoming platform features:
 
 ## Console

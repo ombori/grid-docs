@@ -1,6 +1,17 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-02-21 [Release Candidate]
+
+### Installations
+- Settings overriding ui and releases (or builds)
+- Better installations builds UI
+
+`Note`: Settings overriding is currently in early access. It will be available to all tenants by the end of February 2023, as an opt-in feature for several weeks. It will then  be rolled out as the new installation settings page in 2nd week of March 2023. Contact Ombori to schedule a special workshop.
+
+### Marketplace 
+- Prices ui fixes
+
 ## 2023-02-12
 ### Queue App and Installations
 - Updated api for `AU` data residency to a new ISO compliant infrastructure

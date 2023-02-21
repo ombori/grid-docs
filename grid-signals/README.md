@@ -1,7 +1,5 @@
 # Grid Signals
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 Grid Signals is a library to manage sessions, identify users, and tie different sessions of the same user together. Furthermore, you can use it to manage spaces. A space within Grid Signals is a group of physical devices and virtual entities that share the same state in a physical location.
 
 You could, for example, group all devices within a single store together as a space, and then track the activities of all users within that space. This is incredibly useful to understand what is happening within a space.

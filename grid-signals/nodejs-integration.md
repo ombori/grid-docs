@@ -1,7 +1,5 @@
 # Integrating Grid Signals on NodeJS and other Javascript libraries
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 This page describes how you can integrate your NodeJS or Non-react JavaScript-based gridapps.
 
 #### Functions

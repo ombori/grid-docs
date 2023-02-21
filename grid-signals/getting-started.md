@@ -1,7 +1,5 @@
 # Getting Started
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 Install the `Grid Signals library` to any of your applications.
 
 ## Set-up

@@ -1,7 +1,5 @@
 # Event Tracking
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 In Grid Signals, we classify events to be tracked as:
 
 #### Standard Events

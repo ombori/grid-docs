@@ -1,7 +1,5 @@
 # Integrating Grid Signals on IoT Apps and Edge Modules
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 This page describes how you can integrate your IoT Apps and Edge Modules to Grid Signals.
 
 Today, only NodeJS-based modules are supported in our SDK. For python, c#, and other languages, you can use the [Grid Signals REST API](/grid-signals/rest-api) to integrate your modules.

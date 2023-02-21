@@ -1,7 +1,5 @@
 # Integrating Grid Signals on your Websites
 
-!> Grid Signals is currently in pre-release. Breaking changes are not likely but can still occur before production release
-
 This page describes how you can integrate your existing or new websites to Grid Signals.
 
 ## Step 1: Install Web Signals

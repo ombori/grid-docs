@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2023-02-21 [Release Candidate]
+## 2023-02-22
 
 ### Installations
 - Settings overriding ui and releases (or builds)

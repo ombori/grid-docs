@@ -31,47 +31,7 @@ Template layout that aims to increase digital ticket usage
 
 ![](/assets/queue-kiosk-template-3.png ":no-zoom :size=400")
 
-##### Landscape 
-
-![](/assets/queue-kiosk-itab-1.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-2.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-3.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-4.png ":no-zoom :size=400")
-
-##### Portrait
-
-![](/assets/queue-kiosk-itab-portrait-1.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-portrait-2.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-portrait-3.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-itab-portrait-4.png ":no-zoom :size=400")
-
 #### Basic Template
 Basic template layout
 
 ![](/assets/queue-kiosk-template-1.png ":no-zoom :size=400")
-
-##### Landscape 
-
-![](/assets/queue-kiosk-basic-1.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-2.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-3.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-4.png ":no-zoom :size=400")
-
-##### Portrait
-
-![](/assets/queue-kiosk-basic-portrait-1.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-portrait-2.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-portrait-3.png ":no-zoom :size=400")
-
-![](/assets/queue-kiosk-basic-portrait-4.png ":no-zoom :size=400")

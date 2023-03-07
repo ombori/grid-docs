@@ -7,7 +7,6 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 ### App Configurations
 ---
 ![](/assets/developer-access-token-timeout.png ":size=500")
-- **Developer Access Token** (Required) - access token created from "Developers" tab (should have access to Space permission)
 - **App Timeout in seconds** - time when screen is idle before the app resets the session and goes back to idle screen
 
 ![](/assets/mobile-transfer.png ":size=500")

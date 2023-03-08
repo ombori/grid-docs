@@ -29,8 +29,10 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 ![](/assets/layout-2.png ":size=500")
 - **Traditional Layout**
   - **Checked**: Logo is placed on home screen's top center followed by banners and categories
+
   ![](/assets/traditional.png ":size=300")
   - **Unchecked**: Logo is placed on home screen's header with option to place header label
+ 
   ![](/assets/non-traditional.png ":size=300")
 
 - **Product Gallery Orientation**
@@ -167,7 +169,7 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 
 ### Product Card Style
 ![](/assets/product-card-style.png ":size=500")
-- Allows overriding the CSS styles of different elements of the product card displayed on product listing pag
+- Allows overriding the CSS styles of different elements of the product card displayed on product listing page
 - Default product card display<br/>
 ![](/assets/product-card-default.png ":size=300")
 
@@ -218,3 +220,15 @@ Once you press `Publish` button, the Kiosk Endless Aisle application will start 
 You can also deploy your application to other environments (other than `Prod`) after saving changes. Click on the 3 dots button beside "Publish" and choose what environment you want to deploy, it will then be automatically downloaded to the devices having the specified environment settings.
 
 You will notice on the screen of your device a progress bar will display notifying you of it downloading the assets, and then it will start showing the content you've configured.
+
+
+## Enabling Barcode Scan
+If you intend to integrate Barcode scanner to your Endless Aisle Installation, go to the Grid OS device with an attached barcode scanner
+
+1. Go to the device's `Modules` tab
+2. Click `Add module` and search for `Barcode Scanner`
+3. Once the module is added, press `Save Changes` and make sure the barcode scanner is connected to the Grid OS device
+
+
+## Enabling RFID Scan
+?> To learn more about how to add a RFID Reader, visit the [RFID Reader Setup](/apps/rfid-reader/) documentation.

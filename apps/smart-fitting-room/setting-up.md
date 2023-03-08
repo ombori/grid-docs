@@ -1,34 +1,34 @@
-# Setting up Kiosk Endless Aisle
-
-To set up a Kiosk Endless Aisle screen, find the Endless Aisle app in the Marketplace.
+# Setting up Smart Fitting Room
 
 ## Installation
 
-![](/assets/marketplace-endless-aisle.png ":no-zoom :size=400")
+![](/assets/sfr-marketplace.png ":no-zoom :size=400")
 
-Open it up, and proceed to the install button of Kiosk Endless Aisle below the header
+To set up a Smart Fitting Room screen, go to Marketplace > Apps.
 
-![](/assets/marketplace-endless-aisle-install.png ":no-zoom :size=400")
+![](/assets/sfr-install.png ":no-zoom :size=400")
 
-Click install, and fill out the popup and choose how you want it organized
+Search for `smart-fitting-room` app from the list and click `Install`
 
-![](/assets/marketplace-endless-aisle-installation.png ":no-zoom :size=400")
+![](/assets/sfr-install-form.png ":no-zoom :size=400")
+
+Fill out the popup form with the installation name and installation group based on how you want it organized
 
 ## Configuration
 
 Now you've completed the installation, it's time to configure it. 
 First, find your installation in the sidebar where you've installed it. 
 
-Once you've opened it you can configure your kiosk endless aisle application. 
+Once you've opened it you can configure your Smart Fitting Room application. 
 
 As a start, go to "Settings" tab and make sure to set the following:
-![](/assets/grid-settings.png ":no-zoom :size=700")
+![](/assets/sfr-grid-settings.png ":no-zoom :size=700")
 - **Release**: Should be GridApp v2.170.0 or above (latest version as much as possible)
 - **Supported Languages**
 - **Default Language** - will be used by the application (we support 1 language for now on app usage)
 
 
-You can then start with [adding content](/apps/kiosk-endless-aisle/adding-content.md), or you can start by [adding a device](/general/adding-device.md).
+You can then start with [adding content](/apps/smart-fitting-room/adding-content.md), or you can start by [adding a device](/general/adding-device.md).
 
 ## Device Setup Instructions
 

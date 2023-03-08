@@ -26,6 +26,7 @@
   * [Release Notes](/apps/kiosk-endless-aisle/releasenotes/)
 * [**Smart Fitting Room**](/apps/smart-fitting-room/)
   * [Setting up](/apps/smart-fitting-room/setting-up)
+  * [Adding Contents](/apps/smart-fitting-room/adding-content)
   * [Release Notes](/apps/smart-fitting-room/releasenotes/)
 * [**Tasks App**](/apps/tasks-app/)
   * [Setting up](/apps/tasks-app/setting-up)

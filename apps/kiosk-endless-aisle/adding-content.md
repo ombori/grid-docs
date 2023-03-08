@@ -29,8 +29,10 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 ![](/assets/layout-2.png ":size=500")
 - **Traditional Layout**
   - **Checked**: Logo is placed on home screen's top center followed by banners and categories
+
   ![](/assets/traditional.png ":size=300")
   - **Unchecked**: Logo is placed on home screen's header with option to place header label
+ 
   ![](/assets/non-traditional.png ":size=300")
 
 - **Product Gallery Orientation**
@@ -167,7 +169,7 @@ You can add update the content and configuration to a Kiosk Endless Aisle by cli
 
 ### Product Card Style
 ![](/assets/product-card-style.png ":size=500")
-- Allows overriding the CSS styles of different elements of the product card displayed on product listing pag
+- Allows overriding the CSS styles of different elements of the product card displayed on product listing page
 - Default product card display<br/>
 ![](/assets/product-card-default.png ":size=300")
 

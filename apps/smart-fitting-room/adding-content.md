@@ -38,7 +38,7 @@ You can add update the content and configuration to a Smart Fitting Room by clic
     - Duration that screen is idle without any interactions before it prompts the confirmation if customer is still in the room
       - If no response, it redirects the app back to Idle screen
   - **<ins>Timeout to auto-cancel "bring to me" request items (in seconds)</ins>**
-    - Duration before a newly added request in Tasks App is automatically canceled if no update done on the ticket
+    - Duration before a newly added request in Tasks App is automatically canceled if no update (moving ticket to "Preparing") was done on the ticket
 
 ---
 
@@ -48,7 +48,7 @@ You can add update the content and configuration to a Smart Fitting Room by clic
   - List of product type IDs that are filtered out to be displayed on the solution (all children of specified productTypeId will be automatically covered)
 
 ### Disabled Product Types request (Optional)
-  - List of product type IDs that are disabled to be requested to be brought to the fitting room
+  - List of product type IDs where request to be bought to the fitting room is disabled
 
 ---
 
@@ -73,6 +73,9 @@ You can add update the content and configuration to a Smart Fitting Room by clic
 ![](/assets/sfr-features.png ":size=700")
 
   - **Manual End Session**
+  
+    ![](/assets/sfr-end-session.png ":size=500")
+
     - Shows the "End Session" button in the sidebar which allows the user to manually end the session any part of the journey
     - If disabled, session will only end when screen is idle after App Timeout (in seconds)
   
@@ -83,7 +86,7 @@ You can add update the content and configuration to a Smart Fitting Room by clic
     - If enabled, item can't be requested if there's no item quantity for the variant in Grid Products
 
   - **Display suggested retail price**
-    - Option to show suggested retail price along with the active list price (shows as slashed value if active list price is lower than SRP)
+    - Option to show suggested retail price along with the active list price (shown as slashed price if active list price is lower than SRP)
   
   - **Use suggested retail price as base price**
     - Option to make the suggested retail price as the base price
@@ -212,4 +215,4 @@ You will notice on the screen of your device a progress bar will display notifyi
 ## Setup RFID Reader
 After publishing the application, you'll be required to setup any of our supported RFID readers which will be used to detect the garments placed in the Fitting Room.
 
-?> To learn more about how to add a RFID Reader, visit the [RFID Reader Setup](/apps/rfid-edge-app) documentation.
+?> To learn more about how to add a RFID Reader, visit the [RFID Reader Setup](/apps/rfid-reader/) documentation.

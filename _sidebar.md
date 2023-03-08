@@ -42,6 +42,7 @@
   * [Kiosk Endless Aisle](/apps/kiosk-endless-aisle/)
   * [Smart Fitting Room](/apps/smart-fitting-room/)
   * [Tasks App](/apps/tasks-app/)
+  * [RFID Reader](/apps/rfid-reader/)
   * [People Counter (Edge App)](/apps/people-counter/)
 * **Demo**
   * [Flappy Bird Remote](/demo/flappy-bird)

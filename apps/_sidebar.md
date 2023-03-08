@@ -31,4 +31,5 @@
 * [**Tasks App**](/apps/tasks-app/)
   * [Setting up](/apps/tasks-app/setting-up)
   * [Release Notes](/apps/tasks-app/releasenotes/)
+* [**RFID Reader**](/apps/rfid-reader/)
 * [**People Counter (Edge App)**](/apps/people-counter/)

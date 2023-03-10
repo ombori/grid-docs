@@ -12,7 +12,7 @@ In relation to OmboriGrid’s initiative for ISO27001 certification, OmboriGrid 
 
 ## Impacted Applications
 - Queue Management Solution
-- Queue Manager
+  - Queue Manager
   - Queue Ticket
   - All Queue Kiosk variants
   - All Queue Ticket Signage variants

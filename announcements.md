@@ -4,11 +4,11 @@ In relation to OmboriGrid’s initiative for ISO27001 certification, OmboriGrid 
 
 ## Schedule
 | Region  | From                               | To                                 | Expected Unavailability Duration |
-| ------- | ---------------------------------- | ---------------------------------- | -------------------------------- |
+| ------- |------------------------------------|------------------------------------| -------------------------------- |
 | EU      | March 15, 2023<br /> (20:00 UTC+0) | March 15, 2023<br /> (21:00 UTC+0) | 1 hour                           |                
 | IN      | March 14, 2023<br /> (19:00 UTC+0) | March 14, 2023<br /> (20:00 UTC+0) | 1 hour                           |
 | UAE     | March 14, 2023<br /> (20:00 UTC+0) | March 14, 2023<br /> (21:00 UTC+0) | 1 hour                           |
-| US      | March 14, 2023<br /> (08:00 UTC+0) | March 14, 2023<br /> (09:00 UTC+0) | 1 hour                           |
+| US      | March 14, 2023<br /> (09:00 UTC+0) | March 14, 2023<br /> (10:00 UTC+0) | 1 hour                           |
 
 ## Impacted Applications
 - Queue Management Solution

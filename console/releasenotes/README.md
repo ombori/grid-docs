@@ -1,6 +1,26 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-03-20 (Release Candidate)
+
+### Installations
+- Settings overriding MVP release (private access). General availability within March 2023.
+- Settings overriding support for screen and edge installation types
+- Settings v2 switch
+- Settings overriding overriden field indicator
+- Fixed incorrect settings applied to edge app installation devices on deploy
+- Settings v2 save and auto-publish to selected env
+- Settings v2 save and manual deployment
+- Settings overriding fix count of overriden fields
+- Bug fixes
+
+## Marketplace
+- Make Tasks App visible to all admin users of OmboriGrid console
+- Able to install tasks app from marketplace as an Admin
+
+## Devices
+- Add Tizen divce type on the device creation form
+
 ## 2023-02-22
 
 ### Installations

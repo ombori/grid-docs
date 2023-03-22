@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2023-03-20 (Release Candidate)
+## 2023-03-22
 
 ### Installations
 - Settings overriding MVP release (private access). General availability within March 2023.

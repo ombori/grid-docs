@@ -1,6 +1,18 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-04-03 (Release Candidate)
+
+### Tenant branding
+- New feature
+- Tenant level branding and settings that can be referenced on installations' settings
+
+### Products UI v2
+- An improved products UI page in console where you can view, create, edit, and delete products.
+
+### Installations
+- Settings overriding scope indicator support for all ui fields and widgets
+
 ## 2023-03-22
 
 ### Installations

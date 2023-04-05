@@ -3,6 +3,7 @@
 ### Supported Devices
 Following are supported devices
 - Tizen 4.X
+- Tizen 6.5
 - RPi4 - `Ongoing video rendering performance verification with Nested Installations`
 - Intel NUC (x86 architecture)
 - Intel Atom-based devices

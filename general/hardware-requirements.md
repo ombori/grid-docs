@@ -40,3 +40,43 @@ sudo git clone https://github.com/ombori/omb-elo-i2-15-fix
 cd KMS-FixForBlackScreen
 sudo bash fix_blackscreen.sh
 ```
+
+## Tizen 4.X (Deprecated)
+Tizen 4.X can still run on the platform, but we are not developing new features for it.
+
+To add a Tizen 4.X device, follow below instructions:
+- In console, go to installation > devices > connect device > set-up a new device
+- In console, Select "Generic browser" type
+- In tizen TV, go to URL launcher and input `http://tizen.omborigrid.com/2.170.0`
+- In console, enter the 4 letter code
+- Your device should be running the screen application after
+
+## Tizen 6.5
+Tizen 6.5 is currently supported in the OmboriGrid Platform.
+
+To add a Tizen 6.5 device, follow below instructions:
+- In console, go to installation > devices > connect device > set-up a new device
+- In console, Select "Tizen" type. You will see the latest tizen URL for tizen6.5
+- In tizen TV, go to URL launcher and input the specified URL. (example: `http://tizen.omborigrid.com/3.26.2`)
+- In console, enter the 4 letter code
+- Your device should be running the screen application after
+
+### Tizen 6.5 remote supervisor version update
+Remote tizen supervisor version is possible for tizen6.5 using omg cli
+
+```
+omg dev invoke <device> agent setUrl '{url: "http://some.new.url"}'
+```
+
+### Tizen 6.5 Playlist and Ticket Signage Support
+To run playlist signage and ticket signage on Tizen 6.5 TV, you need to use the latest versions.
+
+- API version (Boot version): `3.28.1`
+
+  *API version can be found in `Installation > Settings` tab or `Installation > Settings > Global settings`
+
+- Playlist Signage app version: `5.3.48`
+- Ticket Signage app version: `0.5.39`
+
+
+

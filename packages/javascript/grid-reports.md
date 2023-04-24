@@ -443,7 +443,7 @@ const analyticsSchema: AnalyticsSchema = {
           statusReference: {
             0: {
               label: 'Offline',
-              color: 'green'
+              color: 'red'
             },
             1: {
               label: 'Online',

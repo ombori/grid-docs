@@ -9,7 +9,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Explore the new features in your tenant page `Menu > Media` page
 
 ## Installation and Analytics Dashboards
-- Grid signals and omg-reports based realtime monitoring status support
+- grid-signals and omg-reports based real-time monitoring status support
 
 ### Devices
 - Hotfixes

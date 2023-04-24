@@ -28,8 +28,9 @@
   * [Contribution Guide](/general/contributing)
   * [General Upcoming Features](/general/upcoming/)
 * **Console**
-  * [Device Lease](/console/device-lease/)
   * [Console Release Notes](/console/releasenotes/)
+  * [Device Lease](/console/device-lease/)
+  * [Installations](/console/installations/)
 * **GridOS**
   * [Setting-up GridOS](/gridos/set-up/v1/)
   * [GridOS Release Notes](/gridos/releasenotes/)

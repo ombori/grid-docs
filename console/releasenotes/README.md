@@ -1,6 +1,19 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-04-24
+
+### Media Library
+- ⭐ Free AI Generated Images powered by OpenAI's DALL-E. This can be used for example in your application content.
+- ⭐ Free photo and video collections. This can be used for example in your digital signages with product templates, as a background photo or video.
+- Explore the new features in your tenant page `Menu > Media` page
+
+## Installation and Analytics Dashboards
+- Grid signals and omg-reports based realtime monitoring status support
+
+### Devices
+- Hotfixes
+
 ## 2023-04-03
 
 ### Tenant branding

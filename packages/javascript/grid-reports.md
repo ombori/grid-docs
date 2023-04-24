@@ -422,3 +422,76 @@ export default analyticsSchema;
   - It is possible to customize card layout with grid-* css properties.
 
 ![Week heatmap card](https://ams03pap001files.storage.live.com/y4m5GBexNv6WNrCSvX--6IVMGDAaRMysfbf-INzOPMdMpmbi5PhvFszc7NJD3IIW8Te83sjjywID5811YpR0RLsXUKJI99IMKJre2IaPZKIE4VSjS0gTm5ip7gWASQH879Gz2PcZXKyPj_kwzPy13xXby82Pb7qfz7TylPc_GLBMb74JuIH95lEDZXKKUp9K7_0?width=2348&height=1334&cropmode=none)
+
+### Monitoring Real-time status
+
+> Adds a card with monitored object through grid signals
+
+```
+import { AnalyticsSchema, CardType } from '@ombori/grid-reports';
+
+const analyticsSchema: AnalyticsSchema = {
+  groups: [
+    {
+      name: 'Real-time analytics',
+      cards: [
+        {
+          type: CardType.MonitoringRealtimeStatus,
+          eventType: 'MONITOR_SESAME_DEVICE_STATUS',
+          distinctColumns: ['str1', 'str2', 'deviceId'],
+          title: 'Device status',
+          statusReference: {
+            0: {
+              label: 'Offline',
+              color: 'green'
+            },
+            1: {
+              label: 'Online',
+              color: 'green'
+            },
+            [-1]: {
+              label: 'Unknown',
+              color: 'gray'
+            }
+          }
+        },
+      ],
+    },
+  ],
+};
+
+export default analyticsSchema;
+```
+
+- `type: CardType.MonitoringRealtimeStatus`
+  - **Required**
+- `title: string`
+  - **Required**
+  - Defines card title.
+- `eventType: string`
+  - **Required**
+  - Should start with `MONITOR_` eventType prefix that is sent from a gridapp through grid signals
+- `distinctColumns:`  "str1"
+    | "str2"
+    | "str3"
+    | "str4"
+    | "str5"
+    | "int1"
+    | "int2"
+    | "int3"
+    | "int4"
+    | "int5"
+    | "deviceId"
+  - **Required**
+  - list of column keys to identify unique rows of the report
+- `statusReference: Record<string | number, { label: string; color: string }`
+  - **Optional**
+  - Default when not supplied is
+    - 0 - Offline
+    - 1 - Online
+    - -1 - Unknown
+- `gridStyles: object`
+  - **Optional**
+  - It is possible to customize card layout with grid-* css properties.
+
+![](/assets/realtime.png ":size720")

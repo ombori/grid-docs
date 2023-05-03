@@ -495,3 +495,64 @@ export default analyticsSchema;
   - It is possible to customize card layout with grid-* css properties.
 
 ![](/assets/realtime.png ":size720")
+
+
+### Monitoring 24 Hour History
+
+> Adds a card with monitored object through grid signals with 24hours span
+
+```
+import { AnalyticsSchema, CardType } from '@ombori/grid-reports';
+
+const analyticsSchema: AnalyticsSchema = {
+  groups: [
+    {
+      name: 'Real-time analytics',
+      cards: [
+        {
+          type: CardType.MonitoringStatusHistory,
+          eventType: 'MONITOR_SESAME_DEVICE_STATUS',
+          title: 'Device status history',
+          statusReference: {
+            0: {
+              label: 'Offline',
+              color: 'red'
+            },
+            1: {
+              label: 'Online',
+              color: 'green'
+            },
+            [-1]: {
+              label: 'Unknown',
+              color: 'gray'
+            }
+          }
+        },
+      ],
+    },
+  ],
+};
+
+export default analyticsSchema;
+```
+
+- `type: CardType.MonitoringStatusHistory`
+  - **Required**
+- `title: string`
+  - **Required**
+  - Defines card title.
+- `eventType: string`
+  - **Required**
+  - Should start with `MONITOR_` eventType prefix that is sent from a gridapp through grid signals
+- `statusReference: Record<string | number, { label: string; color: string }`
+  - **Optional**
+  - Default when not supplied is
+    - 0 - Offline
+    - 1 - Online
+    - -1 - Unknown
+- `gridStyles: object`
+  - **Optional**
+  - It is possible to customize card layout with grid-* css properties.
+
+![](/assets/monitoring-status.png ":size720")
+

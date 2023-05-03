@@ -12,6 +12,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 
 ## Installation and Analytics Dashboards
 - grid-signals and omg-reports based 24hour monitoring status widget
+- better settings overriding form handling for array fields
 
 ## 2023-04-24
 

@@ -1,6 +1,18 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-05-03
+
+### Device Service
+- Properly save device status change history for monitoring
+- Device and module twin realtime updates
+
+### Schema Forms
+- Fix queue picker schema to use correct queue api link for IN region
+
+## Installation and Analytics Dashboards
+- grid-signals and omg-reports based 24hour monitoring status widget
+
 ## 2023-04-24
 
 ### Media Library

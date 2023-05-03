@@ -4,7 +4,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2023-05-03
 
 ### Device Service
-- Properly save device status change history for monitoring
+- Better approach in saving device status change history for monitoring
 - Device and module twin realtime updates
 
 ### Schema Forms

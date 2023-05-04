@@ -1,6 +1,11 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-05-04
+
+### Installations and Analytics Dashboards
+- Date from and date to support for the monitoring status history widget suppor
+
 ## 2023-05-03
 
 ### Device Service

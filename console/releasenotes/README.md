@@ -4,7 +4,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2023-05-04
 
 ### Installations and Analytics Dashboards
-- Date from and date to support for the monitoring status history widget suppor
+- Date from and date to support for the monitoring status history widget support
 
 ## 2023-05-03
 

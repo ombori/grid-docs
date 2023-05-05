@@ -189,3 +189,27 @@ By default, all fields you've defined in the settings are mandatory If you want 
 ```javascript
   testSetting?: string;
 ```
+
+## Roles
+Apply a user-role level field visibility. You can use the default roles "admin" | "editor" | "viewer" or the ID of the custom role.
+
+```javascript
+  /**
+   * @title Product price
+   * @default "99 USD"
+   * @roles ["admin", "editor"]
+   */
+  productPrice: string;
+```
+## Settings Overriding context visiblity (Beta)
+Apply a settings overriding context level field visibility. The options are "global" | "space" | "device". If not defined, it will be visible to all contexts.
+
+```javascript
+  /**
+   * @title Product name
+   * @default "My Example Product"
+   * @settingsOverridingRule ["global", "space", "device"]
+   */
+  productName: string;
+  productPrice: string;
+```

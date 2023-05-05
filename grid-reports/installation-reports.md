@@ -2,14 +2,15 @@
 
 The following endpoints are available in the API for installation reports.
 
-| Method | Endpoint                                                                                      | Description                                                                        |
-|--------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| GET    | [events](/grid-reports/installation-reports?id=get-installation-events)                       | Returns list of installation events based on specified query parameters            |
-| GET    | [sessions](/grid-reports/installation-reports?id=get-installation-sessions)                   | Returns list of installation sessions based on specified query parameters          |
-| GET    | [nps](/grid-reports/installation-reports?id=get-installation-nps)                             | Returns installation nps data                                                      |
-| GET    | [events flow](/grid-reports/installation-reports?id=get-installation-events-flow)             | Returns installation events flow data                                              |
-| GET    | [products events](/grid-reports/installation-reports?id=get-installation-products-events)     | Returns list of installation products events based on specified query parameters   |
-| GET    | [categories events](/grid-reports/installation-reports?id=get-installation-categories-events) | Returns list of installation categories events based on specified query parameters |
+| Method | Endpoint                                                                                              | Description                                                                        |
+|--------|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| GET    | [events](/grid-reports/installation-reports?id=get-installation-events)                               | Returns list of installation events based on specified query parameters            |
+| GET    | [sessions](/grid-reports/installation-reports?id=get-installation-sessions)                           | Returns list of installation sessions based on specified query parameters          |
+| GET    | [nps](/grid-reports/installation-reports?id=get-installation-nps)                                     | Returns installation nps data                                                      |
+| GET    | [events flow](/grid-reports/installation-reports?id=get-installation-events-flow)                     | Returns installation events flow data                                              |
+| GET    | [products events](/grid-reports/installation-reports?id=get-installation-products-events)             | Returns list of installation products events based on specified query parameters   |
+| GET    | [categories events](/grid-reports/installation-reports?id=get-installation-categories-events)         | Returns list of installation categories events based on specified query parameters |
+| GET    | [monitoring events](/grid-reports/installation-reports?id=get-installation-monitoring-events-history) | Returns list of grouped monitoring events based on specified query parameters      |
 
 ?> `{tenant-id}` is your tenant id in the grid console.
 
@@ -193,3 +194,37 @@ To use query parameters, add them as `GET` properties to the `URL`.
 |-----------------|--------|----------------------------------------------------------------------------------------------------------------|-------------|----------|
 | dateFrom        | string | Defines the starting date                                                                                      | 2022-12-26  | true     |
 | dateTo          | string | Defines the final date                                                                                         | 2023-01-02  | true     |
+
+### [GET] Installation monitoring events history
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/installations/{installation-id}/monitoring**
+
+Returns list of grouped monitoring events
+
+#### Response
+```
+[
+  {
+    "id": string,
+    "eventType": string,
+    "spaceId": string,
+    "installationId": string,
+    "deviceId": string,
+    "str1": boolean,
+    "str2": string,
+    "history": Array<{
+      int1: number;
+      eventTime: string;
+    }>
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description                                                                                                    | Example                | Required |
+|-----------------|--------|----------------------------------------------------------------------------------------------------------------|------------------------|----------|
+| eventType       | string | Defines the monitoring event to fetch or show                                                                  | MONITOR_XOVIS_SENSOR   | true     |
+| dateFrom        | string | Defines the starting date                                                                                      | 2022-12-26             | true     |
+| dateTo          | string | Defines the final date                                                                                         | 2023-01-02             | true     |

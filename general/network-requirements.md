@@ -38,32 +38,32 @@ For devices running GridOS v1.0.3 or higher, whitelist the following IP addresse
 #### Australia
 | IP Address      | Port | Protocol   | Description       |
 | --------------- |----- | ---------- | ----------------  |
-| 20.103.183.92   | 443  | UDP        | Provisioning      |
-| 20.211.138.232  | 443 | UDP        | Post-provisioning  |
+| 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
+| 20.211.138.232  | 443  | TCP & UDP  | Post-provisioning |
 
 #### European Union
 | IP Address      | Port | Protocol   | Description       |
 | --------------- |----- | ---------- | ----------------  |
-| 20.103.183.92   | 443  | UDP        | Provisioning      |
-| 20.126.185.169  | 443  | UDP        | Post-provisioning |
+| 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
+| 20.126.185.169  | 443  | TCP & UDP  | Post-provisioning |
 
 #### India
 | IP Address      | Port | Protocol   | Description       |
 | --------------- |----- | ---------- | ----------------  |
-| 20.103.183.92   | 443  | UDP        | Provisioning      |
-| 20.219.43.36    | 443  | UDP        | Post-provisioning |
+| 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
+| 20.219.43.36    | 443  | TCP & UDP  | Post-provisioning |
 
 #### United Arab Emirates
 | IP Address      | Port | Protocol   | Description       |
 | --------------- |----- | ---------- | ----------------  |
-| 20.103.183.92   | 443  | UDP        | Provisioning      |
-| 20.233.13.206   | 443  | UDP        | Post-provisioning |
+| 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
+| 20.233.13.206   | 443  | TCP & UDP  | Post-provisioning |
 
 #### United States
-| IP Address      | Port | Protocol  | Description       |
+| IP Address      | Port | Protocol   | Description       |
 | --------------- |----- | ---------- | ----------------  |
-| 20.103.183.92   | 443  | UDP        | Provisioning      |
-| 20.121.94.131   | 443  | UDP        | Post-provisioning |
+| 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
+| 20.121.94.131   | 443  | TCP & UDP  | Post-provisioning |
 
 ### Employee Tools and Queue Management
 

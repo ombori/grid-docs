@@ -1,6 +1,20 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-06-01
+### Analytics Data Export
+- Menu -> Data export
+- Ability to export analytics raw data of your tenants through console and APIs with developer token
+
+### Alerts (Private Early Access)
+- Menu -> Alerts
+- Ability to configure device and application based alert rules and alert actions
+- This will be enabled for everyone in first week of June
+
+### Spaces
+- Ability to delete a space from space page
+- Prevent a space to be deleted when there are associated devices or mobile endpoints
+
 ## 2023-05-04
 
 ### Installations and Analytics Dashboards

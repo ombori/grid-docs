@@ -1,6 +1,62 @@
 # Endless Aisle Release notes
 The Endless Aisle application receives continuous updates. All the recent release notes can be found below in order of release. 
 
+## v5.4.7
+- Stickers / label UI update on product listing
+
+## v5.4.6
+- Chinese translation updates
+
+## v5.4.5
+- Stickers / label UI update on product listing
+
+## v5.4.4
+- Fix offline status logic
+
+## v5.4.3
+- Language Picker feature
+- Custom configurable content below product price in PDP
+- Chinese language (zh-CN) support
+- Option to open a modal when Mobile handover QR code is clicked
+- Add Banner type that opens flight "Departures" screen
+
+## v5.4.2
+- Fix offline status logic
+
+## v5.4.1
+- Fix reset of RFID detection state on app timeout
+
+## v5.4.0
+- Improve product listing page performance
+
+## v5.3.3
+- Only show product types with products in navigation hierarchy
+- Track events when RFID / barcode detection returns product not found
+
+## v5.3.2
+- Fix price period condition checks
+
+## v5.3.1
+- Additional checkout information on Tasks App ticket
+
+## v5.3.0
+- Tasks App picker
+
+## v5.2.7
+- EAN conversion from EPC in app-level only (reduced latency)
+
+## 5.2.6
+- Norwegian translation support
+
+## v5.2.5
+- Fix product list logic (active status of products)
+
+## v5.2.4
+- Adjustments on Grid Products service updates
+
+## v5.2.3
+- Adjustments on Grid Products service updates
+
 ## v5.2.2
 - Configurable delivery options for "Print Barcode with Customer Info, and Tasks App" checkout method
 - Fix promo code check to be not case sensitive

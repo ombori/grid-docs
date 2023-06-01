@@ -1,5 +1,35 @@
 # Grid Product Release Notes
 Grid Product receives continuous updates. All the recent release notes can be found below in order of release. 
+s
+## 2023-06-01
+- Search endpoint fix for product types
+
+## 2023-05-11
+- Search endpoint logic fix
+
+## 2023-05-10
+- Improved products list endpoint (v2)
+
+## 2023-05-05
+- Product type endpoint to return results with products only
+
+## 2023-04-20
+- Remove leading zeros for barcode related fields (europeanArticleNumber, universalProductCode, globalTradeItemNumber)
+
+## 2023-04-19
+- Improved product by barcode endpoint
+
+## 2023-02-23
+- Fixes on product push operations (image processing)
+
+## 2023-01-26
+- Fix upload products by excel endpoint
+
+## 2023-01-25
+- Product by barcode lookup with raw value and one leading 0
+
+## 2023-01-12
+- Price list type extension
 
 ## 2022-10-25
 - Update base URL endpoints to https://api.omborigrid.com/regions/{data-residency}/products/v1/tenants

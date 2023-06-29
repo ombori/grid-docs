@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 20230629
+## 2023-06-29
 ### Alerts
 - Menu -> Alerts
 - Configurable device alerts

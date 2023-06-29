@@ -14,7 +14,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Separate documentation will be released
 
 ### omg-devices service
-- Updated omg-devices service for Grid alerts
+- Updated omg-devices service for Grid alerts support
 
 ## 2023-06-05
 ### Menu

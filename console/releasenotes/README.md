@@ -1,6 +1,26 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 20230629
+### Alerts
+- Menu -> Alerts
+- Configurable device alerts
+- Grid Alerts v2
+- Separate documentation will be released soon
+
+### Tenant settings
+- Tenant level settings
+- This can be used as a global reference for all installations
+- Separate documentation will be released
+
+### omg-devices service
+- Updated omg-devices service for Grid alerts
+
+## 2023-06-05
+### Menu
+- Menu -> Data export
+- Ability to export analytics raw data of your tenants through console and APIs with developer token
+
 ## 2023-06-01
 ### Analytics Data Export
 - Menu -> Data export

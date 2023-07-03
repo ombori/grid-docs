@@ -5,7 +5,9 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Alerts
 - App Analytics based alerts
 - Added `Device daily analytics session count` alert rule condition type
-- Ability to get daily notifications for devices which do not meet the specificied analytics session count threshold, in the previous day
+- Ability to get daily notifications for devices which do not meet the specified analytics session count threshold, in the previous day
+- Added "Is enabled" column in the rules list view
+- Hide smsRecipients field until sms cost/billing clarified
 
 ## 2023-06-29
 ### Alerts

@@ -1,6 +1,11 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-07-03
+### Alerts
+- Added `Device daily analytics session count` alert rule condition type
+- Ability to get daily notifications for devices which do not meet the specificied condition based on its analytics session count in the previous day
+
 ## 2023-06-29
 ### Alerts
 - Menu -> Alerts

@@ -6,5 +6,6 @@
   * [Device reports](/grid-reports/device-reports)
   * [App reports](/grid-reports/app-reports)
   * [Real-time reports](/grid-reports/realtime-reports)
+  * [Raw Data Export (Parquet)](/grid-reports/raw-data-export)
   
 [< Back to all documentation](/)

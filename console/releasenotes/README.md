@@ -10,7 +10,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Renamed `Locations` to `Spaces` in console UI labels
 - Introduced nested spaces
 - Able to select a parent of a space in settings form
-- Added space type field. "Location" | "Section" | "Custom"
+- Added space type field. "Location" | "Section" | "Floor" | "Custom"
 - This will support apps with reports that need to show breakdown per space (example, per SCO) in the installation level. Separate documentation will be released.
 
   ![](/assets/20230711/nested-spaces.png ":size=512 :no-zoom")

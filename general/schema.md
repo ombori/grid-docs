@@ -219,7 +219,7 @@ Pick a space and ability to
 
 Available uiOptions:
 - filterTypes: string[];
-  - options: "location" | "sections" | "floor" | "custom"
+  - options: "location" | "section" | "floor" | "custom"
 - showOnlyWithExternalId: boolean;
 
 Example:
@@ -228,7 +228,7 @@ Example:
   /**
    * @title Space
    * @ui spacePicker
-   * @uiOptions { filterTypes: ["location" , "sections"], showOnlyWithExternalId: true }
+   * @uiOptions { filterTypes: ["location" , "section"], showOnlyWithExternalId: true }
    */
   space: { id: string; externalId: string };
 ```

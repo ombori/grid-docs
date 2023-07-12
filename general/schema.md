@@ -228,7 +228,7 @@ Example:
   /**
    * @title Space
    * @ui spacePicker
-   * @uiOptions { filterTypes: "location,sections", showOnlyWithExternalId: true }
+   * @uiOptions { filterTypes: ["location" , "sections"], showOnlyWithExternalId: true }
    */
   space: { id: string; externalId: string };
 ```

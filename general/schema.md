@@ -201,7 +201,7 @@ Apply a user-role level field visibility. You can use the default roles "admin" 
    */
   productPrice: string;
 ```
-## Settings Overriding context visiblity (Beta)
+## Settings Overriding context visiblity
 Apply a settings overriding context level field visibility. The options are "global" | "space" | "device". If not defined, it will be visible to all contexts.
 
 ```javascript
@@ -212,4 +212,23 @@ Apply a settings overriding context level field visibility. The options are "glo
    */
   productName: string;
   productPrice: string;
+```
+
+## Space Picker
+Pick a space and ability to
+
+Available uiOptions:
+- filterTypes: string
+  - options: "location" | "sections" | "floor" | "custom"
+- showOnlyWithExternalId: boolean
+
+Example:
+
+```javascript
+  /**
+   * @title Space
+   * @ui spacePicker
+   * @uiOptions { filterTypes: "location,sections", showOnlyWithExternalId: true }
+   */
+  space: { id: string; externalId: string };
 ```

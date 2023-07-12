@@ -23,6 +23,10 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Reports
 - EventsCount card UI fixes
 
+### Widgets
+- Space picker field
+- `ui:options` support for ts-schema library
+
 ## 2023-07-03
 ### Alerts
 - App Analytics based alerts

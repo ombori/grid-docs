@@ -218,9 +218,9 @@ Apply a settings overriding context level field visibility. The options are "glo
 Pick a space and ability to
 
 Available uiOptions:
-- filterTypes: string
+- filterTypes: string[];
   - options: "location" | "sections" | "floor" | "custom"
-- showOnlyWithExternalId: boolean
+- showOnlyWithExternalId: boolean;
 
 Example:
 

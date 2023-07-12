@@ -1,6 +1,13 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-07-12
+### GridApps
+- Fix issue which uses older versions of app on install from the marketplace
+
+### Devices
+- Fix outdated version logic for associated device installation
+
 ## 2023-07-11
 ### Data export
 - Fix permissions in console UI

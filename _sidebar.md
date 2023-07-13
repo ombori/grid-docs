@@ -34,6 +34,8 @@
 * **GridOS**
   * [Setting-up GridOS](/gridos/set-up/v1/)
   * [GridOS Release Notes](/gridos/releasenotes/)
+* **Other Core Services**
+  * [Grid Alerts](/core-services/grid-alerts/)
 * **Marketplace Apps**
   * [Apps Documentation](/apps/)
   * [Signage Playlist](/apps/signage/)

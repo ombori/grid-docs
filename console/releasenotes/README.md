@@ -1,6 +1,11 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-07-24
+### Reports
+- SCO Breakdown dynamic widget per space
+- [Reference documentation for Events] https://ombori.atlassian.net/wiki/spaces/IP/pages/1066795009/ITAB+Sesame+Specs+for+Sending+Grid+Signals+Events
+
 ## 2023-07-12
 ### GridApps
 - Fix issue which uses older versions of app on install from the marketplace

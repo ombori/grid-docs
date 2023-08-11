@@ -1,6 +1,6 @@
 # Grid Alerts
 
-Grid Alerts is a platform features which monitors devices health and sends notifications to specified recipients when a rule's condition is met. You can access the Alerts feature in your tenant page, and navigate to `Menu > Alerts`.
+Grid Alerts is a platform feature which monitors devices health and sends notifications to specified recipients when a rule's condition is met. You can access the Alerts feature in your tenant page, and navigate to `Menu > Alerts`.
 
 
 

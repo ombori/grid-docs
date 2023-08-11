@@ -227,6 +227,52 @@ export default analyticsSchema;
 
 ![Events list card](https://ams03pap001files.storage.live.com/y4mAJFQEl1_ZEIGdfFQ695_G52U_4KsMLL0mrqMm1BEKNWcgxD-xXiPkGPVyZ0UwsF3Bx3MYZtFlCYRv4lQoBVtsmfRTXJeLrfjwM6mTnhMPuWX5J3jmLLUQDF2AprtBf77LpS-_K0EHWyL01d6s1PnbQqujahsDIo9XJYbzdf7fHsCWYzO4EHMmB_A8tUYAhv_?width=1108&height=968&cropmode=none)
 
+### EventsCount card
+
+> Adds a card showing the total count of a specific event type.
+
+```
+import { AnalyticsSchema, CardType, InteractionType } from '@ombori/grid-reports';
+
+const analyticsSchema: AnalyticsSchema = {
+  groups: [
+    {
+      name: "SCO Breakdown",
+      cards: [
+        {
+          type: CardType.EventsCount,
+          title: "SCO Breakdown",
+          eventType: "CHECKOUT_ISSUE_RECEIPT",
+          dataSource: DataSourceBaseEntity.Space,
+        },
+      ],
+    },
+  ],
+};
+
+export default analyticsSchema;
+```
+
+**Options**
+
+- `type: CardType.EventsCount`
+  - **Required**
+- `title: string`
+  - **Required**
+  - Defines card title.
+- `eventType: string`
+  - **Required**
+  - Defines the type of event type to count
+- `dataSource: string`
+  - **Optional**
+  - Possible values are "tenant", "space", "installation"
+  - If "tenant" is set, it will count all the occurence of specified event type on tenant level
+  - If "space" is set, it will show the breakdown of the count of the specific event type occurence per space
+  - If "installation" is set, it will show the breakdown of the count of the specific event type occurence per installation
+  - Default value is "installation"
+
+![Events list card](https://ams03pap001files.storage.live.com/y4mAJFQEl1_ZEIGdfFQ695_G52U_4KsMLL0mrqMm1BEKNWcgxD-xXiPkGPVyZ0UwsF3Bx3MYZtFlCYRv4lQoBVtsmfRTXJeLrfjwM6mTnhMPuWX5J3jmLLUQDF2AprtBf77LpS-_K0EHWyL01d6s1PnbQqujahsDIo9XJYbzdf7fHsCWYzO4EHMmB_A8tUYAhv_?width=1108&height=968&cropmode=none)
+
 ### EventsFunnel card
 
 > Adds card with events funnel based on predefined list of events.

@@ -1,10 +1,29 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-08-11
+### Installations
+- Hide the API or Boot version field in installation `Settings` form
+  - The build system will automatically detect and use the latest stable boot version on build time
+  - Existing builds will not be affected
+  - The stable boot version will be managed by OmboriGrid, who will also guarantee backward compatibility
+- New Build or release page. A dedicated page which shows the information of an installation build. Go to installation > builds > select a build
+- Improved version dropdown picker UI
+
+### Reports
+- Ability to pick previous dates beyond 60days from the current date. Before it was not possible.
+- Limit the maximum date range that can be selected up to 60 days
+
+### Devices
+- Removed RPI4 in the device type options in the Device Set-up form. Please use Giada DN74 for rpi4 alternative.
+- Existing RPI4 will not be affected. It will continue to run and will receive updated contents. Adding new one is not anymore possible.
+- Added [GridOS Giada DN74](/general/hardware-requirements?id=giada-dn74) in the device type options in the Device Set-up form.
+
 ## 2023-07-24
 ### Reports
-- SCO Breakdown dynamic widget per space
-- [Reference documentation for Events] https://ombori.atlassian.net/wiki/spaces/IP/pages/1066795009/ITAB+Sesame+Specs+for+Sending+Grid+Signals+Events
+- Ability to show events count card in the console dashboards
+- Ability to show events count breakdown per space
+- [Reference documentation EventsCount card](http://localhost:3000/#/packages/javascript/grid-reports?id=eventscount-card)
 
 ## 2023-07-12
 ### GridApps

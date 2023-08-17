@@ -86,10 +86,17 @@ The body of the request should be a [Space]((/grid-products/data-model?id=space)
 | -------------- | ------ | ------------------------------------------------------- | -------------------- |
 | organizationId | string | The organization/tenant where the space will be created | `61cxxxxxxxxxxxxxxx` |
 | displayName    | string | The name of the space to be displayed                   | `Store #1`           |
-| type           | string | The type of the space (`location`,`section`,`custom`) | `location` |
+| type           | string | The type of the space (`location`,`section`,`custom`)   | `location`           |
 | longitude      | number | Longitude of the space                                  | `59.32960273523599`  |
 | latitude       | number | Latitude of the space                                   | `18.06886331765492`  |
 | externalId     | string | Id of the space managed externally                      | `store_1`            |
+| country        | string | The name of the country                                 | `Sweden`             |
+| state          | string | The name of the state                                   | `Sweden`             |
+| city           | string | The name of the city                                    | `Stockholm`          |
+| address        | string | The address                                             | `Street#1`           |
+| postcode       | string | Represents the postal code                              | `111 37`             |
+| weeklySchedule | object | The normal opening hours                                | `{"0": {"from": "08:00", "to": "17:30", "isOpen": true}, ...}`  "0" represents Monday |
+| notes          | string | add notes to the space                                  |   `Note#1 sample`    |
 
 #### Response
 ```
@@ -119,6 +126,13 @@ The body of the request should be a [Space]((/grid-products/data-model?id=space)
 | longitude      | number | Longitude of the space                                  | `59.32960273523599`  |
 | latitude       | number | Latitude of the space                                   | `18.06886331765492`  |
 | externalId     | string | Id of the space managed externally                      | `store_1`            |
+| country        | string | The name of the country                                 | `Sweden`             |
+| state          | string | The name of the state                                   | `Sweden`             |
+| city           | string | The name of the city                                    | `Stockholm`          |
+| address        | string | The address                                             | `Street#1`           |
+| postcode       | string | Represents the postal code                              | `111 37`             |
+| weeklySchedule | object | The normal opening hours                                | `{"0": {"from": "08:00", "to": "17:30", "isOpen": true}, ...}`  "0" represents Monday |
+| notes          | string | add notes to the space                                  |   `Note#1 sample`    |
 
 #### Response
 ```

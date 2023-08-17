@@ -5,7 +5,7 @@ This is the API reference for Grid Products integration.
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
 
-?> Download the [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+?> Download the [Postman Collection](https://api.postman.com/collections/28975768-2d6160c4-9ff1-4b0e-a867-897a5243e3ae?access_key=PMAT-01H81FEX5QSF7WPC3282QG1JA8)
 
 - URL: 
   - Please change the values for `<tenant-id>`, `<environment>`, and `<space-id>`

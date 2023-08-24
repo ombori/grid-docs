@@ -5,7 +5,7 @@ This is the API reference for Spaces integration.
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
 
-?> Download the [Postman Collection](https://www.getpostman.com/collections/60c91683eadfae325b83)
+?> Download the [Postman Collection](https://elements.getpostman.com/redirect?entityId=28975768-13915009-a9d3-4f9c-acde-b8dbbf7e2a12&entityType=collection)
 
 - URL: 
   - Please change the values for `<tenant-id>`, `<environment>`, and `<space-id>`

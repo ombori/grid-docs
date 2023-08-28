@@ -12,6 +12,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Devices
 - Tunnel links manual create, edit, delete and connect
 - Tunnel link hierarchy (parent-child relationship)
+- Able to create tunnel links for GridOS devices
 
 ## 2023-08-11
 ### Installations

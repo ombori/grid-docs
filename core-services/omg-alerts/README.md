@@ -4,7 +4,7 @@ Grid Alerts is a platform feature which monitors devices health and sends notifi
 
 
 
-  ![](/assets/grid-alerts.png ":size=512 :no-zoom")
+  ![](/assets/omg-alerts.png ":size=512 :no-zoom")
 
 **There are three (3) main functions of Grid Alerts**
 - monitors devices health
@@ -19,10 +19,10 @@ In order to monitor a device, it needs to have the `isMonitored` option enabled 
 
 Before creating an alert rule, we must identify which user emails or endpoints should receive a notification, and group them according to the desired way.
 
-See the [Notification Groups](/core-services/grid-alerts/notification-groups/) section for the details.
+See the [Notification Groups](/core-services/omg-alerts/notification-groups/) section for the details.
 
 ## Alert Rules
 
 After defining the recipients, we can then create new or update existing Alert Rules.
 
-See the [Alert Rules](/core-services/grid-alerts/alert-rules/) section for the details.
+See the [Alert Rules](/core-services/omg-alerts/alert-rules/) section for the details.

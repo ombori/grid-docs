@@ -1,6 +1,18 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-08-28
+### Tenant
+- Ability to see and copy tenant slug, name, and ID on tenant name hover or click
+- If you want to switch tenants, click the switch icon
+
+### Installation
+- Show language switcher for the Settings overriding mode or layout when multi-language support is enabled
+
+### Devices
+- Tunnel links manual create, edit, delete and connect
+- Tunnel link hierarchy (parent-child relationship)
+
 ## 2023-08-11
 ### Installations
 - Hide the API or Boot version field in installation `Settings` form

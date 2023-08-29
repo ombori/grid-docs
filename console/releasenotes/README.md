@@ -1,6 +1,29 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-08-29 (Release Candidate)
+### Media
+- Region-based media storage
+- Media upload improvements
+
+### Devices
+- Introduction of device bundles. A separate documentation will be released before production deployment. It's generally about better device components management.
+- Outdated device components logic improvements
+
+### Deployments
+- Ability to rollback installation settings from a previous state. Right now you can only rollback builds, but not the settings value in the forms.
+
+### Installation
+- Added link to marketplace application from the installation page, below the installation name.
+
+### Marketplace
+- Fixed gridapp version action button visibility on safari browser
+
+### Media Content Scheduler
+- Built API endpoints for content channel CRUD
+- Built API endpoints for content segment CRUD
+- Built API endpoints for content tag CRUD
+
 ## 2023-08-28
 ### Tenant
 - Ability to see and copy tenant slug, name, and ID on tenant name hover or click

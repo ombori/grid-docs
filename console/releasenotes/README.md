@@ -5,7 +5,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Media
 - Region-based media storage
 - Media upload improvements
-- Grid Media Converter v2 - an Ombori developed and managed service to convert uploaded media to an optimized version for all supported HWs accross the platform
+- Grid Media Converter v2 - an Ombori developed and managed service to convert uploaded media to an optimized version for all supported HWs across the platform
 
 ### Devices
 - Introduction of device bundles. A separate documentation will be released before production deployment. It's generally about better device components management.

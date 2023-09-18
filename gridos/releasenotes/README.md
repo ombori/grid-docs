@@ -1,12 +1,28 @@
-# GridOS Release Notes
+# Grid Device Bundles and GridOS Release Notes
 
-## Latest Stable Versions: Direct Download Links
-- [Download GridOS v1.2.1 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.2.1.amd64.img.xz)
-- [Download GridOS v1.0.3 for Raspberry Pi 4 (arm64-based devices)](https://os.omborigrid.com/gridos.1.0.3.rpi.img.xz)
-- [Download GridOS v1.0.3 for Surface Go and Pro](http://os.omborigrid.com/gridos.1.0.3.surface.img.xz)
+A Grid Device Bundle is a cutting-edge, flashable image specifically designed for AMD and Giada DN74 architectures. The image contains a GridOS, a robust operating system, and comes with pre-loaded edge applications or Docker images, for seamless and ready-to-deploy edge solutions.
 
+[Read more about device bundles.](/gridos/device-bundles/)
 
-## v1.2.1 (Stable Release for x86-64 arch)
+## `Beta versions`
+
+### Direct Download Link
+- [Download Device bundle v1.0.7 for amd64-based devices](http://os.omborigrid.com/griddevice.1.0.7.amd64.img.xz)
+
+- [Download Device bundle v1.0.7 for Giada dn74-based devices](http://os.omborigrid.com/griddevice.1.0.7.dn74.img.xz)
+
+### Network Requirements
+This version requires different IP addresses to be whitelisted on a network with firewall. [See network requirements for GridOS2.X.](/general/network-requirements?id=gridos-v2)
+
+### Change log
+- Introduced [Grid Device Bundles](/gridos/device-bundles/)
+- Ubuntu 23.04 base
+- Better and more reliable Grid Tunnel pre-loaded on the device
+- Grid Edge runtime. An Ombori developed edge runtime as a substitute to Microsoft's edge runtime. The device is still using IoT Hub under-the-hood. It was built to have more control and stability of the edge runtime.
+- Pre-loaded edge, agent, and screen modules
+- Bug fixes
+
+## `v1.2.1 (Stable Release for x86-64 arch)`
 ### Direct Download Link
 - [Download GridOS v1.2.1 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.2.1.amd64.img.xz)
 
@@ -18,7 +34,7 @@
 - Updated embedded screen and agent modules
 - Added support for open wifi network
 
-## v1.0.3 (Stable Release)
+## `v1.0.3 (Stable Release)`
 
 ### Direct Download Links
 - [Download GridOS v1.0.3 for Intel NUC devices (amd64-based devices)](http://os.omborigrid.com/gridos.1.0.3.amd64.img.xz)

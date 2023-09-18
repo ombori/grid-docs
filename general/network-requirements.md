@@ -12,6 +12,12 @@ This document outlines the network requirements for devices connected to the Omb
     - [India](#in)
     - [United Arab Emirates](#uae-1)
     - [United States](#us-1)
+  - [GridOS v2+](#gridos-v2)
+    - [Australia](#au-2)
+    - [European Union](#eu-2)
+    - [India](#in-2)
+    - [United Arab Emirates](#uae-2)
+    - [United States](#us-2)
 - [Employee Tools and Queue Management](#employee-tools-and-queue-management)
   - [European Union](#queue-management-european-union)
   - [United States](#queue-management-united-states)
@@ -64,6 +70,39 @@ For devices running GridOS v1.0.3 or higher, whitelist the following IP addresse
 | --------------- |----- | ---------- | ----------------  |
 | 20.103.183.92   | 443  | TCP & UDP  | Provisioning      |
 | 20.121.94.131   | 443  | TCP & UDP  | Post-provisioning |
+
+### GridOS v2+
+
+For devices running GridOS v2 or higher, whitelist the following IP addresses based on tenant's data-residency to establish connectivity to the Ombori Grid.
+
+#### Australia
+| IP Address      | Port | Protocol   | Description                           |
+| --------------- |----- | ---------- | ------------------------------------  |
+| 20.240.22.238   | 443  | TCP        | Provisioning                          |
+| 4.147.66.95     | 443  | TCP        | Post-provisioning                     |
+
+#### European Union
+| IP Address      | Port | Protocol   | Description                           |
+| --------------- |----- | ---------- | ------------------------------------  |
+| 20.240.22.238   | 443  | TCP        | Provisioning / Post-provisioning      |
+
+#### India
+| IP Address      | Port | Protocol   | Description                           |
+| --------------- |----- | ---------- | ------------------------------------  |
+| 20.240.22.238   | 443  | TCP        | Provisioning                          |
+| 20.244.60.6     | 443  | TCP        | Post-provisioning                     |
+
+#### United Arab Emirates
+| IP Address      | Port | Protocol   | Description                           |
+| --------------- |----- | ---------- | ------------------------------------  |
+| 20.240.22.238   | 443  | TCP        | Provisioning                          |
+| 20.203.114.39   | 443  | TCP        | Post-provisioning                     |
+
+#### United States
+| IP Address      | Port | Protocol   | Description                           |
+| --------------- |----- | ---------- | ------------------------------------  |
+| 20.240.22.238   | 443  | TCP        | Provisioning                          |
+| 20.237.18.225   | 443  | TCP        | Post-provisioning                     |
 
 ### Employee Tools and Queue Management
 

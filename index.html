@@ -57,6 +57,11 @@
                     },
                 ],
             };
+
+            window.addEventListener('hashchange', function() {
+                var element = document.querySelector(location.hash);
+                if (element) element.open = true;
+            });
         </script>
         <script src="/scripts.min.js"></script>
         <style>

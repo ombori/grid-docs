@@ -20,10 +20,10 @@
   * [Grid Signals](/grid-signals/)
   * [Grid Reports](/grid-reports/api.md)
 * **General**
+  * [Network Requirements](/general/network-requirements)
   * [Settings Schema](/general/schema)
   * [Adding a device](/general/adding-device)
   * [Hardware requirements](/general/hardware-requirements)
-  * [Network Requirements](/general/network-requirements)
   * [Onboarding Guide](/general/onboarding-guide)
   * [Contribution Guide](/general/contributing)
   * [General Upcoming Features](/general/upcoming/)
@@ -31,10 +31,11 @@
   * [Console Release Notes](/console/releasenotes/)
   * [Device Lease](/console/device-lease/)
   * [Installations](/console/installations/)
-* **GridOS**
+* **Device Bundles and GridOS**
   * [Setting-up GridOS](/gridos/set-up/v1/)
-  * [GridOS Release Notes](/gridos/releasenotes/)
-* **Other Co Services**
+  * [Grid Device Bundles](/gridos/device-bundles/)
+  * [Release Notes](/gridos/releasenotes/)
+* **Other Core Services**
   * [Grid Alerts](/core-services/omg-alerts/)
   * [Grid Device Stream](/core-services/omg-device-stream/)
 * **Marketplace Apps**

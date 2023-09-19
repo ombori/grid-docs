@@ -59,12 +59,12 @@ curl --location --request POST 'https://api.omborigrid.com/api/device-bundle' \
             "url": "vnxedgeappregistry.azurecr.io/test-org-jovanni.vnx-test-iot:0.1.1-amd64",
             "loginServer": "vnxedgeappregistry.azurecr.io",
             "username": "<USERNAME>",
-            "password": "<USERNAME>"
+            "password": "<PASSWORD>"
         },
         {
             "url": "vnxedgeappregistry.azurecr.io/ombori-test.gate-watch:0.2.4-test1-amd64",
             "loginServer": "vnxedgeappregistry.azurecr.io",
-            "username": "<PASSWORD>",
+            "username": "<USERNAME>",
             "password": "<PASSWORD>"
         }
     ]

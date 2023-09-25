@@ -1,6 +1,12 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2023-09-25 (Release Candidate)
+### Reports
+- Ability to show events list count card in the console installation dashboards
+- Ability to show events list count based on events and additional data 
+- [Reference documentation EventsList card](http://localhost:3000/#/packages/javascript/grid-reports?id=eventslist-card)
+
 ## 2023-08-29 (Release Candidate)
 ### Media
 - Region-based media storage

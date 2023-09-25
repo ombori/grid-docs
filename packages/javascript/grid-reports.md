@@ -78,24 +78,24 @@ const analyticsSchema: AnalyticsSchema = {
 export default analyticsSchema;
 ```
 
-Property `groups` defines a list of analytics report groups. 
+Property `groups` defines a list of analytics report groups.
 
 One group has next options.
 
 **Options**
 
 - `name: string`
-    - **Required**
-    - Defines report group name.
+  - **Required**
+  - Defines report group name.
 - `cards: object[]`
-    - **Required**
-    - List of cards for this report group. 
+  - **Required**
+  - List of cards for this report group.
 - `columnsCount: number`
-    - **Optional**
-    - Defines number of columns for report group layout.
+  - **Optional**
+  - Defines number of columns for report group layout.
 - `gridStyles: object`
-    - **Optional**
-    - It is possible to customize report group layout with grid-* css properties. For example, gridStyles: { 'grid-gap': '20px' }.
+  - **Optional**
+  - It is possible to customize report group layout with grid-\* css properties. For example, gridStyles: { 'grid-gap': '20px' }.
 
 ### Card
 
@@ -152,13 +152,13 @@ export default analyticsSchema;
 **Options**
 
 - `type: CardType.Sessions`
-    - **Required**
+  - **Required**
 - `interactionType: SessionInteractionType`
-    - **Optional**
-    - Defines the type of sessions data to be shown. Use SessionInteractionType enum.
+  - **Optional**
+  - Defines the type of sessions data to be shown. Use SessionInteractionType enum.
 - `gridStyles: object`
-    - **Optional**
-    - It is possible to customize card layout with grid-* css properties.
+  - **Optional**
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Sessions card](https://ams03pap001files.storage.live.com/y4mI5TbY6t37sugI9uGQiDqSkaVTVOb1STm1xOvnPVDj4VFIN87Pomx6a_YBFnhuAPA8xMysryZKMJ8VkkbCTAjxIneO5P-_s0KFTsyLAT30Hg-D6HLhOK1LV1XY6cn5qGhBNNe1TrusY66Om-Z7pbN-k4k2TQAN6vFBpTWAdyJL1qOsDjC1VIiv5__HSCwA7MU?width=1108&height=686&cropmode=none)
 
@@ -189,7 +189,7 @@ export default analyticsSchema;
   - **Required**
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![NPS card](https://ams03pap001files.storage.live.com/y4my7y3gwBuYGYOybHzVwHp_uabNKSdiH_IK9RTQgR85e57QKIehcVc4gIEvkHLWr5z6CF3ZQZFB8utG24enYoRDEhBQizJDgTWWOA_kgieqhP9FMQA7BuD718NmaSXbw-mzJJZ1h8fXPBQGySDuCAODTpiq7bF97GaspbxQrnfs6ev9QA9euc2abw2FgXd7gTp?width=1106&height=578&cropmode=none)
 
@@ -205,7 +205,22 @@ const analyticsSchema: AnalyticsSchema = {
     {
       name: 'Overview',
       cards: [
-        { type: CardType.EventsList, interactionType: InteractionType.Interactive },
+        { type: CardType.EventsList, interactionType: InteractionType.Interactive,   title: 'Sesame success rate',
+          events: [
+            {
+              title: 'Success',
+              eventTypes: ['EXIT_ZONE_VALID_RECEIPT'],
+              color: '#57CD65',
+            }
+          ],
+          additionalData: [
+            {
+              icon: 'https://storemanager.itab.com/assets/img/sales.svg',
+              title: 'Total',
+              eventTypes: ['CHECKOUT_ISSUE_RECEIPT', 'CHECKOUT_ISSUE_RECEIPT_NO_ID'],
+            },
+          ],
+        },
       ],
     },
   ],
@@ -223,7 +238,16 @@ export default analyticsSchema;
   - Defines the type of events data to be shown. Use InteractionType enum.
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
+- `title: string`
+  - **Optional**
+  - It is possible to show title in the card rather show hard coded value in from the console.
+- `events: array of object`
+  - **Optional**
+  - Defines the array of events data to be shown.
+- `additionalData: array of object`
+  - **Optional**
+  - Defines the array of additionalData events data to be shown.
 
 ![Events list card](https://ams03pap001files.storage.live.com/y4mAJFQEl1_ZEIGdfFQ695_G52U_4KsMLL0mrqMm1BEKNWcgxD-xXiPkGPVyZ0UwsF3Bx3MYZtFlCYRv4lQoBVtsmfRTXJeLrfjwM6mTnhMPuWX5J3jmLLUQDF2AprtBf77LpS-_K0EHWyL01d6s1PnbQqujahsDIo9XJYbzdf7fHsCWYzO4EHMmB_A8tUYAhv_?width=1108&height=968&cropmode=none)
 
@@ -310,7 +334,7 @@ export default analyticsSchema;
   - Defines list of events that should be used to build events funnel. For example, ['CATEGORY_VIEW', 'PRODUCT_VIEW', 'CART_ADD', 'CHECKOUT', 'PURCHASE'].
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Events funnel card](https://ams03pap001files.storage.live.com/y4m-i_XI-PS_pdetauG7XTEW55I6RSe5aOOufmJTWh-dVElgY4ecggQpg8MP9OdXHEf8ID0qQYbOUpFvRUaKVZUiZ16FcTnBRCVSOrQy2muCUS_NJ_9FlKfz2w4GKE3ys5K0WpQqdmbptwl9Whs6Wk3qnKtSr2sRLAGxarbFnb2WSVkTwje4nRXg7kIw4z5VCbQ?width=1108&height=972&cropmode=none)
 
@@ -351,7 +375,7 @@ export default analyticsSchema;
   - Defines an event type.
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Products event count card](https://ams03pap001files.storage.live.com/y4mnhiCKUIPiJy-ZVkuVoYTESCFzsk9CZxOG0arQOlAm4RstwkLtNhv_iMNcj9H7RYDgOmUdCTuX30vMqNHv8CaxYQvIkLSvUz5hDKdnWSbICOajHhlDZBbHXRR4Ml1yeWJaZ2kulyn-JxS1ftbapvsGdYtujWMh0w-xFOQ64j9mn2Cg3fkHSQ_yhm3BA3ONF7N?width=1120&height=642&cropmode=none)
 
@@ -382,7 +406,7 @@ export default analyticsSchema;
   - **Required**
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Categories event count card](https://ams03pap001files.storage.live.com/y4mPL956hcbWXLGkygsct2knVAlgjUz425zNdDsqj-CFg-9cTmK0g-dJ9se4KS0K8mhT_B9NtAKGWinMZu22AHDJ6Tmi-RK5JormlIw0h_kqKeY7cxH_Dnc22J9yCL6b2w-C9RB6vqCtYeRbV3HEQI97r1t0FlSkSkfXVV_qspHQnjqmJJoC6Qw9rT_hBLBsYtn?width=1112&height=636&cropmode=none)
 
@@ -413,7 +437,7 @@ export default analyticsSchema;
   - **Required**
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Events flow card](https://ams03pap001files.storage.live.com/y4muCRn0ovjexIO89MUJ6GZxa4CxVRGLFfjI6dEwhU9OpLePrmUusBITyRF_XAE2UOD_ynojH_pH7nNqumIJVcPB7E1t31Lo-MEdM4xb4F8WHxHiAdG7Nwf8-KaTevgt2ikrmr669BavK4PT98LuAwdPhAdQ0cJoM3GmhLML1iOaKTUwP8s-a4lvZ-T36x5POiL?width=2260&height=1224&cropmode=none)
 
@@ -465,7 +489,7 @@ export default analyticsSchema;
       - Defines the specific event type to be used as data source. For example, CART_ADD.
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![Week heatmap card](https://ams03pap001files.storage.live.com/y4m5GBexNv6WNrCSvX--6IVMGDAaRMysfbf-INzOPMdMpmbi5PhvFszc7NJD3IIW8Te83sjjywID5811YpR0RLsXUKJI99IMKJre2IaPZKIE4VSjS0gTm5ip7gWASQH879Gz2PcZXKyPj_kwzPy13xXby82Pb7qfz7TylPc_GLBMb74JuIH95lEDZXKKUp9K7_0?width=2348&height=1334&cropmode=none)
 
@@ -517,17 +541,17 @@ export default analyticsSchema;
 - `eventType: string`
   - **Required**
   - Should start with `MONITOR_` eventType prefix that is sent from a gridapp through grid signals
-- `distinctColumns:`  "str1"
-    | "str2"
-    | "str3"
-    | "str4"
-    | "str5"
-    | "int1"
-    | "int2"
-    | "int3"
-    | "int4"
-    | "int5"
-    | "deviceId"
+- `distinctColumns:` "str1"
+  | "str2"
+  | "str3"
+  | "str4"
+  | "str5"
+  | "int1"
+  | "int2"
+  | "int3"
+  | "int4"
+  | "int5"
+  | "deviceId"
   - **Required**
   - list of column keys to identify unique rows of the report
 - `statusReference: Record<string | number, { label: string; color: string }`
@@ -538,10 +562,9 @@ export default analyticsSchema;
     - -1 - Unknown
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![](/assets/realtime.png ":size720")
-
 
 ### Monitoring 24 Hour History
 
@@ -598,7 +621,6 @@ export default analyticsSchema;
     - -1 - Unknown
 - `gridStyles: object`
   - **Optional**
-  - It is possible to customize card layout with grid-* css properties.
+  - It is possible to customize card layout with grid-\* css properties.
 
 ![](/assets/monitoring-status.png ":size720")
-

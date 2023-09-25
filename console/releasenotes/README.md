@@ -7,7 +7,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Ability to show events list count based on events and additional data 
 - [Reference documentation EventsList card](http://localhost:3000/#/packages/javascript/grid-reports?id=eventslist-card)
 
-## 2023-08-29 (Release Candidate)
+## 2023-08-29
 ### Media
 - Region-based media storage
 - Media upload improvements

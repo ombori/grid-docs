@@ -206,6 +206,8 @@ const analyticsSchema: AnalyticsSchema = {
       name: 'Overview',
       cards: [
         { type: CardType.EventsList, interactionType: InteractionType.Interactive,   title: 'Sesame success rate',
+          dataSource:  DataSourceBaseEntity.Space,
+          dataSourceType: DataSourceTypeEntityEnum.LOCATION,
           events: [
             {
               title: 'Success',
@@ -248,6 +250,12 @@ export default analyticsSchema;
 - `additionalData: array of object`
   - **Optional**
   - Defines the array of additionalData events data to be shown.
+- `datasource: DataSourceBaseEntity`
+  - **Optional**
+  - Defines the type of source data to be shown. Use DataSourceBaseEntity enum.
+- `datasource: DataSourceTypeEntityEnum`
+  - **Optional**
+  - Defines the type of space data to be shown. Use DataSourceTypeEntityEnum enum.
 
 ![Events list card](https://ams03pap001files.storage.live.com/y4mAJFQEl1_ZEIGdfFQ695_G52U_4KsMLL0mrqMm1BEKNWcgxD-xXiPkGPVyZ0UwsF3Bx3MYZtFlCYRv4lQoBVtsmfRTXJeLrfjwM6mTnhMPuWX5J3jmLLUQDF2AprtBf77LpS-_K0EHWyL01d6s1PnbQqujahsDIo9XJYbzdf7fHsCWYzO4EHMmB_A8tUYAhv_?width=1108&height=968&cropmode=none)
 

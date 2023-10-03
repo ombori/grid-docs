@@ -160,7 +160,7 @@ Reference: [Space](/grid-products/data-model?id=space)
 ### [DELETE] Remove Space Products
 > **[DELETE] {base-url}/spaces/{id}/products**
 
-Deletes a space products by sending an array of `productTypeId` it will remove this product from the space and any relavant subfields in the GridProduct that related to this space
+This API allows you to delete space products by sending an array of `productTypeId`. It will remove these products from the specified space and any relevant subfields in the `GridProduct` that are related to this space.
 
 #### Body
 | parameter | type   | Description         | Example              |
@@ -168,6 +168,7 @@ Deletes a space products by sending an array of `productTypeId` it will remove t
 | data      | `Array<string>` | An array of `productTypeId` | `['045xxx','046xxx',...]` |
 
 #### Response
+Upon a successful request, the API will return a JSON response with status information for each product removed.
 ```json
 {
     "data": [

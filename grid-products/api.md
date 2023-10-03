@@ -43,6 +43,7 @@ The following endpoints are available in the API currently.
 | POST   | [products/push](/grid-products/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-products/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-products/api?id=patch-update-products)                 | Update products listed in the database                               |
+| POST  | [products-push](/grid-products/api?id=push-products-v2)                  | Pushes products into space                           |
 | PATCH  | [variants](/grid-products/api?id=patch-update-variants)                 | Update variants level information in the database                    |
 | GET    | [product-types](/grid-products/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
 | GET    | [product-types/{id}](/grid-products/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
@@ -194,6 +195,24 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 | parameter | type                 | Description                                                    | Example |
 | --------- | -------------------- | -------------------------------------------------------------- | ------- |
 | data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
+
+?> Limitations: <br> - 100 products per batch
+
+### [POST] Push Products V2
+> **[POST] {base-url}/{tenant-id}/{environment}/products-push**
+
+This API allows you to upload or merge products following the `GridProduct` format. The only required field is `productGroupId` , while other fields are optional.
+
+?> When pushing products, any product with a matching `productGroupId` will overwrite the existing product with the same `productGroupId`.
+
+#### Body
+The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
+
+| parameter | type                 | Description                                                    | Example |
+| --------- | -------------------- | -------------------------------------------------------------- | ------- |
+| data      | `<Partial<GridProduct>>` | An array of `Partial<GridProduct>`. This can be a list of products in full `GridProduct` format or `Partial<GridProduct>` to update specific product fields. |         |
+
+?> The `spaceIds` array is not included in the request payload. Instead, it is automatically populated based on the values of `productPriceList`, `productStatus`, and `productItemQuantity`.
 
 ?> Limitations: <br> - 100 products per batch
 

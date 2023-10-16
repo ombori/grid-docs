@@ -275,7 +275,7 @@ We will provide two payload examples to illustrate both the replace and merge op
 }'
 ```
 
--  When including the productPriceList and productItemQuantity in the payload, these fields will be subject to updates through a merge operation using the `productId` and `spaceId` as key parameters.
+-  When including the `productPriceList` and `productItemQuantity` in the payload, these fields will be subject to updates through a merge operation using the `productId` and `spaceId` as key parameters.
 
 
 ```js

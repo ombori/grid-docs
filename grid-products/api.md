@@ -239,7 +239,8 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 | customProperties | `CustomProperties[]` | **merge**   | It will merge and update product custom properties array based on  `key` and `spaceId`.  |
 | productItemQuantity | `ProductItemQuantity[]` | **merge**   | It will merge and update product quantity array based on  `productId` and `spaceId`.  |
 
-For example:
+We will provide two payload examples to illustrate both the replace and merge operations:
+
 - When sending the `productName` and `productDescription` in the payload, both of these fields will undergo updates, with the existing values being replaced by the new ones.
 
 ```js

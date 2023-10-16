@@ -198,12 +198,11 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 
 ?> Limitations: <br> - 100 products per batch
 
-### [POST] Push Products V2
+### [POST] Push Products V2 (Beta)
 > **[POST] {base-url}/{tenant-id}/{environment}/products-push**
 
-This API allows you to upload or merge products following the `GridProduct` format. The only required field is `productGroupId` , while other fields are optional.
+?> This API allows you to upload or merge products following the `GridProduct` format. The only required field is `productGroupId` , while other fields are optional.
 
-?> When pushing products, any product with a matching `productGroupId` will overwrite the existing product with the same `productGroupId`.
 
 #### Body
 The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
@@ -212,6 +211,116 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 | --------- | -------------------- | -------------------------------------------------------------- | ------- |
 | data      | `<Partial<GridProduct>>` | An array of `Partial<GridProduct>`. This can be a list of products in full `GridProduct` format or `Partial<GridProduct>` to update specific product fields. |         |
 
+
+#### Payload examples:
+?> Please ensure that the `productGroupId` is always included in the payload.
+
+?> You have the flexibility to send either a single product field, multiple fields, or the entire product in your payload.
+
+| parameter                  | type                           |   expected  | description                          |
+| -------------------------- | ------------------------------ | ----------- | ------------------------------------ |
+| productName                |     `ProductName[]`            | **replace** | The product name will be updated with the new value. |
+| productShortDescription                |     `ProductShortDescription[]`            | **replace** | Product short description will be updated with the new value. |
+| productInternalName                |     `productInternalName[]`            | **replace** | Product internal name  will be updated with the new value. |
+| storageInstructions                |     `ProductStorageInstructions[]`            | **replace** | Product storage instructions  will be updated with the new value. |
+| consumerStorageInstruction                |     `ProductConsumerStorageInstruction[]`            | **replace** | Product consumer storage instructions  will be updated with the new value. |
+| productShippingInstruction                |     `ProductShippingInstruction[]`            | **replace** | Product shipping instructions  will be updated with the new value. |
+| productType                |     `Array<string>`            | **replace** | Product type  will be updated with the new value. |
+| productLabel                |     `ProductLabel[]`            | **replace** | Product label  will be updated with the new value. |
+| productTags                |     `ProductTags[]`            | **replace** | Product tags  will be updated with the new value. |
+| brand                |     `ProductBrand[]`            | **replace** | Product brand  will be updated with the new value. |
+| productVendor                |     `ProductVendor[]`            | **replace** | Product vendor  will be updated with the new value. |
+| productDescription         |     `productDescription[]`     | **replace** | Product description will be replaced with the new value |
+| variants                   |     `Variant[]`                | **merge**   | It will merge and update product variants array based on  `productId` and `productGroupId`.  |
+| productFeature             |     `ProductFeature[]`         | **merge**   | It will merge and update product features array based on  `productId`.  |
+| productPriceList           |     `productPriceList[]`       | **merge**   | It will merge and update product prices array based on  `productId` and `spaceId`.  |
+| productStatus              |     `ProductStatus[]`          | **merge**   | It will merge and update product status array based on  `spaceId`.   |
+| catalogPageLocationProduct | `CatalogPageLocationProduct[]` | **merge**   | It will merge and update product catalogue array based on  `productId` and `productGroupId`.  |
+| customProperties | `CustomProperties[]` | **merge**   | It will merge and update product custom properties array based on  `key` and `spaceId`.  |
+| productItemQuantity | `ProductItemQuantity[]` | **merge**   | It will merge and update product quantity array based on  `productId` and `spaceId`.  |
+
+For example:
+- When sending the `productName` and `productDescription` in the payload, both of these fields will undergo updates, with the existing values being replaced by the new ones.
+
+```js
+  curl --location '{base-url}/{tenant-id}/{environment}/products-push' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "data": [
+            {
+                "productGroupId": "<product-group-id>",
+                "productName": [
+                    {
+                        "isoLanguageId": "en-GB",
+                        "productName": "<product-name>"
+                    },
+                    {
+                        "isoLanguageId": "en-US",
+                        "productName": "<product-name>"
+                    }
+                ],
+                "productDescription": [
+                    {
+                        "isoLanguageId": "en-GB",
+                        "productDescription": "<product-description>"
+                    },
+                    {
+                        "isoLanguageId": "en-US",
+                        "productDescription": "<product-description>    "
+                    }
+                ]
+            }
+    ]
+}'
+```
+
+-  When including the productPriceList and productItemQuantity in the payload, these fields will be subject to updates through a merge operation using the `productId` and `spaceId` as key parameters.
+
+
+```js
+curl --location '{base-url}/{tenant-id}/{environment}/products-push' \
+--header 'Content-Type: application/json' \
+--data '{
+    "data":[
+        {
+            "productGroupId": "xxxxxxx",
+            "productPriceList": [
+                {
+                  "isoLanguageId": "en-GB",
+                  "productId": "xxxxxxx",
+                  "isoCurrencyCode": "EUR",
+                  "listPrice": 1140,
+                  "priceListType": "Standard",
+                  "spaceId": "xxxxxxx"
+                },
+                {
+                  "isoLanguageId": "en-GB",
+                  "productId": "xxxxxxx",
+                  "isoCurrencyCode": "USD",
+                  "listPrice": 11401,
+                  "priceListType": "Standard",
+                  "spaceId": "xxxxxxx"
+                }
+            ],
+            "productItemQuantity": [
+                {
+                  "productId": "xxxxxxx",
+                  "productItemQuantity": 90,
+                  "spaceId": "xxxxxxx"
+                },
+                {
+                  "productId": "xxxxxxx",
+                  "productItemQuantity": 910,
+                  "spaceId": "xxxxxxx"
+                }
+            ]
+        }
+
+    ]
+}'
+```
+
+##### 
 ?> The `spaceIds` array is not included in the request payload. Instead, it is automatically populated based on the values of `productPriceList`, `productStatus`, and `productItemQuantity`.
 
 ?> Limitations: <br> - 100 products per batch

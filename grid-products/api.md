@@ -43,6 +43,7 @@ The following endpoints are available in the API currently.
 | POST   | [products/push](/grid-products/api?id=post-push-products)               | Pushes products into the database                                    |
 | DELETE | [products](/grid-products/api?id=delete-remove-products)                | Removes specified product IDs from the database                      |
 | PATCH  | [products](/grid-products/api?id=patch-update-products)                 | Update products listed in the database                               |
+| POST  | [products-push](/grid-products/api?id=push-products-v2)                  | Pushes products into space                           |
 | PATCH  | [variants](/grid-products/api?id=patch-update-variants)                 | Update variants level information in the database                    |
 | GET    | [product-types](/grid-products/api?id=get-product-types-list)           | Returns list of product types associated with the tenant index       |
 | GET    | [product-types/{id}](/grid-products/api?id=get-product-type-details)    | Retrieves specific product type by id (ProductTypeId)                |
@@ -194,6 +195,134 @@ The body of the request should be an Array of [GridProducts]((/grid-products/dat
 | parameter | type                 | Description                                                    | Example |
 | --------- | -------------------- | -------------------------------------------------------------- | ------- |
 | data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
+
+?> Limitations: <br> - 100 products per batch
+
+### [POST] Push Products V2 (Beta)
+> **[POST] {base-url}/{tenant-id}/{environment}/products-push**
+
+?> This API allows you to upload or merge products following the `GridProduct` format. The only required field is `productGroupId` , while other fields are optional.
+
+
+#### Body
+The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
+
+| parameter | type                 | Description                                                    | Example |
+| --------- | -------------------- | -------------------------------------------------------------- | ------- |
+| data      | `<Partial<GridProduct>>` | An array of `Partial<GridProduct>`. This can be a list of products in full `GridProduct` format or `Partial<GridProduct>` to update specific product fields. |         |
+
+
+#### Payload examples:
+?> Please ensure that the `productGroupId` is always included in the payload.
+
+?> You have the flexibility to send either a single product field, multiple fields, or the entire product in your payload.
+
+| parameter                  | type                           |   expected  | description                          |
+| -------------------------- | ------------------------------ | ----------- | ------------------------------------ |
+| productName                |     `ProductName[]`            | **replace** | The product name will be updated with the new value. |
+| productShortDescription                |     `ProductShortDescription[]`            | **replace** | Product short description will be updated with the new value. |
+| productInternalName                |     `productInternalName[]`            | **replace** | Product internal name  will be updated with the new value. |
+| storageInstructions                |     `ProductStorageInstructions[]`            | **replace** | Product storage instructions  will be updated with the new value. |
+| consumerStorageInstruction                |     `ProductConsumerStorageInstruction[]`            | **replace** | Product consumer storage instructions  will be updated with the new value. |
+| productShippingInstruction                |     `ProductShippingInstruction[]`            | **replace** | Product shipping instructions  will be updated with the new value. |
+| productType                |     `Array<string>`            | **replace** | Product type  will be updated with the new value. |
+| productLabel                |     `ProductLabel[]`            | **replace** | Product label  will be updated with the new value. |
+| productTags                |     `ProductTags[]`            | **replace** | Product tags  will be updated with the new value. |
+| brand                |     `ProductBrand[]`            | **replace** | Product brand  will be updated with the new value. |
+| productVendor                |     `ProductVendor[]`            | **replace** | Product vendor  will be updated with the new value. |
+| productDescription         |     `productDescription[]`     | **replace** | Product description will be replaced with the new value |
+| variants                   |     `Variant[]`                | **merge**   | It will merge and update product variants array based on  `productId` and `productGroupId`.  |
+| productFeature             |     `ProductFeature[]`         | **merge**   | It will merge and update product features array based on  `productId`.  |
+| productPriceList           |     `productPriceList[]`       | **merge**   | It will merge and update product prices array based on  `productId` and `spaceId`.  |
+| productStatus              |     `ProductStatus[]`          | **merge**   | It will merge and update product status array based on  `spaceId`.   |
+| catalogPageLocationProduct | `CatalogPageLocationProduct[]` | **merge**   | It will merge and update product catalogue array based on  `productId` and `productGroupId`.  |
+| customProperties | `CustomProperties[]` | **merge**   | It will merge and update product custom properties array based on  `key` and `spaceId`.  |
+| productItemQuantity | `ProductItemQuantity[]` | **merge**   | It will merge and update product quantity array based on  `productId` and `spaceId`.  |
+
+We will provide two payload examples to illustrate both the replace and merge operations:
+
+- When sending the `productName` and `productDescription` in the payload, both of these fields will undergo updates, with the existing values being replaced by the new ones.
+
+```js
+  curl --location '{base-url}/{tenant-id}/{environment}/products-push' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "data": [
+            {
+                "productGroupId": "<product-group-id>",
+                "productName": [
+                    {
+                        "isoLanguageId": "en-GB",
+                        "productName": "<product-name>"
+                    },
+                    {
+                        "isoLanguageId": "en-US",
+                        "productName": "<product-name>"
+                    }
+                ],
+                "productDescription": [
+                    {
+                        "isoLanguageId": "en-GB",
+                        "productDescription": "<product-description>"
+                    },
+                    {
+                        "isoLanguageId": "en-US",
+                        "productDescription": "<product-description>    "
+                    }
+                ]
+            }
+    ]
+}'
+```
+
+-  When including the `productPriceList` and `productItemQuantity` in the payload, these fields will be subject to updates through a merge operation using the `productId` and `spaceId` as key parameters.
+
+
+```js
+curl --location '{base-url}/{tenant-id}/{environment}/products-push' \
+--header 'Content-Type: application/json' \
+--data '{
+    "data":[
+        {
+            "productGroupId": "xxxxxxx",
+            "productPriceList": [
+                {
+                  "isoLanguageId": "en-GB",
+                  "productId": "xxxxxxx",
+                  "isoCurrencyCode": "EUR",
+                  "listPrice": 1140,
+                  "priceListType": "Standard",
+                  "spaceId": "xxxxxxx"
+                },
+                {
+                  "isoLanguageId": "en-GB",
+                  "productId": "xxxxxxx",
+                  "isoCurrencyCode": "USD",
+                  "listPrice": 11401,
+                  "priceListType": "Standard",
+                  "spaceId": "xxxxxxx"
+                }
+            ],
+            "productItemQuantity": [
+                {
+                  "productId": "xxxxxxx",
+                  "productItemQuantity": 90,
+                  "spaceId": "xxxxxxx"
+                },
+                {
+                  "productId": "xxxxxxx",
+                  "productItemQuantity": 910,
+                  "spaceId": "xxxxxxx"
+                }
+            ]
+        }
+
+    ]
+}'
+```
+
+##### 
+?> The `spaceIds` array is not included in the request payload. Instead, it is automatically populated based on the values of `productPriceList`, `productStatus`, and `productItemQuantity`.
 
 ?> Limitations: <br> - 100 products per batch
 

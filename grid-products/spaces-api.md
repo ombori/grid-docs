@@ -34,9 +34,8 @@ The following endpoints are available in the Spaces API currently.
 | GET    | [spaces/{id}](/grid-products/spaces-api?id=get-get-space-by-id) | Retrieves specific space by ID               |
 | POST   | [spaces](/grid-products/spaces-api?id=post-space)               | Creates a space record into the database     |
 | DELETE | [spaces](/grid-products/spaces-api?id=delete-remove-space)      | Removes specified space ID from the database |
-| PUT    | [spaces](/grid-products/api?id=put-update-space)                | Update specified space in the database       |
-|        |
-
+| PUT    | [spaces/{id}](/grid-products/spaces-api?id=put-update-space)                | Update specified space in the database       |
+| DELETE | [spaces/{spaceId}/products](/grid-products/spaces-api?id=delete-remove-space-products) | Removes products from space |
 
 # Spaces
 ### [GET] Spaces List
@@ -157,3 +156,31 @@ Space
 ```
 
 Reference: [Space](/grid-products/data-model?id=space)
+
+### [DELETE] Remove Space Products
+> **[DELETE] {base-url}/spaces/{id}/products**
+
+This API detaches products from space by sending an array of `productGroupId`. It will remove these products from the specified space and any relevant subfields in the `GridProduct` that are related to this space.
+
+#### Body
+| parameter | type   | Description         | Example              |
+| --------- | ------ | ------------------- | -------------------- |
+| data      | `Array<string>` | An array of `productGroupId` | `['045xxx','046xxx',...]` |
+
+#### Response
+Upon a successful request, the API will return a JSON response with status information for each product removed.
+```json
+{
+    "data": [
+        {
+            "productGroupId": "045xxx",
+            "status": 202
+        },
+        {
+            "productGroupId": "046xxx",
+            "status": 202
+        },
+        ....
+    ]
+}
+```

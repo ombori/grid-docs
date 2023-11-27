@@ -5,7 +5,7 @@ This is the API reference for Grid reports.
 ## Postman Collection
 For easy configuration and testing, here's a Postman collection you can import into Postman.
 
-?> Download the [Postman Collection](/grid-reports/grid-reports.postman-collection.json)
+?> Download the [Postman Collection](/grid-reports/grid-reports.postman-collection.json ':ignore')
 
 ### Variables
 

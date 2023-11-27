@@ -1,0 +1,1890 @@
+{
+	"info": {
+		"_postman_id": "2193e575-4bc2-4dfb-8a55-ca6b20453886",
+		"name": "Grid reports",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2820605",
+		"_collection_link": "https://interstellar-crescent-581756.postman.co/workspace/Grid-reports~dca98c68-8530-462a-89a8-d03295e34acc/collection/2820605-2193e575-4bc2-4dfb-8a55-ca6b20453886?action=share&source=collection_link&creator=2820605"
+	},
+	"item": [
+		{
+			"name": "Tenant reports",
+			"item": [
+				{
+					"name": "Tenant events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/events?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/sessions?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant nps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/nps?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"nps"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant events flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/eventsFlow?dateFrom=2022-12-01&dateTo=2022-12-31&eventsFlowDepth=15",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"eventsFlow"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "eventsFlowDepth",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/products?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant categories events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/categories?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant purchases events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/purchases?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant purchased products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/purchased-products?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"purchased-products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant qr codes events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/qr-codes?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"qr-codes"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tenant media events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/media?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"media"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Installation reports",
+			"item": [
+				{
+					"name": "Installation events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/events?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/sessions?dateFrom=2022-12-25&dateTo=2022-12-25&interactionType=interactive&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-25"
+								},
+								{
+									"key": "interactionType",
+									"value": "interactive"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation nps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/nps?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"nps"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation events flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/eventsFlow?dateFrom=2022-12-01&dateTo=2022-12-31&eventsFlowDepth=15",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"eventsFlow"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "eventsFlowDepth",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/products?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation categories events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/categories?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation monitoring events history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/monitoring?eventType=MONITOR_XOVIS_SENSOR&dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"monitoring"
+							],
+							"query": [
+								{
+									"key": "eventType",
+									"value": "MONITOR_XOVIS_SENSOR"
+								},
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation purchases events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/purchases?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation purchased products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/purchased-products?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"purchased-products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation qr codes events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/qr-codes?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"qr-codes"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installation media events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/installations/{{installation-id}}/media?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"installations",
+								"{{installation-id}}",
+								"media"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Space reports",
+			"item": [
+				{
+					"name": "Space events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/events?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/sessions?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space nps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/nps?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"nps"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space events flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/eventsFlow?dateFrom=2022-12-01&dateTo=2022-12-31&eventsFlowDepth=15",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"eventsFlow"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "eventsFlowDepth",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/products?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space categories events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/categories?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space purchases events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/purchases?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space purchased products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/purchased-products?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"purchased-products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space qr codes events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/qr-codes?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"qr-codes"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Space media events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/spaces/{{space-id}}/media?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"spaces",
+								"{{space-id}}",
+								"media"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device reports",
+			"item": [
+				{
+					"name": "Device events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/events?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/sessions?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device nps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/nps?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"nps"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device events flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/eventsFlow?dateFrom=2022-12-01&dateTo=2022-12-31&eventsFlowDepth=15",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"eventsFlow"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "eventsFlowDepth",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/products?dateFrom=2022-12-01&dateTo=2022-12-31&interactionType=all",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device categories events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/categories?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device purchases events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/purchases?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device purchased products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/purchased-products?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"purchased-products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device qr codes events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/qr-codes?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"qr-codes"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Device media events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/devices/{{device-id}}/media?dateFrom=2022-12-01&dateTo=2022-12-31",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"devices",
+								"{{device-id}}",
+								"media"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2022-12-01"
+								},
+								{
+									"key": "dateTo",
+									"value": "2022-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App reports",
+			"item": [
+				{
+					"name": "App events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/events?dateFrom=2023-01-25&dateTo=2023-02-01&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"events"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/sessions?dateFrom=2023-01-25&dateTo=2023-02-01&interactionType=all&timespanType=day",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								},
+								{
+									"key": "timespanType",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App nps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/nps?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"nps"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App events flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/eventsFlow?dateFrom=2023-01-25&dateTo=2023-02-01&eventsFlowDepth=15",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"eventsFlow"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								},
+								{
+									"key": "eventsFlowDepth",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/products?dateFrom=2023-01-25&dateTo=2023-02-01&interactionType=all",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								},
+								{
+									"key": "interactionType",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App categories events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/categories?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App purchases events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/purchases?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App purchased products events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/purchased-products?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"purchased-products"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App qr codes events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/qr-codes?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"qr-codes"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App media events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/v2/report/tenants/{{tenant-id}}/apps/{{app-id}}/media?dateFrom=2023-01-25&dateTo=2023-02-01",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"v2",
+								"report",
+								"tenants",
+								"{{tenant-id}}",
+								"apps",
+								"{{app-id}}",
+								"media"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "2023-01-25"
+								},
+								{
+									"key": "dateTo",
+									"value": "2023-02-01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access-token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "access-token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "base-url",
+			"value": "https://api.omborigrid.com/regions/eu/reports",
+			"type": "string"
+		},
+		{
+			"key": "tenant-id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "installation-id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "space-id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "device-id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "app-id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

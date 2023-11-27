@@ -2,14 +2,18 @@
 
 The following endpoints are available in the API for device reports.
 
-| Method | Endpoint                                                                          | Description                                                                  |
-|--------|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| GET    | [events](/grid-reports/device-reports?id=get-device-events)                       | Returns list of device events based on specified query parameters            |
-| GET    | [sessions](/grid-reports/device-reports?id=get-device-sessions)                   | Returns list of device sessions based on specified query parameters          |
-| GET    | [nps](/grid-reports/device-reports?id=get-device-nps)                             | Returns device nps data                                                      |
-| GET    | [events flow](/grid-reports/device-reports?id=get-device-events-flow)             | Returns device events flow data                                              |
-| GET    | [products events](/grid-reports/device-reports?id=get-device-products-events)     | Returns list of device products events based on specified query parameters   |
-| GET    | [categories events](/grid-reports/device-reports?id=get-device-categories-events) | Returns list of device categories events based on specified query parameters |
+| Method | Endpoint                                                                                          | Description                                                                                |
+|--------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| GET    | [events](/grid-reports/device-reports?id=get-device-events)                                       | Returns list of device events based on specified query parameters                          |
+| GET    | [sessions](/grid-reports/device-reports?id=get-device-sessions)                                   | Returns list of device sessions based on specified query parameters                        |
+| GET    | [nps](/grid-reports/device-reports?id=get-device-nps)                                             | Returns device nps data                                                                    |
+| GET    | [events flow](/grid-reports/device-reports?id=get-device-events-flow)                             | Returns device events flow data                                                            |
+| GET    | [products events](/grid-reports/device-reports?id=get-device-products-events)                     | Returns list of device products events based on specified query parameters                 |
+| GET    | [categories events](/grid-reports/device-reports?id=get-device-categories-events)                 | Returns list of device categories events based on specified query parameters               |
+| GET    | [purchases events](/grid-reports/device-reports?id=get-device-purchases-events)                   | Returns list of device purchases (transactions) events based on specified query parameters |
+| GET    | [purchased products events](/grid-reports/device-reports?id=get-device-purchased-products-events) | Returns list of device purchased products events based on specified query parameters       |   
+| GET    | [qr codes events](/grid-reports/device-reports?id=get-device-qr-codes-events)                     | Returns list of device qr codes events based on specified query parameters                 |   
+| GET    | [media events](/grid-reports/device-reports?id=get-device-media-events)                           | Returns list of device media events based on specified query parameters                    | 
 
 ?> `{tenant-id}` is your tenant id in the grid console.
 
@@ -193,3 +197,147 @@ To use query parameters, add them as `GET` properties to the `URL`.
 |-----------------|--------|----------------------------------------------------------------------------------------------------------------|-------------|----------|
 | dateFrom        | string | Defines the starting date                                                                                      | 2022-12-26  | true     |
 | dateTo          | string | Defines the final date                                                                                         | 2023-01-02  | true     |
+
+### [GET] Device purchases events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/devices/{device-id}/purchases**
+
+Returns list of device purchases (transactions) events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    eventTime: string;
+    interaction: boolean;
+    transactionId: string;
+    revenue: number;
+    currency: string;
+    count: number;
+    sessionCount: number;
+    deviceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Device purchased products events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/devices/{device-id}/purchased-products**
+
+Returns list of device purchased products events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    transactionId: string;
+    productId: string;
+    categoryId: string;
+    productName: string;
+    currency: string;
+    quantity: number;
+    price: number;
+    count: number;
+    sessionCount: number;
+    deviceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Device qr codes events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/devices/{device-id}/qr-codes**
+
+Returns list of device qr codes events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    qrCodeId: string;
+    qrCodeContent: string;
+    qrCodeEntryMethod: string;
+    qrCodeType: string;
+    count: number;
+    sessionCount: number;
+    deviceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Device media events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/devices/{device-id}/media**
+
+Returns list of device media events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    mediaId: string;
+    mediaType: string;
+    mediaName: string;
+    mediaTags: string[];
+    mediaDuration: number;
+    count: number;
+    sessionCount: number;
+    deviceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |

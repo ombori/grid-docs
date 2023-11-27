@@ -2,14 +2,18 @@
 
 The following endpoints are available in the API for space reports.
 
-| Method | Endpoint                                                                        | Description                                                                 |
-|--------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| GET    | [events](/grid-reports/space-reports?id=get-space-events)                       | Returns list of space events based on specified query parameters            |
-| GET    | [sessions](/grid-reports/space-reports?id=get-space-sessions)                   | Returns list of space sessions based on specified query parameters          |
-| GET    | [nps](/grid-reports/space-reports?id=get-space-nps)                             | Returns space nps data                                                      |
-| GET    | [events flow](/grid-reports/space-reports?id=get-space-events-flow)             | Returns space events flow data                                              |
-| GET    | [products events](/grid-reports/space-reports?id=get-space-products-events)     | Returns list of space products events based on specified query parameters   |
-| GET    | [categories events](/grid-reports/space-reports?id=get-space-categories-events) | Returns list of space categories events based on specified query parameters |
+| Method | Endpoint                                                                                        | Description                                                                               |
+|--------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| GET    | [events](/grid-reports/space-reports?id=get-space-events)                                       | Returns list of space events based on specified query parameters                          |
+| GET    | [sessions](/grid-reports/space-reports?id=get-space-sessions)                                   | Returns list of space sessions based on specified query parameters                        |
+| GET    | [nps](/grid-reports/space-reports?id=get-space-nps)                                             | Returns space nps data                                                                    |
+| GET    | [events flow](/grid-reports/space-reports?id=get-space-events-flow)                             | Returns space events flow data                                                            |
+| GET    | [products events](/grid-reports/space-reports?id=get-space-products-events)                     | Returns list of space products events based on specified query parameters                 |
+| GET    | [categories events](/grid-reports/space-reports?id=get-space-categories-events)                 | Returns list of space categories events based on specified query parameters               |
+| GET    | [purchases events](/grid-reports/space-reports?id=get-space-purchases-events)                   | Returns list of space purchases (transactions) events based on specified query parameters |
+| GET    | [purchased products events](/grid-reports/space-reports?id=get-space-purchased-products-events) | Returns list of space purchased products events based on specified query parameters       |   
+| GET    | [qr codes events](/grid-reports/space-reports?id=get-space-qr-codes-events)                     | Returns list of space qr codes events based on specified query parameters                 |   
+| GET    | [media events](/grid-reports/space-reports?id=get-space-media-events)                           | Returns list of space media events based on specified query parameters                    | 
 
 ?> `{tenant-id}` is your tenant id in the grid console.
 
@@ -193,3 +197,147 @@ To use query parameters, add them as `GET` properties to the `URL`.
 |-----------------|--------|----------------------------------------------------------------------------------------------------------------|-------------|----------|
 | dateFrom        | string | Defines the starting date                                                                                      | 2022-12-26  | true     |
 | dateTo          | string | Defines the final date                                                                                         | 2023-01-02  | true     |
+
+### [GET] Space purchases events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/spaces/{space-id}/purchases**
+
+Returns list of space purchases (transactions) events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    eventTime: string;
+    interaction: boolean;
+    transactionId: string;
+    revenue: number;
+    currency: string;
+    count: number;
+    sessionCount: number;
+    spaceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Space purchased products events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/spaces/{space-id}/purchased-products**
+
+Returns list of space purchased products events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    transactionId: string;
+    productId: string;
+    categoryId: string;
+    productName: string;
+    currency: string;
+    quantity: number;
+    price: number;
+    count: number;
+    sessionCount: number;
+    spaceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Space qr codes events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/spaces/{space-id}/qr-codes**
+
+Returns list of space qr codes events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    qrCodeId: string;
+    qrCodeContent: string;
+    qrCodeEntryMethod: string;
+    qrCodeType: string;
+    count: number;
+    sessionCount: number;
+    spaceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |
+
+### [GET] Space media events
+
+> **[GET] {base-url}/v2/report/tenants/{tenant-id}/spaces/{space-id}/media**
+
+Returns list of space media events based on specified query parameters.
+
+#### Response
+```
+[
+  {
+    id: string;
+    type: string;
+    tenantId: string;
+    date: string;
+    eventType: string;
+    interaction: boolean;
+    mediaId: string;
+    mediaType: string;
+    mediaName: string;
+    mediaTags: string[];
+    mediaDuration: number;
+    count: number;
+    sessionCount: number;
+    spaceId: string;
+  }
+]
+```
+
+#### Query Parameters
+To use query parameters, add them as `GET` properties to the `URL`.
+
+| Parameter       | Type   | Description               | Example     | Required |
+|-----------------|--------|---------------------------|-------------|----------|
+| dateFrom        | string | Defines the starting date | 2022-12-26  | true     |
+| dateTo          | string | Defines the final date    | 2023-01-02  | true     |

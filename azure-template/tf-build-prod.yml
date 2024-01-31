@@ -1,0 +1,15 @@
+jobs:
+  - job: "BuildMain"
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  steps:
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: '$(build.sourcesDirectory)'
+        includeRootFolder: false
+        archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
+        replaceExistingArchive: true
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
+        artifactName: "build-main"
+        publishLocation: "Container"

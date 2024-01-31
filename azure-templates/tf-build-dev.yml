@@ -36,7 +36,7 @@ jobs:
       displayName: 'AzureBlob File Copy'
       inputs:
         SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'
-        azureSubscription: 'Azure Production (EA) Service Connection'
+        azureSubscription: 'omg-dev'
         Destination: AzureBlob
-        storage: griddocsdev
+        storage: omggriddocsdev
         ContainerName: '$web'

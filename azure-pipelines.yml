@@ -20,8 +20,12 @@ stages:
         displayName: 'Install powershell'
         steps:
           - template: azure-templates/prepare-project.yml
-          - script: Get-InstalledModule -Name Az -AllVersions
-            displayName: 'Check Powershell'
+          - task: PowerShell@2
+            displayName: 'Check Azure PowerShell'
+            inputs:
+              targetType: 'inline'
+              script: |
+                Get-InstalledModule -Name Az -AllVersions
       - job: ScanAndBuild
         workspace:
           clean: all

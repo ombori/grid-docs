@@ -26,8 +26,6 @@ jobs:
     pool: ${{ parameters.agentPool }}
     displayName: Approve
     dependsOn: approve
-    condition: and(succeeded(), in(variables['Build.SourceBranchName'], 'master', 'main', 'dev'))
-    pool: server
     steps:
     - task: ExtractFiles
       displayName: 'Extract files'

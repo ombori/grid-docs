@@ -27,12 +27,12 @@ jobs:
     displayName: Approve
     dependsOn: approve
     steps:
-    - task: ExtractFiles
+    - task: ExtractFiles@1
       displayName: 'Extract files'
       inputs:
         archiveFilePatterns: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/build-dev/*.zip'
         destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
-    - task: AzureFileCopy
+    - task: AzureFileCopy@4
       displayName: 'AzureBlob File Copy'
       inputs:
         SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'

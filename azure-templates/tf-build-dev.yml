@@ -21,3 +21,24 @@ jobs:
     pool: server
     steps:
     - template: tf-approve.yml
+  - job: DeployToDev
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
+    pool: ${{ parameters.agentPool }}
+    displayName: Approve
+    dependsOn: approve
+    condition: and(succeeded(), in(variables['Build.SourceBranchName'], 'master', 'main', 'dev'))
+    pool: server
+    steps:
+    - task: ExtractFiles
+      displayName: 'Extract files'
+      inputs:
+        archiveFilePatterns: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/build-dev/*.zip'
+        destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
+    - task: AzureFileCopy
+      displayName: 'AzureBlob File Copy'
+      inputs:
+        SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'
+        azureSubscription: 'Azure Production (EA) Service Connection'
+        Destination: AzureBlob
+        storage: griddocsdev
+        ContainerName: '$web'

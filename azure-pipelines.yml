@@ -27,7 +27,7 @@ stages:
   
   - stage: Build_MAIN_branch
     variables:
-    - group: omg-azure-developer
+    - group: omg-azure-production
     pool:
       vmImage: ubuntu-latest
     displayName: Prepare

@@ -61,7 +61,7 @@ stages:
     condition: |
       and(
         succeeded('ScanAndCommit'),
-        eq(variables.isDev, 'true')
+        eq(variables.isMain, 'true')
       )
     jobs:
     - template: azure-templates/tf-build-prod.yml

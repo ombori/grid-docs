@@ -16,7 +16,7 @@ jobs:
           publishLocation: "Container"
   - job: approve
     displayName: Approve
-    dependsOn: plan
+    dependsOn: BuildDev
     condition: succeeded()
     pool: server
     steps:

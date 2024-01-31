@@ -1,0 +1,5 @@
+steps:
+  - task: ManualValidation@0
+    timeoutInMinutes: 10080 # task times out in 1 * 7 days
+    inputs:
+      instructions: 'Please validate the build configuration and resume'

@@ -1,5 +1,5 @@
 steps:
-  - task: Powershell@0
+  - task: Powershell@2
     displayName: 'Install Powershell'
   - script: |
       Install-Module -Name Az -AllowClobber -Scope AllUsers

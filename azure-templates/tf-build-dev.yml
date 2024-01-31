@@ -32,11 +32,11 @@ jobs:
       inputs:
         archiveFilePatterns: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/build-dev/*.zip'
         destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
-    - task: AzureFileCopy@4
-      displayName: 'AzureBlob File Copy'
-      inputs:
-        SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'
-        azureSubscription: 'omg-dev'
-        Destination: AzureBlob
-        storage: omggriddocsdev
-        ContainerName: '$web'
+    # - task: AzureFileCopy@4
+    #   displayName: 'AzureBlob File Copy'
+    #   inputs:
+    #     SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'
+    #     azureSubscription: 'omg-dev'
+    #     Destination: AzureBlob
+    #     storage: omggriddocsdev
+    #     ContainerName: '$web'

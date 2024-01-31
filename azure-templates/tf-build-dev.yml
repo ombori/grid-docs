@@ -1,6 +1,6 @@
 jobs:
   - job: "BuildDev"
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
   steps:
     - task: ArchiveFiles@2
       inputs:

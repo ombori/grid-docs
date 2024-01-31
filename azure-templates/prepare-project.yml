@@ -4,4 +4,4 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
-        Install-Module -Name Az -AllowClobber -Scope AllUsers
+        Install-Module -Name Az -AllowClobber -Scope AllUsers -Force

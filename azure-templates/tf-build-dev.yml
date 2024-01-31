@@ -24,13 +24,13 @@ jobs:
   - job: DeployToDev
     condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
     pool: ${{ parameters.agentPool }}
-    displayName: Approve
+    displayName: DeployToDev
     dependsOn: approve
     steps:
     - task: ExtractFiles@1
       displayName: 'Extract files'
       inputs:
-        archiveFilePatterns: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/build-dev/*.zip'
+        archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip'
         destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
     # - task: AzureFileCopy@4
     #   displayName: 'AzureBlob File Copy'

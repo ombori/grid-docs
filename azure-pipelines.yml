@@ -2,8 +2,54 @@ trigger:
 - main
 - dev
 
-pool:
-  vmImage: ubuntu-latest
+stages:
+  - stage: Build_DEV_branch
+    variables:
+    - group: omg-azure-developer
+    pool:
+      vmImage: ubuntu-latest
+    displayName: Prepare
+    jobs:
+      - job: "Build_DEV_branch"
+        condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
+    steps:
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: '$(build.sourcesDirectory)'
+          includeRootFolder: false
+          archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip"
+          replaceExistingArchive: true
+      - task: PublishBuildArtifacts@1
+        inputs:
+          pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip"
+          artifactName: "build-dev"
+          publishLocation: "Container"
+  
+  - stage: Build_MAIN_branch
+    variables:
+    - group: omg-azure-developer
+    pool:
+      vmImage: ubuntu-latest
+    displayName: Prepare
+    jobs:
+      - job: "Build_MAIN_branch"
+        condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+    steps:
+      - task: ArchiveFiles@2
+        inputs:
+          rootFolderOrFile: '$(build.sourcesDirectory)'
+          includeRootFolder: false
+          archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
+          replaceExistingArchive: true
+      - task: PublishBuildArtifacts@1
+        inputs:
+          pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
+          artifactName: "build-main"
+          publishLocation: "Container"
+
+
+
+
 
 jobs:
   - job: "Build_DEV_branch"

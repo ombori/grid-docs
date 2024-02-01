@@ -16,16 +16,16 @@ stages:
       vmImage: ubuntu-latest
     displayName: Prepare
     jobs:
-      - job: InstallPwsh
-        displayName: 'Install powershell'
-        steps:
-          - template: azure-templates/prepare-project.yml
-          - task: PowerShell@2
-            displayName: 'Check Azure PowerShell'
-            inputs:
-              targetType: 'inline'
-              script: |
-                Get-InstalledModule -Name Az -AllVersions
+      # - job: InstallPwsh
+      #   displayName: 'Install powershell'
+      #   steps:
+      #     - template: azure-templates/prepare-project.yml
+      #     - task: PowerShell@2
+      #       displayName: 'Check Azure PowerShell'
+      #       inputs:
+      #         targetType: 'inline'
+      #         script: |
+      #           Get-InstalledModule -Name Az -AllVersions
       - job: ScanAndBuild
         workspace:
           clean: all
@@ -33,7 +33,7 @@ stages:
         steps:
           - checkout: self
             fetchDepth: 4
-          - template: azure-templates/tf-scanandbuild.yml
+          - template: azure-templates/scanandbuild.yml
             parameters:
               dataResidency: DEV
   
@@ -48,7 +48,7 @@ stages:
         eq(variables.isDev, 'true')
       )
     jobs:
-    - template: azure-templates/tf-build-dev.yml
+    - template: azure-templates/deploy-dev.yml
       parameters:
         dataResidency: DEV
         agentPool: omg-devops-globaldev
@@ -64,7 +64,7 @@ stages:
         eq(variables.isMain, 'true')
       )
     jobs:
-    - template: azure-templates/tf-build-prod.yml
+    - template: azure-templates/deploy-prod.yml
       parameters:
         dataResidency: EU
         agentPool: omg-devops

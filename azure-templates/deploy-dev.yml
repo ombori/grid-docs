@@ -20,18 +20,24 @@ jobs:
     condition: succeeded()
     pool: server
     steps:
-    - template: tf-approve.yml
+    - template: approve.yml
   - job: DeployToDev
     condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
     pool: ${{ parameters.agentPool }}
-    displayName: DeployToDev
+    displayName: Deploy
     dependsOn: approve
     steps:
-    - task: ExtractFiles@1
-      displayName: 'Extract files'
-      inputs:
-        archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip'
-        destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
+      - task: DownloadBuildArtifacts@0
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'build-dev'
+          downloadPath: '$(System.DefaultWorkingDirectory)'
+      - task: ExtractFiles@1
+          displayName: 'Extract files'
+          inputs:
+            archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-dev/$(Build.BuildId)-dev.zip'
+            destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
     # - task: AzureFileCopy@4
     #   displayName: 'AzureBlob File Copy'
     #   inputs:

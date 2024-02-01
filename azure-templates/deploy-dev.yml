@@ -41,11 +41,12 @@ jobs:
           destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
       - task: AzureCLI@2
         inputs:
-          azureSubscription: 'omg-dev'
-          scriptType: 'bash'
-          scriptLocation: 'inlineScript'
-          inlineScript: |
-            az storage blob upload-batch \
-              --source "$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/" \
-              --destination '$web' \
-              --account-name 'omggriddocsdev'
+        azureSubscription: 'omg-dev'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az storage blob upload-batch \
+            --source "$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/" \
+            --destination '$web' \
+            --account-name 'omggriddocsdev' \
+            --account-key $(GRID_DOCS_DEV_ACCESS_KEY)

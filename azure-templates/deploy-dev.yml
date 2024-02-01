@@ -35,10 +35,10 @@ jobs:
           artifactName: 'build-dev'
           downloadPath: '$(System.DefaultWorkingDirectory)'
       - task: ExtractFiles@1
-          displayName: Extract files
-          inputs:
-            archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-dev/$(Build.BuildId)-dev.zip'
-            destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
+        displayName: Extract files
+        inputs:
+          archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-dev/$(Build.BuildId)-dev.zip'
+          destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
     # - task: AzureFileCopy@4
     #   displayName: 'AzureBlob File Copy'
     #   inputs:

@@ -39,11 +39,13 @@ jobs:
         inputs:
           archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-dev/$(Build.BuildId)-dev.zip'
           destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
-      - task: AzureFileCopy@4
-        displayName: 'AzureBlob File Copy'
+      - task: AzureCLI@2
         inputs:
-          SourcePath: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/*'
           azureSubscription: 'omg-dev'
-          Destination: AzureBlob
-          storage: omggriddocsdev
-          ContainerName: '$web'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az storage blob upload-batch \
+              --source "$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/" \
+              --destination '$web' \
+              --account-name 'omggriddocsdev'

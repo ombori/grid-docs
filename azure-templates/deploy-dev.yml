@@ -28,13 +28,14 @@ jobs:
     dependsOn: approve
     steps:
       - task: DownloadBuildArtifacts@0
+        displayName: Downloading Artifact
         inputs:
           buildType: 'current'
           downloadType: 'single'
           artifactName: 'build-dev'
           downloadPath: '$(System.DefaultWorkingDirectory)'
       - task: ExtractFiles@1
-          displayName: 'Extract files'
+          displayName: Extract files
           inputs:
             archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-dev/$(Build.BuildId)-dev.zip'
             destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'

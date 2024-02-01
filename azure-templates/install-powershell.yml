@@ -1,7 +1,0 @@
-steps:
-  - task: PowerShell@2
-    displayName: 'Install Powershell'
-    inputs:
-      targetType: 'inline'
-      script: |
-        Install-Module -Name Az -AllowClobber -Scope CurrentUser -Force

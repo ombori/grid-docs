@@ -16,16 +16,6 @@ stages:
       vmImage: ubuntu-latest
     displayName: Prepare
     jobs:
-      # - job: InstallPwsh
-      #   displayName: 'Install powershell'
-      #   steps:
-      #     - template: azure-templates/prepare-project.yml
-      #     - task: PowerShell@2
-      #       displayName: 'Check Azure PowerShell'
-      #       inputs:
-      #         targetType: 'inline'
-      #         script: |
-      #           Get-InstalledModule -Name Az -AllVersions
       - job: ScanAndBuild
         workspace:
           clean: all

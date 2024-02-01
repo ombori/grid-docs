@@ -14,3 +14,39 @@ jobs:
           pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
           artifactName: "build-main"
           publishLocation: "Container"
+  - job: approve
+    displayName: Approve
+    dependsOn: BuildMain
+    condition: succeeded()
+    pool: server
+    steps:
+    - template: approve.yml
+  - job: DeployToProd
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+    pool: ${{ parameters.agentPool }}
+    displayName: Deploy
+    dependsOn: approve
+    steps:
+      - task: DownloadBuildArtifacts@0
+        displayName: Downloading Artifact
+        inputs:
+          buildType: 'current'
+          downloadType: 'single'
+          artifactName: 'build-main'
+          downloadPath: '$(System.DefaultWorkingDirectory)'
+      - task: ExtractFiles@1
+        displayName: Extract files
+        inputs:
+          archiveFilePatterns: '$(System.DefaultWorkingDirectory)/build-main/$(Build.BuildId)-main.zip'
+          destinationFolder: '$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web'
+      - task: AzureCLI@2
+        inputs:
+          azureSubscription: 'omg-eu'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az storage blob upload-batch \
+              --source "$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/" \
+              --destination '$web' \
+              --account-name 'omggriddocsprod' \
+              --account-key $(GRID_DOCS_PROD_ACCESS_KEY)

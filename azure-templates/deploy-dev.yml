@@ -16,6 +16,7 @@ jobs:
   - job: approve
     displayName: Approve
     dependsOn: BuildDev
+    pool: server
     condition: succeeded()
     steps:
     - template: approve.yml

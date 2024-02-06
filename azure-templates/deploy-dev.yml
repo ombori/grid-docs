@@ -1,7 +1,6 @@
 jobs:
   - job: "BuildDev"
     condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
-    pool: ${{ parameters.agentPool }}
     steps:
       - task: ArchiveFiles@2
         inputs:
@@ -18,7 +17,6 @@ jobs:
     displayName: Approve
     dependsOn: BuildDev
     condition: succeeded()
-    pool: server
     steps:
     - template: approve.yml
   - job: DeployToDev

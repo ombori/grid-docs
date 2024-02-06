@@ -21,7 +21,6 @@ jobs:
     - template: approve.yml
   - job: DeployToDev
     condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
-    pool: ${{ parameters.agentPool }}
     displayName: Deploy
     dependsOn: approve
     steps:

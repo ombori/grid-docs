@@ -48,4 +48,4 @@ jobs:
               --destination '$web' \
               --account-name 'omggriddocsdev' \
               --account-key $(GRID_DOCS_DEV_ACCESS_KEY)
-              --overwrite
+              --overwrite=true

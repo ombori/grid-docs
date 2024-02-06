@@ -47,5 +47,5 @@ jobs:
               --source "$(System.DefaultWorkingDirectory)/_ombori.grid-docs/web/" \
               --destination '$web' \
               --account-name 'omggriddocsdev' \
-              --account-key $(GRID_DOCS_DEV_ACCESS_KEY)
-              --overwrite=true
+              --account-key $(GRID_DOCS_DEV_ACCESS_KEY) \
+              --overwrite

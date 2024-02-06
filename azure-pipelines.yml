@@ -1,39 +1,58 @@
+variables:
+  - name: isMain
+    value: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+  - name: isDev
+    value: $[eq(variables['Build.SourceBranch'], 'refs/heads/dev')]
+
 trigger:
 - main
 - dev
 
-pool:
-  vmImage: ubuntu-latest
+stages:
+  - stage: ScanAndCommit
+    variables:
+    - group: omg-azure-developer
+    pool:
+      vmImage: ubuntu-latest
+    displayName: Prepare
+    jobs:
+      - job: ScanAndBuild
+        workspace:
+          clean: all
+        displayName: Security Scan
+        steps:
+          - checkout: self
+            fetchDepth: 4
+          - template: azure-templates/scanandbuild.yml
+            parameters:
+              dataResidency: DEV
+  
+  - stage: DeployDev
+    variables:
+    - group: omg-azure-developer
+    displayName: Deploy to DEV
+    dependsOn: ScanAndCommit
+    condition: |
+      and(
+        succeeded('ScanAndCommit'),
+        eq(variables.isDev, 'true')
+      )
+    jobs:
+    - template: azure-templates/deploy-dev.yml
+      parameters:
+        dataResidency: DEV
 
-jobs:
-  - job: "Build_DEV_branch"
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/dev')
-
-    steps:
-    - task: ArchiveFiles@2
-      inputs:
-        rootFolderOrFile: '$(build.sourcesDirectory)'
-        includeRootFolder: false
-        archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip"
-        replaceExistingArchive: true
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-dev.zip"
-        artifactName: "build-dev"
-        publishLocation: "Container"
-  - job: "Build_MAIN_branch"
-    condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
-
-    steps:
-      - task: ArchiveFiles@2
-        inputs:
-          rootFolderOrFile: '$(build.sourcesDirectory)'
-          includeRootFolder: false
-          archiveFile: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
-          replaceExistingArchive: true
-      - task: PublishBuildArtifacts@1
-        inputs:
-          pathtoPublish: "$(Build.ArtifactStagingDirectory)/$(Build.BuildId)-main.zip"
-          artifactName: "build-main"
-          publishLocation: "Container"
-
+  - stage: DeployProd
+    variables:
+    - group: omg-azure-production
+    displayName: Deploy to PROD
+    dependsOn: ScanAndCommit
+    condition: |
+      and(
+        succeeded('ScanAndCommit'),
+        eq(variables.isMain, 'true')
+      )
+    jobs:
+    - template: azure-templates/deploy-prod.yml
+      parameters:
+        dataResidency: EU

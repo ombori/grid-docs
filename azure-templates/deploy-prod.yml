@@ -48,5 +48,4 @@ jobs:
               --destination '$web' \
               --account-name 'omggriddocsprod' \
               --account-key $(GRID_DOCS_PROD_ACCESS_KEY)
-              --pattern "*" \
-              --type block
+              --overwrite

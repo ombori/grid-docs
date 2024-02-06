@@ -41,7 +41,7 @@ stages:
     - template: azure-templates/deploy-dev.yml
       parameters:
         dataResidency: DEV
-        agentPool: omg-devops-globaldev
+        agentPool: omg-gridos-amd
 
   - stage: DeployProd
     variables:
@@ -57,4 +57,4 @@ stages:
     - template: azure-templates/deploy-prod.yml
       parameters:
         dataResidency: EU
-        agentPool: omg-devops
+        agentPool: omg-gridos-amd

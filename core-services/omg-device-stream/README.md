@@ -36,7 +36,7 @@ curl -X POST 'https://device-streams.eu.omborigrid.net/tunnel/my-device/192.168.
 -H 'Authorization: Bearer <token>'
 ```
 
-#### response
+#### Response
 ```
 {
   "tunnel": string;

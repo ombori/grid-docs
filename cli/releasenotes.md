@@ -1,6 +1,10 @@
 # omg CLI Release Notes
 To install the latest omg cli updates, run `npm install -g @ombori/ga-cli` if you install it for the first time. You can also run `omg update` if you have already pre-installed omg package on your machine. 
 
+## All versions (2024-03-12)
+- Increased inactivity timeout for `omg dev shell <device-name>` and other device streaming commands from 1minute to 15minutes
+
+
 ## v2.226.0 (2022-09-08)
 - Added `--stage` parameter on `omg module publish` command. Valid stage values are `qa` and `production`
 

@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2023-11-13 (Release Candidate)
+## 2023-11-13
 ### Reports
 - Ability to show Sesame succesrate and Store breakdown card in the console tenant dashboards
 

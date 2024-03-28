@@ -31,7 +31,7 @@
   * [Console Release Notes](/console/releasenotes/)
   * [Device Lease](/console/device-lease/)
   * [Installations](/console/installations/)
-* **Device Bundles and GridOS**
+* **GridOS and Phyos**
   * [Setting-up GridOS](/gridos/set-up/v1/)
   * [Grid Device Bundles](/gridos/device-bundles/)
   * [Release Notes](/gridos/releasenotes/)

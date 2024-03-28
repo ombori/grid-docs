@@ -1,11 +1,33 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-03-28
-- 
+## 2024-03-01 - 2024-03-28
+### Alerts
+- Improved alerts UI
+- Added support for analytics-based alerts
 
-### Reports
-- Ability to show Sesame succesrate and Store breakdown card in the console tenant dashboards
+### Devices
+- Added External ID property on device settings
+- Fixed duplicate serial error on device connect/add
+- Made tunnel link from console work for all GridOS and Phyos versions
+- Made omg dev shell work for both GridOS and Phyos
+- Improved CLI shell session inactivity timeout. See more Phygrid CLI updates: [here.](/cli/releasenotes)
+
+### Spaces
+- Able to search spaces on the "Parent" space field in create/update space form
+
+### Environments
+- Disallow `prod` environment to be deleted
+
+### Marketplace
+- Marketplace improvements
+- Added more apps in the marketplace, like lift and learn
+- Updated marketplace solutions descriptions
+
+### Networking
+- Menu > Networking
+- Introduced whitelist control. This is used to filter or allow/disallow requests from Phyos 3 devices to the cloud. All required hostnames to integrate with the Phygrid cloud are whitelisted under the hood by default. Only custom hostnames that your custom apps are using should be added in the list.
+- Check `Allow all` to allow all requests to the cloud from your devices, under your tenant 
 
 ## 2023-11-13
 ### Reports

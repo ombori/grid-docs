@@ -10,7 +10,6 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Added External ID property on device settings
 - Fixed duplicate serial error on device connect/add
 - Made tunnel link from console work for all GridOS and Phyos versions
-- Made omg dev shell work for both GridOS and Phyos
 - Improved CLI shell session inactivity timeout. See more Phygrid CLI updates: [here.](/cli/releasenotes)
 
 ### Spaces

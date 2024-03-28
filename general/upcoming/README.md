@@ -6,25 +6,17 @@ Below is the list of upcoming platform features:
 
 ## Console
 
-### Mass software update
-- Ability to mass update devices' screen and agent modules
-- Ability to mass update devices' GridOS version
-- Richer device list properties, which will include module, edge app, GridOS versions and more
-- Estimated release date: June 2023
+### Analytics and Alerts Improvements
+- Estimated release dates: March 2024 - April 2024
 
-### Marketplace improvements
-- Improved Marketplace UI
-- Improved Gridapp list and details pages
-- Estimated release date: June 2023
-
-### User permissions
-- Resource level access management on location, installation, and installation group levels
-- Estimated release date: July 2023
+### Resource Level Access Management
+- Resource level access management on space level
+- Estimated release date: May 1, 2024
 
 ## Devices
 
-### GridOS v2
+### Phyos3
 - Better device networking management
 - Updated Linux Kernel
 - Grid Edge Runtime
-- Estimated release date: June 2023
+- Estimated release date: April, 2024

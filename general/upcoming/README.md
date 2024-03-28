@@ -16,7 +16,4 @@ Below is the list of upcoming platform features:
 ## Devices
 
 ### Phyos3
-- Better device networking management
-- Updated Linux Kernel
-- Grid Edge Runtime
 - Estimated release date: April, 2024

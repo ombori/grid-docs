@@ -36,6 +36,7 @@
   * [Grid Device Bundles](/gridos/device-bundles/)
   * [Release Notes](/gridos/releasenotes/)
 * **Other Core Services**
+  * [Users Management API](/core-services/users-management/)
   * [Grid Alerts](/core-services/omg-alerts/)
   * [Grid Device Stream](/core-services/omg-device-stream/)
 * **Marketplace Apps**

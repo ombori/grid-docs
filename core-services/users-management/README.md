@@ -1,6 +1,6 @@
 # Users Management API
 
-This guide provides detailed documentation on the User Management API available within the OmboriGrid Platform, enabling seamless user management across organizations or tenants.
+This guide provides detailed documentation on the Users Management API available within the OmboriGrid Platform, enabling seamless users management across organizations or tenants.
 
 # Table of Contents
 

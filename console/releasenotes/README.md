@@ -1,6 +1,10 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-04-11-A
+### Spaces
+- Fixed users list in space page showing user role id instead of display name
+
 ## 2024-03-01 - 2024-03-28
 ### Alerts
 - Improved alerts UI

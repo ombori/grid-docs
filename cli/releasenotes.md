@@ -3,7 +3,7 @@ To install the latest omg cli updates, run `npm install -g @ombori/ga-cli` if yo
 
 
 ## v3.91.4  (2024-04-15)
-- Proxy support for http requests and wesocket connections
+- Proxy support for https requests and websocket connections
   - To test, run `export HTTPS_PROXY=<proxy-url>` on the terminal
   - Execute commands like `omg org list`, `omg dev physhell <device-name>` and `omg dev status`
   - All Phygrid CLI network requests should go through the configured proxy

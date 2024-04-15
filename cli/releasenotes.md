@@ -6,7 +6,7 @@ To install the latest omg cli updates, run `npm install -g @ombori/ga-cli` if yo
 - Proxy support for all Phygrid (omg) CLI commands with network requests
   - To test, run `export HTTPS_PROXY=<proxy-url>` on the terminal
   - Execute commands like `omg org list`, `omg dev physhell <device-name>` and `omg dev status`
-  - All Phygrid CLI requests should go through the set proxy
+  - All Phygrid CLI network requests should go through the configured proxy
 
 ## v3.90.12 (2024-03-28)
 - Increased inactivity timeout for `omg dev shell <device-name>` and other device streaming commands from 1minute to 5minutes

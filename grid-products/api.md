@@ -183,22 +183,6 @@ To use query parameters, add them as `GET` properties to the `URL`.
 | productGroupId | string | The ID of the Product | `100001` |
 
 ### [POST] Push Products
-> **[POST] {base-url}/{tenant-id}/{environment}/products/push**
-
-Uploads or merges products listing following the GridProduct format
-
-?> Any Product in the pushed set that has a matching productGroupId will overwrite the product
-
-#### Body
-The body of the request should be an Array of [GridProducts]((/grid-products/data-model?id=gridproduct)) JSON format using the `content-type` header `application/json`.
-
-| parameter | type                 | Description                                                    | Example |
-| --------- | -------------------- | -------------------------------------------------------------- | ------- |
-| data      | `Array<GridProduct>` | List of products in GridProduct format to push to the Database |         |
-
-?> Limitations: <br> - 100 products per batch
-
-### [POST] Push Products V2 (Beta)
 > **[POST] {base-url}/{tenant-id}/{environment}/products-push**
 
 ?> This API allows you to upload or merge products following the `GridProduct` format. The only required field is `productGroupId` , while other fields are optional.
@@ -325,6 +309,34 @@ curl --location '{base-url}/{tenant-id}/{environment}/products-push' \
 ?> The `spaceIds` array is not included in the request payload. Instead, it is automatically populated based on the values of `productPriceList`, `productStatus`, and `productItemQuantity`.
 
 ?> Limitations: <br> - 100 products per batch
+
+### [DELETE] Remove Space Products
+> **[DELETE] {base-url}/spaces/{id}/products**
+
+This API detaches products from space by sending an array of `productGroupId`. It will remove these products from the specified space and any relevant subfields in the `GridProduct` that are related to this space.
+
+#### Body
+| parameter | type   | Description         | Example              |
+| --------- | ------ | ------------------- | -------------------- |
+| data      | `Array<string>` | An array of `productGroupId` | `['045xxx','046xxx',...]` |
+
+#### Response
+Upon a successful request, the API will return a JSON response with status information for each product removed.
+```json
+{
+    "data": [
+        {
+            "productGroupId": "045xxx",
+            "status": 202
+        },
+        {
+            "productGroupId": "046xxx",
+            "status": 202
+        },
+        ....
+    ]
+}
+```
 
 ### [DELETE] Remove Products
 > **[DELETE] {base-url}/{tenant-id}/{environment}/products**

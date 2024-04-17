@@ -1,6 +1,17 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-04-18 [Release Candidate]
+### Installations
+- Added delete button on installations with settings overriding mode enabled
+
+### Devices
+- Fixed data residency value on provisioning for all regions
+
+### Analytics Dashboards
+- Preserve selected datetime range when navigating to different parts of the console and back to analytics page
+  - The selected datetime range is only persisted within a browser tab
+
 ## 2024-04-11-A
 ### Spaces
 - Fixed users list in space page showing user role id instead of display name

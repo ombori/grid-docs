@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-04-18 [Release Candidate]
+## 2024-04-18
 ### Installations
 - Added delete button on installations with settings overriding mode enabled
 

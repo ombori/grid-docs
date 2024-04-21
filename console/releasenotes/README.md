@@ -2,7 +2,7 @@
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
 ## 2024-04-19
-Changes around permissions are UI only. The APIs already blocked these operations based on the permissions associated to the user role.
+Changes around permissions are UI only. The APIs already allow or block these operations based on the permissions associated to the user role.
 
 ### Installations
 - hide save button for users with no installation update permission (i.e. viewer role) in installation's global, space, and device settings pages
@@ -11,16 +11,16 @@ Changes around permissions are UI only. The APIs already blocked these operation
 - allow delete only for users with installation delete permission
 
 ### Builds
-- hide delete option when user has no permission remove a build (i.e viewer role)
+- hide delete option when user has no permission to remove a build (i.e viewer role)
 - hide app build link for non-pwa and non-mobile-pwa type installations (i.e. edge app installations)
-- show deployment environments but disable deploy 
+- show deployment environments but disable deploy button when a user has no permission to remove a build (i.e viewer role)
 
 ### Devices
-- Hide the tunnel link to only visible to users with device update permission
+- Make tunnel links only visible to users with device update permission
 - Hide delete button when user has no device delete permission
 
 ### Networking - Network Whitelist
-- Disallow settings update to only users with network whitelist update permission
+- Allow settings update to only users with network whitelist update permission
 
 ## 2024-04-18
 ### Installations

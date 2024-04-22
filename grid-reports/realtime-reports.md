@@ -2,11 +2,11 @@
 
 The following endpoints are available in the API for real-time reports.
 
-| Method | Endpoint                                                                               | Description                                                                                                                |
-|--------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| GET    | [sessions](/grid-reports/installation-reports?id=get-real-time-sessions)               | Returns list of sessions in the past 48hours                                                                               |
-| GET    | [events](/grid-reports/installation-reports?id=get-real-time-events)                   | Returns list of events in the past 48hours for eventTypes that starts with `MONITOR_` and past 1 hour for all other events.|
-| GET    | [latest-event](/grid-reports/installation-reports?id=get-real-time-latest-events)      | Returns installation nps data                                                                                              |
+| Method | Endpoint                                                                               | Description                                   |
+|--------|----------------------------------------------------------------------------------------|-----------------------------------------------|
+| GET    | [sessions](/grid-reports/installation-reports?id=get-real-time-sessions)               | Returns list of sessions in the past 24 hours |
+| GET    | [events](/grid-reports/installation-reports?id=get-real-time-events)                   | Returns list of events in the past 24 hours   |
+| GET    | [latest-event](/grid-reports/installation-reports?id=get-real-time-latest-events)      | Returns list of latest events                 |
 
 ?> `{tenant-id}` is your tenant id in the grid console.
 
@@ -14,7 +14,7 @@ The following endpoints are available in the API for real-time reports.
 
 > **[GET] {base-url}/v2/realtime/session/tenants/{tenant-id}**
 
-Returns list of sessions in the past 48hours
+Returns list of sessions in the past 24 hours
 
 #### Response
 ```
@@ -55,7 +55,7 @@ To use query parameters, add them as `GET` properties to the `URL`.
 
 > **[GET] {base-url}/v2/realtime/event/tenants/{tenant-id}**
 
-Returns list of events in the past 48hours for eventTypes that starts with `MONITOR_` and past 1 hour for all other events.
+Returns list of events in the past 24 hours.
 
 #### Response
 ```

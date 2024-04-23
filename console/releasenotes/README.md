@@ -1,6 +1,12 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-04-23
+
+### Installations
+- Fixed the associated installations list of a device when connected and disconnected to multiple IoT type installations
+- Fixed newly added device to be immediately visible in Installations -> Devices list
+
 ## 2024-04-19
 Changes around permissions are UI only. The APIs already allow or block these operations based on the permissions associated to the user role.
 

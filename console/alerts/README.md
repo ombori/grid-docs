@@ -256,11 +256,11 @@ Currently, it is possible to define the following duration values:
 
 **Group by**
 
-The group by is the list of fields that you want to group the events by. This field is optional. Please refer to the examples section ([Gate connection alerts](#gate-connection-alerts-example)) for more information.
+The group by is the list of fields that you want to group the events by. This field is optional. Please refer to the examples section ([Gate connection alerts](#gate-connection-alert-example)) for more information.
 
 **Filters**
 
-It is the list of filters that you want to apply to the events. This field is optional. Please refer to the examples section ([Gate connection alerts](#gate-connection-alerts-example)) for more information.
+It is the list of filters that you want to apply to the events. This field is optional. Please refer to the examples section ([Gate connection alerts](#gate-connection-alert-example)) for more information.
 
 #### Device analytics events count email notification payload
 
@@ -551,10 +551,10 @@ Example of analytics event payload:
   "id": "b6786782-3019-418e-a19b-cc106e649cfc",
   "tenantId": "621e1fc633350f0007637a0c",
   "sessionId": "945fd23e-adfc-4217-86ef-3e1b39b7f880",
-  "eventTime": "2024-04-10T15:11:23.3720000Z",
+  "eventTime": "2024-04-12T07:55:23.3720000Z",
   "clientId": null,
   "eventType": "MONITOR_SESAME_DEVICE_STATUS",
-  "eventCaptureTime": "2024-04-10T15:14:55.3730000Z",
+  "eventCaptureTime": "2024-04-12T07:55:55.3730000Z",
   "interaction": true,
   "ip": "20.240.32.212",
   "productId": null,
@@ -563,18 +563,20 @@ Example of analytics event payload:
   "int2": null,
   "int3": null,
   "int4": null,
-  "int5": null,
+  "int5": 1200,
   "str1": "gate",
-  "str2": "192.168.1.25",
+  "str2": "192.168.1.100",
   "str3": null,
-  "str4": null,
+  "str4": "71386851-c372-4b27-b460-7256dd354707",
   "str5": null
 }
 ```
 
 In this example, we're keeping an eye on the MONITOR_SESAME_DEVICE_STATUS event type. Events of this type might have various values for the STR1 and INT1 properties, but we're specifically looking for events where STR1 is "gate" and INT1 is 0. We can use the filters feature to specify this requirement.
 
-We also need to group the events by the STR1 and STR2 property to ensure that we're counting the number of unique gates that have lost connection. Using the group by feature, means that we will receive an alert notification for each unique group. If the group by field is used, then the values of the group by fields will be included in the alert notification payload.
+We also need to group the events by the STR1 and STR2 property to ensure that we're counting the number of unique gates that have lost connection. Using the group by feature, means that we will receive an alert notification for each unique group. 
+
+> If the group by field is used, then the alert notification payload will include all non-NULL values of properties STR1 through STR5 and INT1 through INT5.
 
 Example of the email notification payload:
 
@@ -607,12 +609,19 @@ Example of the webhook notification payload:
       "spaceId": "65e9de8f00c00f0008ce761b",
       "str1": "gate",
       "str2": "192.168.1.100",
+      "str4": "71386851-c372-4b27-b460-7256dd354707",
+      "int1": 0,
+      "int5": 1200,
       "type": "device-analytics-events-count",
       "name": "Device Events Count"
     }
   ]
 }
 ```
+
+Since the group by field is used in the alert rule settings, the alert notification payload includes all non-NULL values of properties STR1 through STR5 and INT1 through INT5.
+
+In the above example the STR1, STR2, STR4, INT1 and INT5 properties are included in the alert notification payload.
 
 ### Sensor offline alert example
 
@@ -631,10 +640,10 @@ Example of analytics event payload:
   "id": "b6786782-3019-418e-a19b-cc106e649cfc",
   "tenantId": "621e1fc633350f0007637a0c",
   "sessionId": "945fd23e-adfc-4217-86ef-3e1b39b7f880",
-  "eventTime": "2024-04-10T15:11:23.3720000Z",
+  "eventTime": "2024-04-12T07:55:23.3720000Z",
   "clientId": null,
   "eventType": "MONITOR_SESAME_DEVICE_STATUS",
-  "eventCaptureTime": "2024-04-10T15:14:55.3730000Z",
+  "eventCaptureTime": "2024-04-12T07:55:55.3730000Z",
   "interaction": true,
   "ip": "20.240.32.212",
   "productId": null,
@@ -643,18 +652,20 @@ Example of analytics event payload:
   "int2": null,
   "int3": null,
   "int4": null,
-  "int5": null,
+  "int5": 1200,
   "str1": "xovis",
-  "str2": "192.168.1.25",
+  "str2": "192.168.1.100",
   "str3": null,
-  "str4": "9facab5a-8a9e-4124-838d-2fc0bdbb6361",
+  "str4": "71386851-c372-4b27-b460-7256dd354707",
   "str5": null
 }
 ```
 
 In this example, we're keeping an eye on the MONITOR_SESAME_DEVICE_STATUS event type. Events of this type might have various values for the STR1 and INT1 properties, but we're specifically looking for events where STR1 is "xovis" and INT1 is 0. We can use the filters feature to specify this requirement.
 
-We also need to group the events by the STR1 and STR2 property to ensure that we're counting the number of unique sensors that have lost connection. Using the group by feature, means that we will receive an alert notification for each unique group. If the group by field is used, then the values of the group by fields will be included in the alert notification payload.
+We also need to group the events by the STR1 and STR2 property to ensure that we're counting the number of unique sensors that have lost connection. Using the group by feature, means that we will receive an alert notification for each unique group.
+
+> If the group by field is used, then the alert notification payload will include all non-NULL values of properties STR1 through STR5 and INT1 through INT5.
 
 Example of the email notification payload:
 
@@ -664,17 +675,17 @@ Example of the webhook notification payload:
 
 ```json
 {
-  "title": "Fired:Critical Sensor offline at April 12, 2024 7:45:49 AM UTC",
+  "title": "Fired:Critical Sensor offline at April 12, 2024 7:57:50 AM UTC",
   "description": "Device Events Count: Device dmitry-malofeev-generic-browser analytics events count is greater than 0 within last 5 minutes.",
   "alertRuleId": "6617e2329a15e70007e49811",
   "alertRuleName": "Sensor offline",
   "severityName": "Critical",
   "severityValue": 0,
-  "firedAt": "April 12, 2024 7:45:49 AM UTC",
+  "firedAt": "April 12, 2024 7:57:50 AM UTC",
   "alertRuleUrl": "https://console.omborigrid.com/organisations/5cbac8a388e174147b878cdd/alerts/alert-rules/update/6617e2329a15e70007e49811#general",
   "additionalInfo": [
     {
-      "count": 6,
+      "count": 12,
       "threshold": 0,
       "duration": 5,
       "deviceUuid": "ca49b20d-5a2c-44ff-8d68-eac79cc42755",
@@ -687,9 +698,16 @@ Example of the webhook notification payload:
       "spaceId": "65e9de8f00c00f0008ce761b",
       "str1": "xovis",
       "str2": "192.168.1.100",
+      "str4": "71386851-c372-4b27-b460-7256dd354707",
+      "int1": 0,
+      "int5": 1200,
       "type": "device-analytics-events-count",
       "name": "Device Events Count"
     }
   ]
 }
 ```
+
+Since the group by field is used in the alert rule settings, the alert notification payload includes all non-NULL values of properties STR1 through STR5 and INT1 through INT5.
+
+In the above example the STR1, STR2, STR4, INT1 and INT5 properties are included in the alert notification payload.

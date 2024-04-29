@@ -711,3 +711,37 @@ Example of the webhook notification payload:
 Since the group by field is used in the alert rule settings, the alert notification payload includes all non-NULL values of properties STR1 through STR5 and INT1 through INT5.
 
 In the above example the STR1, STR2, STR4, INT1 and INT5 properties are included in the alert notification payload.
+
+#### Sensor status alerts example 
+
+Based on the example alerts settings [above](#sensor-offline-alert-example), this is the human language translation:
+
+- Trigger 1 alert
+- When event data has
+  - event.type "MONITOR_SESAME_DEVICE_STATUS"
+  - AND device type (event.str1) "xovis"
+  - AND device status online (event.int1 = 0)
+- Treat the combined event data as 1 unique count:
+  - event.type
+  - str1 (device type)
+  - str2 (IP address)
+  - example, ID: `MONITOR_SESAME_DEVICE_STATUS_xovis_<IP>`
+- and When the unique count is
+  - greater than or equal to 1
+  - with in the last 5mins
+
+**Example Scenario**
+- Set-up
+  - You have 3 xovis sensors with different IPs
+  - All sensors were online, then all went offline
+  - So we expect it to trigger alerts
+- Result
+  - Given the configuration, you will receive 3 alerts
+  - Because the rule says, GROUP BY: STR1, STR2  (device type, IP)
+  - Which means
+    - sensor1 goes offline
+      - event unique count id: MONITOR_SESAME_DEVICE_STATUS_xovis_192.168.1.2
+    - sensor2 goes offline
+      - event unique count id: MONITOR_SESAME_DEVICE_STATUS_xovis_192.168.1.3
+    - sensor3 goes offline
+      - event unique count id: MONITOR_SESAME_DEVICE_STATUS_xovis_192.168.1.4

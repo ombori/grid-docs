@@ -1,6 +1,16 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-06
+
+### Analytics
+- Fixed spaces list limit causing incorrect analytics count
+
+### User Management
+- Introduced User management tab in tenant Menu
+- Moved `Menu > Users` to `Menu > User management > Users`
+- Moved `Menu > User roles` to `Menu > User management > User roles`
+
 ## 2024-04-23
 
 ### Installations

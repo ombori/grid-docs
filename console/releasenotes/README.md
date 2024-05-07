@@ -3,10 +3,10 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 
 ## 2024-05-08 (RC)
 
-### Analytics
+### Analytics dashboards
 - Support images analytics card for device, space, and tenant level analytics dashboards
 - Update your gridapp dependency `@ombori/grid-reports` to `3.91.6` or higher. Or simply do `yarn add @ombori/grid-reports@latest`
-- See more to configure your gridapp analytics-schema to show images analytics card
+- [See more](/packages/javascript/grid-reports?id=images-card) to configure your gridapp analytics-schema to show images analytics card
 
 ## 2024-05-07
 

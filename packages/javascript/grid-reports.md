@@ -632,3 +632,111 @@ export default analyticsSchema;
   - It is possible to customize card layout with grid-\* css properties.
 
 ![](/assets/monitoring-status.png ":size720")
+
+### Monitoring Real-time status
+
+> Adds a card with monitored object through grid signals
+
+```
+import { AnalyticsSchema, CardType } from '@ombori/grid-reports';
+
+const analyticsSchema: AnalyticsSchema = {
+  groups: [
+    {
+      name: 'Real-time analytics',
+      cards: [
+        {
+          type: CardType.MonitoringRealtimeStatus,
+          eventType: 'MONITOR_SESAME_DEVICE_STATUS',
+          distinctColumns: ['str1', 'str2', 'deviceId'],
+          title: 'Device status',
+          statusReference: {
+            0: {
+              label: 'Offline',
+              color: 'red'
+            },
+            1: {
+              label: 'Online',
+              color: 'green'
+            },
+            [-1]: {
+              label: 'Unknown',
+              color: 'gray'
+            }
+          }
+        },
+      ],
+    },
+  ],
+};
+
+export default analyticsSchema;
+```
+
+- `type: CardType.MonitoringRealtimeStatus`
+  - **Required**
+- `title: string`
+  - **Required**
+  - Defines card title.
+- `eventType: string`
+  - **Required**
+  - Should start with `MONITOR_` eventType prefix that is sent from a gridapp through grid signals
+- `distinctColumns:` "str1"
+  | "str2"
+  | "str3"
+  | "str4"
+  | "str5"
+  | "int1"
+  | "int2"
+  | "int3"
+  | "int4"
+  | "int5"
+  | "deviceId"
+  - **Required**
+  - list of column keys to identify unique rows of the report
+- `statusReference: Record<string | number, { label: string; color: string }`
+  - **Optional**
+  - Default when not supplied is
+    - 0 - Offline
+    - 1 - Online
+    - -1 - Unknown
+- `gridStyles: object`
+  - **Optional**
+  - It is possible to customize card layout with grid-\* css properties.
+
+![](/assets/realtime.png ":size720")
+
+### Images card
+
+> Adds a card with images shown which are fetched from the relative installation settings
+
+```
+import { AnalyticsSchema, CardType, SessionInteractionType, VisibilityEnum } from '@ombori/grid-reports';
+
+const analyticsSchema: AnalyticsSchema = {
+  groups: [
+    {
+      name: 'Overview',
+      cards: [
+        { type: CardType.Image, title: 'Images', imageProperty: 'image' },
+      ],
+      visibility: [VisibilityEnum.Device, VisibilityEnum.Space],
+    },
+  ],
+};
+export default analyticsSchema;
+```
+
+- `type: CardType.Image`
+  - **Required**
+- `title: string`
+  - **Required**
+  - Defines card title.
+- `imageProperty: string`
+  - **Required**
+  - the property path of the image based on the gridapp settings-schema
+- `visibility: VisibilityEnum`
+  - **Optional**
+  - If not specified, it will be visible to all levels of analytics dashboards
+
+![](/assets/monitoring-status.png ":size720")

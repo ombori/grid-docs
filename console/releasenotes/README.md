@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-05-07 (RC)
+## 2024-05-07
 
 ### Installations
 - After a version upgrade, automatically enable the removal of any additional properties or values of properties that exist in the older version of the app but are not present in the newer version.

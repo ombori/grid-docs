@@ -4,7 +4,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2024-05-07
 
 ### Installations
-- After a version upgrade, automatically enable the removal of any additional properties or values of properties that exist in the older version of the app but are not present in the newer version.
+- After a version upgrade, automatically enable the removal of any additional properties or values of properties that exist in the older version of the app but are not present in the newer version. This is initially auto-enabled for IoT or Edge app type installations. We'll enable for other types soon.
 
 ## 2024-05-06
 

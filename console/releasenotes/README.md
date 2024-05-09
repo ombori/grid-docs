@@ -1,6 +1,11 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-09
+
+### User permissions
+- Security improvements
+
 ## 2024-05-08
 
 ### Analytics dashboards

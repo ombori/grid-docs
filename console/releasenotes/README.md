@@ -1,6 +1,29 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-11
+
+### Developer tokens
+- Added last used timestamp information of tokens
+- Added expiry for all existing and new tokens
+- All tokens created before `2024-05-11T14:53:00.000Z` have default expiration until `December 31, 2024`
+- Please generate a new token and specify an expiry if you need a longer token expiry
+
+  ![](/assets/20240511/access-token.png ":size=512 :no-zoom")
+
+### Media
+- For all new videos uploaded, a video duration will be visible in the file item in the media list
+
+  ![](/assets/20240511/media-video.png ":size=212 :no-zoom")
+
+### Installations
+- Media picker, like in Signage playlist, will show the duration for newly uploaded videos when picked
+  ![](/assets/20240511/media-picker.png ":size=212 :no-zoom")
+
+### User management v2
+- Coming soon, it's currently in private mode and will be available to public in within May 2024
+- Better user management UI that uses more advanced and simpler user management APIs
+
 ## 2024-05-09
 
 ### User permissions

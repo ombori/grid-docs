@@ -1,14 +1,13 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-05-15 (RC)
+## 2024-05-15 (RELEASE CANDIDATE)
 
 ### Phy CLI
 - brand new CLI with granular permissions and api endpoints under the hood
-- introduced `phy` instead of `omg`
-  `omg` will still work for backward compatibility if users are used to it
+- introduced `phy` instead of `omg`. The `omg` prefix will still work for backward compatibility
 - removed `omg dev physhell` command and make `omg dev shell` work for all types of devices (GridOS, Phyos, Tizen6.5 >)
-- older versions of CLI will still work until June 3-, 2024
+- older versions of CLI will still work until June 30, 2024
   - run `omg update` to automatically download the new CLI
 
 ### Tenant - User email domain restriction

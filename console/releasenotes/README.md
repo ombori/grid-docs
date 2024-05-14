@@ -1,6 +1,41 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-15 (RC)
+
+### Phy CLI
+- brand new CLI with granular permissions and api endpoints under the hood
+- introduced `phy` instead of `omg`
+  `omg` will still work for backward compatibility if users are used to it
+- removed `omg dev physhell` command and make `omg dev shell` work for all types of devices (GridOS, Phyos, Tizen6.5 >)
+- older versions of CLI will still work until June 3-, 2024
+  - run `omg update` to automatically download the new CLI
+
+### Tenant - User email domain restriction
+- introduced new configurable properties
+  - Enable user email domain restriction - a checkbox to only restrict specific email domains that can be added for specific tenant
+  - Allowed user email domains - list of allowed email domains that can be added for specific tenant. Will be visible only when user email domain restriction is enabled.
+- can only be managed by Certified Solutions Providers (CSP) tenants and by Phygrid. Please contact Phygrid if you need similar feature for your tenant
+- prevent emails to be added and updated in a tenant if restriction is enabled and when the email domain is not in the rule
+
+### Tenant - Analytics timezone
+- introduced a tenant property `timezone`
+- can only be configured by Certified Solutions Providers (CSP) tenants and by Phygrid. Please contact Phygrid if you need similar feature for your tenant.
+- this value is used as the basis for the analytics aggregations
+
+### Analytics dashboards
+- introduced csv download feature for specific cards
+- extended analytics-schema support for developers to define columns and values for the downloadable data
+
+### Developer tokens
+- better UI for the developer access tokens list
+- added new search feature
+- better date formats for date of creation, expiry, and last used information
+
+### General
+- improved load time of console from across the world
+- infrastructure level optimization
+
 ## 2024-05-11
 
 ### Developer tokens

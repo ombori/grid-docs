@@ -1,8 +1,10 @@
-# Grid Checkout
+# Grid Checkout (preview)
 
-Grid Checkout service is a core component of Phygrid solutions, designed to streamline and enhance the checkout process for businesses across various industries. This service offers features tailored to meet the evolving needs of modern commerce. From seamless online transactions to efficient in-store payments and shipping functionalities.
+Grid Checkout enhances Phygrid solutions by allowing versatile integration options with your Phygrid tenant, streamlining the checkout process across different products. 
 
-To understand how to integrate Grid checkout, several documents can help you.
+Please note that as of now, the documentation for Grid Checkout is still in preview and subject to updates
+
+To understand how to integrate Grid Checkout, several documents can help you.
 
 - [Grid Checkout API Reference](/grid-checkout/api)
 - [Grid Checkout Webhooks](/grid-checkout/webhooks)

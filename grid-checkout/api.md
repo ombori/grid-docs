@@ -1,14 +1,10 @@
-# Grid Checkout API Reference
+# Grid Checkout API Reference (preview)
 
-This is the API reference for Grid Checkout integration.
+This is the API reference for Grid Checkout API.
 
-- URL:
-  - Please change the values for `<tenant-id>`and `<transaction-id>`
-  - Please change the value of `<data-residency>` with either `eu`, `us`, or `uae`.
+## Base API URL overview
 
-## URL's overview
-
-The `{base-url}` of the Grid Checkout API depends on the data residency you're working with. Make sure you use the correct URL for the data residency you're working with.
+The `{baseUrl}` for the Grid Checkout API is determined by the data residency of your tenant.
 
 | Region | URL                                                  |
 | ------ | ---------------------------------------------------- |
@@ -16,9 +12,9 @@ The `{base-url}` of the Grid Checkout API depends on the data residency you're w
 | US     | `https://checkout-v2.us.omborigrid.net/api/tenants`  |
 | UAE    | `https://checkout-v2.uae.omborigrid.net/api/tenants` |
 
-?> `{tenant-id}` is your tenant id in the grid console.
+The `{tenantId}` parameter should be replaced with your actual tenant ID, which is available in your Grid console.
 
-The following endpoints are available in the API currently.
+The following endpoints are available in the API:
 
 | Method | Endpoint                                                        | Description                          |
 | ------ | --------------------------------------------------------------- | ------------------------------------ |
@@ -27,17 +23,21 @@ The following endpoints are available in the API currently.
 
 ### [GET] Transaction by ID
 
-> **[GET] {base-url}/api/tenants/{tenant-id}/transactions/{transactionId}**
+> **[GET] {baseUrl}/api/tenants/{tenantId}/transactions/{transactionId}**
 
 Retrieves a specific transaction by ID
 
 #### Response
 
-Returns <[`Transaction`](/grid-checkout/data-model?id=transaction)>
+```
+{
+    data: Transaction
+}
+```
+
+Reference: [Transaction](/grid-checkout/data-model?id=TransactionResponse)
 
 #### Query Parameters
-
-To use query parameters, add them as `GET` properties to the `URL`.
 
 | parameter     | type   | Description               | Example  |
 | ------------- | ------ | ------------------------- | -------- |
@@ -53,7 +53,7 @@ Retrieves a list of transactions
 
 ```
 {
-    data: Array<Transaction>,
+    data: Array<Transaction>
 }
 ```
 

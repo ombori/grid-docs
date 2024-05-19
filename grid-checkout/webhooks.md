@@ -1,21 +1,32 @@
+# Webhooks overview
+
+Webhooks provide a powerful mechanism to enhance the integration of Phygrid's checkout solutions with your existing systems. This feature facilitates seamless interactions with fulfillment systems, customer relationship management (CRM) software, and similar platforms, optimizing operational efficiency and data synchronization.
+
+## Configuring webhooks
+
+Since the Grid Checkout API is currently in preview, please note that this section will be updated soon. Future enhancements will include an API for configuring webhooks and a user interface in the Grid Console for setting up webhook destination URLs.
+
+
+## Webhooks
+
 ### [CheckoutEvent] Webhook
 
-When a transaction occurs, our system will send you a response containing detailed information about the transaction. Below is the structure of the data you will receive:
+A webhook for a checkout event is triggered upon the completion of a transaction.
 
-### CheckoutEvent
+#### CheckoutEvent
 
 The [`CheckoutEvent`](/grid-checkout/data-model?id=CheckoutEvent) object represents the event data sent to your webhook URL. It includes the following properties:
 
 - `data`: [An object containing information about the transaction](/grid-checkout/data-model?id=Transaction).
 - `type`: A string indicating the type of checkout event, which can be either `transaction.success` or `transaction.fail`.
 
-### Example Checkout Event Response
+#### Example Checkout Event
 
 ```json
 {
   "type": "transaction.success",
   "data": {
-    "id": "xxxxxxxxxxxxxxxxxxxx",
+    "id": "xxxxxxxxxxxx",
     "status": "success",
     "items": [
       {
@@ -33,7 +44,7 @@ The [`CheckoutEvent`](/grid-checkout/data-model?id=CheckoutEvent) object represe
         "alerts": []
       },
       {
-        "productId": "123",
+        "productId": "124",
         "description": "Product Description",
         "name": "Product Name",
         "quantity": 2,
@@ -56,8 +67,8 @@ The [`CheckoutEvent`](/grid-checkout/data-model?id=CheckoutEvent) object represe
     "totalShippingAmount": 10,
     "customer": {
       "phone": "111-1111-1111",
-      "name": "test",
-      "email": "test@test.com"
+      "name": "xyz",
+      "email": "xyz@phygrid.com"
     },
     "shipping": {
       "address": {

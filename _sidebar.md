@@ -16,7 +16,6 @@
   * [CLI Release Notes](/cli/releasenotes)
 * **Integration**
   * [Grid Products](/grid-products/)
-  * [Grid Checkout](/grid-checkout/)
   * [Grid Signals](/grid-signals/)
   * [Grid Reports](/grid-reports/api.md)
 * **General**

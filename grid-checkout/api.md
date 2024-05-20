@@ -10,8 +10,11 @@ Regional Grid Checkout base API URLs:
 
 | Region | URL                                                                         |
 | ------ | --------------------------------------------------------------------------- |
+| EU    | `https://api.omborigrid.com/regions/eu/phycheckout` |
 | US     | `https://api.omborigrid.com/regions/us/phycheckout`  |
 | UAE    | `https://api.omborigrid.com/regions/uae/phycheckout` |
+| IN    | `https://api.omborigrid.com/regions/in/phycheckout` |
+| AU    | `https://api.omborigrid.com/regions/au/phycheckout` |
 
 The standard base URL for most API operations is structured as follows:
 

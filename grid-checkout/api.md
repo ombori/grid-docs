@@ -6,15 +6,18 @@ This is the API reference for Grid Checkout API.
 
 The `{baseUrl}` for the Grid Checkout API is determined by the data residency of your tenant.
 
-`https://api.omborigrid.com/regions/{data-residency}/phycheckout/api/tenants/{tenantId}`
-
-- The `{tenantId}` parameter should be replaced with your actual tenant ID, which is available in your Grid console.
-- Please change the value of `<data-residency>` with either `us`, or `uae`.
+Regional Grid Checkout base API URLs:
 
 | Region | URL                                                                         |
 | ------ | --------------------------------------------------------------------------- |
-| US     | `https://api.omborigrid.com/regions/us/phycheckout/api/tenants/{tenantId}`  |
-| UAE    | `https://api.omborigrid.com/regions/uae/phycheckout/api/tenants/{tenantId}` |
+| US     | `https://api.omborigrid.com/regions/us/phycheckout`  |
+| UAE    | `https://api.omborigrid.com/regions/uae/phycheckout` |
+
+The standard base URL for most API operations is structured as follows:
+
+`https://api.omborigrid.com/regions/{dataResidency}/phycheckout/api/tenants/{tenantId}`
+
+The `{tenantId}` parameter should be substituted with your specific tenant ID, which can be found in your Grid console.
 
 The following endpoints are available in the API:
 
@@ -47,7 +50,7 @@ Reference: [Transaction](/grid-checkout/data-model?id=TransactionResponse)
 
 ### [GET] Transactions
 
-> **[GET] {base-url}/api/tenants/{tenant-id}/transactions**
+> **[GET] {baseUrl}/api/tenants/{tenantId}/transactions**
 
 Retrieves a list of transactions
 

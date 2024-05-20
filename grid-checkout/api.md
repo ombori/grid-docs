@@ -6,13 +6,15 @@ This is the API reference for Grid Checkout API.
 
 The `{baseUrl}` for the Grid Checkout API is determined by the data residency of your tenant.
 
-| Region | URL                                                  |
-| ------ | ---------------------------------------------------- |
-| EU     | `https://checkout-v2.eu.omborigrid.net/api/tenants`  |
-| US     | `https://checkout-v2.us.omborigrid.net/api/tenants`  |
-| UAE    | `https://checkout-v2.uae.omborigrid.net/api/tenants` |
+`https://api.omborigrid.com/regions/{data-residency}/phycheckout/api/tenants/{tenantId}`
 
-The `{tenantId}` parameter should be replaced with your actual tenant ID, which is available in your Grid console.
+- The `{tenantId}` parameter should be replaced with your actual tenant ID, which is available in your Grid console.
+- Please change the value of `<data-residency>` with either `eu`, `us`, `in`, `au`, or `uae`.
+
+| Region | URL                                                                        |
+| ------ | -------------------------------------------------------------------------- |
+| US     | `https://api.omborigrid.com/regions/us/phycheckout/api/tenants/{tenantId}` |
+| UAE    | `https://api.omborigrid.com/regions/us/phycheckout/api/tenants/{tenantId}` |
 
 The following endpoints are available in the API:
 

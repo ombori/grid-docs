@@ -1,4 +1,3 @@
-
 * [Getting Started](/getting-started)
 * [Visit our website](https://omborigrid.com)
 

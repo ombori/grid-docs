@@ -28,8 +28,7 @@
   * [General Upcoming Features](/general/upcoming/)
 * **Console**
   * [Console Release Notes](/console/releasenotes/)
-  * [Device Lease](/console/device-lease/)
-  * [Installations](/console/installations/)
+  * [Devices](/console/devices/)
   * [Alerts](/console/alerts/)
 * **GridOS and Phyos**
   * [Setting-up GridOS](/gridos/set-up/v1/)

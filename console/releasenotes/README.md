@@ -1,7 +1,27 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-05-15-B (RELEASE CANDIDATE)
+## 2024-05-23 (Release Candidate)
+
+### General
+- Changed OmboriGrid Logos to Phygrid
+- For more information, please see this [blog post](https://ombori.com/introducing-phygrid-the-next-chapter-in-our-journey/) about OmboriGrid to Phygrid evolution.
+
+### Users management
+- New users management users list, create, update, and delete UI
+- Security improvements
+- Introduced user last seen information (1 hour accuracy)
+
+### Signage 2.0
+- Still in private access
+- a new revolutionary way to manage content schedule and triggers that can be reused in Signage, gridapp applications, and 3rd party content scheduling integrations.
+- Initial UI updates 
+
+### Installations
+- Fixed fields not appearing or appearing unexpectedly on runtime device settings
+- With associated Phyos release. Please see Phyos release notes.
+
+## 2024-05-15-B
 
 ### Phy CLI
 - brand new CLI with granular permissions and api endpoints under the hood

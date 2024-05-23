@@ -8,7 +8,7 @@ A device can have different statuses reported in console.
 |---------------------------|-----------------|---------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | Online                    | ok              | Device reported healthy status of all its components                                  | -                                                               |
 | Offline                   | offline         | Device is disconnected from the Grid Platform in the cloud                            | Network issue                                                   |
-| Runtime not responding    | noedge          | Device is disconnected from the Grid Platform                                         | Network issue, phyedged, Grid Device Service                    |          
+| Runtime not responding    | noedge          | Device is disconnected from the Grid Platform                                         | Network issue, phyedged, Grid Device Service, Azure iothub      |          
 | No cloud connection       | nohub           | edgeHub is not reported in the telemetry                                              | Phyedged, Azure iothub                                          |
 | Screen not responding     | noscreen        | When connected to a screen installation and no screen is detected in HDMI port        | Screen is off, HDMI connection, screen module                   |
 | Agent not responding      | noagent         | edgeAgent is not reported in the telemetry                                            | Network issue, phyedged, Grid Device Service, Azure iothub      | 

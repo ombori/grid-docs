@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-05-23 (Release Candidate)
+## 2024-05-27
 
 ### General
 - Changed OmboriGrid Logos to Phygrid

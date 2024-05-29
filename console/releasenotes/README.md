@@ -1,6 +1,14 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-29
+
+### Analytics
+- Make csv exported data file name more descriptive with report name, date from, and date to information
+
+### Phygrid CLI
+- fixed api causing `phy app create <app-name>` error when creating screen app
+
 ## 2024-05-27
 
 ### General

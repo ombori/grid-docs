@@ -1,6 +1,20 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-05-30
+
+### Devices
+- Make IP address/addresses reported from Phyos phyagent telemetry appear on the device telemetry section in details page 
+
+### Alerts
+- Make IP address as fallback value of Device External ID (deviceExternalId) in both payload and email alerts.
+- If external ID is set in the UI, it will use it, otherwise, use the device IP address
+
+### Signage 2.0
+- Still in private access
+- a new revolutionary way to manage content schedule and triggers that can be reused in Signage, gridapp applications, and 3rd party content scheduling integrations.
+- Initial UI updates 
+
 ## 2024-05-29
 
 ### Analytics

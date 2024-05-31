@@ -4,11 +4,13 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ## 2024-05-30
 
 ### Devices
-- Make IP address/addresses reported from Phyos phyagent telemetry appear on the device telemetry section in details page 
+- Make IP address/addresses reported from the Phyos (phyagent) telemetry appear on the device telemetry section in device details page 
+  - Requires Phyos v3.10.40 or higher
 
 ### Alerts
-- Make IP address as fallback value of Device External ID (deviceExternalId) in both payload and email alerts.
-- If external ID is set in the UI, it will use it, otherwise, use the device IP address
+- Make IP address as fallback value of Device External ID (deviceExternalId) in both webhook payload and email alerts.
+  - If external ID is set in the device settings in console, it will use it, otherwise, it will use the device IP address
+  - Requires Phyos v3.10.40 or higher
 
 ### Signage 2.0
 - Still in private access

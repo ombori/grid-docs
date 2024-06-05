@@ -1,6 +1,16 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-06-05
+
+### Devices
+- Support older devices with different device id and uuid patterns for latest phy cli (omg cli)
+
+## 2024-06-04
+
+### Devices
+- Make sure devices page wont crash when there's issues with grid-devices and iothub connections
+
 ## 2024-05-30
 
 ### Devices

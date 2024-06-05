@@ -89,7 +89,7 @@ Please refer the following table for the severity levels and their corresponding
 | Critical   | Every 15 minutes       |
 | Error      | Every 30 minutes       |
 | Warning    | Every 60 minutes       |
-| Information| Every 120 hour         |
+| Information| Every 120 minutes      |
 
 #### Scope
 

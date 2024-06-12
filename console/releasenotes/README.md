@@ -1,6 +1,29 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-06-12 (RC)
+
+### Devices
+- Make sure that there's no edge device created under the hood when device add fails due to duplicate serials
+
+### Users
+- [Private Access] Partially introduce space level access on user create and update forms
+  - This will be available to public by the end of June 2024
+  - No actions required for existing users. The new features are guaranteed backward compatible
+
+### Spaces
+- [Private Access] Able to see only spaces which user has access to
+  - This will be available to public by the end of June 2024
+  - No actions required for existing users. The new features are guaranteed backward compatible
+
+### Signage 2.0
+- Still in private access
+- a new revolutionary way to manage content schedule and triggers that can be reused in Signage, gridapp applications, and 3rd party content scheduling integrations.
+- Tags and Channels improvements
+
+### Devices
+- Support older devices with different device id and uuid patterns for latest phy cli (omg cli)
+
 ## 2024-06-05
 
 ### Devices

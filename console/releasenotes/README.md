@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-06-12 (RC)
+## 2024-06-13
 
 ### Devices
 - Make sure that there's no edge device created under the hood when device add fails due to duplicate serials

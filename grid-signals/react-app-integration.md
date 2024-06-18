@@ -11,8 +11,6 @@ This page describes how you can integrate your React-based App to Grid Signals.
 
 #### States and Events
 - [Event Tracking](grid-signals/tracking-events)
-- [States and Events Subscription](grid-signals/states-and-events)
-
 
 ## useGridSignals
 Use this hook if your app is built from the `omg app create` template or is using `@ombori/ga-settings`.
@@ -153,5 +151,3 @@ import { getInstance as gs } from '@ombori/grid-signals-react';
 ## Event Tracking
 See [Event Tracking](grid-signals/tracking-events) page for more details.
 
-## States and Events Subscription
-See [States and Events Subscription](grid-signals/states-and-events) page for more details.

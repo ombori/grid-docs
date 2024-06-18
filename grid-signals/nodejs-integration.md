@@ -7,7 +7,6 @@ This page describes how you can integrate your NodeJS or Non-react JavaScript-ba
 
 #### States and Events
 - [Event Tracking](grid-signals/tracking-events)
-- [States and Events Subscription](grid-signals/states-and-events)
 
 ## init
 Used to initialize the Grid Signals instance with the required [Init Parameters](grid-signals/nodejs-integration?id=grid-signals-init-parameters).
@@ -77,6 +76,3 @@ await gs.sendCustomEvent({
 
 ## Event Tracking
 See [Event Tracking](grid-signals/tracking-events) page for more details.
-
-## States and Events Subscription
-See [States and Events Subscription](grid-signals/states-and-events) page for more details.

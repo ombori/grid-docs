@@ -31,7 +31,7 @@ phy login --use-device-code
 Verify the setup by running a command that lists your tenants:
 
 ```bash
-omg org list
+phy org list
 ```
 
 If you see your tenant's name and you don't see any errors, you are good to go!

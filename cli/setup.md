@@ -1,27 +1,32 @@
-# Installing the Ombori Grid CLI
+# Installing the Phygrid CLI
 
-You will need following prerequisites in your dev environment for Ombori Grid CLI to work:
+You will need following prerequisites in your dev environment for Phygrid CLI to work:
 * [NodeJS 16+](https://nodejs.org/en/) (current LTS version is recommended)
 * Git CLI
 
 ## Install CLI 
 
-To install the CLI, you have to download the `@ombori/ga-cli` package from NPM. This package should be installed globally.
+To install the CLI, you have to download the `@phygrid/cli` package from NPM. This package should be installed globally.
 
 ```bash
-npm i -g @ombori/ga-cli
+npm i -g @phygrid-cli
 ```
 
 ## Authentication
-Authentication with the CLI works using tokens. You can get a token from the [Ombori Grid Console](https://console.omborigrid.com/). Head over to the `developer` page within your organization, and press the "Create" button to generate a token. Give it a name, and then copy the token. This token will only be displayed once so make sure you copy it, otherwise, you'll have to generate a new token.
+Authentication with the CLI works using Device Grant Flow. 
 
 Then to authenticate the CLI run the following command:
 
 ```bash
-omg login
+phy login
 ```
 
-Enter the token you just created.
+A special command can be used when you need to use the phy CLI on environment without a browser:
+
+```
+phy login --use-device-code
+```
+
 ## Confirm successful authentication
 Verify the setup by running a command that lists your tenants:
 

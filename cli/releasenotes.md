@@ -1,5 +1,13 @@
-# omg CLI Release Notes
-To install the latest omg cli updates, run `npm install -g @ombori/ga-cli` if you install it for the first time. You can also run `omg update` if you have already pre-installed omg package on your machine. 
+# phy CLI Release Notes
+To install the latest omg cli updates, run `npm install -g @phygrid/cli` if you install it for the first time. You can also run `phy update` if you have already pre-installed omg package on your machine. 
+
+## v2.0.3
+- make sure that `phy login` and `phy logout` respects HTTPS_PROXY environment variable
+- make sure that `phy dev shell` respects the HTTPS_PROXY environment variable
+- fixed `phy update` command
+- general hotfixes
+
+# Below are the release notes of the legacy `@ombori/ga-cli`
 
 ## v3.92.11 (2024-05-29)
 - fixed `phy app create <app-name>` error when creating screen app

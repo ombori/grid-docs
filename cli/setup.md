@@ -9,7 +9,7 @@ You will need following prerequisites in your dev environment for Phygrid CLI to
 To install the CLI, you have to download the `@phygrid/cli` package from NPM. This package should be installed globally.
 
 ```bash
-npm i -g @phygrid-cli
+npm i -g @phygrid/cli
 ```
 
 ## Authentication

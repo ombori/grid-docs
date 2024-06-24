@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-06-18 (Release Candidate)
+## 2024-06-24
 
 ### Analytics dashboards
 - Added parent space and device columns for subspaces data matrix card

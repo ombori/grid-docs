@@ -1,6 +1,18 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-06-27
+### Users
+- Users can only view spaces assigned to them under the Spaces tab in the side menu
+- Users can see devices located in the spaces they have access to in the Devices tab
+- Users can only view devices in accessible spaces within the Installation > Devices tab
+
+### Installation
+- Only users with access to all spaces can edit the installation's global configuration
+
+### Tenant - Analytics
+- Only users with access to all spaces can view tenant-level analytics
+
 ## 2024-06-24
 
 ### Analytics dashboards

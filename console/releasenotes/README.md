@@ -6,8 +6,8 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Users can only view spaces assigned to them under the Spaces tab in the side menu
 
 ### Devices
-- In the devices tab, only show devices which are associated with the spaces which the user can access
-- Users can only view devices in accessible spaces within the Installation > Devices tab
+- In **Devices** tab, only show devices which are associated with the spaces which the user can access
+- In **Installation > Devices** tab, only show devices which are associated with the spaces which the user can access
 
 ### Installation
 - Only users with access to all spaces can edit the installation's global configuration

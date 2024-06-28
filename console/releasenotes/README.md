@@ -6,7 +6,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Users can only view spaces assigned to them under the Spaces tab in the side menu
 
 ### Devices
-- Users can see devices located in the spaces they have access to in the Devices tab
+- In the devices tab, only show devices which are associated with the spaces which the user can access
 - Users can only view devices in accessible spaces within the Installation > Devices tab
 
 ### Installation

@@ -1,7 +1,7 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-06-27 (Release Candidate)
+## 2024-07-03 (Release Candidate)
 ### Users
 - Users can only view spaces assigned to them under the Spaces tab in the side menu
 
@@ -14,6 +14,11 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 
 ### Tenant - Analytics
 - Only users with access to all spaces can view tenant-level analytics
+
+## 2024-07-02
+### Analytics
+- Optimized rendering for analytics card when spaces list is too big
+- Fix analytics page freezing when there are thousands of spaces in a tenant
 
 ## 2024-06-24
 

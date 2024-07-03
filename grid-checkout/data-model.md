@@ -8,23 +8,23 @@ The Transaction model serves as the core data structure within Grid Checkout, ce
 
 This document provides definitions for all fields outlined in the Grid Checkout Transaction data model. It details nested structures under separate headings for clarity and organization.
 
-| Field               | Description                                                                                                                                | Example                                                                     |
-|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| id                  | A unique Grid Checkout identifier for the transaction.                                                                                     | 123456                                                                      |
-| status              | Indicates the current status of the transaction, represented by a value from the `TransactionStatusEnum`.                                  | [TransactionStatusEnum](/grid-checkout/data-model?id=transactionStatusEnum) |
-| items               | An array containing documents representing individual items included in the transaction (`TransactionItem`).                                | [TransactionItem](/grid-checkout/data-model?id=TransactionItem)             |
-| totalAmount         | The total amount of the transaction, including taxes, discounts and shipping, in cents, represented as an integer.                         | 880                                                                         |
-| subtotalAmount      | The subtotal amount of the transaction, excluding taxes and discounts, in cents, represented as an integer.                                | 800                                                                         |
-| totalTaxAmount      | The total tax amount applied to the transaction, in cents, represented as an integer.                                                       | 160                                                                         |
-| totalDiscountAmount | The total discount amount applied to the transaction, in cents, represented as an integer.                                                  | 80                                                                          |
-| totalShippingAmount | The total shipping cost amount, in cents, represented as an integer.                                                                       | 80                                                                          |
-| currency            | The currency used for monetary values in the transaction, represented as a string.                                                         | USD                                                                         |
-| metadata            | Additional metadata associated with the transaction, if available.                                                                         | {}                                                                          |
-| createdAt           | The date and time when the transaction was created, represented as a string.                                                               | `2024-05-16T10:54:42.005Z`                                                  |
-| updatedAt           | The date and time when the transaction was last updated, represented as a string.                                                          | `2024-05-16T10:54:42.005Z`                                                  |
-| payment             | Details about the payment associated with the transaction, if available, represented by a `TransactionPayment`.                            | [TransactionPayment](/grid-checkout/data-model?id=transactionPayment)       |
-| customer            | Information about the `customer` associated with the transaction, represented by a Customer object.                                        | [Customer](/grid-checkout/data-model?id=customer)                           |
-| shipping            | Information about the `shipping` associated with the transaction, represented by a Shipping object.                                        | [Shipping](/grid-checkout/data-model?id=shipping)                           |
+| Field               | Description                                                                                                        | Example                                                                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| id                  | A unique Grid Checkout identifier for the transaction.                                                             | 123456                                                                      |
+| status              | Indicates the current status of the transaction, represented by a value from the `TransactionStatusEnum`.          | [TransactionStatusEnum](/grid-checkout/data-model?id=transactionStatusEnum) |
+| items               | An array containing documents representing individual items included in the transaction (`TransactionItem`).       | [TransactionItem](/grid-checkout/data-model?id=TransactionItem)             |
+| totalAmount         | The total amount of the transaction, including taxes, discounts and shipping, in cents, represented as an integer. | 880                                                                         |
+| subtotalAmount      | The subtotal amount of the transaction, excluding taxes and discounts, in cents, represented as an integer.        | 800                                                                         |
+| totalTaxAmount      | The total tax amount applied to the transaction, in cents, represented as an integer.                              | 160                                                                         |
+| totalDiscountAmount | The total discount amount applied to the transaction, in cents, represented as an integer.                         | 80                                                                          |
+| totalShippingAmount | The total shipping cost amount, in cents, represented as an integer.                                               | 80                                                                          |
+| currency            | The currency used for monetary values in the transaction, represented as a string.                                 | USD                                                                         |
+| metadata            | Additional metadata associated with the transaction, if available.                                                 | {}                                                                          |
+| createdAt           | The date and time when the transaction was created, represented as a string.                                       | `2024-05-16T10:54:42.005Z`                                                  |
+| updatedAt           | The date and time when the transaction was last updated, represented as a string.                                  | `2024-05-16T10:54:42.005Z`                                                  |
+| payment             | Details about the payment associated with the transaction, if available, represented by a `TransactionPayment`.    | [TransactionPayment](/grid-checkout/data-model?id=transactionPayment)       |
+| customer            | Information about the `customer` associated with the transaction, represented by a Customer object.                | [Customer](/grid-checkout/data-model?id=customer)                           |
+| shipping            | Information about the `shipping` associated with the transaction, represented by a Shipping object.                | [Shipping](/grid-checkout/data-model?id=shipping)                           |
 
 ### Type Definitions Reference
 
@@ -33,21 +33,21 @@ This document provides definitions for all fields outlined in the Grid Checkout 
 ```js
 interface TransactionResponse {
   id: string;
-  tenantId: string; 
+  tenantId: string;
   spaceId: string;
-  status: TransactionStatusEnum; 
-  items: TransactionItem[]; 
-  totalAmount: number; 
+  status: TransactionStatusEnum;
+  items: TransactionItem[];
+  totalAmount: number;
   subtotalAmount: number;
-  totalTaxAmount: number; 
-  totalDiscountAmount: number; 
-  totalShippingAmount: number; 
-  currency: string; 
-  metadata?: unknown; 
-  createdAt: string; 
+  totalTaxAmount: number;
+  totalDiscountAmount: number;
+  totalShippingAmount: number;
+  currency: string;
+  metadata?: unknown;
+  createdAt: string;
   updatedAt: string;
   payment?: TransactionPayment;
-  customer?: Customer; 
+  customer?: Customer;
   shipping?: Shipping;
 }
 ```
@@ -56,17 +56,20 @@ interface TransactionResponse {
 
 ```js
 interface TransactionItem {
-  productId: string; 
-  name: string; 
-  description?: string; 
-  unitAmount: number; 
-  discountAmount: number; 
-  subtotalAmount: number; 
+  productId: string;
+  name: string;
+  description?: string;
+  unitAmount: number;
+  discountAmount: number;
+  subtotalAmount: number;
   totalAmount: number;
-  quantity: number; 
-  taxAmount?: number; 
-  taxRate?: number; 
-  metadata?: unknown; 
+  quantity: number;
+  taxAmount?: number;
+  taxRate?: number;
+  metadata?: unknown;
+  customProperties: {
+    [key: string]: string | number | boolean,
+  };
 }
 ```
 
@@ -96,9 +99,9 @@ interface TransactionOtherPayment {
 }
 
 interface TransactionStripeOnlineCheckout {
-  type: PaymentType.StripeOnlineCheckout; 
+  type: PaymentType.StripeOnlineCheckout;
   amount: number;
-  data: TransactionStripeOnlineCheckoutData; 
+  data: TransactionStripeOnlineCheckoutData;
 }
 
 interface TransactionStripeOnlineCheckoutData {

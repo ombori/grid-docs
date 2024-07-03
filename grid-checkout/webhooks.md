@@ -6,7 +6,6 @@ Webhooks provide a powerful mechanism to enhance the integration of Phygrid's ch
 
 Since the Grid Checkout API is currently in preview, please note that this section will be updated soon. Future enhancements will include an API for configuring webhooks and a user interface in the Grid Console for setting up webhook destination URLs.
 
-
 ## Webhooks
 
 ### [CheckoutEvent] Webhook
@@ -41,7 +40,10 @@ The [`CheckoutEvent`](/grid-checkout/data-model?id=CheckoutEvent) object represe
         "subtotalAmount": 400,
         "totalAmount": 440,
         "metadata": {},
-        "alerts": []
+        "alerts": [],
+        "customProperties": {
+          "internalId": "123456"
+        }
       },
       {
         "productId": "124",
@@ -55,7 +57,10 @@ The [`CheckoutEvent`](/grid-checkout/data-model?id=CheckoutEvent) object represe
         "subtotalAmount": 400,
         "totalAmount": 440,
         "metadata": {},
-        "alerts": []
+        "alerts": [],
+        "customProperties": {
+          "internalId": "123456"
+        }
       }
     ],
     "tenantId": "xxxxxxxxxxxxxxxx",

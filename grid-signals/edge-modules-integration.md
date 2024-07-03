@@ -43,9 +43,6 @@ await signals.detectMood({ certainty: 80, mood: 'HAPPY' });
 
 See [Event Tracking](grid-signals/tracking-events) page for more details.
 
-## States and Events Subscription
-See [States and Events Subscription](grid-signals/states-and-events) page for more details.
-
 ## createSession
 An initial session is created on app start. You can invoke create session when you want to start a new session during runtime.
 

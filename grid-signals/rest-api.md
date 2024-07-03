@@ -147,11 +147,3 @@ route: /event
 | clientScreenPixelDepth      | ay                          |
 | stateful                    | ba                          |
 | public                      | bb                          |
-
-- [getSessionState](/grid-signals/states-and-events?id=getsessionstate)
-- [getSpaceState](/grid-signals/states-and-events?id=getspacestate)
-- [getSpaceStateRows](/grid-signals/states-and-events?id=getspacestaterows)
-- [subscribeSessionState](/grid-signals/states-and-events?id=subscribesessionstate)
-- [subscribeSessionEvent](/grid-signals/states-and-events?id=subscribesessionevent)
-- [subscribeSessionEvent](/grid-signals/states-and-events?id=subscribespacestate)
-- [subscribeSpaceEvent](/grid-signals/states-and-events?id=subscribespaceevent)

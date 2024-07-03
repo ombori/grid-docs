@@ -1,7 +1,86 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
-## 2024-05-23 (Release Candidate)
+## 2024-07-03 (Release Candidate)
+### Users
+- Users can only view spaces assigned to them under the Spaces tab in the side menu
+
+### Devices
+- In **Devices** tab, only show devices which are associated with the spaces which the user can access
+- In **Installation > Devices** tab, only show devices which are associated with the spaces which the user can access
+
+### Installation
+- Only users with access to all spaces can edit the installation's global configuration
+
+### Tenant - Analytics
+- Only users with access to all spaces can view tenant-level analytics
+
+## 2024-07-02
+### Analytics
+- Optimized rendering for analytics card when spaces list is too big
+- Fix analytics page freezing when there are thousands of spaces in a tenant
+
+## 2024-06-24
+
+### Analytics dashboards
+- Added parent space and device columns for subspaces data matrix card
+- For success rates data matrix cards, show 0% in the cell when there are data events but success rate is 0
+- For success rates data matrix cards, show empty string in the cell when there are no data events
+- Fixed downloadable report for subspaces data matrix card
+
+## 2024-06-13
+
+### Devices
+- Make sure that there's no edge device created under the hood when device add fails due to duplicate serials
+
+### Users
+- [Private Access] Partially introduce space level access on user create and update forms
+  - This will be available to public by the end of June 2024
+  - No actions required for existing users. The new features are guaranteed backward compatible
+
+### Signage 2.0
+- Still in private access
+- a new revolutionary way to manage content schedule and triggers that can be reused in Signage, gridapp applications, and 3rd party content scheduling integrations.
+- Tags and Channels improvements
+
+### Devices
+- Support older devices with different device id and uuid patterns for latest phy cli (omg cli)
+
+## 2024-06-05
+
+### Devices
+- Support older devices with different device id and uuid patterns for latest phy cli (omg cli)
+
+## 2024-06-04
+
+### Devices
+- Make sure devices page wont crash when there's issues with grid-devices and iothub connections
+
+## 2024-05-30
+
+### Devices
+- Make IP address/addresses reported from the Phyos (phyagent) telemetry appear on the device telemetry section in device details page 
+  - Requires Phyos v3.10.40 or higher
+
+### Alerts
+- Make IP address as fallback value of Device External ID (deviceExternalId) in both webhook payload and email alerts.
+  - If external ID is set in the device settings in console, it will use it, otherwise, it will use the device IP address
+  - Requires Phyos v3.10.40 or higher
+
+### Signage 2.0
+- Still in private access
+- a new revolutionary way to manage content schedule and triggers that can be reused in Signage, gridapp applications, and 3rd party content scheduling integrations.
+- Initial UI updates 
+
+## 2024-05-29
+
+### Analytics
+- Make csv exported data file name more descriptive with report name, date from, and date to information
+
+### Phygrid CLI
+- fixed api causing `phy app create <app-name>` error when creating screen app
+
+## 2024-05-27
 
 ### General
 - Changed OmboriGrid Logos to Phygrid

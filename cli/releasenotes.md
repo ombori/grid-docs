@@ -1,6 +1,33 @@
-# omg CLI Release Notes
-To install the latest omg cli updates, run `npm install -g @ombori/ga-cli` if you install it for the first time. You can also run `omg update` if you have already pre-installed omg package on your machine. 
+# phy CLI Release Notes
+To install the latest omg cli updates, run `npm install -g @phygrid/cli` if you install it for the first time. You can also run `phy update` if you have already pre-installed omg package on your machine. 
 
+## v2.0.3
+- made sure that `phy login` and `phy logout` respects HTTPS_PROXY environment variable
+- made sure that `phy dev shell` respects the HTTPS_PROXY environment variable
+- fixed `phy update` command
+
+## v2.0.0
+- introduced new phy login command. It uses Device Authorization Grant Flow, instead of Developer tokens.
+- introduced new phy logout command. Used to revoke the access token generated after a successful phy login
+- make the api calls use the new tokens generated through the Device Auth Grant Flow.
+
+# [LEGACY OMG CLI] `@ombori/ga-cli`
+
+## v3.92.11 (2024-05-29)
+- fixed `phy app create <app-name>` error when creating screen app
+
+## v3.92.2 (2024-05-16)
+- brand new CLI with granular permissions and api endpoints under the hood
+- introduced `phy` instead of `omg`. The `omg` prefix will still work for backward compatibility
+- removed `omg dev physhell` command and make `omg dev shell` work for all types of devices (GridOS, Phyos, Tizen6.5 >)
+- older versions of CLI will still work until June 30, 2024
+  - run `omg update` to automatically download the new CLI
+
+## v3.91.4  (2024-04-15)
+- Proxy support for https requests and websocket connections
+  - To test, run `export HTTPS_PROXY=<proxy-url>` on the terminal
+  - Execute commands like `omg org list`, `omg dev physhell <device-name>` and `omg dev status`
+  - All Phygrid CLI network requests should go through the configured proxy
 
 ## v3.91.4  (2024-04-15)
 - Proxy support for https requests and websocket connections

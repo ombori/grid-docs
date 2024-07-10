@@ -1,6 +1,15 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-07-10 (Release Candidate)
+### Installation
+- Optimize global, space, and device settings forms
+
+### General Schema form
+- Optimize space picker
+- Optimize adding/removing of array type settings fields
+- Optimize spaces query in settings forms
+
 ## 2024-07-03 (Release Candidate)
 ### Users
 - Users can only view spaces assigned to them under the Spaces tab in the side menu

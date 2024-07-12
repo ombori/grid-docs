@@ -1,12 +1,17 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-07-12
+### Spaces
+- Added api level smart caching on spaces list endpoint
+- Optimized space picker in create and edit space formss
+
 ## 2024-07-11
 ### Installation
-- Optimize global, space, and device settings forms
-- Optimize space picker
-- Optimize adding/removing of array type settings fields
-- Optimize spaces query in installation settings forms
+- Optimized global, space, and device settings forms
+- Optimized space picker
+- Optimized adding/removing of array type settings fields
+- Optimized spaces query in installation settings forms
 
 ## 2024-07-03 (Release Candidate)
 ### Users

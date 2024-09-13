@@ -1,6 +1,42 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-09-13
+### App Settings Overriding
+- Multiple users can now edit app settings for different devices simultaneously.
+- Multiple users can now edit app settings for different spaces simultaneously.
+- Overriding Detection:
+-  - Alerts are now shown when more than one user attempts to change settings for the same device.
+-  - Alerts are now shown when more than one user attempts to change settings for the same space.
+-  - Alerts are now shown when more than one user attempts to change global settings and space/device level settings simultaneously.
+
+### App Settings
+- Bug Fix: Resolved an issue where devices were missing from the settings.
+
+### Builds
+- Page Size Adjustment: Removed the page size selector from the builds table. The page size is now fixed at 5 records per page.
+
+### Users Management
+- Optimized the space picker dropdown in the user form.
+- Users can now only view spaces assigned to them under the Spaces tab in the side menu.
+- Users with full space access in a parent tenant will inherit full space access in child tenants.
+- For backward compatibility, all current users will retain full space access.
+- An admin user with partial space access can only grant partial space access to users they create or edit.
+
+### Devices
+- In the Devices tab, only devices associated with spaces accessible to the user will be shown.
+- In Installation > Devices tab, only devices associated with spaces accessible to the user will be shown.
+
+### Tenant - Analytics
+- Only users with access to all spaces can view tenant-level analytics.
+
+### Phy CLI
+- Introduced a command to perform bulk OTA (Over-The-Air) updates via the Phy CLI.
+- Increased shell inactivity timeout period from 5 minutes to 15 minutes.
+
+### Grid Admin API
+- Enhanced the latest build fetching process to handle large payloads more efficiently.
+
 ## 2024-07-12
 ### Spaces
 - Added api level smart caching on spaces list endpoint

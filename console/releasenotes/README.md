@@ -6,9 +6,9 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Multiple users can now edit app settings for different devices simultaneously.
 - Multiple users can now edit app settings for different spaces simultaneously.
 - Overriding Detection:
--  - Alerts are now shown when more than one user attempts to change settings for the same device.
--  - Alerts are now shown when more than one user attempts to change settings for the same space.
--  - Alerts are now shown when more than one user attempts to change global settings and space/device level settings simultaneously.
+  - Alerts are now shown when more than one user attempts to change settings for the same device.
+  - Alerts are now shown when more than one user attempts to change settings for the same space.
+  - Alerts are now shown when more than one user attempts to change global settings and space/device level settings simultaneously.
 
 ### App Settings
 - Bug Fix: Resolved an issue where devices were missing from the settings.
@@ -48,20 +48,6 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 - Optimized space picker
 - Optimized adding/removing of array type settings fields
 - Optimized spaces query in installation settings forms
-
-## 2024-07-03 (Release Candidate)
-### Users
-- Users can only view spaces assigned to them under the Spaces tab in the side menu
-
-### Devices
-- In **Devices** tab, only show devices which are associated with the spaces which the user can access
-- In **Installation > Devices** tab, only show devices which are associated with the spaces which the user can access
-
-### Installation
-- Only users with access to all spaces can edit the installation's global configuration
-
-### Tenant - Analytics
-- Only users with access to all spaces can view tenant-level analytics
 
 ## 2024-07-02
 ### Analytics

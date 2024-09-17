@@ -30,7 +30,7 @@ The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequ
 ### Tenant - Analytics
 - Only users with access to all spaces can view tenant-level analytics.
 
-### Phy CLI
+### Phy CLI (Version 2.0.46)
 - Introduced a command to perform bulk OTA (Over-The-Air) updates via the Phy CLI.
 - Increased shell inactivity timeout period from 5 minutes to 15 minutes.
 

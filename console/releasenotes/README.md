@@ -1,6 +1,16 @@
 # Console Release Notes
 The [Ombori Grid Console](https://console.omborigrid.com) receives updates frequently. This page contains all the console changes that were deployed in production recently.
 
+## 2024-10-31
+### Environments
+- Environment identifiers are now automatically generated based on the display name provided during creation.
+- Environment identifiers are fixed and cannot be edited. Only the environment display name is editable.
+
+## 2024-10-23
+### Analytics
+- Optimized infrastructure and resources to seamlessly accommodate higher volumes, supporting robust performance in data processing.
+- Integrated advanced optimizations within the data processing layer to enhance the efficiency, reliability, and observability of business processes.
+
 ## 2024-09-13
 ### App Settings Overriding
 - Multiple users can now edit app settings for different devices simultaneously.
